@@ -16,8 +16,8 @@
         <div class="card-body text-info">
           <h5 class="card-title" ></h5>
           <br>
-          <a v-bind:href="course.PreSurveyURL" class="card-link">Start Survey</a>
-          <a v-bind:href="course.PostSurveyURL" class="card-link">End Survey</a>
+          <a v-bind:href="'http://'+course.PreSurveyURL" class="card-link" target="_blank">Start Survey</a>
+          <a v-bind:href="'http://'+course.PostSurveyURL" class="card-link" target="_blank">End Survey</a>
           <br>
           <router-link :to="{ name: 'CourseStudent', params: { courseName: course.courseNameKey } }">
           <button class="btn "><i class="fa fa-eye fa-lg" aria-hidden="true" ></i></button></router-link>

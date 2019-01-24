@@ -1,1 +1,9 @@
 
+2019-01-24T20:27:02.824Z - info: START seeder.
+2019-01-24T20:27:02.841Z - debug: 2 dataCodewordset seeded
+2019-01-24T20:27:02.841Z - debug: 292 datacodeword seeded
+2019-01-24T20:27:02.841Z - debug: 6 datacourse seeded
+2019-01-24T20:27:02.841Z - debug: 114 dataCoursestudent seeded
+2019-01-24T20:27:02.841Z - debug: 92 hootoriginal seeded
+2019-01-24T20:27:02.842Z - debug: 200 largeset seeded
+2019-01-24T20:27:02.842Z - info: END Seeder. Sample data read and verified.

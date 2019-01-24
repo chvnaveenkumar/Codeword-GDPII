@@ -17,8 +17,8 @@
     <div class="col-md-6 col-lg-6 col-xs-0 col-sm-0" style="text-align:left;font-weight:bold">
     Start Date: {{ courseData.Startdate }} <br>
     End Date: {{ courseData.Enddate }} <br>
-    Start Survey URL: {{ courseData.PreSurveyURL }} <br>
-    End Survey URL: {{ courseData.PostSurveyURL }} <br>
+    Start Survey URL: <a v-bind:href="'http://'+courseData.PreSurveyURL" class="card-link" target="_blank">{{ courseData.PreSurveyURL }} </a> <br>
+    End Survey URL: <a v-bind:href="'http://'+courseData.PostSurveyURL" class="card-link" target="_blank">{{ courseData.PostSurveyURL }} </a> <br>
     </div>
      <div class="col-md-6 col-lg-6 col-xs-0 col-sm-0" style="text-align:left;font-weight:bold">
           <button class="btn" data-toggle="modal" data-target="#editCourse" @click="selectCourse(courseData)" style="float:right;">Edit <i class="fa fa-pencil fa-xs"></i></button>
@@ -72,18 +72,18 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Delete Course</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Delete Student</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Cancel">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <h5> Course Name: {{selectCourseName}} </h5>
-        <h6> Student Email:{{ selectEmailKey}} </h6>
+        <h5> Student Name: {{ selectstudentName}} </h5>
+        <h6> Student Email: {{ selectEmailKey}} </h6>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primart" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-danger" @click="deleteStudent(selectCourseName, selectEmailKey)">Delete Course</button>
+        <button type="button" class="btn btn-danger" @click="deleteStudent(selectCourseName, selectEmailKey)">Delete Student</button>
       </div>
     </div>
   </div>
@@ -235,7 +235,7 @@ export default {
     selectStudent (courseName, emailKey, studentName) {
       this.selectCourseName = courseName
       this.selectEmailKey = emailKey
-      this.studentName = studentName
+      this.selectstudentName = studentName
       this.selectedEmailKey = emailKey
       this.selectedStudentName = studentName
     },

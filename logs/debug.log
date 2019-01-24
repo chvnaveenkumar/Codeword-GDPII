@@ -7,3 +7,478 @@
 2019-01-24T20:27:02.841Z - debug: 92 hootoriginal seeded
 2019-01-24T20:27:02.842Z - debug: 200 largeset seeded
 2019-01-24T20:27:02.842Z - info: END Seeder. Sample data read and verified.
+2019-01-24T21:02:23.971Z - info: START seeder.
+2019-01-24T21:02:23.986Z - debug: 2 dataCodewordset seeded
+2019-01-24T21:02:23.986Z - debug: 292 datacodeword seeded
+2019-01-24T21:02:23.986Z - debug: 6 datacourse seeded
+2019-01-24T21:02:23.986Z - debug: 114 dataCoursestudent seeded
+2019-01-24T21:02:23.986Z - debug: 92 hootoriginal seeded
+2019-01-24T21:02:23.986Z - debug: 200 largeset seeded
+2019-01-24T21:02:23.987Z - info: END Seeder. Sample data read and verified.
+2019-01-24T21:50:20.965Z - info: START seeder.
+2019-01-24T21:50:21.006Z - debug: 2 dataCodewordset seeded
+2019-01-24T21:50:21.006Z - debug: 292 datacodeword seeded
+2019-01-24T21:50:21.006Z - debug: 6 datacourse seeded
+2019-01-24T21:50:21.006Z - debug: 114 dataCoursestudent seeded
+2019-01-24T21:50:21.006Z - debug: 92 hootoriginal seeded
+2019-01-24T21:50:21.006Z - debug: 200 largeset seeded
+2019-01-24T21:50:21.007Z - info: END Seeder. Sample data read and verified.
+2019-01-24T21:51:03.811Z - info: START seeder.
+2019-01-24T21:51:03.841Z - debug: 2 dataCodewordset seeded
+2019-01-24T21:51:03.841Z - debug: 292 datacodeword seeded
+2019-01-24T21:51:03.841Z - debug: 6 datacourse seeded
+2019-01-24T21:51:03.841Z - debug: 114 dataCoursestudent seeded
+2019-01-24T21:51:03.841Z - debug: 92 hootoriginal seeded
+2019-01-24T21:51:03.841Z - debug: 200 largeset seeded
+2019-01-24T21:51:03.841Z - info: END Seeder. Sample data read and verified.
+2019-01-24T21:51:59.665Z - info: START seeder.
+2019-01-24T21:51:59.695Z - debug: 2 dataCodewordset seeded
+2019-01-24T21:51:59.695Z - debug: 292 datacodeword seeded
+2019-01-24T21:51:59.695Z - debug: 6 datacourse seeded
+2019-01-24T21:51:59.695Z - debug: 114 dataCoursestudent seeded
+2019-01-24T21:51:59.695Z - debug: 92 hootoriginal seeded
+2019-01-24T21:51:59.695Z - debug: 200 largeset seeded
+2019-01-24T21:51:59.695Z - info: END Seeder. Sample data read and verified.
+2019-01-24T21:53:05.803Z - error: uncaughtException: drCaseData is not defined date=Thu Jan 24 2019 15:53:05 GMT-0600 (Central Standard Time), pid=5744, uid=null, gid=null, cwd=c:\Users\S530742\Desktop\CI\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.11.3, argv=[C:\Program Files\nodejs\node.exe, c:\Users\S530742\Desktop\CI\Codeword-GDPII\bin\www], rss=99250176, heapTotal=50212864, heapUsed=45742232, external=21495537, loadavg=[0, 0, 0], uptime=23518.6739775
+ReferenceError: drCaseData is not defined
+    at c:\Users\S530742\Desktop\CI\Codeword-GDPII\controllers\controller.coursestudent.js:82:86
+    at c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongoose\lib\model.js:4659:16
+    at c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongoose\lib\query.js:4090:12
+    at cb (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongoose\lib\query.js:1782:14)
+    at result (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\utils.js:414:17)
+    at executeCallback (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\utils.js:406:9)
+    at handleCallback (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at cursor.close (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:216:62)
+    at handleCallback (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at completeClose (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:893:14)
+    at Cursor.close (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:912:10)
+    at cursor._next (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:216:23)
+    at handleCallback (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:203:5)
+    at _setCursorNotifiedImpl (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:561:38)
+    at self._endSession (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:569:46)
+    at Cursor._endSession (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:194:5)
+2019-01-24T21:53:42.801Z - info: START seeder.
+2019-01-24T21:53:42.830Z - debug: 2 dataCodewordset seeded
+2019-01-24T21:53:42.830Z - debug: 292 datacodeword seeded
+2019-01-24T21:53:42.830Z - debug: 6 datacourse seeded
+2019-01-24T21:53:42.830Z - debug: 114 dataCoursestudent seeded
+2019-01-24T21:53:42.830Z - debug: 92 hootoriginal seeded
+2019-01-24T21:53:42.830Z - debug: 200 largeset seeded
+2019-01-24T21:53:42.831Z - info: END Seeder. Sample data read and verified.
+2019-01-24T21:53:50.561Z - error: uncaughtException: drCaseData is not defined date=Thu Jan 24 2019 15:53:50 GMT-0600 (Central Standard Time), pid=10264, uid=null, gid=null, cwd=c:\Users\S530742\Desktop\CI\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.11.3, argv=[C:\Program Files\nodejs\node.exe, c:\Users\S530742\Desktop\CI\Codeword-GDPII\bin\www], rss=129433600, heapTotal=80621568, heapUsed=57512136, external=21992766, loadavg=[0, 0, 0], uptime=23563.4319775
+ReferenceError: drCaseData is not defined
+    at c:\Users\S530742\Desktop\CI\Codeword-GDPII\controllers\controller.coursestudent.js:82:86
+    at c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongoose\lib\model.js:4659:16
+    at c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongoose\lib\query.js:4090:12
+    at cb (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongoose\lib\query.js:1782:14)
+    at result (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\utils.js:414:17)
+    at executeCallback (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\utils.js:406:9)
+    at handleCallback (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at cursor.close (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:216:62)
+    at handleCallback (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at completeClose (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:893:14)
+    at Cursor.close (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:912:10)
+    at cursor._next (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:216:23)
+    at handleCallback (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:203:5)
+    at _setCursorNotifiedImpl (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:561:38)
+    at self._endSession (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:569:46)
+    at Cursor._endSession (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:194:5)
+2019-01-24T21:55:30.433Z - error: uncaughtException: drCaseData is not defined date=Thu Jan 24 2019 15:55:30 GMT-0600 (Central Standard Time), pid=10264, uid=null, gid=null, cwd=c:\Users\S530742\Desktop\CI\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.11.3, argv=[C:\Program Files\nodejs\node.exe, c:\Users\S530742\Desktop\CI\Codeword-GDPII\bin\www], rss=103956480, heapTotal=53358592, heapUsed=49635976, external=21494315, loadavg=[0, 0, 0], uptime=23663.2989775
+ReferenceError: drCaseData is not defined
+    at c:\Users\S530742\Desktop\CI\Codeword-GDPII\controllers\controller.coursestudent.js:82:86
+    at c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongoose\lib\model.js:4659:16
+    at c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongoose\lib\query.js:4090:12
+    at cb (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongoose\lib\query.js:1782:14)
+    at result (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\utils.js:414:17)
+    at executeCallback (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\utils.js:406:9)
+    at handleCallback (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at cursor.close (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:216:62)
+    at handleCallback (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at completeClose (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:893:14)
+    at Cursor.close (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:912:10)
+    at cursor._next (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:216:23)
+    at handleCallback (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:203:5)
+    at _setCursorNotifiedImpl (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:561:38)
+    at self._endSession (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:569:46)
+    at Cursor._endSession (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:194:5)
+2019-01-24T21:55:47.118Z - info: START seeder.
+2019-01-24T21:55:47.151Z - debug: 2 dataCodewordset seeded
+2019-01-24T21:55:47.151Z - debug: 292 datacodeword seeded
+2019-01-24T21:55:47.151Z - debug: 6 datacourse seeded
+2019-01-24T21:55:47.151Z - debug: 114 dataCoursestudent seeded
+2019-01-24T21:55:47.151Z - debug: 92 hootoriginal seeded
+2019-01-24T21:55:47.151Z - debug: 200 largeset seeded
+2019-01-24T21:55:47.151Z - info: END Seeder. Sample data read and verified.
+2019-01-24T21:56:03.923Z - error: uncaughtException: drCaseData is not defined date=Thu Jan 24 2019 15:56:03 GMT-0600 (Central Standard Time), pid=7068, uid=null, gid=null, cwd=c:\Users\S530742\Desktop\CI\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.11.3, argv=[C:\Program Files\nodejs\node.exe, c:\Users\S530742\Desktop\CI\Codeword-GDPII\bin\www], rss=104263680, heapTotal=55455744, heapUsed=49768800, external=21507492, loadavg=[0, 0, 0], uptime=23696.7919775
+ReferenceError: drCaseData is not defined
+    at c:\Users\S530742\Desktop\CI\Codeword-GDPII\controllers\controller.coursestudent.js:82:86
+    at c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongoose\lib\model.js:4659:16
+    at c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongoose\lib\query.js:4090:12
+    at cb (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongoose\lib\query.js:1782:14)
+    at result (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\utils.js:414:17)
+    at executeCallback (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\utils.js:406:9)
+    at handleCallback (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at cursor.close (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:216:62)
+    at handleCallback (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at completeClose (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:893:14)
+    at Cursor.close (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:912:10)
+    at cursor._next (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:216:23)
+    at handleCallback (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:203:5)
+    at _setCursorNotifiedImpl (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:561:38)
+    at self._endSession (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:569:46)
+    at Cursor._endSession (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:194:5)
+2019-01-24T21:56:50.487Z - info: START seeder.
+2019-01-24T21:56:50.516Z - debug: 2 dataCodewordset seeded
+2019-01-24T21:56:50.516Z - debug: 292 datacodeword seeded
+2019-01-24T21:56:50.516Z - debug: 6 datacourse seeded
+2019-01-24T21:56:50.516Z - debug: 114 dataCoursestudent seeded
+2019-01-24T21:56:50.516Z - debug: 92 hootoriginal seeded
+2019-01-24T21:56:50.516Z - debug: 200 largeset seeded
+2019-01-24T21:56:50.517Z - info: END Seeder. Sample data read and verified.
+2019-01-24T21:57:18.177Z - info: START seeder.
+2019-01-24T21:57:18.207Z - debug: 2 dataCodewordset seeded
+2019-01-24T21:57:18.207Z - debug: 292 datacodeword seeded
+2019-01-24T21:57:18.207Z - debug: 6 datacourse seeded
+2019-01-24T21:57:18.207Z - debug: 114 dataCoursestudent seeded
+2019-01-24T21:57:18.207Z - debug: 92 hootoriginal seeded
+2019-01-24T21:57:18.207Z - debug: 200 largeset seeded
+2019-01-24T21:57:18.208Z - info: END Seeder. Sample data read and verified.
+2019-01-24T21:58:28.020Z - info: START seeder.
+2019-01-24T21:58:28.048Z - debug: 2 dataCodewordset seeded
+2019-01-24T21:58:28.049Z - debug: 292 datacodeword seeded
+2019-01-24T21:58:28.049Z - debug: 6 datacourse seeded
+2019-01-24T21:58:28.049Z - debug: 114 dataCoursestudent seeded
+2019-01-24T21:58:28.049Z - debug: 92 hootoriginal seeded
+2019-01-24T21:58:28.049Z - debug: 200 largeset seeded
+2019-01-24T21:58:28.049Z - info: END Seeder. Sample data read and verified.
+2019-01-24T21:59:23.339Z - info: START seeder.
+2019-01-24T21:59:23.369Z - debug: 2 dataCodewordset seeded
+2019-01-24T21:59:23.369Z - debug: 292 datacodeword seeded
+2019-01-24T21:59:23.369Z - debug: 6 datacourse seeded
+2019-01-24T21:59:23.369Z - debug: 114 dataCoursestudent seeded
+2019-01-24T21:59:23.369Z - debug: 92 hootoriginal seeded
+2019-01-24T21:59:23.369Z - debug: 200 largeset seeded
+2019-01-24T21:59:23.369Z - info: END Seeder. Sample data read and verified.
+2019-01-24T22:10:04.478Z - info: START seeder.
+2019-01-24T22:10:04.515Z - debug: 2 dataCodewordset seeded
+2019-01-24T22:10:04.515Z - debug: 292 datacodeword seeded
+2019-01-24T22:10:04.515Z - debug: 6 datacourse seeded
+2019-01-24T22:10:04.515Z - debug: 114 dataCoursestudent seeded
+2019-01-24T22:10:04.516Z - debug: 92 hootoriginal seeded
+2019-01-24T22:10:04.516Z - debug: 200 largeset seeded
+2019-01-24T22:10:04.516Z - info: END Seeder. Sample data read and verified.
+2019-01-24T22:10:26.758Z - info: START seeder.
+2019-01-24T22:10:26.794Z - debug: 2 dataCodewordset seeded
+2019-01-24T22:10:26.794Z - debug: 292 datacodeword seeded
+2019-01-24T22:10:26.794Z - debug: 6 datacourse seeded
+2019-01-24T22:10:26.795Z - debug: 114 dataCoursestudent seeded
+2019-01-24T22:10:26.795Z - debug: 92 hootoriginal seeded
+2019-01-24T22:10:26.795Z - debug: 200 largeset seeded
+2019-01-24T22:10:26.795Z - info: END Seeder. Sample data read and verified.
+2019-01-24T22:12:33.010Z - info: START seeder.
+2019-01-24T22:12:33.038Z - debug: 2 dataCodewordset seeded
+2019-01-24T22:12:33.038Z - debug: 292 datacodeword seeded
+2019-01-24T22:12:33.038Z - debug: 6 datacourse seeded
+2019-01-24T22:12:33.038Z - debug: 114 dataCoursestudent seeded
+2019-01-24T22:12:33.038Z - debug: 92 hootoriginal seeded
+2019-01-24T22:12:33.039Z - debug: 200 largeset seeded
+2019-01-24T22:12:33.039Z - info: END Seeder. Sample data read and verified.
+2019-01-24T22:19:53.296Z - info: START seeder.
+2019-01-24T22:19:53.325Z - debug: 2 dataCodewordset seeded
+2019-01-24T22:19:53.325Z - debug: 292 datacodeword seeded
+2019-01-24T22:19:53.325Z - debug: 6 datacourse seeded
+2019-01-24T22:19:53.325Z - debug: 114 dataCoursestudent seeded
+2019-01-24T22:19:53.325Z - debug: 92 hootoriginal seeded
+2019-01-24T22:19:53.325Z - debug: 200 largeset seeded
+2019-01-24T22:19:53.326Z - info: END Seeder. Sample data read and verified.
+2019-01-24T22:20:05.123Z - info: START seeder.
+2019-01-24T22:20:05.156Z - debug: 2 dataCodewordset seeded
+2019-01-24T22:20:05.156Z - debug: 292 datacodeword seeded
+2019-01-24T22:20:05.156Z - debug: 6 datacourse seeded
+2019-01-24T22:20:05.156Z - debug: 114 dataCoursestudent seeded
+2019-01-24T22:20:05.157Z - debug: 92 hootoriginal seeded
+2019-01-24T22:20:05.157Z - debug: 200 largeset seeded
+2019-01-24T22:20:05.157Z - info: END Seeder. Sample data read and verified.
+2019-01-24T22:20:38.301Z - info: START seeder.
+2019-01-24T22:20:38.336Z - debug: 2 dataCodewordset seeded
+2019-01-24T22:20:38.336Z - debug: 292 datacodeword seeded
+2019-01-24T22:20:38.336Z - debug: 6 datacourse seeded
+2019-01-24T22:20:38.336Z - debug: 114 dataCoursestudent seeded
+2019-01-24T22:20:38.336Z - debug: 92 hootoriginal seeded
+2019-01-24T22:20:38.336Z - debug: 200 largeset seeded
+2019-01-24T22:20:38.336Z - info: END Seeder. Sample data read and verified.
+2019-01-24T22:26:09.577Z - info: START seeder.
+2019-01-24T22:26:09.609Z - debug: 2 dataCodewordset seeded
+2019-01-24T22:26:09.609Z - debug: 292 datacodeword seeded
+2019-01-24T22:26:09.609Z - debug: 6 datacourse seeded
+2019-01-24T22:26:09.609Z - debug: 114 dataCoursestudent seeded
+2019-01-24T22:26:09.609Z - debug: 92 hootoriginal seeded
+2019-01-24T22:26:09.610Z - debug: 200 largeset seeded
+2019-01-24T22:26:09.610Z - info: END Seeder. Sample data read and verified.
+2019-01-24T22:26:20.206Z - info: START seeder.
+2019-01-24T22:26:20.239Z - debug: 2 dataCodewordset seeded
+2019-01-24T22:26:20.239Z - debug: 292 datacodeword seeded
+2019-01-24T22:26:20.239Z - debug: 6 datacourse seeded
+2019-01-24T22:26:20.239Z - debug: 114 dataCoursestudent seeded
+2019-01-24T22:26:20.239Z - debug: 92 hootoriginal seeded
+2019-01-24T22:26:20.239Z - debug: 200 largeset seeded
+2019-01-24T22:26:20.240Z - info: END Seeder. Sample data read and verified.
+2019-01-24T22:26:35.387Z - info: START seeder.
+2019-01-24T22:26:35.421Z - debug: 2 dataCodewordset seeded
+2019-01-24T22:26:35.421Z - debug: 292 datacodeword seeded
+2019-01-24T22:26:35.421Z - debug: 6 datacourse seeded
+2019-01-24T22:26:35.421Z - debug: 114 dataCoursestudent seeded
+2019-01-24T22:26:35.421Z - debug: 92 hootoriginal seeded
+2019-01-24T22:26:35.421Z - debug: 200 largeset seeded
+2019-01-24T22:26:35.421Z - info: END Seeder. Sample data read and verified.
+2019-01-24T22:26:54.581Z - info: START seeder.
+2019-01-24T22:26:54.609Z - debug: 2 dataCodewordset seeded
+2019-01-24T22:26:54.610Z - debug: 292 datacodeword seeded
+2019-01-24T22:26:54.610Z - debug: 6 datacourse seeded
+2019-01-24T22:26:54.610Z - debug: 114 dataCoursestudent seeded
+2019-01-24T22:26:54.610Z - debug: 92 hootoriginal seeded
+2019-01-24T22:26:54.610Z - debug: 200 largeset seeded
+2019-01-24T22:26:54.610Z - info: END Seeder. Sample data read and verified.
+2019-01-24T22:29:44.961Z - info: START seeder.
+2019-01-24T22:29:44.996Z - debug: 2 dataCodewordset seeded
+2019-01-24T22:29:44.996Z - debug: 292 datacodeword seeded
+2019-01-24T22:29:44.996Z - debug: 6 datacourse seeded
+2019-01-24T22:29:44.996Z - debug: 114 dataCoursestudent seeded
+2019-01-24T22:29:44.996Z - debug: 92 hootoriginal seeded
+2019-01-24T22:29:44.996Z - debug: 200 largeset seeded
+2019-01-24T22:29:44.996Z - info: END Seeder. Sample data read and verified.
+2019-01-24T22:29:47.089Z - error: uncaughtException: Can't set headers after they are sent. date=Thu Jan 24 2019 16:29:47 GMT-0600 (Central Standard Time), pid=9504, uid=null, gid=null, cwd=c:\Users\S530742\Desktop\CI\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.11.3, argv=[C:\Program Files\nodejs\node.exe, c:\Users\S530742\Desktop\CI\Codeword-GDPII\bin\www], rss=127197184, heapTotal=83075072, heapUsed=59250064, external=22348731, loadavg=[0, 0, 0], uptime=25719.9609775
+Error: Can't set headers after they are sent.
+    at validateHeader (_http_outgoing.js:491:11)
+    at ServerResponse.setHeader (_http_outgoing.js:498:3)
+    at ServerResponse.header (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\express\lib\response.js:767:10)
+    at ServerResponse.send (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\express\lib\response.js:170:12)
+    at ServerResponse.json (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\express\lib\response.js:267:15)
+    at c:\Users\S530742\Desktop\CI\Codeword-GDPII\controllers\controller.coursestudent.js:83:24
+    at c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongoose\lib\model.js:4659:16
+    at c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongoose\lib\query.js:4090:12
+    at process.nextTick (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+2019-01-24T22:31:18.959Z - info: START seeder.
+2019-01-24T22:31:19.000Z - debug: 2 dataCodewordset seeded
+2019-01-24T22:31:19.000Z - debug: 292 datacodeword seeded
+2019-01-24T22:31:19.000Z - debug: 6 datacourse seeded
+2019-01-24T22:31:19.000Z - debug: 114 dataCoursestudent seeded
+2019-01-24T22:31:19.001Z - debug: 92 hootoriginal seeded
+2019-01-24T22:31:19.001Z - debug: 200 largeset seeded
+2019-01-24T22:31:19.001Z - info: END Seeder. Sample data read and verified.
+2019-01-24T22:31:20.929Z - error: uncaughtException: Can't set headers after they are sent. date=Thu Jan 24 2019 16:31:20 GMT-0600 (Central Standard Time), pid=10796, uid=null, gid=null, cwd=c:\Users\S530742\Desktop\CI\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.11.3, argv=[C:\Program Files\nodejs\node.exe, c:\Users\S530742\Desktop\CI\Codeword-GDPII\bin\www], rss=126263296, heapTotal=83243008, heapUsed=50668480, external=21708835, loadavg=[0, 0, 0], uptime=25813.8009775
+Error: Can't set headers after they are sent.
+    at validateHeader (_http_outgoing.js:491:11)
+    at ServerResponse.setHeader (_http_outgoing.js:498:3)
+    at ServerResponse.header (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\express\lib\response.js:767:10)
+    at ServerResponse.send (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\express\lib\response.js:170:12)
+    at ServerResponse.json (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\express\lib\response.js:267:15)
+    at c:\Users\S530742\Desktop\CI\Codeword-GDPII\controllers\controller.coursestudent.js:83:24
+    at c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongoose\lib\model.js:4659:16
+    at c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongoose\lib\query.js:4090:12
+    at process.nextTick (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+2019-01-24T22:32:28.657Z - info: START seeder.
+2019-01-24T22:32:28.689Z - debug: 2 dataCodewordset seeded
+2019-01-24T22:32:28.689Z - debug: 292 datacodeword seeded
+2019-01-24T22:32:28.689Z - debug: 6 datacourse seeded
+2019-01-24T22:32:28.689Z - debug: 114 dataCoursestudent seeded
+2019-01-24T22:32:28.689Z - debug: 92 hootoriginal seeded
+2019-01-24T22:32:28.690Z - debug: 200 largeset seeded
+2019-01-24T22:32:28.690Z - info: END Seeder. Sample data read and verified.
+2019-01-24T22:32:30.173Z - error: uncaughtException: Can't set headers after they are sent. date=Thu Jan 24 2019 16:32:30 GMT-0600 (Central Standard Time), pid=9988, uid=null, gid=null, cwd=c:\Users\S530742\Desktop\CI\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.11.3, argv=[C:\Program Files\nodejs\node.exe, c:\Users\S530742\Desktop\CI\Codeword-GDPII\bin\www], rss=127426560, heapTotal=83660800, heapUsed=60528888, external=22348770, loadavg=[0, 0, 0], uptime=25883.0449775
+Error: Can't set headers after they are sent.
+    at validateHeader (_http_outgoing.js:491:11)
+    at ServerResponse.setHeader (_http_outgoing.js:498:3)
+    at ServerResponse.header (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\express\lib\response.js:767:10)
+    at ServerResponse.send (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\express\lib\response.js:170:12)
+    at ServerResponse.json (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\express\lib\response.js:267:15)
+    at c:\Users\S530742\Desktop\CI\Codeword-GDPII\controllers\controller.coursestudent.js:84:24
+    at c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongoose\lib\model.js:4659:16
+    at c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongoose\lib\query.js:4090:12
+    at process.nextTick (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+2019-01-24T22:33:05.189Z - info: START seeder.
+2019-01-24T22:33:05.222Z - debug: 2 dataCodewordset seeded
+2019-01-24T22:33:05.223Z - debug: 292 datacodeword seeded
+2019-01-24T22:33:05.223Z - debug: 6 datacourse seeded
+2019-01-24T22:33:05.223Z - debug: 114 dataCoursestudent seeded
+2019-01-24T22:33:05.223Z - debug: 92 hootoriginal seeded
+2019-01-24T22:33:05.223Z - debug: 200 largeset seeded
+2019-01-24T22:33:05.223Z - info: END Seeder. Sample data read and verified.
+2019-01-24T22:33:06.659Z - error: uncaughtException: Can't set headers after they are sent. date=Thu Jan 24 2019 16:33:06 GMT-0600 (Central Standard Time), pid=5832, uid=null, gid=null, cwd=c:\Users\S530742\Desktop\CI\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.11.3, argv=[C:\Program Files\nodejs\node.exe, c:\Users\S530742\Desktop\CI\Codeword-GDPII\bin\www], rss=127238144, heapTotal=83660800, heapUsed=58215952, external=22295833, loadavg=[0, 0, 0], uptime=25919.5309775
+Error: Can't set headers after they are sent.
+    at validateHeader (_http_outgoing.js:491:11)
+    at ServerResponse.setHeader (_http_outgoing.js:498:3)
+    at ServerResponse.header (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\express\lib\response.js:767:10)
+    at ServerResponse.send (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\express\lib\response.js:170:12)
+    at ServerResponse.json (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\express\lib\response.js:267:15)
+    at c:\Users\S530742\Desktop\CI\Codeword-GDPII\controllers\controller.coursestudent.js:81:24
+    at c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongoose\lib\model.js:4659:16
+    at c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongoose\lib\query.js:4079:14
+    at cb (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongoose\lib\query.js:1778:14)
+    at err (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\utils.js:415:14)
+    at executeCallback (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\utils.js:404:25)
+    at handleCallback (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at cursor._endSession.cursor._endSession (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:212:38)
+    at ClientSession.endSession (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb-core\lib\sessions.js:129:41)
+    at Cursor._endSession (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:189:13)
+    at Cursor._endSession (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:226:59)
+    at cursor._next (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:212:20)
+    at handleCallback (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:203:5)
+    at c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:608:23
+    at queryCallback (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:248:16)
+    at c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongodb-core\lib\connection\pool.js:532:18
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+2019-01-24T22:36:16.029Z - info: START seeder.
+2019-01-24T22:36:16.062Z - debug: 2 dataCodewordset seeded
+2019-01-24T22:36:16.062Z - debug: 292 datacodeword seeded
+2019-01-24T22:36:16.062Z - debug: 6 datacourse seeded
+2019-01-24T22:36:16.062Z - debug: 114 dataCoursestudent seeded
+2019-01-24T22:36:16.062Z - debug: 92 hootoriginal seeded
+2019-01-24T22:36:16.062Z - debug: 200 largeset seeded
+2019-01-24T22:36:16.062Z - info: END Seeder. Sample data read and verified.
+2019-01-24T22:36:17.013Z - error: uncaughtException: Can't set headers after they are sent. date=Thu Jan 24 2019 16:36:17 GMT-0600 (Central Standard Time), pid=7032, uid=null, gid=null, cwd=c:\Users\S530742\Desktop\CI\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.11.3, argv=[C:\Program Files\nodejs\node.exe, c:\Users\S530742\Desktop\CI\Codeword-GDPII\bin\www], rss=127696896, heapTotal=83660800, heapUsed=58661464, external=22354195, loadavg=[0, 0, 0], uptime=26109.8839775
+Error: Can't set headers after they are sent.
+    at validateHeader (_http_outgoing.js:491:11)
+    at ServerResponse.setHeader (_http_outgoing.js:498:3)
+    at ServerResponse.header (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\express\lib\response.js:767:10)
+    at ServerResponse.send (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\express\lib\response.js:170:12)
+    at ServerResponse.json (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\express\lib\response.js:267:15)
+    at c:\Users\S530742\Desktop\CI\Codeword-GDPII\controllers\controller.coursestudent.js:85:24
+    at c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongoose\lib\model.js:4659:16
+    at c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongoose\lib\utils.js:258:16
+    at _hooks.execPost (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongoose\lib\query.js:4065:11)
+    at c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\kareem\index.js:135:16
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+2019-01-24T22:36:27.538Z - info: START seeder.
+2019-01-24T22:36:27.572Z - debug: 2 dataCodewordset seeded
+2019-01-24T22:36:27.572Z - debug: 292 datacodeword seeded
+2019-01-24T22:36:27.572Z - debug: 6 datacourse seeded
+2019-01-24T22:36:27.572Z - debug: 114 dataCoursestudent seeded
+2019-01-24T22:36:27.572Z - debug: 92 hootoriginal seeded
+2019-01-24T22:36:27.572Z - debug: 200 largeset seeded
+2019-01-24T22:36:27.572Z - info: END Seeder. Sample data read and verified.
+2019-01-24T22:36:41.543Z - error: uncaughtException: Can't set headers after they are sent. date=Thu Jan 24 2019 16:36:41 GMT-0600 (Central Standard Time), pid=9508, uid=null, gid=null, cwd=c:\Users\S530742\Desktop\CI\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.11.3, argv=[C:\Program Files\nodejs\node.exe, c:\Users\S530742\Desktop\CI\Codeword-GDPII\bin\www], rss=98037760, heapTotal=50737152, heapUsed=46359856, external=21500803, loadavg=[0, 0, 0], uptime=26134.4139775
+Error: Can't set headers after they are sent.
+    at validateHeader (_http_outgoing.js:491:11)
+    at ServerResponse.setHeader (_http_outgoing.js:498:3)
+    at ServerResponse.header (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\express\lib\response.js:767:10)
+    at ServerResponse.send (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\express\lib\response.js:170:12)
+    at ServerResponse.json (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\express\lib\response.js:267:15)
+    at c:\Users\S530742\Desktop\CI\Codeword-GDPII\controllers\controller.coursestudent.js:85:24
+    at c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongoose\lib\model.js:4659:16
+    at c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongoose\lib\utils.js:258:16
+    at _hooks.execPost (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongoose\lib\query.js:4065:11)
+    at c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\kareem\index.js:135:16
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+2019-01-24T22:37:08.834Z - info: START seeder.
+2019-01-24T22:37:08.868Z - debug: 2 dataCodewordset seeded
+2019-01-24T22:37:08.868Z - debug: 292 datacodeword seeded
+2019-01-24T22:37:08.868Z - debug: 6 datacourse seeded
+2019-01-24T22:37:08.868Z - debug: 114 dataCoursestudent seeded
+2019-01-24T22:37:08.868Z - debug: 92 hootoriginal seeded
+2019-01-24T22:37:08.868Z - debug: 200 largeset seeded
+2019-01-24T22:37:08.868Z - info: END Seeder. Sample data read and verified.
+2019-01-24T22:38:44.072Z - info: START seeder.
+2019-01-24T22:38:44.112Z - debug: 2 dataCodewordset seeded
+2019-01-24T22:38:44.112Z - debug: 292 datacodeword seeded
+2019-01-24T22:38:44.112Z - debug: 6 datacourse seeded
+2019-01-24T22:38:44.112Z - debug: 114 dataCoursestudent seeded
+2019-01-24T22:38:44.113Z - debug: 92 hootoriginal seeded
+2019-01-24T22:38:44.113Z - debug: 200 largeset seeded
+2019-01-24T22:38:44.113Z - info: END Seeder. Sample data read and verified.
+2019-01-24T22:39:00.826Z - info: START seeder.
+2019-01-24T22:39:00.861Z - debug: 2 dataCodewordset seeded
+2019-01-24T22:39:00.861Z - debug: 292 datacodeword seeded
+2019-01-24T22:39:00.861Z - debug: 6 datacourse seeded
+2019-01-24T22:39:00.861Z - debug: 114 dataCoursestudent seeded
+2019-01-24T22:39:00.861Z - debug: 92 hootoriginal seeded
+2019-01-24T22:39:00.862Z - debug: 200 largeset seeded
+2019-01-24T22:39:00.862Z - info: END Seeder. Sample data read and verified.
+2019-01-24T22:41:17.795Z - info: START seeder.
+2019-01-24T22:41:17.825Z - debug: 2 dataCodewordset seeded
+2019-01-24T22:41:17.825Z - debug: 292 datacodeword seeded
+2019-01-24T22:41:17.825Z - debug: 6 datacourse seeded
+2019-01-24T22:41:17.825Z - debug: 114 dataCoursestudent seeded
+2019-01-24T22:41:17.825Z - debug: 92 hootoriginal seeded
+2019-01-24T22:41:17.825Z - debug: 200 largeset seeded
+2019-01-24T22:41:17.825Z - info: END Seeder. Sample data read and verified.
+2019-01-24T22:42:08.017Z - info: START seeder.
+2019-01-24T22:42:08.051Z - debug: 2 dataCodewordset seeded
+2019-01-24T22:42:08.052Z - debug: 292 datacodeword seeded
+2019-01-24T22:42:08.052Z - debug: 6 datacourse seeded
+2019-01-24T22:42:08.052Z - debug: 114 dataCoursestudent seeded
+2019-01-24T22:42:08.052Z - debug: 92 hootoriginal seeded
+2019-01-24T22:42:08.052Z - debug: 200 largeset seeded
+2019-01-24T22:42:08.052Z - info: END Seeder. Sample data read and verified.
+2019-01-24T22:42:20.421Z - info: START seeder.
+2019-01-24T22:42:20.454Z - debug: 2 dataCodewordset seeded
+2019-01-24T22:42:20.454Z - debug: 292 datacodeword seeded
+2019-01-24T22:42:20.454Z - debug: 6 datacourse seeded
+2019-01-24T22:42:20.454Z - debug: 114 dataCoursestudent seeded
+2019-01-24T22:42:20.454Z - debug: 92 hootoriginal seeded
+2019-01-24T22:42:20.454Z - debug: 200 largeset seeded
+2019-01-24T22:42:20.454Z - info: END Seeder. Sample data read and verified.
+2019-01-24T22:42:40.588Z - info: START seeder.
+2019-01-24T22:42:40.628Z - debug: 2 dataCodewordset seeded
+2019-01-24T22:42:40.628Z - debug: 292 datacodeword seeded
+2019-01-24T22:42:40.628Z - debug: 6 datacourse seeded
+2019-01-24T22:42:40.629Z - debug: 114 dataCoursestudent seeded
+2019-01-24T22:42:40.629Z - debug: 92 hootoriginal seeded
+2019-01-24T22:42:40.629Z - debug: 200 largeset seeded
+2019-01-24T22:42:40.629Z - info: END Seeder. Sample data read and verified.
+2019-01-24T22:43:55.854Z - info: START seeder.
+2019-01-24T22:43:55.888Z - debug: 2 dataCodewordset seeded
+2019-01-24T22:43:55.888Z - debug: 292 datacodeword seeded
+2019-01-24T22:43:55.888Z - debug: 6 datacourse seeded
+2019-01-24T22:43:55.888Z - debug: 114 dataCoursestudent seeded
+2019-01-24T22:43:55.888Z - debug: 92 hootoriginal seeded
+2019-01-24T22:43:55.888Z - debug: 200 largeset seeded
+2019-01-24T22:43:55.888Z - info: END Seeder. Sample data read and verified.
+2019-01-24T22:44:14.532Z - info: START seeder.
+2019-01-24T22:44:14.571Z - debug: 2 dataCodewordset seeded
+2019-01-24T22:44:14.571Z - debug: 292 datacodeword seeded
+2019-01-24T22:44:14.571Z - debug: 6 datacourse seeded
+2019-01-24T22:44:14.571Z - debug: 114 dataCoursestudent seeded
+2019-01-24T22:44:14.571Z - debug: 92 hootoriginal seeded
+2019-01-24T22:44:14.572Z - debug: 200 largeset seeded
+2019-01-24T22:44:14.572Z - info: END Seeder. Sample data read and verified.
+2019-01-24T22:44:47.812Z - info: START seeder.
+2019-01-24T22:44:47.852Z - debug: 2 dataCodewordset seeded
+2019-01-24T22:44:47.852Z - debug: 292 datacodeword seeded
+2019-01-24T22:44:47.852Z - debug: 6 datacourse seeded
+2019-01-24T22:44:47.852Z - debug: 114 dataCoursestudent seeded
+2019-01-24T22:44:47.853Z - debug: 92 hootoriginal seeded
+2019-01-24T22:44:47.853Z - debug: 200 largeset seeded
+2019-01-24T22:44:47.853Z - info: END Seeder. Sample data read and verified.
+2019-01-24T22:45:18.086Z - info: START seeder.
+2019-01-24T22:45:18.114Z - debug: 2 dataCodewordset seeded
+2019-01-24T22:45:18.114Z - debug: 292 datacodeword seeded
+2019-01-24T22:45:18.114Z - debug: 6 datacourse seeded
+2019-01-24T22:45:18.114Z - debug: 114 dataCoursestudent seeded
+2019-01-24T22:45:18.114Z - debug: 92 hootoriginal seeded
+2019-01-24T22:45:18.114Z - debug: 200 largeset seeded
+2019-01-24T22:45:18.114Z - info: END Seeder. Sample data read and verified.
+2019-01-24T22:46:45.267Z - info: START seeder.
+2019-01-24T22:46:45.296Z - debug: 2 dataCodewordset seeded
+2019-01-24T22:46:45.296Z - debug: 292 datacodeword seeded
+2019-01-24T22:46:45.296Z - debug: 6 datacourse seeded
+2019-01-24T22:46:45.296Z - debug: 114 dataCoursestudent seeded
+2019-01-24T22:46:45.296Z - debug: 92 hootoriginal seeded
+2019-01-24T22:46:45.296Z - debug: 200 largeset seeded
+2019-01-24T22:46:45.296Z - info: END Seeder. Sample data read and verified.
+2019-01-24T22:47:45.042Z - info: START seeder.
+2019-01-24T22:47:45.071Z - debug: 2 dataCodewordset seeded
+2019-01-24T22:47:45.071Z - debug: 292 datacodeword seeded
+2019-01-24T22:47:45.071Z - debug: 6 datacourse seeded
+2019-01-24T22:47:45.071Z - debug: 114 dataCoursestudent seeded
+2019-01-24T22:47:45.071Z - debug: 92 hootoriginal seeded
+2019-01-24T22:47:45.071Z - debug: 200 largeset seeded
+2019-01-24T22:47:45.072Z - info: END Seeder. Sample data read and verified.

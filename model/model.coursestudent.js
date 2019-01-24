@@ -3,6 +3,7 @@
  */
 var mongoose = require('mongoose');
 var validator = require('validator');
+var mongoosePaginate = require('mongoose-paginate');
 var CourseStudentModel = mongoose.model('CourseStudentModel', {
     CourseNameKey: {
     type: String,
@@ -36,4 +37,5 @@ var CourseStudentModel = mongoose.model('CourseStudentModel', {
     default: false
    }
 });
+
 module.exports.CourseStudentModel = CourseStudentModel

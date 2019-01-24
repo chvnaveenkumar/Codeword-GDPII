@@ -72,20 +72,16 @@ function shuffle(array) {
 module.exports.addCourseStudent = addCourseStudent;
 
 let getCourseStudent = (req,res) => {
-    //code by anurag
-    let drCaseDataRead = fs.readFileSync('./data/data.coursestudent.json'); 
-    let drCaseData = JSON.parse(drCaseDataRead);  
-    
-    var body = _.pick(req.body,['CourseNameValue']);    
-    CourseStudentModel.find({CourseNameKey: body.CourseNameValue}, function (err, courseStudents) {
+    var body = _.pick(req.body,['CourseNameValue']);
+    var _pageNumber = parseInt(req.param('_pageNumber'));
+    var _pageSize = parseInt(req.param('_pageSize'));
+    console.log(_pageNumber)
+    CourseStudentModel.find({CourseNameKey: body.CourseNameValue}).skip((_pageNumber-1)*_pageSize).limit(_pageSize).exec(function (err, courseStudents) {
         if(err){
             return res.json({ code: 200, message: 'No courses created!!'});
         }
         if (courseStudents)
-        //code by anurag
-            return res.json({ code: 200, data: courseStudents, drCaseData : _.filter(drCaseData, { 'CourseNameKey':  body.CourseNameValue}) });
-        }).catch((e) => {
-        return res.json({ code: 400, message: e });
+            return res.json({ code: 200, data: courseStudents });
         })
 }
 

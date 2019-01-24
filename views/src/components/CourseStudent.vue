@@ -28,7 +28,7 @@
 </div>
 <br>
 <br>
- <table class="table col-md-6 col-lg-6 col-xs-0 col-sm-0 " >
+ <table class="table table-sm" >
  <thead class="thead-dark">
             <tr>
                 <th>
@@ -46,24 +46,26 @@
                         <u>CodeWord</u>
                     </h4>
                 </th>
+                	<th>
+                    <h4>
+                        <u></u>
+                    </h4>
+                </th>
+                	<th>
+                    <h4>
+                        <u></u>
+                    </h4>
+                </th>
             </tr>
         </thead>
 
-  <tbody>
-    <tr v-for="courseStudent in drCaseStudentData" :key="courseStudent._id">
-      <td scope="row">{{ courseStudent.EmailKey }}</td>
-      <td>{{ courseStudent.Name }}</td>
-      <td>{{ courseStudent.Codeword }}</td>
-      <a><button class="btn" data-toggle="modal" @click="selectStudent(courseNameData,courseStudent.EmailKey, courseStudent.StudentName)" data-target="#editStudent"><i class="fa fa-pencil fa-xs"></i></button></a>
-      <a><button class="btn" data-toggle="modal" @click="selectStudent(courseNameData, courseStudent.EmailKey, courseStudent.StudentName)" data-target="#deleteStudent"><i class="fa fa-trash fa-xs"></i></button></a>
-    </tr>
-    
+  <tbody>    
     <tr v-for="courseStudent in courseStudentData" :key="courseStudent._id">
       <td scope="row">{{ courseStudent.EmailKey }}</td>
       <td>{{ courseStudent.StudentName }}</td>
        <td>{{ courseStudent.Codeword }}</td>
-      <a><button class="btn" data-toggle="modal" @click="selectStudentInfo(courseStudent)" data-target="#editStudent"><i class="fa fa-pencil fa-xs"></i></button></a>
-      <a><button class="btn" data-toggle="modal" @click="selectStudent(courseNameData, courseStudent.EmailKey, courseStudent.StudentName)" data-target="#deleteStudent"><i class="fa fa-trash fa-xs"></i></button></a>
+      <td><a><button class="btn" data-toggle="modal" @click="selectStudentInfo(courseStudent)" data-target="#editStudent"><i class="fa fa-pencil fa-xs"></i></button></a></td>
+      <td><a><button class="btn" data-toggle="modal" @click="selectStudent(courseNameData, courseStudent.EmailKey, courseStudent.StudentName)" data-target="#deleteStudent"><i class="fa fa-trash fa-xs"></i></button></a></td>
     </tr>
   </tbody>
 </table>

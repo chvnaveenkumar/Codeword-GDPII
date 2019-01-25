@@ -19,6 +19,18 @@ if node.js is not installed go to this link(https://nodejs.org/en/) and install 
 
 4. Also do npm run dev.
 
+Sometimes you get an error, to stop that error 2 steps need to be followed:
+
+a)netstat -ano | findstr :yourPortNumber
+
+b)taskkill /PID typeyourPIDhere /F
+
+here is the link to refer :https://stackoverflow.com/questions/39632667/how-to-kill-the-process-currently-using-a-port-on-localhost-in-windows
+
+now do npm run dev
+
+In this way we remove port error.
+
 5. Now click on f5 to connect to database.
 
 Now open chrome and use localhost:3000

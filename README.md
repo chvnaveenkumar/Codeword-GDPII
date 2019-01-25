@@ -17,12 +17,8 @@ if node.js is not installed go to this link(https://nodejs.org/en/) and install 
 
 3. After step 2 set path to client (cd ..\views\) and use npm install command to install all the dependency modules in the project which is used in package.json.
 
-4. In views use command hit npm build run to run the project.
+4. Also do npm run dev.
 
-5. Also do npm run dev.
-
-5. And get back use cd .. command to get back.
-
-6. Now start the Server using npm start
+5. Now click on f5 to connect to database.
 
 Now open chrome and use localhost:3000

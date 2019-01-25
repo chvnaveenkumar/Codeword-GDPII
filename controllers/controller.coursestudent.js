@@ -73,16 +73,27 @@ module.exports.addCourseStudent = addCourseStudent;
 
 let getCourseStudent = (req,res) => {
     var body = _.pick(req.body,['CourseNameValue']);
-    var _pageNumber = parseInt(req.param('_pageNumber'));
-    var _pageSize = parseInt(req.param('_pageSize'));
-    console.log(_pageNumber)
-    CourseStudentModel.find({CourseNameKey: body.CourseNameValue}).skip((_pageNumber-1)*_pageSize).limit(_pageSize).exec(function (err, courseStudents) {
-        if(err){
-            return res.json({ code: 200, message: 'No courses created!!'});
-        }
-        if (courseStudents)
-            return res.json({ code: 200, data: courseStudents });
-        })
+    let pageCount = 10;
+    let pageNumber = parseInt(req.param('pageNumber')) || 0;
+    let pages = 0;
+    CourseStudentModel.find({CourseNameKey: body.CourseNameValue}).exec( function (err, count){
+        CourseStudentModel.find({CourseNameKey: body.CourseNameValue}).skip(pageNumber * pageCount).limit(pageCount).exec(function (err, courseStudents) {
+            if(err){
+                return res.json({ code: 200, message: 'No courses created!!'});
+            }
+            if (courseStudents)
+                pages = Math.ceil(count.length / pageCount );
+                console.log(pages)
+                if( pageNumber === 0) {
+                return res.json({ code: 200, courseStudents,currentPage: pageNumber, pages, prevUrl: '', nextUrl: `codeword/getcoursestudent?pageNumber=${pageNumber + 1}` });}
+                else if( pageNumber ===  pages - 1) {
+                    return res.json({ code: 200, courseStudents, currentPage: pageNumber, pages, prevUrl: `codeword/getcoursestudent?pageNumber=${pageNumber - 1}`, nextUrl: `` });}
+                else {
+                    return res.json({ code: 200, courseStudents, currentPage: pageNumber, pages, prevUrl: `codeword/getcoursestudent?pageNumber=${pageNumber - 1}`, nextUrl: `codeword/getcoursestudent?pageNumber=${pageNumber + 1}` });
+                }
+    
+            })    
+    })
 }
 
 module.exports.getCourseStudent = getCourseStudent;

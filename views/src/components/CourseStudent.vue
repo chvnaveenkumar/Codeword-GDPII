@@ -69,6 +69,18 @@
     </tr>
   </tbody>
 </table>
+  <div>
+        <p class="text-center mb-0">{{currentPage+1 }} / {{ pages }}</p>
+        <ul class="pagination justify-content-center">
+            <li class="page-item" :class="{disabled: prevUrl === ''}">
+                <button class="page-link" @click="checkPage(prevUrl)">Previous</button>
+            </li>
+            <li class="page-item" :class="{disabled: nextUrl === ''}">
+                <button class="page-link" @click="checkPage(nextUrl)">Next</button>
+            </li>
+        </ul>
+  </div>
+
 <!-- Modal Delete Student -->
 <div class="modal fade" id="deleteStudent" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -91,7 +103,6 @@
   </div>
 </div>
 
-
 <!-- Modal Edit Student -->
 <div class="modal fade" id="editStudent" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -113,8 +124,6 @@
     </div>
   </div>
 </div>
-
-
 
 <!-- Modal Edit Course -->
 <div class="modal fade" id="editCourse" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -162,10 +171,9 @@ export default {
   data () {
     return {
       courseNameData: '',
-      courseStudentData: '',
+      courseStudentData: [],
       courseData: '',
       coursesData: '',
-      drCaseStudentData: [],
       selectCourseName: '',
       selectEmailKey: '',
       selectstudentName: '',
@@ -178,7 +186,11 @@ export default {
       studentInfo: '',
       editStudentName: '',
       editStudentEmail: '',
-      editStudentId: ''
+      editStudentId: '',
+      currentPage: '',
+      pages: '',
+      prevUrl: '',
+      nextUrl: ''
     }
   },
   created () {
@@ -205,7 +217,11 @@ export default {
           token: window.localStorage.getItem('token')
         }
       }).then(response => {
-        this.courseStudentData = response.data.data
+        this.courseStudentData = response.data.courseStudents
+        this.currentPage = response.data.currentPage
+        this.pages = response.data.pages
+        this.nextUrl = response.data.nextUrl
+        this.prevUrl = response.data.prevUrl
         for (var i = 0; i < this.courseStudentData.length; i++) {
           this.acknowledgedTotal = this.acknowledgedTotal + 1
           if (this.courseStudentData[0].Acknowledged === true) {
@@ -214,7 +230,24 @@ export default {
             this.acknowledgedFalse = this.acknowledgedFalse + 1
           }
         }
-        this.drCaseStudentData = response.data.drCaseData
+      })
+    },
+    checkPage (url) {
+      axios({
+        method: 'post',
+        url: url,
+        data: {
+          CourseNameValue: this.courseNameData
+        },
+        headers: {
+          token: window.localStorage.getItem('token')
+        }
+      }).then(response => {
+        this.courseStudentData = response.data.courseStudents
+        this.currentPage = response.data.currentPage
+        this.pages = response.data.pages
+        this.nextUrl = response.data.nextUrl
+        this.prevUrl = response.data.prevUrl
       })
     },
     getCoursesData (courseNameData) {

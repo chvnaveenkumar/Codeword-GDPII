@@ -59,12 +59,7 @@
                         </form>
 
                     </div>
-                    <!-- Modal Footer -->
-                     <div class="modal-footer">
-                                <button type="cancel" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-                                <button type="create" class="btn btn-success" data-dismiss="modal" @click.prevent="saveCodeWordData" @click="showDetails">Create</button>
-                            </div>
-
+                  
                 </div>
             </div>
         </div>
@@ -115,8 +110,7 @@
                 
                 <td> {{ code.CodeWordSetName }} </td>
                  <td id="count">{{ codeWordSetData[code.CodeWordSetName] ? codeWordSetData[code.CodeWordSetName].length : 0 }}</td>
-                <td> <router-link to="/codeword"><button type="button" class="btn btn-info btn-sm"> View Codewords</button></router-link>
-                    </td>
+                <td> <router-link to="/codeword"><button type="button" class="btn btn-info btn-sm"> View Codewords</button></router-link></td>
             </tr>
 
         </tbody>
@@ -166,7 +160,7 @@ export default {
       }
       axios({
         method: 'post',
-        url: 'http://localhost:3000/codeword/addcodewordset',
+        url: '/codeword/addcodewordset',
         data: sendData,
         headers: {
           token: window.localStorage.getItem('token')
@@ -175,7 +169,7 @@ export default {
         if (response.data.code === 200) {
           axios({
             method: 'post',
-            url: 'http://localhost:3000/codeword/addnewcodewords',
+            url: '/codeword/addnewcodewords',
             data: sendData2,
             headers: {
               token: window.localStorage.getItem('token')
@@ -210,6 +204,7 @@ export default {
         }).then(response => {
           if (response.data && response.data.data) {
             this.codeWordSetData = response.data.data
+            console.log(response.data.data)
           }
         })
       })

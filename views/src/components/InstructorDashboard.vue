@@ -86,7 +86,7 @@
             </div>
             <div >
               <button type="cancel" class="btn btn-warning" data-dismiss="modal">Cancel</button>
-              <button type="create" class="btn btn-primary">Create Course</button>
+              <button type="create" class="btn btn-primary" data-dismiss="modal">Create Course</button>
             </div>
             </div>
             </form></div></div></div>

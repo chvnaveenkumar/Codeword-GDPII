@@ -196,6 +196,7 @@ export default {
         }
       }).then(response => {
         this.codeWordTempSetData = response.data.data
+        this.codeWordTempSetDataCount = response.data.data.length
         this.codeWordSetCount = []
         axios({
           method: 'post',

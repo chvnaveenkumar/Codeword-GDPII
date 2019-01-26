@@ -22,14 +22,11 @@
                     <li class="nav-item" v-if='this.$route.name != "StudentDashboard" && this.$route.name !== "ChangePassword"'>
                         <router-link to="/codewordset">CodeWord Set</router-link>
                     </li>
-                    <li class="nav-item" v-if='this.$route.name != "StudentDashboard" && this.$route.name !== "ChangePassword"'>
-                        <router-link to="/codeword">CodeWord</router-link>
-                    </li>
-                      <li class="nav-item dropdown">
-                      <div class="dropdown">
-                      <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown">
-                      {{ email }}
-                      </a>
+                    <li class="nav-item dropdown">
+                    <div class="dropdown">
+                    <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown">
+                    {{ email }}
+                    </a>
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                           <a class="dropdown-item" @click.prevent="changePassword" >Change Password</a>
                           <a class="dropdown-item" @click.prevent="onLogout" >Logout</a>

@@ -119,8 +119,8 @@
         <input type="text" v-model="editStudentEmail">
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primart" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-danger" @click="editStudent(editStudentId, editStudentEmail, editStudentName)">Edit Student</button>
+        <button type="button" class="btn btn-primary" @click="editStudent(editStudentId, editStudentEmail, editStudentName)">Update Details</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
       </div>
     </div>
   </div>

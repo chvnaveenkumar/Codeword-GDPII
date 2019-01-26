@@ -522,3 +522,11 @@ Error: Can't set headers after they are sent.
 2019-01-26T04:03:20.268Z - debug: 92 hootoriginal seeded
 2019-01-26T04:03:20.268Z - debug: 200 largeset seeded
 2019-01-26T04:03:20.268Z - info: END Seeder. Sample data read and verified.
+2019-01-26T04:50:53.412Z - info: START seeder.
+2019-01-26T04:50:53.442Z - debug: 2 dataCodewordset seeded
+2019-01-26T04:50:53.442Z - debug: 292 datacodeword seeded
+2019-01-26T04:50:53.442Z - debug: 6 datacourse seeded
+2019-01-26T04:50:53.442Z - debug: 114 dataCoursestudent seeded
+2019-01-26T04:50:53.443Z - debug: 92 hootoriginal seeded
+2019-01-26T04:50:53.443Z - debug: 200 largeset seeded
+2019-01-26T04:50:53.443Z - info: END Seeder. Sample data read and verified.

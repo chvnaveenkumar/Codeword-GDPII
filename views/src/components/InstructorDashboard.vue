@@ -4,14 +4,14 @@
     <button type="button" class="btn btn-success" title="Create CodeWord Set" data-toggle="modal" data-target="#addcourse" v-on:click="loadCourseModel">
       <span class="fa fa-plus"></span> Add Course </button>
   </div>
-  <div class="row" style="margin-left: 7rem;margin-right: 7rem;" >
+  <div class="row" style="margin-left: 3rem;margin-right: 7rem;" >
     <div class="col-md-3 col-lg-3 col-xs-0 col-sm-0" v-for="course in coursesData" :key="course._id">
       <div class="card border-success mb-3 cardstyle" style="max-width: 20rem;margin-top: 1rem;" >
          <div class="card-header bg-info border-success" id = "boldforcourse"><h4>{{ course.courseNameKey }}</h4>
-       <br>
+        <br>
        <div>
          {{ course.Startdate }} &nbsp;&nbsp; {{ course.Enddate }} 
-    </div>
+       </div>
          </div>
         <div class="card-body text-info">
           <h5 class="card-title" ></h5>

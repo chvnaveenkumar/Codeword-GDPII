@@ -59,43 +59,17 @@
                         </form>
 
                     </div>
-                  
+                   <!-- Modal Footer -->	
+                      <div class="modal-footer">	
+                                <button type="cancel" class="btn btn-danger" data-dismiss="modal">Cancel</button>	
+                                <button type="create" class="btn btn-success" data-dismiss="modal" @click.prevent="saveCodeWordData">Create</button>	
+                            </div>                  
                 </div>
             </div>
         </div>
     </div>
     <!-- class="table table-striped" -->
     <div class="table-responsive-sm"> 
-    <!-- <table class="table" id="codewordsetTable">
-        <thead>
-            <tr>
-                              
-                <th scope="col">
-                    <h4>
-                        <u>Codeword Set Name</u>
-                    </h4>
-                </th>
-                <th scope="col">
-                    <h4>
-                        <u>Count</u>
-                    </h4>
-                </th>
-                <th scope="col">
-                   
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr v-for="(code,index) in codeWordSetData" :key="code._id">
-                
-                <td> {{ code.CodeWordSetName }} </td>
-                 <td id="count">{{ codeWordSetCount[index] }}</td>
-                <td> <router-link to="/codeword"><button type="button" class="btn btn-info btn-sm">Show Details</button></router-link>
-                    </td>
-            </tr>
-
-        </tbody>
-    </table> -->
     <table class="table" id="codewordsetTable">
                 <thead class="thead-dark">
                     <tr>
@@ -141,8 +115,7 @@ export default {
     previewFiles () {
       this.files = this.$refs.myFile
       let data = new FormData(document.querySelector('form'))
-      axios.post('http://localhost:3000/codeword/getdataxlsx', data).then(response => {
-        console.log(response.data.data)
+      axios.post('/codeword/getdataxlsx', data).then(response => {
         this.tcodeWordSetData = response.data.data
         this.count = response.data.data.length
       })
@@ -175,7 +148,7 @@ export default {
               token: window.localStorage.getItem('token')
             }
           }).then(response => {
-            console.log(response.data.data)
+            console.log(response.data.data + 'testing')
             this.getCodeWordData()
           })
         }

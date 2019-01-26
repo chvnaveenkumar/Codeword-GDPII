@@ -3,7 +3,8 @@
    <div class="row" >
  <router-link :to="{ name: 'InstructorDashboard' }"><button type="button" style="float:left;" class="btn btn-primary btn-xs"><i class="fa fa-chevron-left fa-lg"></i> DashBoard</button></router-link>
   </div>
-      <div class="row" >
+ <div class="card">
+   <h5 class="card-header">      <div class="row" >
             <div class="col-md-6 col-lg-6 col-xs-0 col-sm-0">
                 <h3 style="font-weight:bold;text-align:left"> Course Name: {{ courseNameData }} </h3>
             </div>
@@ -11,7 +12,7 @@
                 <h3 style="font-weight:bold;text-align:right"> Acknowledged Status: {{ ( acknowledgedTrue / acknowledgedTotal )  * 100}}% </h3>
             </div>
       </div>
- <div class="card">
+</h5>
   <div class="card-body">
     <div class="row" >
     <div class="col-md-6 col-lg-6 col-xs-0 col-sm-0" style="text-align:left;font-weight:bold">
@@ -28,7 +29,7 @@
 </div>
 <br>
 <br>
- <table class="table table-sm" >
+ <table class="table table-striped table-sm" >
  <thead class="thead-dark">
             <tr>
                 <th>

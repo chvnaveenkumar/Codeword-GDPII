@@ -111,11 +111,11 @@
                     </tr>
                 </thead>
                 <tbody>
-            <tr v-for="(code,index) in codeWordTempSetData" :key="code._id">
+            <tr v-for="code in codeWordTempSetData" :key="code._id">
                 
                 <td> {{ code.CodeWordSetName }} </td>
                  <td id="count">{{ codeWordSetData[code.CodeWordSetName] ? codeWordSetData[code.CodeWordSetName].length : 0 }}</td>
-                <td> <router-link to="/codeword"><button type="button" class="btn btn-info btn-sm">Show Details</button></router-link>
+                <td> <router-link to="/codeword"><button type="button" class="btn btn-info btn-sm"> View Codewords</button></router-link>
                     </td>
             </tr>
 

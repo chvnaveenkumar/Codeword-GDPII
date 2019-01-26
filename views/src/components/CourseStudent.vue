@@ -71,7 +71,7 @@
   </tbody>
 </table>
   <div>
-        <p class="text-center mb-0">{{currentPage+1 }} / {{ pages }}</p>
+        <p class="text-center mb-0">{{ currentPage+1 }} / {{ pages }}</p>
         <ul class="pagination justify-content-center">
             <li class="page-item" :class="{disabled: prevUrl === ''}">
                 <button class="page-link" @click="checkPage(prevUrl)">Previous</button>

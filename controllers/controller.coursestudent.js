@@ -83,11 +83,13 @@ let getCourseStudent = (req,res) => {
             }
             if (courseStudents)
                 pages = Math.ceil(count.length / pageCount );
-                console.log(pages)
-                if( pageNumber === 0) {
+                console.log(pages + " "+ pageNumber)
+                if( pageNumber === (pages-1)) {
+                    return res.json({ code: 200, courseStudents,currentPage: pageNumber, pages, prevUrl: '', nextUrl: '' });}
+                else if( pageNumber === 0) {
                 return res.json({ code: 200, courseStudents,currentPage: pageNumber, pages, prevUrl: '', nextUrl: `codeword/getcoursestudent?pageNumber=${pageNumber + 1}` });}
-                else if( pageNumber ===  pages - 1) {
-                    return res.json({ code: 200, courseStudents, currentPage: pageNumber, pages, prevUrl: `codeword/getcoursestudent?pageNumber=${pageNumber - 1}`, nextUrl: `` });}
+                else if( pageNumber ===  (pages -1)) {
+                    return res.json({ code: 200, courseStudents, currentPage: pageNumber, pages, prevUrl: `codeword/getcoursestudent?pageNumber=${pageNumber - 1}`, nextUrl: '' });}
                 else {
                     return res.json({ code: 200, courseStudents, currentPage: pageNumber, pages, prevUrl: `codeword/getcoursestudent?pageNumber=${pageNumber - 1}`, nextUrl: `codeword/getcoursestudent?pageNumber=${pageNumber + 1}` });
                 }

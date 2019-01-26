@@ -17,7 +17,7 @@
                         <h5 class="modal-title" id="addcourseLabel">Create Codeword Set</h5>
                         <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span></button> -->
-                      <button id="exPopover3" class="btn btn-info btn-sm"><i class="fa fa-eye"></i> Hint</button>
+                      <button id="exPopover3" class="btn btn-outline-primary"><i class="fa fa-eye"></i> Hint</button>
                        
                       <b-popover target="exPopover3" triggers="click" placement="auto">
                         <template slot="title">Rules for Creating Codewords</template>

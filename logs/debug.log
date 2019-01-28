@@ -866,3 +866,91 @@ Error: Can't set headers after they are sent.
 2019-01-28T18:55:51.164Z - debug: 92 hootoriginal seeded
 2019-01-28T18:55:51.164Z - debug: 200 largeset seeded
 2019-01-28T18:55:51.164Z - info: END Seeder. Sample data read and verified.
+2019-01-28T19:14:42.401Z - info: START seeder.
+2019-01-28T19:14:42.441Z - debug: 2 dataCodewordset seeded
+2019-01-28T19:14:42.441Z - debug: 292 datacodeword seeded
+2019-01-28T19:14:42.443Z - debug: 6 datacourse seeded
+2019-01-28T19:14:42.443Z - debug: 114 dataCoursestudent seeded
+2019-01-28T19:14:42.443Z - debug: 92 hootoriginal seeded
+2019-01-28T19:14:42.443Z - debug: 200 largeset seeded
+2019-01-28T19:14:42.443Z - info: END Seeder. Sample data read and verified.
+2019-01-28T19:20:33.075Z - info: START seeder.
+2019-01-28T19:20:33.125Z - debug: 2 dataCodewordset seeded
+2019-01-28T19:20:33.125Z - debug: 292 datacodeword seeded
+2019-01-28T19:20:33.125Z - debug: 6 datacourse seeded
+2019-01-28T19:20:33.126Z - debug: 114 dataCoursestudent seeded
+2019-01-28T19:20:33.126Z - debug: 92 hootoriginal seeded
+2019-01-28T19:20:33.126Z - debug: 200 largeset seeded
+2019-01-28T19:20:33.126Z - info: END Seeder. Sample data read and verified.
+2019-01-28T19:24:35.951Z - info: START seeder.
+2019-01-28T19:24:35.993Z - debug: 2 dataCodewordset seeded
+2019-01-28T19:24:35.993Z - debug: 292 datacodeword seeded
+2019-01-28T19:24:35.993Z - debug: 6 datacourse seeded
+2019-01-28T19:24:35.997Z - debug: 114 dataCoursestudent seeded
+2019-01-28T19:24:35.997Z - debug: 92 hootoriginal seeded
+2019-01-28T19:24:35.997Z - debug: 200 largeset seeded
+2019-01-28T19:24:35.997Z - info: END Seeder. Sample data read and verified.
+2019-01-28T19:25:39.526Z - info: START seeder.
+2019-01-28T19:25:39.579Z - debug: 2 dataCodewordset seeded
+2019-01-28T19:25:39.579Z - debug: 292 datacodeword seeded
+2019-01-28T19:25:39.579Z - debug: 6 datacourse seeded
+2019-01-28T19:25:39.579Z - debug: 114 dataCoursestudent seeded
+2019-01-28T19:25:39.579Z - debug: 92 hootoriginal seeded
+2019-01-28T19:25:39.580Z - debug: 200 largeset seeded
+2019-01-28T19:25:39.580Z - info: END Seeder. Sample data read and verified.
+2019-01-28T19:25:44.530Z - error: uncaughtException: CourseModel is not defined date=Mon Jan 28 2019 13:25:44 GMT-0600 (Central Standard Time), pid=66940, uid=null, gid=null, cwd=c:\sravya\Spring2019\GDP11\228\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, c:\sravya\Spring2019\GDP11\228\Codeword-GDPII\bin\www], rss=133316608, heapTotal=84647936, heapUsed=61734976, external=21820698, loadavg=[0, 0, 0], uptime=791169.209302
+ReferenceError: CourseModel is not defined
+    at c:\sravya\Spring2019\GDP11\228\Codeword-GDPII\controllers\controller.studentdashboard.js:25:13
+    at c:\sravya\Spring2019\GDP11\228\Codeword-GDPII\node_modules\mongoose\lib\model.js:4669:16
+    at c:\sravya\Spring2019\GDP11\228\Codeword-GDPII\node_modules\mongoose\lib\query.js:4090:12
+    at process.nextTick (c:\sravya\Spring2019\GDP11\228\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-01-28T19:27:50.451Z - error: uncaughtException: CourseModel is not defined date=Mon Jan 28 2019 13:27:50 GMT-0600 (Central Standard Time), pid=66940, uid=null, gid=null, cwd=c:\sravya\Spring2019\GDP11\228\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, c:\sravya\Spring2019\GDP11\228\Codeword-GDPII\bin\www], rss=112758784, heapTotal=61747200, heapUsed=54150544, external=21559720, loadavg=[0, 0, 0], uptime=791295.1171205
+ReferenceError: CourseModel is not defined
+    at c:\sravya\Spring2019\GDP11\228\Codeword-GDPII\controllers\controller.studentdashboard.js:25:13
+    at c:\sravya\Spring2019\GDP11\228\Codeword-GDPII\node_modules\mongoose\lib\model.js:4669:16
+    at c:\sravya\Spring2019\GDP11\228\Codeword-GDPII\node_modules\mongoose\lib\query.js:4090:12
+    at process.nextTick (c:\sravya\Spring2019\GDP11\228\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-01-28T19:28:10.648Z - info: START seeder.
+2019-01-28T19:28:10.735Z - debug: 2 dataCodewordset seeded
+2019-01-28T19:28:10.735Z - debug: 292 datacodeword seeded
+2019-01-28T19:28:10.735Z - debug: 6 datacourse seeded
+2019-01-28T19:28:10.736Z - debug: 114 dataCoursestudent seeded
+2019-01-28T19:28:10.736Z - debug: 92 hootoriginal seeded
+2019-01-28T19:28:10.736Z - debug: 200 largeset seeded
+2019-01-28T19:28:10.736Z - info: END Seeder. Sample data read and verified.
+2019-01-28T19:28:36.213Z - error: uncaughtException: CourseModel is not defined date=Mon Jan 28 2019 13:28:36 GMT-0600 (Central Standard Time), pid=74020, uid=null, gid=null, cwd=c:\sravya\Spring2019\GDP11\228\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, c:\sravya\Spring2019\GDP11\228\Codeword-GDPII\bin\www], rss=138276864, heapTotal=90058752, heapUsed=63651128, external=21624839, loadavg=[0, 0, 0], uptime=791340.8596031
+ReferenceError: CourseModel is not defined
+    at c:\sravya\Spring2019\GDP11\228\Codeword-GDPII\controllers\controller.studentdashboard.js:25:13
+    at c:\sravya\Spring2019\GDP11\228\Codeword-GDPII\node_modules\mongoose\lib\model.js:4669:16
+    at c:\sravya\Spring2019\GDP11\228\Codeword-GDPII\node_modules\mongoose\lib\query.js:4090:12
+    at process.nextTick (c:\sravya\Spring2019\GDP11\228\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-01-28T19:30:36.953Z - error: uncaughtException: CourseModel is not defined date=Mon Jan 28 2019 13:30:36 GMT-0600 (Central Standard Time), pid=74020, uid=null, gid=null, cwd=c:\sravya\Spring2019\GDP11\228\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, c:\sravya\Spring2019\GDP11\228\Codeword-GDPII\bin\www], rss=112771072, heapTotal=64368640, heapUsed=55193560, external=21702480, loadavg=[0, 0, 0], uptime=791461.5963552
+ReferenceError: CourseModel is not defined
+    at c:\sravya\Spring2019\GDP11\228\Codeword-GDPII\controllers\controller.studentdashboard.js:25:13
+    at c:\sravya\Spring2019\GDP11\228\Codeword-GDPII\node_modules\mongoose\lib\model.js:4669:16
+    at c:\sravya\Spring2019\GDP11\228\Codeword-GDPII\node_modules\mongoose\lib\query.js:4090:12
+    at process.nextTick (c:\sravya\Spring2019\GDP11\228\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-01-28T19:31:13.716Z - error: uncaughtException: CourseModel is not defined date=Mon Jan 28 2019 13:31:13 GMT-0600 (Central Standard Time), pid=74020, uid=null, gid=null, cwd=c:\sravya\Spring2019\GDP11\228\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, c:\sravya\Spring2019\GDP11\228\Codeword-GDPII\bin\www], rss=108163072, heapTotal=57028608, heapUsed=50916784, external=21705521, loadavg=[0, 0, 0], uptime=791498.3946171
+ReferenceError: CourseModel is not defined
+    at c:\sravya\Spring2019\GDP11\228\Codeword-GDPII\controllers\controller.studentdashboard.js:25:13
+    at c:\sravya\Spring2019\GDP11\228\Codeword-GDPII\node_modules\mongoose\lib\model.js:4669:16
+    at c:\sravya\Spring2019\GDP11\228\Codeword-GDPII\node_modules\mongoose\lib\query.js:4090:12
+    at process.nextTick (c:\sravya\Spring2019\GDP11\228\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-01-28T19:32:29.043Z - info: START seeder.
+2019-01-28T19:32:29.086Z - debug: 2 dataCodewordset seeded
+2019-01-28T19:32:29.086Z - debug: 292 datacodeword seeded
+2019-01-28T19:32:29.090Z - debug: 6 datacourse seeded
+2019-01-28T19:32:29.090Z - debug: 114 dataCoursestudent seeded
+2019-01-28T19:32:29.090Z - debug: 92 hootoriginal seeded
+2019-01-28T19:32:29.090Z - debug: 200 largeset seeded
+2019-01-28T19:32:29.090Z - info: END Seeder. Sample data read and verified.

@@ -5,6 +5,7 @@ var courseController = require('../controllers/controller.course')
 var codewordsetController = require('../controllers/controller.codewordset')
 var codewordController = require('../controllers/controller.codeword')
 var courseStudentController = require('../controllers/controller.coursestudent')
+var studentController = require('../controllers/controller.studentdashboard')
 const bodyParser = require('body-parser');
 let multer = require('multer')
 
@@ -40,6 +41,8 @@ router.post('/getCodewords', codewordController.getCodewords)
 router.post('/deleteCodewords', codewordController.deleteCodewords)
 router.post('/updatecodeword', codewordController.updatecodeword);
 router.post('/addnewcodewords', codewordController.addcodewords);
-router.get('/getstudentcodeword', courseStudentController.getstudentcodeword);
+
+// API calls for student
+router.get('/getstudentcodeword', studentController.getstudentcodeword);
 
 module.exports = router;

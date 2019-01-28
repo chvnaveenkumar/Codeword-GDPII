@@ -128,23 +128,23 @@ let updatecoursestudent=(req,res) =>{
 module.exports.updatecoursestudent=updatecoursestudent;
 
 let getstudentcodeword=(req,res) =>{
-        CourseStudentModel.find({EmailKey: 'S530742@nwmissouri.edu  '}, function(err,getstudentcodeword){
-        if(err){
-            return res.json({ code:200, message:'EmailKeys are fetched'});
-        }
-            if (getstudentcodeword)
-            {
-                console.log(getstudentcodeword[0].CourseNameKey)
-                CourseModel.find({CourseNameKey: getstudentcodeword[0].CourseNameKey}, function(err,getstudentcodeword){
-                if(err){
-                    return res.json({ code:200,message:'URL is fetched'});
-                }
-                })
-                return res.json({ code: 200, data: getstudentcodeword });
+    CourseStudentModel.find({EmailKey: 'S531500@nwmissouri.edu  '}, function(err,getstudentcodeword){
+    if(err){
+        return res.json({ code:200, message:'EmailKeys are fetched'});
+    }
+        if (getstudentcodeword)
+        {
+            console.log(getstudentcodeword[0].CourseNameKey)
+            CourseModel.find({CourseNameKey: getstudentcodeword[0].CourseNameKey}, function(err,getstudentcodeword){
+            if(err){
+                return res.json({ code:200,message:'URL is fetched'});
             }
-        }).catch((e) => {
-        return res.json({ code: 400, message: e });
-        })
+            })
+            return res.json({ code: 200, data: getstudentcodeword });
+        }
+    }).catch((e) => {
+    return res.json({ code: 400, message: e });
+    })
 }
 module.exports.getstudentcodeword=getstudentcodeword;
 

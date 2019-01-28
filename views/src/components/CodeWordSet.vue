@@ -21,19 +21,12 @@
                        
                       <b-popover target="exPopover3" triggers="click" placement="auto">
                         <template slot="title">Rules for Creating Codewords</template>
-                        <strong>1.</strong> Every codeword should be unique in the set.</br>
-                        <strong>2.</strong> The codewords with substring should differ by at least 3 letters.</br>
-                        <strong>3.</strong> There should not be any codewords like Ex: daa , baa.</br>
-                        <strong>4.</strong> Scan the codewords as soon as the upload is done and give the feedback.</br>
+                        <strong>1.</strong> Every codeword should be unique in the set.<br>
+                        <strong>2.</strong> The codewords with substring should differ by at least 3 letters.<br>
+                        <strong>3.</strong> There should not be any codewords like Ex: daa , baa.<br>
+                        <strong>4.</strong> Scan the codewords as soon as the upload is done and give the feedback.<br>
                         <strong>5.</strong> Every codeword should be compared with every other codeword in the set.
                       </b-popover>
-                        <!-- <b-btn id="popoverButton-open" class="btn btn-info btn-sm" variant="primary"><i class="fa fa-eye"></i> Hint</b-btn>
-                        <b-popover show target="popoverButton-open" title="Hints for codewordset">
-                          I start open
-                        </b-popover>             -->
-                        <!-- </button> -->
-                        <!-- <btn v-popover="{title:'Title', content:'Popover content'}" type="primary">Popover</btn> -->
-
                     </div>
                     
                     <!-- Modal Body -->
@@ -54,10 +47,7 @@
                                 <p v-else>
                                     There are {{ count }} codewords in the Uploaded set.</p>
                             </div>
-                           
-
                         </form>
-
                     </div>
                    <!-- Modal Footer -->	
                       <div class="modal-footer">	
@@ -77,6 +67,7 @@
                         <th scope="col">Codeword Set Name</th>
                         <th scope="col">Count</th>
                         <th scope="col"></th>
+                        <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -84,13 +75,11 @@
                 
                 <td> {{ code.CodeWordSetName }} </td>
                  <td id="count">{{ codeWordSetData[code.CodeWordSetName] ? codeWordSetData[code.CodeWordSetName].length : 0 }}</td>
-                <td> <router-link to="/codeword"><button type="button" class="btn btn-info btn-sm"> View Codewords</button></router-link></td>
+                <td> <router-link :to="{ name: 'CodeWord', params: { CodeWordSetName: code.CodeWordSetName } }"><button type="button" class="btn btn-info btn-sm"><i class="fa fa-pencil fa-xs"></i></button></router-link></td>
+                <td> <router-link to="/codeword"><button type="button" class="btn btn-info btn-sm"><i class="fa fa-trash fa-xs"></i></button></router-link></td>
             </tr>
-
         </tbody>
             </table>
-
-
     </div>
 </div>
 </template>
@@ -165,6 +154,7 @@ export default {
         this.codeWordTempSetData = response.data.data
         this.codeWordTempSetDataCount = response.data.data.length
         this.codeWordSetCount = []
+        console.log(this.codeWordTempSetData)
         axios({
           method: 'post',
           url: '/codeword/getCodewords',
@@ -177,7 +167,6 @@ export default {
         }).then(response => {
           if (response.data && response.data.data) {
             this.codeWordSetData = response.data.data
-            console.log(response.data.data)
           }
         })
       })

@@ -43,8 +43,6 @@ module.exports.getDataFromXLS = getDataFromXLS;
 
 
 let addcodewordset = (req, res) => {
-    // Upper code was not working so I(Ujjawal) added the below code
-    // Removed emailkey it is not in requirement - updated by Srimai
     var body = _.pick(req.body,['CodeWordSetName']);
     var codewordset = new Codewordset({
         CodeWordSetName: body.CodeWordSetName,

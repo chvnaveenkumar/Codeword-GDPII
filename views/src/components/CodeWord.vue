@@ -1,5 +1,5 @@
 /**
- * @author Naveenkumar Nuggu
+ * @author Naveen kumar Chandaluri
  */
 <template>
     <div id="codeWord" class="container-fluid" style="margin-top:5em">
@@ -24,15 +24,11 @@
         </button>
       </div>
       <div class="modal-body">
-       
-
 <div class="form-group text-left">
                                 Upload Cordwords(Excel)
                                 <input type="file"  name="file" ref="myFile"  class="form-control-file" id="exampleFormControlFile1" style="margin-top:.2em"
                                     required>
                             </div>
-
-
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary">Add</button>
@@ -71,25 +67,31 @@
 
                 </tbody>
             </table>
-
-
     </div>
     </div>  
 </template>
 <script>
-import axios from 'axios'
+/* global axios */
 
 export default {
   name: 'CodeWordSet',
   data () {
     return {
-      files: '',
-      tcodeWordSetData: [],
-      codeWordSetData: [],
-      count: 0
+      CodeWordSetNames: [],
+      codewords: []
     }
   },
-
+  created () {
+    if (this.$route.params.CodeWordSetName == null) {
+      this.CodeWordName = window.localStorage.getItem('setId')
+      this.CodeWordSetNames.push({CodeWordSetName: this.CodeWordName})
+      this.getCodeWords()
+    } else {
+      window.localStorage.setItem('setId', this.$route.params.CodeWordSetName)
+      this.CodeWordSetNames.push({CodeWordSetName: this.$route.params.CodeWordSetName})
+      this.getCodeWords()
+    }
+  },
   methods: {
     // Getting the data from uploaded xls file
     previewFiles () {
@@ -101,32 +103,22 @@ export default {
         this.count = this.tcodeWordSetData.length
       })
     },
-
-    // Calling API of codeWordSet controller and sending xls data in form of json
-    saveCodeWordData () {
-      let data = new FormData(document.querySelector('form'))
-      let sendData = {
-        codeWordSetName: data.get('dataSetName'),
-        emailKeySet: this.tcodeWordSetData
-      }
-      axios.post('http://localhost:3000/codeword/addcodewordset', sendData).then(response => {
-        console.log(response.data.data)
-        this.getCodeWordData()
-      })
-    },
-    getCodeWordData () {
-      axios.get('http://localhost:3000/codeword/getcodewordset').then(response => {
-        this.codeWordSetData = response.data.data
+    getCodeWords () {
+      console.log(this.CodeWordSetNames + ' test')
+      axios({
+        method: 'post',
+        url: '/codeword/getCodewords',
+        data: {
+          CodeWordSetKey: this.CodeWordSetNames
+        },
+        headers: {
+          token: window.localStorage.getItem('token')
+        }
+      }).then(response => {
+        this.codewords = response.data.data
+        console.log(this.codewords)
       })
     }
-    // resetForm: function (e) {
-    //   e.preventDefault()
-    //   this.name = ''
-    //   this.data = ''
-    // }
-  },
-  mounted () {
-    this.getCodeWordData()
   }
 }
 </script>

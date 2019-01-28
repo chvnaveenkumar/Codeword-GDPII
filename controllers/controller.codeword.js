@@ -9,8 +9,6 @@ var { CodeWord } = require('../model/model.codeword');
 var { mongoose } = require('./../config/database')
 var mailController = require('../config/user.mail.js')
 let XLSX = require('xlsx')
-
-
 let addcodewords = (req, res) => {
      var codewords = [];
     var body = _.pick(req.body,['CodeWordSetName','Codewords']);
@@ -34,11 +32,11 @@ module.exports.addcodewords = addcodewords;
 let getCodewords = (req,res) => {
     var body = _.map(req.body.CodeWordSetKey, 'CodeWordSetName');
     CodeWord.find({CodeWordSetName : {$in : body}}, function (err, codewords) {
-        console.log(codewords)
         data = _.groupBy(codewords, 'CodeWordSetName');
         if(err){
             return res.json({ code: 200, message: 'No codewordset is created!!'});
         }
+        console.log(data)
         if (codewords)
             return res.json({ code: 200, data: data});
         }).catch((e) => {

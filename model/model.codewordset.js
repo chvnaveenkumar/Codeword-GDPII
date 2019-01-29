@@ -19,6 +19,10 @@ var codeWordSetSchema = new Schema({
         isPermanent : {
                 type: Boolean,
                 default : false
+        },
+        Codewords: {
+                type: Array,
+                required: true
         }
 });
 

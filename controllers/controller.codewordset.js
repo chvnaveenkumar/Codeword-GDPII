@@ -43,10 +43,11 @@ module.exports.getDataFromXLS = getDataFromXLS;
 
 
 let addcodewordset = (req, res) => {
-    var body = _.pick(req.body,['CodeWordSetName']);
+    var body = _.pick(req.body,['CodeWordSetName','Codewords']);
     var codewordset = new Codewordset({
         CodeWordSetName: body.CodeWordSetName,
-        CodeWordCreator: req.session.email
+        CodeWordCreator: req.session.email,
+        Codewords: body.Codewords
     });
     codewordset.save().then((codes) => {
         return res.json({ code: 200, data: codes });
@@ -58,7 +59,7 @@ let addcodewordset = (req, res) => {
 module.exports.addcodewordset = addcodewordset;
 
 let getcodewordset = (req, res) => {
-    Codewordset.find({ $or: [{CodeWordCreator: req.session.email}, {defaultRow: true},{CodeWordCreator: 'twosets' }] } ).then((codes) => {
+    Codewordset.find({ $or: [{CodeWordCreator: req.session.email}, {isPermanent: true}] } ).then((codes) => {
         if (codes)
             return res.json({ code: 200, data: codes });
     }).catch((e) => {

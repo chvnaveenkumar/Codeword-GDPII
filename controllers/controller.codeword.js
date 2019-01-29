@@ -16,7 +16,7 @@ let addcodewords = (req, res) => {
     codewords = _.map(codewords, function(codeword){
         return {
             CodeWordSetName: req.body.CodeWordSetName,
-            Codeword: codeword
+            Codeword: codewords
         }
     })
     CodeWord.insertMany(codewords).then((user) => {

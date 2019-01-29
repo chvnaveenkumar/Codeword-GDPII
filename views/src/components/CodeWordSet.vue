@@ -74,7 +74,7 @@
             <tr v-for="code in codeWordTempSetData" :key="code._id">
                 
                 <td> {{ code.CodeWordSetName }} </td>
-                 <td id="count">{{ codeWordSetData[code.CodeWordSetName] ? codeWordSetData[code.CodeWordSetName].length : 0 }}</td>
+                 <td id="count">{{ code.Codewords.length }}</td>
                 <td> <router-link :to="{ name: 'CodeWord', params: { CodeWordSetName: code.CodeWordSetName } }"><button type="button" class="btn btn-info btn-sm"><i class="fa fa-pencil fa-xs"></i></button></router-link></td>
                 <td> <router-link to="/codeword"><button type="button" class="btn btn-info btn-sm"><i class="fa fa-trash fa-xs"></i></button></router-link></td>
             </tr>
@@ -114,9 +114,6 @@ export default {
     saveCodeWordData () {
       let data = new FormData(document.querySelector('form'))
       let sendData = {
-        CodeWordSetName: data.get('dataSetName')
-      }
-      let sendData2 = {
         CodeWordSetName: data.get('dataSetName'),
         Codewords: this.tcodeWordSetData
       }
@@ -128,19 +125,7 @@ export default {
           token: window.localStorage.getItem('token')
         }
       }).then(response => {
-        if (response.data.code === 200) {
-          axios({
-            method: 'post',
-            url: '/codeword/addnewcodewords',
-            data: sendData2,
-            headers: {
-              token: window.localStorage.getItem('token')
-            }
-          }).then(response => {
-            console.log(response.data.data + 'testing')
-            this.getCodeWordData()
-          })
-        }
+        this.getCodeWordData()
       })
     },
     getCodeWordData () {
@@ -152,23 +137,7 @@ export default {
         }
       }).then(response => {
         this.codeWordTempSetData = response.data.data
-        this.codeWordTempSetDataCount = response.data.data.length
-        this.codeWordSetCount = []
-        console.log(this.codeWordTempSetData)
-        axios({
-          method: 'post',
-          url: '/codeword/getCodewords',
-          headers: {
-            token: window.localStorage.getItem('token')
-          },
-          data: {
-            CodeWordSetKey: this.codeWordTempSetData
-          }
-        }).then(response => {
-          if (response.data && response.data.data) {
-            this.codeWordSetData = response.data.data
-          }
-        })
+        console.log(this.codeWordTempSetData[0].Codewords.length)
       })
     }
   },

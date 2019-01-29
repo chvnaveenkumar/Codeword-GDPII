@@ -954,3 +954,19 @@ ReferenceError: CourseModel is not defined
 2019-01-28T19:32:29.090Z - debug: 92 hootoriginal seeded
 2019-01-28T19:32:29.090Z - debug: 200 largeset seeded
 2019-01-28T19:32:29.090Z - info: END Seeder. Sample data read and verified.
+2019-01-29T01:50:27.111Z - info: START seeder.
+2019-01-29T01:50:27.155Z - debug: 2 dataCodewordset seeded
+2019-01-29T01:50:27.167Z - debug: 292 datacodeword seeded
+2019-01-29T01:50:27.167Z - debug: 6 datacourse seeded
+2019-01-29T01:50:27.167Z - debug: 114 dataCoursestudent seeded
+2019-01-29T01:50:27.167Z - debug: 92 hootoriginal seeded
+2019-01-29T01:50:27.168Z - debug: 200 largeset seeded
+2019-01-29T01:50:27.168Z - info: END Seeder. Sample data read and verified.
+2019-01-29T02:00:18.731Z - info: START seeder.
+2019-01-29T02:00:18.806Z - debug: 2 dataCodewordset seeded
+2019-01-29T02:00:18.806Z - debug: 292 datacodeword seeded
+2019-01-29T02:00:18.806Z - debug: 6 datacourse seeded
+2019-01-29T02:00:18.806Z - debug: 114 dataCoursestudent seeded
+2019-01-29T02:00:18.806Z - debug: 92 hootoriginal seeded
+2019-01-29T02:00:18.806Z - debug: 200 largeset seeded
+2019-01-29T02:00:18.807Z - info: END Seeder. Sample data read and verified.

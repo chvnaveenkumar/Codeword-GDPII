@@ -31,12 +31,10 @@ module.exports.addcodewords = addcodewords;
 
 let getCodewords = (req,res) => {
     var body = _.pick(req.body,['CodeWordSetKey']);
-    Codewordset.find({CodeWordSetName : body.CodeWordSetKey}, function (err, codewordset) {
-        if(err){
-            return res.json({ code: 200, message: 'No codewordset is created!!'});
-        }
+    Codewordset.findOne({CodeWordSetName : body.CodeWordSetKey}).then((codewordset) => {
+        console.log(codewordset.Codewords)
         if (codewordset)
-            return res.json({ code: 200, data: codewordset[0].Codewords});
+            return res.json({ code: 200, data: codewordset.Codewords});
         }).catch((e) => {
             return res.json({ code: 400, message: e });
         })

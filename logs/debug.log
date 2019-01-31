@@ -1226,3 +1226,172 @@ TypeError: Cannot read property 'Codewords' of undefined
     at b:\GDP2\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:621:16
     at queryCallback (b:\GDP2\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:268:16)
     at b:\GDP2\Codeword-GDPII\node_modules\mongodb-core\lib\connection\pool.js:532:18
+2019-01-31T21:31:08.301Z - info: START seeder.
+2019-01-31T21:31:08.341Z - debug: 2 dataCodewordset seeded
+2019-01-31T21:31:08.341Z - debug: 292 datacodeword seeded
+2019-01-31T21:31:08.341Z - debug: 6 datacourse seeded
+2019-01-31T21:31:08.341Z - debug: 114 dataCoursestudent seeded
+2019-01-31T21:31:08.341Z - debug: 92 hootoriginal seeded
+2019-01-31T21:31:08.342Z - debug: 200 largeset seeded
+2019-01-31T21:31:08.342Z - info: END Seeder. Sample data read and verified.
+2019-01-31T21:32:20.488Z - info: START seeder.
+2019-01-31T21:32:20.525Z - debug: 2 dataCodewordset seeded
+2019-01-31T21:32:20.525Z - debug: 292 datacodeword seeded
+2019-01-31T21:32:20.525Z - debug: 6 datacourse seeded
+2019-01-31T21:32:20.525Z - debug: 114 dataCoursestudent seeded
+2019-01-31T21:32:20.526Z - debug: 92 hootoriginal seeded
+2019-01-31T21:32:20.526Z - debug: 200 largeset seeded
+2019-01-31T21:32:20.526Z - info: END Seeder. Sample data read and verified.
+2019-01-31T21:32:29.151Z - error: uncaughtException: Cannot read property 'codewords' of undefined date=Thu Jan 31 2019 15:32:29 GMT-0600 (Central Standard Time), pid=11676, uid=null, gid=null, cwd=b:\GDP2\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP2\Codeword-GDPII\bin\www], rss=130187264, heapTotal=84123648, heapUsed=48689616, external=21509598, loadavg=[0, 0, 0], uptime=882604.6629221
+TypeError: Cannot read property 'codewords' of undefined
+    at b:\GDP2\Codeword-GDPII\controllers\controller.codeword.js:40:40
+    at b:\GDP2\Codeword-GDPII\node_modules\mongoose\lib\model.js:4669:16
+    at b:\GDP2\Codeword-GDPII\node_modules\mongoose\lib\query.js:4090:12
+    at cb (b:\GDP2\Codeword-GDPII\node_modules\mongoose\lib\query.js:1782:14)
+    at result (b:\GDP2\Codeword-GDPII\node_modules\mongodb\lib\utils.js:414:17)
+    at executeCallback (b:\GDP2\Codeword-GDPII\node_modules\mongodb\lib\utils.js:406:9)
+    at handleCallback (b:\GDP2\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at cursor.close (b:\GDP2\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:216:62)
+    at handleCallback (b:\GDP2\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at completeClose (b:\GDP2\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:893:14)
+    at Cursor.close (b:\GDP2\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:912:10)
+    at cursor._next (b:\GDP2\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:216:23)
+    at handleCallback (b:\GDP2\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:203:5)
+    at _setCursorNotifiedImpl (b:\GDP2\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:561:38)
+    at self._endSession (b:\GDP2\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:569:46)
+    at Cursor._endSession (b:\GDP2\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:194:5)
+    at Cursor._endSession (b:\GDP2\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:226:59)
+    at _setCursorNotifiedImpl (b:\GDP2\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:569:17)
+    at setCursorNotified (b:\GDP2\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:561:3)
+    at b:\GDP2\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:621:16
+    at queryCallback (b:\GDP2\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:268:16)
+    at b:\GDP2\Codeword-GDPII\node_modules\mongodb-core\lib\connection\pool.js:532:18
+2019-01-31T21:34:17.099Z - info: START seeder.
+2019-01-31T21:34:17.138Z - debug: 2 dataCodewordset seeded
+2019-01-31T21:34:17.138Z - debug: 292 datacodeword seeded
+2019-01-31T21:34:17.138Z - debug: 6 datacourse seeded
+2019-01-31T21:34:17.138Z - debug: 114 dataCoursestudent seeded
+2019-01-31T21:34:17.138Z - debug: 92 hootoriginal seeded
+2019-01-31T21:34:17.139Z - debug: 200 largeset seeded
+2019-01-31T21:34:17.139Z - info: END Seeder. Sample data read and verified.
+2019-01-31T21:38:10.732Z - info: START seeder.
+2019-01-31T21:38:10.785Z - debug: 2 dataCodewordset seeded
+2019-01-31T21:38:10.785Z - debug: 292 datacodeword seeded
+2019-01-31T21:38:10.785Z - debug: 6 datacourse seeded
+2019-01-31T21:38:10.785Z - debug: 114 dataCoursestudent seeded
+2019-01-31T21:38:10.785Z - debug: 92 hootoriginal seeded
+2019-01-31T21:38:10.786Z - debug: 200 largeset seeded
+2019-01-31T21:38:10.786Z - info: END Seeder. Sample data read and verified.
+2019-01-31T21:38:32.912Z - info: START seeder.
+2019-01-31T21:38:32.952Z - debug: 2 dataCodewordset seeded
+2019-01-31T21:38:32.952Z - debug: 292 datacodeword seeded
+2019-01-31T21:38:32.952Z - debug: 6 datacourse seeded
+2019-01-31T21:38:32.952Z - debug: 114 dataCoursestudent seeded
+2019-01-31T21:38:32.952Z - debug: 92 hootoriginal seeded
+2019-01-31T21:38:32.952Z - debug: 200 largeset seeded
+2019-01-31T21:38:32.953Z - info: END Seeder. Sample data read and verified.
+2019-01-31T21:39:47.132Z - info: START seeder.
+2019-01-31T21:39:47.173Z - debug: 2 dataCodewordset seeded
+2019-01-31T21:39:47.173Z - debug: 292 datacodeword seeded
+2019-01-31T21:39:47.173Z - debug: 6 datacourse seeded
+2019-01-31T21:39:47.173Z - debug: 114 dataCoursestudent seeded
+2019-01-31T21:39:47.174Z - debug: 92 hootoriginal seeded
+2019-01-31T21:39:47.174Z - debug: 200 largeset seeded
+2019-01-31T21:39:47.174Z - info: END Seeder. Sample data read and verified.
+2019-01-31T21:40:01.824Z - error: uncaughtException: Cannot read property 'Codewords' of null date=Thu Jan 31 2019 15:40:01 GMT-0600 (Central Standard Time), pid=12432, uid=null, gid=null, cwd=b:\GDP2\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP2\Codeword-GDPII\bin\www], rss=132214784, heapTotal=85970944, heapUsed=52520672, external=21607637, loadavg=[0, 0, 0], uptime=883057.3376089
+TypeError: Cannot read property 'Codewords' of null
+    at b:\GDP2\Codeword-GDPII\controllers\controller.codeword.js:38:33
+    at b:\GDP2\Codeword-GDPII\node_modules\mongoose\lib\model.js:4669:16
+    at b:\GDP2\Codeword-GDPII\node_modules\mongoose\lib\query.js:4090:12
+    at model.Query.Query._completeOne (b:\GDP2\Codeword-GDPII\node_modules\mongoose\lib\query.js:1934:12)
+    at Immediate.Query.base.findOne.call (b:\GDP2\Codeword-GDPII\node_modules\mongoose\lib\query.js:1994:10)
+    at Immediate._onImmediate (b:\GDP2\Codeword-GDPII\node_modules\mquery\lib\utils.js:116:16)
+    at runCallback (timers.js:810:20)
+    at tryOnImmediate (timers.js:768:5)
+    at processImmediate [as _immediateCallback] (timers.js:745:5)
+2019-01-31T21:40:39.974Z - info: START seeder.
+2019-01-31T21:40:40.011Z - debug: 2 dataCodewordset seeded
+2019-01-31T21:40:40.011Z - debug: 292 datacodeword seeded
+2019-01-31T21:40:40.011Z - debug: 6 datacourse seeded
+2019-01-31T21:40:40.012Z - debug: 114 dataCoursestudent seeded
+2019-01-31T21:40:40.012Z - debug: 92 hootoriginal seeded
+2019-01-31T21:40:40.012Z - debug: 200 largeset seeded
+2019-01-31T21:40:40.012Z - info: END Seeder. Sample data read and verified.
+2019-01-31T21:40:48.029Z - error: uncaughtException: Cannot read property 'Codewords' of null date=Thu Jan 31 2019 15:40:48 GMT-0600 (Central Standard Time), pid=13532, uid=null, gid=null, cwd=b:\GDP2\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP2\Codeword-GDPII\bin\www], rss=130211840, heapTotal=84647936, heapUsed=48042360, external=21511444, loadavg=[0, 0, 0], uptime=883103.5435972
+TypeError: Cannot read property 'Codewords' of null
+    at b:\GDP2\Codeword-GDPII\controllers\controller.codeword.js:38:33
+    at b:\GDP2\Codeword-GDPII\node_modules\mongoose\lib\model.js:4669:16
+    at b:\GDP2\Codeword-GDPII\node_modules\mongoose\lib\query.js:4090:12
+    at model.Query.Query._completeOne (b:\GDP2\Codeword-GDPII\node_modules\mongoose\lib\query.js:1934:12)
+    at Immediate.Query.base.findOne.call (b:\GDP2\Codeword-GDPII\node_modules\mongoose\lib\query.js:1994:10)
+    at Immediate._onImmediate (b:\GDP2\Codeword-GDPII\node_modules\mquery\lib\utils.js:116:16)
+    at runCallback (timers.js:810:20)
+    at tryOnImmediate (timers.js:768:5)
+    at processImmediate [as _immediateCallback] (timers.js:745:5)
+2019-01-31T21:42:45.578Z - error: uncaughtException: Cannot read property 'Codewords' of null date=Thu Jan 31 2019 15:42:45 GMT-0600 (Central Standard Time), pid=13532, uid=null, gid=null, cwd=b:\GDP2\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP2\Codeword-GDPII\bin\www], rss=98770944, heapTotal=51261440, heapUsed=45966568, external=21515690, loadavg=[0, 0, 0], uptime=883221.094249
+TypeError: Cannot read property 'Codewords' of null
+    at b:\GDP2\Codeword-GDPII\controllers\controller.codeword.js:38:33
+    at b:\GDP2\Codeword-GDPII\node_modules\mongoose\lib\model.js:4669:16
+    at b:\GDP2\Codeword-GDPII\node_modules\mongoose\lib\query.js:4090:12
+    at model.Query.Query._completeOne (b:\GDP2\Codeword-GDPII\node_modules\mongoose\lib\query.js:1934:12)
+    at Immediate.Query.base.findOne.call (b:\GDP2\Codeword-GDPII\node_modules\mongoose\lib\query.js:1994:10)
+    at Immediate._onImmediate (b:\GDP2\Codeword-GDPII\node_modules\mquery\lib\utils.js:116:16)
+    at runCallback (timers.js:810:20)
+    at tryOnImmediate (timers.js:768:5)
+    at processImmediate [as _immediateCallback] (timers.js:745:5)
+2019-01-31T21:44:55.564Z - info: START seeder.
+2019-01-31T21:44:55.605Z - debug: 2 dataCodewordset seeded
+2019-01-31T21:44:55.605Z - debug: 292 datacodeword seeded
+2019-01-31T21:44:55.605Z - debug: 6 datacourse seeded
+2019-01-31T21:44:55.605Z - debug: 114 dataCoursestudent seeded
+2019-01-31T21:44:55.605Z - debug: 92 hootoriginal seeded
+2019-01-31T21:44:55.606Z - debug: 200 largeset seeded
+2019-01-31T21:44:55.606Z - info: END Seeder. Sample data read and verified.
+2019-01-31T21:45:56.919Z - info: START seeder.
+2019-01-31T21:45:56.973Z - debug: 2 dataCodewordset seeded
+2019-01-31T21:45:56.974Z - debug: 292 datacodeword seeded
+2019-01-31T21:45:56.974Z - debug: 6 datacourse seeded
+2019-01-31T21:45:56.974Z - debug: 114 dataCoursestudent seeded
+2019-01-31T21:45:56.974Z - debug: 92 hootoriginal seeded
+2019-01-31T21:45:56.974Z - debug: 200 largeset seeded
+2019-01-31T21:45:56.974Z - info: END Seeder. Sample data read and verified.
+2019-01-31T21:46:05.192Z - info: START seeder.
+2019-01-31T21:46:05.231Z - debug: 2 dataCodewordset seeded
+2019-01-31T21:46:05.232Z - debug: 292 datacodeword seeded
+2019-01-31T21:46:05.232Z - debug: 6 datacourse seeded
+2019-01-31T21:46:05.232Z - debug: 114 dataCoursestudent seeded
+2019-01-31T21:46:05.232Z - debug: 92 hootoriginal seeded
+2019-01-31T21:46:05.233Z - debug: 200 largeset seeded
+2019-01-31T21:46:05.233Z - info: END Seeder. Sample data read and verified.
+2019-01-31T21:51:44.211Z - info: START seeder.
+2019-01-31T21:51:44.255Z - debug: 2 dataCodewordset seeded
+2019-01-31T21:51:44.256Z - debug: 292 datacodeword seeded
+2019-01-31T21:51:44.256Z - debug: 6 datacourse seeded
+2019-01-31T21:51:44.256Z - debug: 114 dataCoursestudent seeded
+2019-01-31T21:51:44.256Z - debug: 92 hootoriginal seeded
+2019-01-31T21:51:44.256Z - debug: 200 largeset seeded
+2019-01-31T21:51:44.256Z - info: END Seeder. Sample data read and verified.
+2019-01-31T21:52:19.401Z - info: START seeder.
+2019-01-31T21:52:19.440Z - debug: 2 dataCodewordset seeded
+2019-01-31T21:52:19.440Z - debug: 292 datacodeword seeded
+2019-01-31T21:52:19.441Z - debug: 6 datacourse seeded
+2019-01-31T21:52:19.441Z - debug: 114 dataCoursestudent seeded
+2019-01-31T21:52:19.441Z - debug: 92 hootoriginal seeded
+2019-01-31T21:52:19.441Z - debug: 200 largeset seeded
+2019-01-31T21:52:19.442Z - info: END Seeder. Sample data read and verified.
+2019-01-31T21:52:53.542Z - info: START seeder.
+2019-01-31T21:52:53.583Z - debug: 2 dataCodewordset seeded
+2019-01-31T21:52:53.583Z - debug: 292 datacodeword seeded
+2019-01-31T21:52:53.583Z - debug: 6 datacourse seeded
+2019-01-31T21:52:53.583Z - debug: 114 dataCoursestudent seeded
+2019-01-31T21:52:53.584Z - debug: 92 hootoriginal seeded
+2019-01-31T21:52:53.584Z - debug: 200 largeset seeded
+2019-01-31T21:52:53.584Z - info: END Seeder. Sample data read and verified.
+2019-01-31T21:53:17.811Z - info: START seeder.
+2019-01-31T21:53:17.859Z - debug: 2 dataCodewordset seeded
+2019-01-31T21:53:17.859Z - debug: 292 datacodeword seeded
+2019-01-31T21:53:17.860Z - debug: 6 datacourse seeded
+2019-01-31T21:53:17.860Z - debug: 114 dataCoursestudent seeded
+2019-01-31T21:53:17.860Z - debug: 92 hootoriginal seeded
+2019-01-31T21:53:17.865Z - debug: 200 largeset seeded
+2019-01-31T21:53:17.866Z - info: END Seeder. Sample data read and verified.

@@ -74,14 +74,17 @@ export default {
   created () {
     if (this.$route.params.CodeWordSetName == null) {
       this.CodeWordSetName = window.localStorage.getItem('setId')
+      console.log('setid' + this.CodeWordSetName)
       this.getCodeWords()
     } else {
       window.localStorage.setItem('setId', this.$route.params.CodeWordSetName)
+      this.CodeWordSetName = this.$route.params.CodeWordSetName
       this.getCodeWords()
     }
   },
   methods: {
     getCodeWords () {
+      console.log(this.CodeWordSetName + 'checking')
       axios({
         method: 'post',
         url: '/codeword/getCodewords',
@@ -92,6 +95,7 @@ export default {
           token: window.localStorage.getItem('token')
         }
       }).then(response => {
+        console.log(response.data.data)
         this.codewords = response.data.data
         console.log(this.codewords)
       })

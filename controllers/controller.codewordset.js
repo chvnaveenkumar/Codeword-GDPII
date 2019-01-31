@@ -41,7 +41,6 @@ let getDataFromXLS = (req, res) => {
 }
 module.exports.getDataFromXLS = getDataFromXLS;
 
-
 let addcodewordset = (req, res) => {
     var body = _.pick(req.body,['CodeWordSetName','Codewords']);
     var codewordset = new Codewordset({

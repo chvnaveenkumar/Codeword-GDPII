@@ -46,25 +46,15 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td > Codeword1</td>
-                         <td><a href="#" class="btn btn-warning"> <i class="fas fa-pencil-alt"></i> </a> <button type="button" class="btn btn-danger" title="Create CodeWord" data-toggle="modal" data-target="#" style="marging-left:10px">
-   <i class="fas fa-trash"></i>
-</button> 
-</td>
+                    <tr v-for="(codeword,index) in codewords" :key="codeword._id">
+                        <td scope="row">{{ index+1 }}</td>
+                        <td > {{ codeword }}</td>
+                        <td><a href="#" class="btn btn-warning"> <i class="fas fa-pencil-alt"></i> </a> 
+                        <button type="button" class="btn btn-danger" title="Create CodeWord" data-toggle="modal" data-target="#" style="marging-left:10px">
+                             <i class="fas fa-trash"></i>
+                             </button> 
+                        </td>
                     </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Codeword2</td>
-                        <td><a href="#" class="btn btn-warning"> <i class="fas fa-pencil-alt"></i> </a> <a href="#" class="btn btn-danger" style="marging-left:10px"> <i class="fas fa-trash"></i> </a> </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Codeword3</td>
-                        <td><a href="#" class="btn btn-warning"> <i class="fas fa-pencil-alt"></i> </a> <a href="#" class="btn btn-danger" style="marging-left:10px"> <i class="fas fa-trash"></i> </a> </td>
-                    </tr>
-
                 </tbody>
             </table>
     </div>
@@ -77,39 +67,26 @@ export default {
   name: 'CodeWordSet',
   data () {
     return {
-      CodeWordSetNames: [],
+      CodeWordSetName: '',
       codewords: []
     }
   },
   created () {
     if (this.$route.params.CodeWordSetName == null) {
-      this.CodeWordName = window.localStorage.getItem('setId')
-      this.CodeWordSetNames.push({CodeWordSetName: this.CodeWordName})
+      this.CodeWordSetName = window.localStorage.getItem('setId')
       this.getCodeWords()
     } else {
       window.localStorage.setItem('setId', this.$route.params.CodeWordSetName)
-      this.CodeWordSetNames.push({CodeWordSetName: this.$route.params.CodeWordSetName})
       this.getCodeWords()
     }
   },
   methods: {
-    // Getting the data from uploaded xls file
-    previewFiles () {
-      this.files = this.$refs.myFile
-      let data = new FormData(document.querySelector('form'))
-      axios.post('http://localhost:3000/codeword/getdataxlsx', data).then(response => {
-        console.log(response.data.data)
-        this.tcodeWordSetData = response.data.data
-        this.count = this.tcodeWordSetData.length
-      })
-    },
     getCodeWords () {
-      console.log(this.CodeWordSetNames + ' test')
       axios({
         method: 'post',
         url: '/codeword/getCodewords',
         data: {
-          CodeWordSetKey: this.CodeWordSetNames
+          CodeWordSetKey: this.CodeWordSetName
         },
         headers: {
           token: window.localStorage.getItem('token')
@@ -122,4 +99,3 @@ export default {
   }
 }
 </script>
-

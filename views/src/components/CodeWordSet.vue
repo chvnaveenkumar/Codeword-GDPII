@@ -15,10 +15,7 @@
                 <div class="modal-content" style="width:fit-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="addcourseLabel">Create Codeword Set</h5>
-                        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span></button> -->
-                      <button id="exPopover3" class="btn btn-outline-primary"><i class="fa fa-eye"></i> Hint</button>
-                       
+                      <button id="exPopover3" class="btn btn-outline-primary"><i class="fa fa-eye"></i> Hint</button>          
                       <b-popover target="exPopover3" triggers="click" placement="auto">
                         <template slot="title">Rules for Creating Codewords</template>
                         <strong>1.</strong> Every codeword should be unique in the set.<br>
@@ -137,7 +134,6 @@ export default {
         }
       }).then(response => {
         this.codeWordTempSetData = response.data.data
-        console.log(this.codeWordTempSetData[0].Codewords.length)
       })
     }
   },

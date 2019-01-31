@@ -5,7 +5,7 @@
 const _ = require('lodash');
 const bcrypt = require('bcryptjs');
 var jwt = require('jsonwebtoken');
-var { CodeWord } = require('../model/model.codeword');
+var Codewordset = require('../model/model.codewordset');
 var { mongoose } = require('./../config/database')
 var mailController = require('../config/user.mail.js')
 let XLSX = require('xlsx')
@@ -30,15 +30,13 @@ let addcodewords = (req, res) => {
 module.exports.addcodewords = addcodewords;
 
 let getCodewords = (req,res) => {
-    var body = _.map(req.body.CodeWordSetKey, 'CodeWordSetName');
-    CodeWord.find({CodeWordSetName : {$in : body}}, function (err, codewords) {
-        data = _.groupBy(codewords, 'CodeWordSetName');
+    var body = _.pick(req.body,['CodeWordSetKey']);
+    Codewordset.find({CodeWordSetName : body.CodeWordSetKey}, function (err, codewordset) {
         if(err){
             return res.json({ code: 200, message: 'No codewordset is created!!'});
         }
-        console.log(data)
-        if (codewords)
-            return res.json({ code: 200, data: data});
+        if (codewordset)
+            return res.json({ code: 200, data: codewordset[0].Codewords});
         }).catch((e) => {
             return res.json({ code: 400, message: e });
         })

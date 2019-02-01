@@ -72,12 +72,12 @@
                 <td> {{ code.CodeWordSetName }} </td>
                  <td id="count">{{ code.Codewords.length }}</td>
                 <td> <router-link :to="{ name: 'CodeWord', params: { CodeWordSetName: code.CodeWordSetName } }"><button type="button" class="btn btn-info btn-sm"><i class="fa fa-pencil fa-xs"></i></button></router-link></td>
-                <td> <button type="button" class="btn btn-info btn-sm" data-target="#deleteCodwordset" @click="selectCodewordSet(code.CodeWordSetName)"><i class="fa fa-trash fa-xs"></i></button></td>
+                <td> <button type="button" data-toggle="modal" class="btn btn-info btn-sm" data-target="#deleteCodwordsetmodel" @click="selectCodewordSet(code.CodeWordSetName)"><i class="fa fa-trash fa-xs"></i></button></td>
             </tr>
         </tbody>
             </table>
             <!-- Modal Delete codewordset -->
-<div class="modal fade" id="deleteCodewordset" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="deleteCodwordsetmodel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -87,7 +87,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <h1> {{selectedCourse}} </h1>
+        <h1> {{CodewordSetName}} </h1>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primart" data-dismiss="modal">Cancel</button>
@@ -109,7 +109,8 @@ export default {
       codeWordSetCount: [],
       codeWordTempSetData: [],
       codeWordSetData: [],
-      count: 0
+      count: 0,
+      CodewordSetName: ''
     }
   },
   /* global axios */
@@ -119,7 +120,7 @@ export default {
       this.files = this.$refs.myFile
       let data = new FormData(document.querySelector('form'))
       axios.post('/codeword/getdataxlsx', data).then(response => {
-        this.tcodeWordSetData = response.data.data
+        this.codeWordSetData = response.data.data
         this.count = response.data.data.length
       })
     },
@@ -161,11 +162,14 @@ export default {
           token: window.localStorage.getItem('token')
         },
         data: {
-          CodeWordSetName: setName
+          CodeWordSetName: this.CodewordSetName
         }
       }).then(response => {
         console.log('test')
       })
+    },
+    selectCodewordSet (setName) {
+      this.CodewordSetName = setName
     }
   },
   mounted () {

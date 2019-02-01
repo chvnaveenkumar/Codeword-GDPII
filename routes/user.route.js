@@ -35,6 +35,7 @@ router.post('/updateCourse', courseController.updateCourse)
 // Codeword Set API calls
 router.post('/addcodewordset',codewordsetController.addcodewordset)
 router.get('/getcodewordset', codewordsetController.getcodewordset)
+router.delete('/deletecodewordset', codewordsetController.deletecodewordset)
 
 // Codewords API calls
 router.post('/getCodewords', codewordController.getCodewords)

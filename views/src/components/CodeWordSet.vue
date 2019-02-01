@@ -69,11 +69,10 @@
                 </thead>
                 <tbody>
             <tr v-for="code in codeWordTempSetData" :key="code._id">
-                
                 <td> {{ code.CodeWordSetName }} </td>
                  <td id="count">{{ code.Codewords.length }}</td>
                 <td> <router-link :to="{ name: 'CodeWord', params: { CodeWordSetName: code.CodeWordSetName } }"><button type="button" class="btn btn-info btn-sm"><i class="fa fa-pencil fa-xs"></i></button></router-link></td>
-                <td> <router-link to="/codeword"><button type="button" class="btn btn-info btn-sm"><i class="fa fa-trash fa-xs"></i></button></router-link></td>
+                <td> <button type="button" class="btn btn-info btn-sm" @click="deleteCodewordSet(code.CodeWordSetName)"><i class="fa fa-trash fa-xs"></i></button></td>
             </tr>
         </tbody>
             </table>
@@ -82,8 +81,6 @@
 </template>
 
 <script>
-// import swal from 'sweetalert2'
-
 export default {
   name: 'CodeWordSet',
   data () {
@@ -134,6 +131,20 @@ export default {
         }
       }).then(response => {
         this.codeWordTempSetData = response.data.data
+      })
+    },
+    deleteCodewordSet (setName) {
+      axios({
+        method: 'delete',
+        url: '/codeword/deletecodewordset',
+        headers: {
+          token: window.localStorage.getItem('token')
+        },
+        data: {
+          CodeWordSetName: setName
+        }
+      }).then(response => {
+        console.log('test')
       })
     }
   },

@@ -32,7 +32,6 @@ module.exports.addcodewords = addcodewords;
 let getCodewords = (req,res) => {
     var body = _.pick(req.body,['CodeWordSetKey']);
     Codewordset.findOne({CodeWordSetName : body.CodeWordSetKey}).then((codewordset) => {
-        console.log(codewordset.Codewords)
         if (codewordset)
             return res.json({ code: 200, data: codewordset.Codewords});
         })

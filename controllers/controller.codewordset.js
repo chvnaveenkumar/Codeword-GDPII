@@ -67,4 +67,3 @@ let getcodewordset = (req, res) => {
     })
 }
 module.exports.getcodewordset = getcodewordset;
-

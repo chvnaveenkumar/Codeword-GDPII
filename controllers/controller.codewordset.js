@@ -67,3 +67,14 @@ let getcodewordset = (req, res) => {
     })
 }
 module.exports.getcodewordset = getcodewordset;
+
+let deletecodewordset = (req, res) => {
+    var body = _.pick(req.body,['CodeWordSetName']);
+    Codewordset.remove({ CodeWordSetName: body.CodeWordSetName } ).then((result) => {
+        if (result)
+            return res.json({ code: 200, data: true });
+    }).catch((e) => {
+        return res.json({ code: 400, message: e });
+    })
+}
+module.exports.deletecodewordset = deletecodewordset;

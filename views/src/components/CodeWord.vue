@@ -62,7 +62,7 @@
         Codeword: <input type="text" v-model="selectedCodeword">
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" @click="editCodeword(selectedCodeword, codewordIndex)">Update Codeword</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" @click="editCodeword(selectedCodeword, codewordIndex)">Update Codeword</button>
         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
       </div>
     </div>
@@ -91,7 +91,6 @@ export default {
   created () {
     if (this.$route.params.CodeWordSetName == null) {
       this.CodeWordSetName = window.localStorage.getItem('setId')
-      console.log('setid' + this.CodeWordSetName)
       this.getCodeWords()
     } else {
       window.localStorage.setItem('setId', this.$route.params.CodeWordSetName)
@@ -115,22 +114,23 @@ export default {
       })
     },
     selectCodeword (index) {
-      this.codewordIndex = this.index
+      this.codewordIndex = index
       this.selectedCodeword = this.codewords[index]
     },
-    editCodeword (selectedCodeword, codewordIndex) {
+    editCodeword (selectedCodeword, index) {
+      this.codewords[this.codewordIndex] = selectedCodeword
       axios({
         method: 'post',
         url: '/codeword/updatecodeword',
         data: {
           CodeWordSetKey: this.CodeWordSetName,
-          CodewordIndex: this.codewordIndex
+          updatedCodewords: this.codewords
         },
         headers: {
           token: window.localStorage.getItem('token')
         }
       }).then(response => {
-        this.codewords = response.data.data
+        this.getCodeWords()
       })
     }
   }

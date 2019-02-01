@@ -112,7 +112,7 @@ export default {
       let data = new FormData(document.querySelector('form'))
       let sendData = {
         CodeWordSetName: data.get('dataSetName'),
-        Codewords: this.tcodeWordSetData
+        Codewords: this.codeWordSetData
       }
       axios({
         method: 'post',

@@ -35,19 +35,16 @@ let getCodewords = (req,res) => {
         console.log(codewordset.Codewords)
         if (codewordset)
             return res.json({ code: 200, data: codewordset.Codewords});
-        }).catch((e) => {
-            return res.json({ code: 400, message: e });
         })
 }
 module.exports.getCodewords = getCodewords;
 
 let updatecodeword=(req,res) =>{
-    var body = _.pick(req.body,['CodeWordSetKey','CodewordIndex']);  
-    CodeWord.updateOne({CodeWordSetKey: body.CodeWordSetName}, { $set: { "Codeword" : body.Codeword } }, function(err, updatecodeword){
-        if(err){
-            return res.json({ code:200, message:'StudentName is updated'});
-        }
+    var body = _.pick(req.body,['CodeWordSetKey','updatedCodewords']);  
+    Codewordset.updateOne({CodeWordSetName: body.CodeWordSetKey}, { $set: { "Codewords" : body.updatedCodewords }}).then((updatecodeword) => {
         return res.json({ code: 400, message:true})
+    }).catch((e) => {
+        return res.json({ code: 400, message: 'Codeword is not updated' });
     })
 }
 

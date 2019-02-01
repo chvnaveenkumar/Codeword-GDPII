@@ -42,8 +42,8 @@ let getCodewords = (req,res) => {
 module.exports.getCodewords = getCodewords;
 
 let updatecodeword=(req,res) =>{
-    var body = _.pick(req.body,['CodeWordSetName','Codeword']);  
-    CodeWord.updateOne({CodeWordSetName: body.CodeWordSetName}, { $set: { "Codeword" : body.Codeword } }, function(err, updatecodeword){
+    var body = _.pick(req.body,['CodeWordSetKey','CodewordIndex']);  
+    CodeWord.updateOne({CodeWordSetKey: body.CodeWordSetName}, { $set: { "Codeword" : body.Codeword } }, function(err, updatecodeword){
         if(err){
             return res.json({ code:200, message:'StudentName is updated'});
         }

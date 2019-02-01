@@ -4,31 +4,23 @@
 <template>
     <div id="codeWord" class="container-fluid" style="margin-top:5em">
     <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
-      
-<h1>Softseventy(70)</h1>
-<div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">
-   <!-- Button trigger modal -->
-<button type="button" class="btn btn-success" title="Create CodeWord" data-toggle="modal" data-target="#createcodeword" style="float:left">
-   <span class="fa fa-plus"></span> Add codeword
-</button>
-
+<div class="col-md-4 col-lg-4 col-xs-4 col-sm-4 headingstyle">
+<h3>Codeword set Name: <strong>{{ CodeWordSetName }}</strong></h3>
 <!-- Modal -->
 <div class="modal fade" id="createcodeword" tabindex="-1" role="dialog" aria-labelledby="createcodewordLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="createcodewordLabel">Add COdeword</h5>
+        <h5 class="modal-title" id="createcodewordLabel">Add Codeword</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true"
-          >&times;</span>
+          <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
 <div class="form-group text-left">
-                                Upload Cordwords(Excel)
-                                <input type="file"  name="file" ref="myFile"  class="form-control-file" id="exampleFormControlFile1" style="margin-top:.2em"
-                                    required>
-                            </div>
+      Upload Cordwords(Excel)
+      <input type="file"  name="file" ref="myFile"  class="form-control-file" id="exampleFormControlFile1" style="margin-top:.2em" required>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary">Add</button>
@@ -49,16 +41,39 @@
                     <tr v-for="(codeword,index) in codewords" :key="codeword._id">
                         <td scope="row">{{ index+1 }}</td>
                         <td > {{ codeword }}</td>
-                        <td><a href="#" class="btn btn-warning"> <i class="fas fa-pencil-alt"></i> </a> 
-                        <button type="button" class="btn btn-danger" title="Create CodeWord" data-toggle="modal" data-target="#" style="marging-left:10px">
+                        <td>
+                          <button type="button" class="btn btn-warning" data-toggle="modal" @click="selectCodeword(index)" data-target="#editcodeword" style="marging-left:10px">
+                             <i class="fas fa-pencil-alt"></i>
+                        </button> 
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deletecodeword" style="marging-left:10px">
                              <i class="fas fa-trash"></i>
-                             </button> 
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                        </button>
+<!-- Modal Edit Course -->
+<div class="modal fade" id="editcodeword" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Edit Codeword</h5>  
+        <button type="button" class="close" data-dismiss="modal" aria-label="Cancel">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Codeword: <input type="text" v-model="selectedCodeword">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" @click="editCodeword(selectedCodeword, codewordIndex)">Update Codeword</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+      </div>
     </div>
-    </div>  
+  </div>
+</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
 </template>
 <script>
 /* global axios */
@@ -68,7 +83,9 @@ export default {
   data () {
     return {
       CodeWordSetName: '',
-      codewords: []
+      codewords: [],
+      selectedCodeword: '',
+      codewordIndex: ''
     }
   },
   created () {
@@ -84,7 +101,6 @@ export default {
   },
   methods: {
     getCodeWords () {
-      console.log(this.CodeWordSetName + 'checking')
       axios({
         method: 'post',
         url: '/codeword/getCodewords',
@@ -95,11 +111,33 @@ export default {
           token: window.localStorage.getItem('token')
         }
       }).then(response => {
-        console.log(response.data.data)
         this.codewords = response.data.data
-        console.log(this.codewords)
+      })
+    },
+    selectCodeword (index) {
+      this.codewordIndex = this.index
+      this.selectedCodeword = this.codewords[index]
+    },
+    editCodeword (selectedCodeword, codewordIndex) {
+      axios({
+        method: 'post',
+        url: '/codeword/updatecodeword',
+        data: {
+          CodeWordSetKey: this.CodeWordSetName,
+          CodewordIndex: this.codewordIndex
+        },
+        headers: {
+          token: window.localStorage.getItem('token')
+        }
+      }).then(response => {
+        this.codewords = response.data.data
       })
     }
   }
 }
 </script>
+<style>
+.headingstyle {
+  font-weight: bold;
+}
+</style>

@@ -72,10 +72,30 @@
                 <td> {{ code.CodeWordSetName }} </td>
                  <td id="count">{{ code.Codewords.length }}</td>
                 <td> <router-link :to="{ name: 'CodeWord', params: { CodeWordSetName: code.CodeWordSetName } }"><button type="button" class="btn btn-info btn-sm"><i class="fa fa-pencil fa-xs"></i></button></router-link></td>
-                <td> <button type="button" class="btn btn-info btn-sm" @click="deleteCodewordSet(code.CodeWordSetName)"><i class="fa fa-trash fa-xs"></i></button></td>
+                <td> <button type="button" class="btn btn-info btn-sm" data-target="#deleteCodwordset" @click="selectCodewordSet(code.CodeWordSetName)"><i class="fa fa-trash fa-xs"></i></button></td>
             </tr>
         </tbody>
             </table>
+            <!-- Modal Delete codewordset -->
+<div class="modal fade" id="deleteCodewordset" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Delete Codeword</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Cancel">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h1> {{selectedCourse}} </h1>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primart" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-danger" @click="deleteCodewordSet">Delete Course</button>
+      </div>
+    </div>
+  </div>
+</div>
     </div>
 </div>
 </template>
@@ -133,7 +153,7 @@ export default {
         this.codeWordTempSetData = response.data.data
       })
     },
-    deleteCodewordSet (setName) {
+    deleteCodewordSet () {
       axios({
         method: 'delete',
         url: '/codeword/deletecodewordset',

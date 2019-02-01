@@ -53,7 +53,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Edit Codeword</h5>  
+        <h5 class="modal-title">Update Codeword</h5>  
         <button type="button" class="close" data-dismiss="modal" aria-label="Cancel">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -82,8 +82,8 @@
         <h1> {{selectedCodeword}} </h1>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primart" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-danger" @click="deleteCodeword">Delete Course</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" @click="deleteCodeword">Delete Codeword</button>
       </div>
     </div>
   </div>

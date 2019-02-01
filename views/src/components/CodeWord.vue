@@ -96,7 +96,7 @@
     </div>
 </template>
 <script>
-/* global axios */
+/* global $ axios */
 
 export default {
   name: 'CodeWordSet',
@@ -170,7 +170,6 @@ export default {
     },
     selectCodewordSet (setName) {
       this.CodewordSetName = setName
-    }
     }
   }
 }

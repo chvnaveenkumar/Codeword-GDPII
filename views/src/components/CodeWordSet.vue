@@ -101,6 +101,7 @@
 </template>
 
 <script>
+/* global axios $ */
 export default {
   name: 'CodeWordSet',
   data () {
@@ -165,7 +166,8 @@ export default {
           CodeWordSetName: this.CodewordSetName
         }
       }).then(response => {
-        console.log('test')
+        $('#deleteCodwordsetmodel').modal('hide')
+        this.getCodeWordData()
       })
     },
     selectCodewordSet (setName) {

@@ -45,7 +45,7 @@
                           <button type="button" class="btn btn-warning" data-toggle="modal" @click="selectCodeword(index)" data-target="#editcodeword" style="marging-left:10px">
                              <i class="fas fa-pencil-alt"></i>
                         </button> 
-                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deletecodeword" style="marging-left:10px">
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deletecodeword" @click="selectCodeword(index)" style="marging-left:10px">
                              <i class="fas fa-trash"></i>
                         </button>
 <!-- Modal Edit Course -->
@@ -64,6 +64,26 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal" @click="editCodeword(selectedCodeword, codewordIndex)">Update Codeword</button>
         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+      <!-- Modal Delete codeword -->
+<div class="modal fade" id="deletecodeword" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Delete Codeword</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Cancel">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h1> {{Codeword}} </h1>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primart" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-danger" @click="deleteCodeword">Delete Course</button>
       </div>
     </div>
   </div>

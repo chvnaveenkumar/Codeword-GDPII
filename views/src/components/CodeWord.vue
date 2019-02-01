@@ -79,7 +79,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <h1> {{Codeword}} </h1>
+        <h1> {{selectedCodeword}} </h1>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primart" data-dismiss="modal">Cancel</button>
@@ -152,6 +152,25 @@ export default {
       }).then(response => {
         this.getCodeWords()
       })
+    },
+    deleteCodeword () {
+      axios({
+        method: 'delete',
+        url: '/codeword/deletecodeword',
+        headers: {
+          token: window.localStorage.getItem('token')
+        },
+        data: {
+          CodeWordSetName: this.CodewordSetName
+        }
+      }).then(response => {
+        $('#deleteCodwordsetmodel').modal('hide')
+        this.getCodeWordData()
+      })
+    },
+    selectCodewordSet (setName) {
+      this.CodewordSetName = setName
+    }
     }
   }
 }

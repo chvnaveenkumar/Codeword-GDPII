@@ -4,8 +4,31 @@
 <template>
     <div id="codeWord" class="container-fluid" style="margin-top:5em">
     <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
+      <h3>Codeword set Name: <strong>{{ CodeWordSetName }}</strong></h3>
+      <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#addcodeword" style="marging-left:10px">
+  <i class="fas fa-fa-plus"></i>
+</button>
+<div class="modal fade" id="addcodeword" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add Codeword</h5>  
+        <button type="button" class="close" data-dismiss="modal" aria-label="Cancel">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Enter new codeword: <input type="text" v-model="newCodeword">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" @click="addCodeword()">Add Codeword</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4 headingstyle">
-<h3>Codeword set Name: <strong>{{ CodeWordSetName }}</strong></h3>
 <!-- Modal -->
 <div class="modal fade" id="createcodeword" tabindex="-1" role="dialog" aria-labelledby="createcodewordLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -105,7 +128,8 @@ export default {
       CodeWordSetName: '',
       codewords: [],
       selectedCodeword: '',
-      codewordIndex: ''
+      codewordIndex: '',
+      newCodeword: ''
     }
   },
   created () {
@@ -143,6 +167,10 @@ export default {
     },
     deleteCodeword () {
       this.codewords.splice(this.codewordIndex, 1)
+      this.updateCodeword()
+    },
+    addCodeword () {
+      this.codewords.push(this.newCodeword)
       this.updateCodeword()
     },
     updateCodeword () {

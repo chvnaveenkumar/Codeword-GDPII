@@ -1619,3 +1619,19 @@ TypeError: Cannot read property 'Codewords' of null
 2019-02-01T22:40:05.921Z - debug: 92 hootoriginal seeded
 2019-02-01T22:40:05.921Z - debug: 200 largeset seeded
 2019-02-01T22:40:05.921Z - info: END Seeder. Sample data read and verified.
+2019-02-02T00:52:37.129Z - info: START seeder.
+2019-02-02T00:52:37.170Z - debug: 2 dataCodewordset seeded
+2019-02-02T00:52:37.171Z - debug: 292 datacodeword seeded
+2019-02-02T00:52:37.171Z - debug: 6 datacourse seeded
+2019-02-02T00:52:37.171Z - debug: 114 dataCoursestudent seeded
+2019-02-02T00:52:37.171Z - debug: 92 hootoriginal seeded
+2019-02-02T00:52:37.171Z - debug: 200 largeset seeded
+2019-02-02T00:52:37.172Z - info: END Seeder. Sample data read and verified.
+2019-02-02T00:57:12.502Z - info: START seeder.
+2019-02-02T00:57:12.553Z - debug: 2 dataCodewordset seeded
+2019-02-02T00:57:12.553Z - debug: 292 datacodeword seeded
+2019-02-02T00:57:12.553Z - debug: 6 datacourse seeded
+2019-02-02T00:57:12.553Z - debug: 114 dataCoursestudent seeded
+2019-02-02T00:57:12.553Z - debug: 92 hootoriginal seeded
+2019-02-02T00:57:12.554Z - debug: 200 largeset seeded
+2019-02-02T00:57:12.554Z - info: END Seeder. Sample data read and verified.

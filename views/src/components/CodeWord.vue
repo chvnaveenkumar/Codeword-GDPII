@@ -82,8 +82,8 @@
         <h1> {{selectedCodeword}} </h1>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-primary" @click="deleteCodeword">Delete Codeword</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-danger" @click="deleteCodeword">Delete Codeword</button>
       </div>
     </div>
   </div>

@@ -85,7 +85,7 @@
               <input type="text" class="form-control" placeholder="Enter Survey End URL"  name="endSurveyurl" data-toggle="tooltip" data-placement="bottom" title="Enter Survey End URL" >
             </div>
             <div >
-              <button type="cancel" class="btn btn-warning" data-dismiss="modal">Cancel</button>
+              <button type="cancel" class="btn btn-danger" data-dismiss="modal">Cancel</button>
               <button type="create" class="btn btn-primary" data-dismiss="modal" @click.prevent="CreateCourse">Create Course</button>
             </div>
             </div>

@@ -42,10 +42,10 @@
                         <td scope="row">{{ index+1 }}</td>
                         <td > {{ codeword }}</td>
                         <td>
-                          <button type="button" class="btn btn-warning" data-toggle="modal" @click="selectCodeword(index)" data-target="#editcodeword" style="marging-left:10px">
+                          <button type="button" class="btn btn-info btn-sm" data-toggle="modal" @click="selectCodeword(index)" data-target="#editcodeword" style="marging-left:10px">
                              <i class="fas fa-pencil-alt"></i>
                         </button> 
-                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deletecodeword" @click="selectCodeword(index)" style="marging-left:10px">
+                        <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#deletecodeword" @click="selectCodeword(index)" style="marging-left:10px">
                              <i class="fas fa-trash"></i>
                         </button>
 <!-- Modal Edit Course -->
@@ -82,8 +82,8 @@
         <h1> {{selectedCodeword}} </h1>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-danger" @click="deleteCodeword">Delete Codeword</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" @click="deleteCodeword">Delete Codeword</button>
       </div>
     </div>
   </div>

@@ -83,7 +83,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-primary" @click="deleteCodeword">Delete Codeword</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" @click="deleteCodeword">Delete Codeword</button>
       </div>
     </div>
   </div>
@@ -96,7 +96,7 @@
     </div>
 </template>
 <script>
-/* global $ axios */
+/* global axios */
 
 export default {
   name: 'CodeWordSet',
@@ -139,6 +139,13 @@ export default {
     },
     editCodeword (selectedCodeword, index) {
       this.codewords[this.codewordIndex] = selectedCodeword
+      this.updateCodeword()
+    },
+    deleteCodeword () {
+      this.codewords.splice(this.codewordIndex, 1)
+      this.updateCodeword()
+    },
+    updateCodeword () {
       axios({
         method: 'post',
         url: '/codeword/updatecodeword',
@@ -151,21 +158,6 @@ export default {
         }
       }).then(response => {
         this.getCodeWords()
-      })
-    },
-    deleteCodeword () {
-      axios({
-        method: 'delete',
-        url: '/codeword/deletecodeword',
-        headers: {
-          token: window.localStorage.getItem('token')
-        },
-        data: {
-          CodeWordSetName: this.CodewordSetName
-        }
-      }).then(response => {
-        $('#deleteCodwordsetmodel').modal('hide')
-        this.getCodeWordData()
       })
     },
     selectCodewordSet (setName) {

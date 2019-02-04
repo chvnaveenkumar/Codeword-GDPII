@@ -5,7 +5,7 @@
     <div id="codeWord" class="container-fluid" style="margin-top:5em">
     <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
       <h3>Codeword set Name: <strong>{{ CodeWordSetName }}</strong></h3>
-      <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#addcodeword" style="marging-left:10px">
+      <button type="button" class="btn btn-info btn-sm" v-if='isPermanent !== true' data-toggle="modal" data-target="#addcodeword" style="marging-left:10px">
   <i class="fas fa-fa-plus"></i>
 </button>
 <div class="modal fade" id="addcodeword" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -57,14 +57,14 @@
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Codewords</th>
-                        <th scope="col">Options</th>
+                        <th scope="col" v-if='isPermanent !== true'>Options</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr v-for="(codeword,index) in codewords" :key="codeword._id">
                         <td scope="row">{{ index+1 }}</td>
                         <td > {{ codeword }}</td>
-                        <td>
+                        <td v-if='isPermanent !== true'>
                           <button type="button" class="btn btn-info btn-sm" data-toggle="modal" @click="selectCodeword(index)" data-target="#editcodeword" style="marging-left:10px">
                              <i class="fas fa-pencil-alt"></i>
                         </button> 
@@ -129,7 +129,8 @@ export default {
       codewords: [],
       selectedCodeword: '',
       codewordIndex: '',
-      newCodeword: ''
+      newCodeword: '',
+      isPermanent: Boolean
     }
   },
   created () {
@@ -154,7 +155,8 @@ export default {
           token: window.localStorage.getItem('token')
         }
       }).then(response => {
-        this.codewords = response.data.data
+        this.codewords = response.data.codewords
+        this.isPermanent = response.data.isPermanent
       })
     },
     selectCodeword (index) {

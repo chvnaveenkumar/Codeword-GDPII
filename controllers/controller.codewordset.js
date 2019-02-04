@@ -20,7 +20,6 @@ var upload = multer({ storage: storage }).single('file')
 
 // Fetching data from uploaded xls file is added by Ujjawal Kumar
 let getDataFromXLS = (req, res) => {
-
     upload(req, res, function (err) {
         if (req && (!req.file || req.file.size == 0)) {
             return res.status(500).json({ message: "Please provide proper file." });
@@ -33,8 +32,20 @@ let getDataFromXLS = (req, res) => {
                     'codeword': 'A',
                 }
             }).then(jsonArray => {
-                console.log(_.map(jsonArray[0],'codeword'))
-                return res.status(200).json({ data: _.map(jsonArray[0],'codeword'), count: jsonArray[0].length })
+                var codewords = _.map(jsonArray[0],'codeword')
+                var checking = true
+                _.forEach(codewords, function(value) {
+                    if(value.length<5 || value.length >10) {
+                         checking = false
+                         return false
+                    }
+                });
+                console.log('cheking' + checking)
+                if(checking === false){
+                    return res.status(200).json({ data: 'Codeword not 5 letter', count: false })
+                }else{
+                    return res.status(200).json({ data: codewords, count: jsonArray[0].length })
+                }
             })
     })
 

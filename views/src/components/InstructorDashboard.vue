@@ -63,8 +63,6 @@
               <input type="text" class="form-control" pattern=".{6,}" id="courseName" name="courseName" placeholder="Enter Course Name" data-toggle="tooltip"  title="Atleast 6 characters" required>
             </div>
             <div class="row">
-              <!-- :value="startDate && startDate.toISOString().split('T')[0]" -->
-              <!--  v-model="startDate" -->
                 <div class="col tooltip-test" title="Start Date"> Start Date:<input type="date" name="startDate" class="form-control" v-model="startDate" placeholder="Start Date" required/></div>
                 <div class="col tooltip-test" title="End Date"> End Date:<input type="date" class="form-control" v-model="endDate"  name="endDate" :disabled=true  placeholder="End Date" required></div>
             </div>
@@ -115,12 +113,11 @@ export default {
   created () {
     this.startDate = new Date() && new Date().toISOString().split('T')[0]
     this.endDate = new Date() && new Date(new Date().getMonth() + 4).toISOString().split('T')[0]
-    console.log(this.endDate)
     this.fetchCourseList()
   },
   watch: {
     startDate (value) {
-      let start = new Date()
+      let start = new Date(value)
       this.startDate = new Date(start) && new Date(start).toISOString().split('T')[0]
       this.endDate = new Date(start.setMonth(start.getMonth())) && new Date(start.setMonth(start.getMonth() + 4)).toISOString().split('T')[0]
     },
@@ -128,8 +125,8 @@ export default {
   },
   methods: {
     CreateCourse () {
-      if (this.CodeWordSetName === '') {
-        swal('Please select codeword set!')
+      if (this.courseName === '') {
+        swal('Please enter course Name !')
       } else {
         let data = new FormData(document.querySelector('form'))
         this.courseName = data.get('courseName')
@@ -138,7 +135,6 @@ export default {
         this.startSurveyurldata = data.get('startSurveyurl')
         this.endSurveyurldata = data.get('endSurveyurl')
         let formData = new FormData()
-        console.log(this.CodeWordSetName + 'testcode')
         formData.append('CourseNameKey', this.courseName)
         formData.append('CodeWordSetName', this.CodeWordSetName)
         formData.append('file', this.file)

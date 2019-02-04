@@ -32,15 +32,15 @@
                             <div class="form-group">
                                 <input name="dataSetName" type="text" class="form-control" placeholder="Enter Cordword Set Name" data-toggle="tooltip" data-placement="top" title="Enter Cordword Set Name" required>
                             </div>
-                            
                             <div class="form-group text-left">
                                 Upload Cordword Set(Excel)
                                 <input type="file"  name="file" ref="myFile" @change="previewFiles" class="form-control-file" id="exampleFormControlFile1" style="margin-top:.2em" required>
                             </div>
-                            
                             <div class="alert alert-info">
-                                 <p v-if="count == 0">                          
+                                 <p v-if="count === 0">                          
                                  No File is uploaded. Waiting for user to upload the CodeWord Set.</p>
+                                <p v-else-if="count === false">
+                                    Codeword is not 5 letter Please upload another excel.</p>
                                 <p v-else>
                                     There are {{ count }} codewords in the Uploaded set.</p>
                             </div>
@@ -49,8 +49,8 @@
                    <!-- Modal Footer -->	
                       <div class="modal-footer">	
                                 <button type="cancel" class="btn btn-danger" data-dismiss="modal">Cancel</button>	
-                                <button type="create" class="btn btn-success" data-dismiss="modal" @click.prevent="saveCodeWordData">Create</button>	
-                            </div>                  
+                                <button type="create" :disabled="count != false || 0" class="btn btn-success" data-dismiss="modal" @click.prevent="saveCodeWordData">Create</button>	
+                      </div>                  
                 </div>
             </div>
         </div>
@@ -60,7 +60,6 @@
     <table class="table" id="codewordsetTable">
                 <thead class="thead-dark">
                     <tr>
-                        
                         <th scope="col">Codeword Set Name</th>
                         <th scope="col">Count</th>
                         <th scope="col"></th>
@@ -70,13 +69,13 @@
                 <tbody>
             <tr v-for="code in codeWordTempSetData" :key="code._id">
                 <td> {{ code.CodeWordSetName }} </td>
-                 <td id="count">{{ code.Codewords.length }}</td>
+                <td id="count">{{ code.Codewords.length }}</td>
                 <td> <router-link :to="{ name: 'CodeWord', params: { CodeWordSetName: code.CodeWordSetName } }"><button type="button" class="btn btn-info btn-sm"><i class="fa fa-pencil fa-xs"></i></button></router-link></td>
-                <td> <button type="button" data-toggle="modal" class="btn btn-info btn-sm" data-target="#deleteCodwordsetmodel" @click="selectCodewordSet(code.CodeWordSetName)"><i class="fa fa-trash fa-xs"></i></button></td>
+                <td> <button type="button" data-toggle="modal" v-if='code.isPermanent !== true' class="btn btn-info btn-sm" data-target="#deleteCodwordsetmodel" @click="selectCodewordSet(code.CodeWordSetName)"><i class="fa fa-trash fa-xs"></i></button></td>
             </tr>
         </tbody>
             </table>
-            <!-- Modal Delete codewordset -->
+<!-- Modal Delete codewordset -->
 <div class="modal fade" id="deleteCodwordsetmodel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -122,7 +121,8 @@ export default {
       let data = new FormData(document.querySelector('form'))
       axios.post('/codeword/getdataxlsx', data).then(response => {
         this.codeWordSetData = response.data.data
-        this.count = response.data.data.length
+        this.count = response.data.count
+        console.log(this.count)
       })
     },
 

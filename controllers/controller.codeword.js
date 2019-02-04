@@ -33,7 +33,7 @@ let getCodewords = (req,res) => {
     var body = _.pick(req.body,['CodeWordSetKey']);
     Codewordset.findOne({CodeWordSetName : body.CodeWordSetKey}).then((codewordset) => {
         if (codewordset)
-            return res.json({ code: 200, data: codewordset.Codewords});
+            return res.json({ code: 200, codewords: codewordset.Codewords, isPermanent: codewordset.isPermanent});
         })
 }
 module.exports.getCodewords = getCodewords;

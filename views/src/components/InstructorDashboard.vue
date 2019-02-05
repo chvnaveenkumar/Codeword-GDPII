@@ -84,7 +84,7 @@
             </div>
             <div >
               <button type="cancel" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-              <button type="create" class="btn btn-primary" data-dismiss="modal" @click.prevent="CreateCourse">Create Course</button>
+              <button type="create" class="btn btn-primary">Create Course</button>
             </div>
             </div>
             </form></div></div></div>
@@ -125,8 +125,8 @@ export default {
   },
   methods: {
     CreateCourse () {
-      if (this.courseName === '') {
-        swal('Please enter course Name !')
+      if (this.CodeWordSetName === '') {
+        swal('Please choose codeword set!')
       } else {
         let data = new FormData(document.querySelector('form'))
         this.courseName = data.get('courseName')

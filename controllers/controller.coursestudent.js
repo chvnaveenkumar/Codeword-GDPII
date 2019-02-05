@@ -1,9 +1,8 @@
 const _ = require('lodash');
 var { CourseStudentModel } = require('../model/model.coursestudent');
 var { mongoose } = require('./../config/database')
-var { CodeWord } = require('../model/model.codeword')
+var Codewordset = require('../model/model.codewordset');
 let XLSX = require('xlsx')
-var Course = require('./../controllers/controller.course')
 var { CourseModel } = require('../model/model.course');
 const fs = require('fs');
 
@@ -16,13 +15,12 @@ let addCourseStudent = (req,res) => {
     var body = _.pick(req.body,['CourseNameKey','CodeWordSetName']);    
     studetList = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]]);
     
-    CodeWord.find({CodeWordSetName: body.CodeWordSetName}, function (err, CodeWords) {
+    Codewordset.find({CodeWordSetName: body.CodeWordSetName}, function (err, CodeWordset) {
         if(err){
             return res.status(200).json({ message: 'CodeWord Set Not found error'});
         }
-        for(var i=0;i<CodeWords.length;i++){
-        codewordslist.push(CodeWords[i].Codeword)
-        }
+        codewordslist = CodeWordset[0].Codewords
+        
         if(codewordslist.length < studetList.length )
         {
             CourseModel.deleteOne({courseNameKey: body.CourseNameKey,emailKey: req.session.email }, function(err,deletecourse){

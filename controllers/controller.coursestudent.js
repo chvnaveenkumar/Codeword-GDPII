@@ -77,8 +77,8 @@ let getCourseStudent = (req,res) => {
     let pageCount = 10;
     let pageNumber = parseInt(req.param('pageNumber')) || 0;
     let pages = 0;
-    CourseStudentModel.find({CourseNameKey: body.CourseNameValue}).exec( function (err, count){
-        CourseStudentModel.find({CourseNameKey: body.CourseNameValue}).skip(pageNumber * pageCount).limit(pageCount).exec(function (err, courseStudents) {
+    CourseStudentModel.find({$and: [{CourseNameKey: body.CourseNameValue}, {courseCreater: req.session.email}]}).exec( function (err, count){
+        CourseStudentModel.find({$and: [{CourseNameKey: body.CourseNameValue}, {courseCreater: req.session.email}]}).skip(pageNumber * pageCount).limit(pageCount).exec(function (err, courseStudents) {
             if(err){
                 return res.json({ code: 200, message: 'No courses created!!'});
             }

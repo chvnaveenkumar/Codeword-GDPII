@@ -1,7 +1,7 @@
 /**
  * @author Ujjawal Kumar
  */
-
+ 
 <template>
 <div id="codeWordSet" class="container-fluid" style="margin-top:5em">
     <div class="col-md-4 col-lg-4 col-xs-0 col-sm-0">
@@ -49,7 +49,7 @@
                    <!-- Modal Footer -->	
                       <div class="modal-footer">	
                                 <button type="cancel" class="btn btn-danger" data-dismiss="modal">Cancel</button>	
-                                <button type="create" :disabled="count != false || 0" class="btn btn-success" data-dismiss="modal" @click.prevent="saveCodeWordData">Create</button>	
+                                <button type="create" :disabled="count === false || count === 0" class="btn btn-success" data-dismiss="modal" @click.prevent="saveCodeWordData">Create</button>	
                       </div>                  
                 </div>
             </div>

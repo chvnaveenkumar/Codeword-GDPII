@@ -29,12 +29,16 @@ var CourseStudentModel = mongoose.model('CourseStudentModel', {
    Codeword:{
     type: String,
     require: true,
-    minlength: 3
+    minlength: 2
    },
    Acknowledged: {
     type: Boolean,
     require: true,
     default: false
+   },
+   courseCreater: {
+    type: String,
+    require: true
    }
 });
 

@@ -43,7 +43,8 @@ let addCourseStudent = (req,res) => {
                     EmailKey:studentidList[i],
                     Codeword:shuffleCodeWords[i],
                     StudentName: studentNameList[i],
-                    Acknowledged: false 
+                    Acknowledged: false,
+                    courseCreater: req.session.email 
                 });
                 coursestudent.push(courseStudentModel);
             }
@@ -51,7 +52,9 @@ let addCourseStudent = (req,res) => {
                     return res.status(200).json({message: 'Course student successfully!'})    
                 })
                 .catch(error => {
+                    console.log(error.message)
                     return res.status(403).json({ message:error.message});
+                    
                 })                 
         }
     })

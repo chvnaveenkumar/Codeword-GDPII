@@ -142,10 +142,10 @@
           <div class=" col-md-6">
         Start Date: </div>
           <div class="col-md-6">
-        <input type="date" class="form-control" v-model="courseInfo.Startdate"></div></div>
+        <input type="date" id="startDate" class="form-control" v-model="courseInfo.Startdate" @change="changeEndDate"></div></div>
         <div class="row">
           <div class=" col-md-6">
-        End Date: </div><div class="col-md-6"><input type="date" class="form-control" v-model="courseInfo.Enddate"></div>
+        End Date: </div><div class="col-md-6"><input type="date" id="endDate" class="form-control" v-model="courseInfo.Enddate"></div>
         </div>
              <div class="row">
           <div class=" col-md-6">
@@ -207,6 +207,12 @@ export default {
     }
   },
   methods: {
+    changeEndDate () {
+      let start = new Date(document.getElementById('startDate').value)
+      this.courseInfo.Startdate = new Date(start) && new Date(start).toISOString().split('T')[0]
+      this.courseInfo.Enddate = new Date(start.setMonth(start.getMonth())) && new Date(start.setMonth(start.getMonth() + 4)).toISOString().split('T')[0]
+      document.getElementById('endDate').value = this.courseInfo.Enddate
+    },
     getCourseStudentData () {
       axios({
         method: 'post',

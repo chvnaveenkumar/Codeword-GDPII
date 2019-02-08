@@ -1,0 +1,12 @@
+#codewordsetTable tr:nth-child(even){background-color: #f2f2f2;}
+
+#codewordsetTable tr:hover {background-color: #ddd;}
+
+#codewordsetTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color:#212121;
+    color: white;
+    width: 60%;
+}

@@ -56,7 +56,7 @@
         </div>
     </div>
     <!-- class="table table-striped" -->
-    <div class="table-responsive-sm"> 
+    <div class="table-responsive-md"> 
     <table class="table" id="codewordsetTable">
                 <thead class="thead-dark">
                     <tr>

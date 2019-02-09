@@ -277,4 +277,7 @@ background-color: white;
 .bg-info {
     background-color: #3e5c67 !important;
 }
+#boldforcourse{
+  color: aliceblue;
+}
 </style>

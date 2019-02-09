@@ -20,6 +20,7 @@
     End Date: {{ courseData.Enddate }} <br>
     Start Survey URL: <a v-bind:href="'http://'+courseData.PreSurveyURL" class="card-link" target="_blank">{{ courseData.PreSurveyURL }} </a> <br>
     End Survey URL: <a v-bind:href="'http://'+courseData.PostSurveyURL" class="card-link" target="_blank">{{ courseData.PostSurveyURL }} </a> <br>
+    Number of Students: {{ courseStudentData.length }} <br>
     </div>
      <div class="col-md-6 col-lg-6 col-xs-0 col-sm-0" style="text-align:left;font-weight:bold">
           <button class="btn" data-toggle="modal" data-target="#editCourse" @click="selectCourse(courseData)" style="float:right;">Edit <i class="fa fa-pencil fa-xs"></i></button>

@@ -35,30 +35,27 @@ export default {
       courseName: '',
       startSurveyurldata: '',
       endSurveyurldata: '',
-      Codeword: ''
+      Codeword: '',
+      userCourses: ''
     }
   },
   /* global axios */
   created () {
-    // fetch the data when the view is created and the data is
-    // already being observed
     this.fetchUserData()
   },
   watch: {
-    // call again the method if the route changes
     '$route': 'fetchUserData'
   },
   methods: {
     fetchUserData () {
       axios({
         method: 'get',
-        url: 'codeword/getstudentcodeword',
+        url: 'codeword/getstudentcourses',
         headers: {
           token: window.localStorage.getItem('token')
         }
       }).then(response => {
-        this.userCodeword = response.data.data
-        console.log(this.userCodeword)
+        this.userCourses = response.data.data
       })
     }
   }

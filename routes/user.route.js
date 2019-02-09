@@ -44,8 +44,6 @@ router.post('/updatecodeword', codewordController.updatecodeword);
 router.post('/addnewcodewords', codewordController.addcodewords);
 
 // API calls for student
-router.get('/getstudentcodeword', studentController.getstudentcodeword);
-
-
+router.get('/getstudentcourses', studentController.getstudentDetails);
 
 module.exports = router;

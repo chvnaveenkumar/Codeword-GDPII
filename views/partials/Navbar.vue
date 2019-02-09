@@ -5,7 +5,7 @@
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>npm 
+            </button>
              <div class="navbar-collapse collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto" v-if="!auth">
                     <li class="nav-item">

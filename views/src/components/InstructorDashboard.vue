@@ -274,4 +274,7 @@ background-color: white;
     margin-right: 160px;
     margin-left: 80px;
 }
+.bg-info {
+    background-color: #3e5c67 !important;
+}
 </style>

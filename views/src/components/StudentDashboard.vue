@@ -15,9 +15,9 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Graduate Directed Project-1</td>
-        <td>Cricket</td>
+      <tr v-for="course in userCourses" :key="course">
+        <td>{{ course.CourseNameKey}}</td>
+        <td>{{ course.Codeword }}</td>
       </tr>
       
     </tbody>
@@ -55,6 +55,7 @@ export default {
           token: window.localStorage.getItem('token')
         }
       }).then(response => {
+        console.log(response.data.data)
         this.userCourses = response.data.data
       })
     }

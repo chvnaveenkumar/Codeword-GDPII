@@ -19,6 +19,8 @@
       <tr v-for="course in userCourses" :key="course">
         <td>{{ course.CourseNameKey}}</td>
         <td>{{ course.Codeword }}</td>
+        <td>  <a> Click Here </a></td>
+        <td> <a> Click Here </a></td>
       </tr>
     </tbody>
       <div v-else class='nodata'>

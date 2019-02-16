@@ -13,17 +13,17 @@
         <th>Codeword</th>
       </tr>
     </thead>
+    <div v-if="status">
     <tbody>
-      <div v-if="status">
       <tr v-for="course in userCourses" :key="course">
         <td>{{ course.CourseNameKey}}</td>
         <td>{{ course.Codeword }}</td>
       </tr>
-      </div>
-      <div v-else>
+    </tbody>
+    </div>
+      <div v-else class='nodata'>
         No Courses Found
       </div>
-    </tbody>
   </table>
   <div class="col-md-2 col-lg-2 col-xs-0 col-sm-0"></div>
 </div></div>
@@ -70,3 +70,8 @@ export default {
   }
 }
 </script>
+<style>
+.nodata {
+  text-align: right
+}
+</style>

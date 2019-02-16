@@ -62,7 +62,7 @@
             <div class="modal-body">
             <!-- Retrive the course name from input field -->
             <div class="form-group">
-              <input type="text" class="form-control" pattern=".{6,}" id="courseName" name="courseName" placeholder="Enter Course Name" data-toggle="tooltip"  title="Atleast 6 characters" required>
+              <input type="text" class="form-control" pattern=".{6,}" id="courseName" autocomplete="off" name="courseName" placeholder="Enter Course Name" data-toggle="tooltip"  title="Atleast 6 characters" required>
             </div>
             <div class="row">
                 <div class="col tooltip-test" title="Start Date"> Start Date:<input type="date" name="startDate" class="form-control" v-model="startDate" placeholder="Start Date" required/></div>
@@ -163,7 +163,6 @@ export default {
                   token: window.localStorage.getItem('token')
                 }
                 }).then(response => {
-                console.log(response.data.message)
                 if (response.data.message === 'Course student successfully!') {
                   $('#addcourse').modal('hide')
                   this.fetchCourseList()

@@ -90,7 +90,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-primary" @click="deleteCodewordSet">Delete Codeword Set</button>
+        <button type="button" class="btn btn-primary" @click="codewordSetDelete()">Delete Codeword Set</button>
       </div>
     </div>
   </div>
@@ -156,7 +156,8 @@ export default {
         this.codeWordTempSetData = response.data.data
       })
     },
-    deleteCodewordSet () {
+    codewordSetDelete () {
+      console.log('test')
       axios({
         method: 'delete',
         url: '/codeword/deletecodewordset',

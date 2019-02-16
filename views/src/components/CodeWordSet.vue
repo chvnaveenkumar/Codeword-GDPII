@@ -5,12 +5,12 @@
 <template>
 <div id="codeWordSet" class="container-fluid" style="margin-top:5em">
     <div class="col-md-4 col-lg-4 col-xs-0 col-sm-0">
-        <button type="button" class="btn btn-success" title="Create CodeWord Set" data-toggle="modal" data-target="#addcourse">
+        <button type="button" class="btn btn-success" title="Create CodeWord Set" data-toggle="modal" data-target="#addcodeword">
                     <span class="fa fa-plus"></span> Create Codeword Set
                 </button>
 
         <!-- Modal -->        
-        <div class="modal fade" id="addcourse" tabindex="-1" role="dialog" aria-labelledby="addcourseLabel" aria-hidden="true">
+        <div class="modal fade" id="addcodeword" tabindex="-1" role="dialog" aria-labelledby="addcourseLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content" style="width:fit-content">
                     <div class="modal-header">
@@ -27,10 +27,10 @@
                     </div>
                     
                     <!-- Modal Body -->
+                    <form @submit.prevent="saveCodeWordData">
                     <div class="modal-body">
-                        <form @submit.prevent="CreateCodewordSet">
                             <div class="form-group">
-                                <input name="dataSetName" type="text" class="form-control" placeholder="Enter Cordword Set Name" data-toggle="tooltip" data-placement="top" title="Enter Cordword Set Name" required>
+                                <input name="dataSetName" pattern=".{5,}" type="text" class="form-control" placeholder="Enter Cordword Set Name" data-toggle="tooltip" data-placement="top" title="Cordword Set Name atleast 5 letters" required>
                             </div>
                             <div class="form-group text-left">
                                 Upload Cordword Set(Excel)
@@ -44,13 +44,13 @@
                                 <p v-else>
                                     There are {{ count }} codewords in the Uploaded set.</p>
                             </div>
-                        </form>
                     </div>
                    <!-- Modal Footer -->	
                       <div class="modal-footer">	
                                 <button type="cancel" class="btn btn-danger" data-dismiss="modal">Cancel</button>	
-                                <button type="create" :disabled="count === false || count === 0" class="btn btn-success" data-dismiss="modal" @click.prevent="saveCodeWordData">Create</button>	
-                      </div>                  
+                                <button type="create" :disabled="count === false || count === 0" class="btn btn-success" >Create</button>	
+                      </div>            
+                    </form>      
                 </div>
             </div>
         </div>
@@ -141,6 +141,7 @@ export default {
           token: window.localStorage.getItem('token')
         }
       }).then(response => {
+        $('#addcodeword').modal('hide')
         this.getCodeWordData()
       })
     },

@@ -7,7 +7,7 @@
         <!-- Button trigger modal -->
       <h2>List of courses registered</h2>
   <table class="table col-md-12 col-lg-12 col-xs-12 col-sm-12 table-striped table-bordered table-hover" >
-    <thead>
+    <thead class="thead-dark">
       <tr>
         <th>Course Name</th>
         <th>Codeword</th>

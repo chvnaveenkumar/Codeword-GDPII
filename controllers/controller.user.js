@@ -18,7 +18,7 @@ let signUp = (req,res) => {
         bcrypt.hash(body.password,salt,(err,hash) => {
             body.password = hash;
             var userModel = new UserModel({
-                emailKey: body.email,
+                emailKey: body.email.charAt(0).toUpperCase() + body.email.slice(1),
                 password: body.password,
                 isInstructor: body.instructor
             });

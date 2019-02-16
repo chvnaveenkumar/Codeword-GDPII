@@ -15,14 +15,12 @@
         <th>End Survey</th>
       </tr>
     </thead>
-    <div v-if="status">
-    <tbody>
+    <tbody v-if="status">
       <tr v-for="course in userCourses" :key="course">
         <td>{{ course.CourseNameKey}}</td>
         <td>{{ course.Codeword }}</td>
       </tr>
     </tbody>
-    </div>
       <div v-else class='nodata'>
         No Courses Found
       </div>

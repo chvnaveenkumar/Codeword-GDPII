@@ -1971,6 +1971,7 @@ TypeError: Cannot read property 'Codewords' of null
 2019-02-09T04:29:09.428Z - debug: 92 hootoriginal seeded
 2019-02-09T04:29:09.428Z - debug: 200 largeset seeded
 2019-02-09T04:29:09.428Z - info: END Seeder. Sample data read and verified.
+<<<<<<< HEAD
 2019-02-11T15:15:58.142Z - info: START seeder.
 2019-02-11T15:15:58.155Z - debug: 2 dataCodewordset seeded
 2019-02-11T15:15:58.155Z - debug: 292 datacodeword seeded
@@ -1979,3 +1980,213 @@ TypeError: Cannot read property 'Codewords' of null
 2019-02-11T15:15:58.155Z - debug: 92 hootoriginal seeded
 2019-02-11T15:15:58.155Z - debug: 200 largeset seeded
 2019-02-11T15:15:58.156Z - info: END Seeder. Sample data read and verified.
+=======
+2019-02-15T15:08:46.237Z - info: START seeder.
+2019-02-15T15:08:46.278Z - debug: 2 dataCodewordset seeded
+2019-02-15T15:08:46.279Z - debug: 292 datacodeword seeded
+2019-02-15T15:08:46.279Z - debug: 6 datacourse seeded
+2019-02-15T15:08:46.279Z - debug: 114 dataCoursestudent seeded
+2019-02-15T15:08:46.280Z - debug: 92 hootoriginal seeded
+2019-02-15T15:08:46.280Z - debug: 200 largeset seeded
+2019-02-15T15:08:46.280Z - info: END Seeder. Sample data read and verified.
+2019-02-15T15:14:16.891Z - info: START seeder.
+2019-02-15T15:14:16.932Z - debug: 2 dataCodewordset seeded
+2019-02-15T15:14:16.933Z - debug: 292 datacodeword seeded
+2019-02-15T15:14:16.933Z - debug: 6 datacourse seeded
+2019-02-15T15:14:16.934Z - debug: 114 dataCoursestudent seeded
+2019-02-15T15:14:16.934Z - debug: 92 hootoriginal seeded
+2019-02-15T15:14:16.934Z - debug: 200 largeset seeded
+2019-02-15T15:14:16.934Z - info: END Seeder. Sample data read and verified.
+2019-02-15T15:19:04.961Z - info: START seeder.
+2019-02-15T15:19:05.005Z - debug: 2 dataCodewordset seeded
+2019-02-15T15:19:05.005Z - debug: 292 datacodeword seeded
+2019-02-15T15:19:05.005Z - debug: 6 datacourse seeded
+2019-02-15T15:19:05.005Z - debug: 114 dataCoursestudent seeded
+2019-02-15T15:19:05.006Z - debug: 92 hootoriginal seeded
+2019-02-15T15:19:05.006Z - debug: 200 largeset seeded
+2019-02-15T15:19:05.006Z - info: END Seeder. Sample data read and verified.
+2019-02-15T15:20:22.673Z - info: START seeder.
+2019-02-15T15:20:22.714Z - debug: 2 dataCodewordset seeded
+2019-02-15T15:20:22.714Z - debug: 292 datacodeword seeded
+2019-02-15T15:20:22.714Z - debug: 6 datacourse seeded
+2019-02-15T15:20:22.714Z - debug: 114 dataCoursestudent seeded
+2019-02-15T15:20:22.715Z - debug: 92 hootoriginal seeded
+2019-02-15T15:20:22.715Z - debug: 200 largeset seeded
+2019-02-15T15:20:22.715Z - info: END Seeder. Sample data read and verified.
+2019-02-15T15:21:47.228Z - info: START seeder.
+2019-02-15T15:21:47.261Z - debug: 2 dataCodewordset seeded
+2019-02-15T15:21:47.261Z - debug: 292 datacodeword seeded
+2019-02-15T15:21:47.261Z - debug: 6 datacourse seeded
+2019-02-15T15:21:47.261Z - debug: 114 dataCoursestudent seeded
+2019-02-15T15:21:47.261Z - debug: 92 hootoriginal seeded
+2019-02-15T15:21:47.261Z - debug: 200 largeset seeded
+2019-02-15T15:21:47.261Z - info: END Seeder. Sample data read and verified.
+2019-02-15T15:22:38.946Z - info: START seeder.
+2019-02-15T15:22:38.982Z - debug: 2 dataCodewordset seeded
+2019-02-15T15:22:38.982Z - debug: 292 datacodeword seeded
+2019-02-15T15:22:38.982Z - debug: 6 datacourse seeded
+2019-02-15T15:22:38.982Z - debug: 114 dataCoursestudent seeded
+2019-02-15T15:22:38.982Z - debug: 92 hootoriginal seeded
+2019-02-15T15:22:38.983Z - debug: 200 largeset seeded
+2019-02-15T15:22:38.983Z - info: END Seeder. Sample data read and verified.
+2019-02-15T15:24:11.729Z - info: START seeder.
+2019-02-15T15:24:11.761Z - debug: 2 dataCodewordset seeded
+2019-02-15T15:24:11.761Z - debug: 292 datacodeword seeded
+2019-02-15T15:24:11.762Z - debug: 6 datacourse seeded
+2019-02-15T15:24:11.762Z - debug: 114 dataCoursestudent seeded
+2019-02-15T15:24:11.762Z - debug: 92 hootoriginal seeded
+2019-02-15T15:24:11.762Z - debug: 200 largeset seeded
+2019-02-15T15:24:11.762Z - info: END Seeder. Sample data read and verified.
+2019-02-15T15:25:37.567Z - info: START seeder.
+2019-02-15T15:25:37.601Z - debug: 2 dataCodewordset seeded
+2019-02-15T15:25:37.601Z - debug: 292 datacodeword seeded
+2019-02-15T15:25:37.601Z - debug: 6 datacourse seeded
+2019-02-15T15:25:37.601Z - debug: 114 dataCoursestudent seeded
+2019-02-15T15:25:37.601Z - debug: 92 hootoriginal seeded
+2019-02-15T15:25:37.602Z - debug: 200 largeset seeded
+2019-02-15T15:25:37.602Z - info: END Seeder. Sample data read and verified.
+2019-02-15T15:26:48.183Z - info: START seeder.
+2019-02-15T15:26:48.217Z - debug: 2 dataCodewordset seeded
+2019-02-15T15:26:48.217Z - debug: 292 datacodeword seeded
+2019-02-15T15:26:48.217Z - debug: 6 datacourse seeded
+2019-02-15T15:26:48.218Z - debug: 114 dataCoursestudent seeded
+2019-02-15T15:26:48.218Z - debug: 92 hootoriginal seeded
+2019-02-15T15:26:48.218Z - debug: 200 largeset seeded
+2019-02-15T15:26:48.218Z - info: END Seeder. Sample data read and verified.
+2019-02-15T15:27:19.986Z - info: START seeder.
+2019-02-15T15:27:20.019Z - debug: 2 dataCodewordset seeded
+2019-02-15T15:27:20.020Z - debug: 292 datacodeword seeded
+2019-02-15T15:27:20.020Z - debug: 6 datacourse seeded
+2019-02-15T15:27:20.020Z - debug: 114 dataCoursestudent seeded
+2019-02-15T15:27:20.020Z - debug: 92 hootoriginal seeded
+2019-02-15T15:27:20.020Z - debug: 200 largeset seeded
+2019-02-15T15:27:20.020Z - info: END Seeder. Sample data read and verified.
+2019-02-15T15:29:43.967Z - info: START seeder.
+2019-02-15T15:29:44.010Z - debug: 2 dataCodewordset seeded
+2019-02-15T15:29:44.010Z - debug: 292 datacodeword seeded
+2019-02-15T15:29:44.010Z - debug: 6 datacourse seeded
+2019-02-15T15:29:44.011Z - debug: 114 dataCoursestudent seeded
+2019-02-15T15:29:44.011Z - debug: 92 hootoriginal seeded
+2019-02-15T15:29:44.011Z - debug: 200 largeset seeded
+2019-02-15T15:29:44.011Z - info: END Seeder. Sample data read and verified.
+2019-02-15T15:31:26.418Z - info: START seeder.
+2019-02-15T15:31:26.450Z - debug: 2 dataCodewordset seeded
+2019-02-15T15:31:26.451Z - debug: 292 datacodeword seeded
+2019-02-15T15:31:26.451Z - debug: 6 datacourse seeded
+2019-02-15T15:31:26.451Z - debug: 114 dataCoursestudent seeded
+2019-02-15T15:31:26.451Z - debug: 92 hootoriginal seeded
+2019-02-15T15:31:26.451Z - debug: 200 largeset seeded
+2019-02-15T15:31:26.451Z - info: END Seeder. Sample data read and verified.
+2019-02-15T15:31:58.232Z - info: START seeder.
+2019-02-15T15:31:58.267Z - debug: 2 dataCodewordset seeded
+2019-02-15T15:31:58.267Z - debug: 292 datacodeword seeded
+2019-02-15T15:31:58.267Z - debug: 6 datacourse seeded
+2019-02-15T15:31:58.267Z - debug: 114 dataCoursestudent seeded
+2019-02-15T15:31:58.267Z - debug: 92 hootoriginal seeded
+2019-02-15T15:31:58.268Z - debug: 200 largeset seeded
+2019-02-15T15:31:58.268Z - info: END Seeder. Sample data read and verified.
+2019-02-15T15:32:53.212Z - info: START seeder.
+2019-02-15T15:32:53.288Z - debug: 2 dataCodewordset seeded
+2019-02-15T15:32:53.288Z - debug: 292 datacodeword seeded
+2019-02-15T15:32:53.288Z - debug: 6 datacourse seeded
+2019-02-15T15:32:53.288Z - debug: 114 dataCoursestudent seeded
+2019-02-15T15:32:53.289Z - debug: 92 hootoriginal seeded
+2019-02-15T15:32:53.289Z - debug: 200 largeset seeded
+2019-02-15T15:32:53.290Z - info: END Seeder. Sample data read and verified.
+2019-02-15T15:35:06.256Z - info: START seeder.
+2019-02-15T15:35:06.289Z - debug: 2 dataCodewordset seeded
+2019-02-15T15:35:06.289Z - debug: 292 datacodeword seeded
+2019-02-15T15:35:06.289Z - debug: 6 datacourse seeded
+2019-02-15T15:35:06.290Z - debug: 114 dataCoursestudent seeded
+2019-02-15T15:35:06.290Z - debug: 92 hootoriginal seeded
+2019-02-15T15:35:06.290Z - debug: 200 largeset seeded
+2019-02-15T15:35:06.290Z - info: END Seeder. Sample data read and verified.
+2019-02-15T15:40:05.158Z - info: START seeder.
+2019-02-15T15:40:05.190Z - debug: 2 dataCodewordset seeded
+2019-02-15T15:40:05.190Z - debug: 292 datacodeword seeded
+2019-02-15T15:40:05.191Z - debug: 6 datacourse seeded
+2019-02-15T15:40:05.191Z - debug: 114 dataCoursestudent seeded
+2019-02-15T15:40:05.191Z - debug: 92 hootoriginal seeded
+2019-02-15T15:40:05.191Z - debug: 200 largeset seeded
+2019-02-15T15:40:05.191Z - info: END Seeder. Sample data read and verified.
+2019-02-15T15:41:58.260Z - info: START seeder.
+2019-02-15T15:41:58.296Z - debug: 2 dataCodewordset seeded
+2019-02-15T15:41:58.296Z - debug: 292 datacodeword seeded
+2019-02-15T15:41:58.296Z - debug: 6 datacourse seeded
+2019-02-15T15:41:58.296Z - debug: 114 dataCoursestudent seeded
+2019-02-15T15:41:58.296Z - debug: 92 hootoriginal seeded
+2019-02-15T15:41:58.296Z - debug: 200 largeset seeded
+2019-02-15T15:41:58.297Z - info: END Seeder. Sample data read and verified.
+2019-02-15T15:42:38.364Z - info: START seeder.
+2019-02-15T15:42:38.397Z - debug: 2 dataCodewordset seeded
+2019-02-15T15:42:38.397Z - debug: 292 datacodeword seeded
+2019-02-15T15:42:38.397Z - debug: 6 datacourse seeded
+2019-02-15T15:42:38.398Z - debug: 114 dataCoursestudent seeded
+2019-02-15T15:42:38.398Z - debug: 92 hootoriginal seeded
+2019-02-15T15:42:38.398Z - debug: 200 largeset seeded
+2019-02-15T15:42:38.398Z - info: END Seeder. Sample data read and verified.
+2019-02-15T15:43:34.469Z - info: START seeder.
+2019-02-15T15:43:34.502Z - debug: 2 dataCodewordset seeded
+2019-02-15T15:43:34.502Z - debug: 292 datacodeword seeded
+2019-02-15T15:43:34.503Z - debug: 6 datacourse seeded
+2019-02-15T15:43:34.503Z - debug: 114 dataCoursestudent seeded
+2019-02-15T15:43:34.503Z - debug: 92 hootoriginal seeded
+2019-02-15T15:43:34.503Z - debug: 200 largeset seeded
+2019-02-15T15:43:34.503Z - info: END Seeder. Sample data read and verified.
+2019-02-15T15:43:56.225Z - info: START seeder.
+2019-02-15T15:43:56.260Z - debug: 2 dataCodewordset seeded
+2019-02-15T15:43:56.260Z - debug: 292 datacodeword seeded
+2019-02-15T15:43:56.260Z - debug: 6 datacourse seeded
+2019-02-15T15:43:56.261Z - debug: 114 dataCoursestudent seeded
+2019-02-15T15:43:56.261Z - debug: 92 hootoriginal seeded
+2019-02-15T15:43:56.261Z - debug: 200 largeset seeded
+2019-02-15T15:43:56.261Z - info: END Seeder. Sample data read and verified.
+2019-02-15T15:47:23.767Z - info: START seeder.
+2019-02-15T15:47:23.829Z - debug: 2 dataCodewordset seeded
+2019-02-15T15:47:23.829Z - debug: 292 datacodeword seeded
+2019-02-15T15:47:23.829Z - debug: 6 datacourse seeded
+2019-02-15T15:47:23.830Z - debug: 114 dataCoursestudent seeded
+2019-02-15T15:47:23.831Z - debug: 92 hootoriginal seeded
+2019-02-15T15:47:23.831Z - debug: 200 largeset seeded
+2019-02-15T15:47:23.831Z - info: END Seeder. Sample data read and verified.
+2019-02-15T15:48:47.595Z - info: START seeder.
+2019-02-15T15:48:47.628Z - debug: 2 dataCodewordset seeded
+2019-02-15T15:48:47.628Z - debug: 292 datacodeword seeded
+2019-02-15T15:48:47.628Z - debug: 6 datacourse seeded
+2019-02-15T15:48:47.628Z - debug: 114 dataCoursestudent seeded
+2019-02-15T15:48:47.629Z - debug: 92 hootoriginal seeded
+2019-02-15T15:48:47.629Z - debug: 200 largeset seeded
+2019-02-15T15:48:47.629Z - info: END Seeder. Sample data read and verified.
+2019-02-15T21:14:52.711Z - info: START seeder.
+2019-02-15T21:14:52.739Z - debug: 2 dataCodewordset seeded
+2019-02-15T21:14:52.739Z - debug: 292 datacodeword seeded
+2019-02-15T21:14:52.739Z - debug: 6 datacourse seeded
+2019-02-15T21:14:52.739Z - debug: 114 dataCoursestudent seeded
+2019-02-15T21:14:52.740Z - debug: 92 hootoriginal seeded
+2019-02-15T21:14:52.740Z - debug: 200 largeset seeded
+2019-02-15T21:14:52.740Z - info: END Seeder. Sample data read and verified.
+2019-02-16T03:15:58.963Z - info: START seeder.
+2019-02-16T03:15:59.005Z - debug: 2 dataCodewordset seeded
+2019-02-16T03:15:59.005Z - debug: 292 datacodeword seeded
+2019-02-16T03:15:59.005Z - debug: 6 datacourse seeded
+2019-02-16T03:15:59.005Z - debug: 114 dataCoursestudent seeded
+2019-02-16T03:15:59.005Z - debug: 92 hootoriginal seeded
+2019-02-16T03:15:59.005Z - debug: 200 largeset seeded
+2019-02-16T03:15:59.005Z - info: END Seeder. Sample data read and verified.
+2019-02-16T03:55:40.715Z - info: START seeder.
+2019-02-16T03:55:40.738Z - debug: 2 dataCodewordset seeded
+2019-02-16T03:55:40.739Z - debug: 292 datacodeword seeded
+2019-02-16T03:55:40.739Z - debug: 6 datacourse seeded
+2019-02-16T03:55:40.739Z - debug: 114 dataCoursestudent seeded
+2019-02-16T03:55:40.740Z - debug: 92 hootoriginal seeded
+2019-02-16T03:55:40.740Z - debug: 200 largeset seeded
+2019-02-16T03:55:40.740Z - info: END Seeder. Sample data read and verified.
+2019-02-16T04:14:20.935Z - info: START seeder.
+2019-02-16T04:14:20.982Z - debug: 2 dataCodewordset seeded
+2019-02-16T04:14:20.982Z - debug: 292 datacodeword seeded
+2019-02-16T04:14:20.982Z - debug: 6 datacourse seeded
+2019-02-16T04:14:20.982Z - debug: 114 dataCoursestudent seeded
+2019-02-16T04:14:20.982Z - debug: 92 hootoriginal seeded
+2019-02-16T04:14:20.982Z - debug: 200 largeset seeded
+2019-02-16T04:14:20.982Z - info: END Seeder. Sample data read and verified.
+>>>>>>> 8b5205dcd815c8f53c29cf40de4914d817a65f20

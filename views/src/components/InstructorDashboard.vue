@@ -1,9 +1,11 @@
 <template>
 <div class="container-fluid" style="margin-top:5em" >
   <div class="col-md-4 col-lg-4 col-xs-0 col-sm-0">
-    <button type="button" class="btn btn-success" title="Create CodeWord Set" data-toggle="modal" data-target="#addcourse" v-on:click="loadCourseModel">
+      <button type="button" class="btn btn-success" title="Create CodeWord Set" data-toggle="modal" data-target="#addcourse" v-on:click="loadCourseModel">
       <span class="fa fa-plus"></span> Add Course </button>
+      <toggle-button v-model="isEnabled" color="Green" :labels="{checked: 'Active Courses', unchecked: 'InActive Courses'}"/>
   </div>
+
   <div class="row" style="margin-left: 3rem;margin-right: 7rem;" >
     <div class="col-md-3 col-lg-3 col-xs-0 col-sm-0" v-for="course in coursesData" :key="course._id">
       <div class="card border-success mb-3 cardstyle" style="max-width: 20rem;margin-top: 1rem;" >
@@ -107,7 +109,8 @@ export default {
       codeWordSetData: '',
       coursesData: '',
       selectedCourse: '',
-      codeWordSetCount: ''
+      codeWordSetCount: '',
+      isEnabled: true
     }
   },
   created () {
@@ -162,7 +165,6 @@ export default {
                 }).then(response => {
                 console.log(response.data.message)
                 if (response.data.message === 'Course student successfully!') {
-                  console.log('success')
                   $('#addcourse').modal('hide')
                   this.fetchCourseList()
                 } else {
@@ -250,7 +252,6 @@ export default {
   text-align: left;
 }
 .btn {
-      
         border-radius: 5px;
         background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);

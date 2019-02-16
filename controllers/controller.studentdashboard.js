@@ -4,12 +4,15 @@
 var { CourseStudentModel } = require('../model/model.coursestudent');
 
  let getstudentDetails = (req,res) => {
-    var body = _.pick(req.body,['EmailKey']);
-    CourseStudentModel.findOne({EmailKey: body.EmailKey}), function (err, studentcourses) {
-            if(err){
-                return res.json({ code: 200, message: 'Course Student not exist'});
+     var email = req.session.email.charAt(0).toUpperCase() + req.session.email.slice(1)
+    CourseStudentModel.find({EmailKey: email}).then((studentcourses) => {
+            if(!studentcourses){
+                return res.json({ code: 200, message: 'Courses not exist'});
             }
-            return studentcourses;
-        }
+            if (studentcourses === undefined || studentcourses.length === 0 ) {
+                return res.json({ code: 400 ,data: 'No courses found'});
+            }
+            return res.json({ code: 400 ,data: studentcourses});
+        })
     } 
 module.exports.getstudentDetails = getstudentDetails;

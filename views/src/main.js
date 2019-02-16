@@ -10,7 +10,7 @@ import 'mdbvue/build/css/mdb.css'
 import {store} from './store'
 import 'font-awesome/css/font-awesome.min.css'
 import VueSweetalert2 from 'vue-sweetalert2'
-import BootstrapVue from 'bootstrap-vue'
+import ToggleButton from 'vue-js-toggle-button'
 
 window.axios = axios.create({
   baseURL: process.env.URL,
@@ -19,10 +19,10 @@ window.axios = axios.create({
 window.$ = require('jquery')
 Vue.use(VueSweetalert2)
 Vue.use(Vuelidate)
+Vue.use(ToggleButton)
 Vue.config.productionTip = false
 require('bootstrap')
 
-Vue.use(BootstrapVue)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

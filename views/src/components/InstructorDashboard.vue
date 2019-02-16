@@ -1,6 +1,6 @@
 <template>
 <div class="container-fluid" style="margin-top:5em" >
-  <div class="col-md-4 col-lg-4 col-xs-0 col-sm-0">
+  <div class="col-md-12 col-lg-12 col-xs-2 col-sm-2">
       <button type="button" class="btn btn-success" title="Create CodeWord Set" data-toggle="modal" data-target="#addcourse" v-on:click="loadCourseModel">
       <span class="fa fa-plus"></span> Add Course </button>
       <toggle-button v-model="isEnabled" color="Green" :labels="{checked: 'Active Courses', unchecked: 'InActive Courses'}"/>

@@ -21,8 +21,10 @@ export default new Router({
         console.log(logged + 'logged status')
         if (logged !== null) {
           if (logged) {
+            console.log('instructordashboard')
             next('/instructordashboard')
           } else {
+            console.log('studentdashboard')
             next('/studentdashboard')
           }
         }

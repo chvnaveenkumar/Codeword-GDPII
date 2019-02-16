@@ -11,6 +11,8 @@
       <tr>
         <th>Course Name</th>
         <th>Codeword</th>
+        <th>Start Survey</th>
+        <th>End Survey</th>
       </tr>
     </thead>
     <div v-if="status">
@@ -62,7 +64,10 @@ export default {
         if (response.data.data === 'No courses found') {
           this.status = false
         } else {
+<<<<<<< HEAD
           console.log(response.data.data)
+=======
+>>>>>>> d0ca2161e957d894cfe9ef7311a85782a4b312e3
           this.userCourses = response.data.data
         }
       })

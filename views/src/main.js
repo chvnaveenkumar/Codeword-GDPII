@@ -12,6 +12,10 @@ import 'font-awesome/css/font-awesome.min.css'
 import VueSweetalert2 from 'vue-sweetalert2'
 import ToggleButton from 'vue-js-toggle-button'
 
+import jQuery from 'jquery'
+
+window.jQuery = jQuery
+window.$ = jQuery
 window.axios = axios.create({
   baseURL: process.env.URL,
   timeout: 1000
@@ -22,7 +26,7 @@ Vue.use(Vuelidate)
 Vue.use(ToggleButton)
 Vue.config.productionTip = false
 require('bootstrap')
-
+require('bootstrap-toggle')
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

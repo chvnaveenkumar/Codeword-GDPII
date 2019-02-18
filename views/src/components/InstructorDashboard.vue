@@ -1,13 +1,16 @@
 <template>
 <div class="container-fluid" style="margin-top:5em" >
   <div class="col-md-12 col-lg-12 col-xs-2 col-sm-2">
+    <div class="coursebutton">
       <button type="button" class="btn btn-success" title="Create CodeWord Set" data-toggle="modal" data-target="#addcourse" v-on:click="loadCourseModel">
       <span class="fa fa-plus"></span> Add Course </button>
-      <toggle-button v-model="isEnabled" color="Green" :labels="{checked: 'Active Courses', unchecked: 'InActive Courses'}"/>
+    </div>
+      <div class="togglealign">
+          <toggle-button id="changed-font" :color="{checked: 'green', unchecked: 'red', disabled: '#CCCCCC'}" :width=185 :height=45 v-model="isEnabled" :labels="{checked: 'Active Courses', unchecked: 'InActive Courses'}"/>
+      </div>
   </div>
-
-  <div class="row" style="margin-left: 3rem;  margin-right: 4rem;" >
-    <div class="col-md-3 col-lg-3 col-xs-0 col-sm-0" v-for="course in coursesData" :key="course._id">
+  <div class="row" style="margin-left: 3rem;margin-right: 7rem;" >
+    <div class="col-md-3 col-lg-3 col-xs-0 col-sm-0" v-for="course in coursesData" :key="course._id" v-if="!isEnabled != (new Date() < new Date(course.Enddate))">
       <div class="card border-success mb-3 cardstyle" style="max-width: 20rem;margin-top: 1rem;" >
          <div class="card-header bg-info border-success" id = "boldforcourse"><h4>{{ course.courseNameKey }}</h4>
         <br>
@@ -62,7 +65,7 @@
             <div class="modal-body">
             <!-- Retrive the course name from input field -->
             <div class="form-group">
-              <input type="text" class="form-control" pattern=".{6,}" id="courseName" autocomplete="off" name="courseName" placeholder="Enter Course Name" data-toggle="tooltip"  title="Atleast 6 characters" required>
+              <input type="text" class="form-control" pattern=".{6,}" id="courseName" name="courseName" placeholder="Enter Course Name" data-toggle="tooltip"  title="Atleast 6 characters" required>
             </div>
             <div class="row">
                 <div class="col tooltip-test" title="Start Date"> Start Date:<input type="date" name="startDate" class="form-control" v-model="startDate" placeholder="Start Date" required/></div>
@@ -163,6 +166,7 @@ export default {
                   token: window.localStorage.getItem('token')
                 }
                 }).then(response => {
+                console.log(response.data.message)
                 if (response.data.message === 'Course student successfully!') {
                   $('#addcourse').modal('hide')
                   this.fetchCourseList()
@@ -195,6 +199,9 @@ export default {
       }).then(response => {
         this.codeWordSetData = response.data.data
       })
+    },
+    status () {
+      this.isEnabled = false
     },
     fetchCourseList () {
       axios({
@@ -256,12 +263,6 @@ export default {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         color: darkviolet;
    }
-.toog {
-  width: 400px;
-  height: 300px;
-  position: absolute;
-}
-
 /* Darker background on mouse-over */
 .btn:hover {
     background-color: RoyalBlue;
@@ -273,7 +274,6 @@ background-color: white;
         width: 260px;
     height: 320px;
    background-color: floralwhite;
-
      margin-top: 100px;
     margin-bottom: 100px;
     margin-right: 160px;
@@ -284,5 +284,14 @@ background-color: white;
 }
 #boldforcourse{
   color: aliceblue;
+}
+.vue-js-switch#changed-font {
+  font-size: 16px;
+}
+.togglealign {
+  text-align: right
+}
+.coursebutton {
+  text-align: left
 }
 </style>

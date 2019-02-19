@@ -18,8 +18,11 @@
     <tbody v-if="status">
       <tr v-for="(course,index) in userCourses" :key="index">
         <td>{{ course.CourseNameKey}}</td>
-        <td>{{ course.Codeword }}</td>
-        <input  type="button" v-if=!course.Acknowledged @click="getCodeWord(index)" Value="Get CodeWord" style="width:30px">
+        
+        <td>
+          <input  type="button" v-if=!course.Acknowledged @click="getCodeWord(index)" Value="Get CodeWord">
+          <div v-else> {{ course.Codeword }}</div>
+        </td>
         <td>  <a> Click Here </a></td>
         <td> <a> Click Here </a></td>
       </tr>
@@ -73,6 +76,22 @@ export default {
     getCodeWord (index) {
       // yet to write an API Call to change status as acknowledged
       this.userCourses[index].Acknowledged = true
+      axios({
+        method: 'post',
+        url: 'codeword/codewordAcknowledged',
+        headers: {
+          token: window.localStorage.getItem('token')
+        },
+        data: {
+          acknowledgedStatus: this.userCourses[index]
+        }
+      }).then(response => {
+        if (response.data.data === 'No courses found') {
+          this.status = false
+        } else {
+          this.userCourses = response.data.data
+        }
+      })
     }
   }
 }

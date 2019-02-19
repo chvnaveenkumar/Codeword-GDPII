@@ -16,9 +16,10 @@
       </tr>
     </thead>
     <tbody v-if="status">
-      <tr v-for="course in userCourses" :key="course">
+      <tr v-for="(course,index) in userCourses" :key="index">
         <td>{{ course.CourseNameKey}}</td>
         <td>{{ course.Codeword }}</td>
+        <input  type="button" v-if=!course.Acknowledged @click="getCodeWord(index)" Value="Get CodeWord" style="width:30px">
         <td>  <a> Click Here </a></td>
         <td> <a> Click Here </a></td>
       </tr>
@@ -42,10 +43,11 @@ export default {
       endSurveyurldata: '',
       Codeword: '',
       userCourses: '',
-      status: true
+      status: true,
+      show: true
     }
   },
-  /* global axios */
+  /* global axios  */
   created () {
     this.fetchUserData()
   },
@@ -64,10 +66,13 @@ export default {
         if (response.data.data === 'No courses found') {
           this.status = false
         } else {
-          console.log(response.data.data)
           this.userCourses = response.data.data
         }
       })
+    },
+    getCodeWord (index) {
+      // yet to write an API Call to change status as acknowledged
+      this.userCourses[index].Acknowledged = true
     }
   }
 }

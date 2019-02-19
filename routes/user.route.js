@@ -46,4 +46,6 @@ router.post('/addnewcodewords', codewordController.addcodewords);
 // API calls for student
 router.get('/getstudentcourses', studentController.getstudentDetails);
 
+//Excel sheet validation
+router.post('/getdatastudentxlsx', courseStudentController.getDataStudentXLSX);
 module.exports = router;

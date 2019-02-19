@@ -72,7 +72,7 @@
                 <div class="col tooltip-test" title="End Date"> End Date:<input type="date" class="form-control" v-model="endDate"  name="endDate" :disabled=true  placeholder="End Date" required></div>
             </div>
             <div class="form-group">
-                <input type="file" ref="file" v-on:change="handleFileUpload()" class="form-control-file" id="file" style="margin-top:1em" required>
+                <input type="file" ref="file" name="file" v-on:change="handleFileUpload()" class="form-control-file" id="file" style="margin-top:1em" required>
                 Upload Student Details(Excel)
             </div>
             <div class="form-group" required>
@@ -184,6 +184,12 @@ export default {
     },
     handleFileUpload () {
       this.file = this.$refs.file.files[0]
+      let data = new FormData(document.querySelector('form'))
+      axios.post('/codeword/getdatastudentxlsx', data).then(response => {
+        this.codeWordSetData = response.data.data
+        this.count = response.data.count
+        console.log(this.count + 'student')
+      })
     },
     getStartDate () {
       var today = new Date()

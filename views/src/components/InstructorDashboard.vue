@@ -89,7 +89,7 @@
             </div>
             <div >
               <button type="cancel" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-              <button type="create" class="btn btn-primary">Create Course</button>
+              <button type="create" :disabled="count === false || count === 0" class="btn btn-primary">Create Course</button>
             </div>
             </div>
             </form></div></div></div>
@@ -113,7 +113,8 @@ export default {
       coursesData: '',
       selectedCourse: '',
       codeWordSetCount: '',
-      isEnabled: true
+      isEnabled: true,
+      count: ''
     }
   },
   created () {
@@ -186,7 +187,6 @@ export default {
       this.file = this.$refs.file.files[0]
       let data = new FormData(document.querySelector('form'))
       axios.post('/codeword/getdatastudentxlsx', data).then(response => {
-        this.codeWordSetData = response.data.data
         this.count = response.data.count
         console.log(this.count + 'student')
       })

@@ -37,8 +37,10 @@ let getDataStudentXLSX = (req, res) => {
                 var emails = _.map(jsonArray[0],'email')
                 emails.splice(0,1)
                 var checking_emails = true
-                _.forEach(emails, function(value) {
-                    if(value.length === 0 || value.includes('@')) {
+                console.log(emails)
+                _(emails).forEach(function(value) {
+                    console.log(value+" "+value.length + value.includes("@") )
+                    if(value.length === 0 || !(value.includes("@"))) {
                          checking_emails = false
                          return false
                     }
@@ -46,13 +48,13 @@ let getDataStudentXLSX = (req, res) => {
                 var names = _.map(jsonArray[0],'name')
                 names.splice(0,1)
                 var checking_names = true
-                _.forEach(names, function(value) {
+                _(names).forEach(function(value) {
                     if(value.length === 0 || value.length < 2) {
                          checking_names = false
                          return false
                     }
                 });
-
+                console.log(checking_emails + checking_names)
                 if(checking_emails === false || checking_names === false){
                     return res.status(200).json({ data: 'Uploaded Excel sheet is not in the given format!!', count: false })
                 }else{

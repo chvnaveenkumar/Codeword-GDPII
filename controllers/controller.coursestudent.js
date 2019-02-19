@@ -58,7 +58,7 @@ let getDataStudentXLSX = (req, res) => {
                 if(checking_emails === false || checking_names === false){
                     return res.status(200).json({ data: 'Uploaded Excel sheet is not in the given format!!', count: false })
                 }else{
-                    return res.status(200).json({ data: codewords, count: jsonArray[0].length })
+                    return res.status(200).json({ count: emails.length })
                 }
             })
     })

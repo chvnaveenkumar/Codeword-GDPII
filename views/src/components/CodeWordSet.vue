@@ -14,7 +14,7 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content" style="width:fit-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="addcourseLabel">Create Codeword Set</h5>
+                        <h5 class=  "modal-title" id="addcourseLabel">Create Codeword Set</h5>
                       <button id="exPopover3" class="btn btn-outline-primary"><i class="fa fa-eye"></i> Hint</button>          
                       <b-popover target="exPopover3" triggers="click" placement="auto">
                         <template slot="title">Rules for Creating Codewords</template>
@@ -70,7 +70,8 @@
             <tr v-for="code in codeWordTempSetData" :key="code._id">
                 <td> {{ code.CodeWordSetName }} </td>
                 <td id="count">{{ code.Codewords.length }}</td>
-                <td> <router-link :to="{ name: 'CodeWord', params: { CodeWordSetName: code.CodeWordSetName } }"><button type="button" class="btn btn-info btn-sm" data-toggle="tooltip" data-placement="bottom" title="Edit" ><i class="fa fa-pencil fa-xs"></i></button></router-link></td>
+                <td v-if='code.isPermanent !== true'> <router-link :to="{ name: 'CodeWord', params: { CodeWordSetName: code.CodeWordSetName } }"><button type="button" class="btn btn-info btn-sm" data-toggle="tooltip" data-placement="bottom" title="Edit" ><i class="fa fa-pencil fa-xs"></i></button></router-link></td>
+                <td v-if='code.isPermanent == true'> <router-link :to="{ name: 'CodeWord', params: { CodeWordSetName: code.CodeWordSetName } }"><button type="button" class="btn btn-info btn-sm" data-toggle="tooltip" data-placement="bottom" title="Edit" ><i class="fa fa-eye fa-xs"></i></button></router-link></td>
                 <td> <button type="button" data-toggle="modal" v-if='code.isPermanent !== true' class="btn btn-info btn-sm" data-target="#deleteCodwordsetmodel" @click="selectCodewordSet(code.CodeWordSetName)"><i class="fa fa-trash fa-xs"></i></button></td>
             </tr>
         </tbody>

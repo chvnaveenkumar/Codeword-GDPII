@@ -73,7 +73,7 @@ let addCourseStudent = (req,res) => {
     var studentidList=[],studentNameList=[];
     var workbook = XLSX.read(req.file.buffer, {type:"buffer"});
     var body = _.pick(req.body,['CourseNameKey','CodeWordSetName']);    
-    studetList = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0].charAt(0).toUpperCase() + workbook.SheetNames[0].slice(1)]);
+    studetList = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0].charAt(0).toLowerCase() + workbook.SheetNames[0].slice(1)]);
     
     Codewordset.find({CodeWordSetName: body.CodeWordSetName}, function (err, CodeWordset) {
         if(err){

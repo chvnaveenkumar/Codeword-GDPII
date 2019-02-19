@@ -4,7 +4,7 @@
 var { CourseStudentModel } = require('../model/model.coursestudent');
 
  let getstudentDetails = (req,res) => {
-     var email = req.session.email.charAt(0).toUpperCase() + req.session.email.slice(1)
+     var email = req.session.email.charAt(0).toLowerCase() + req.session.email.slice(1)
     CourseStudentModel.find({EmailKey: email}).then((studentcourses) => {
             if(!studentcourses){
                 return res.json({ code: 200, message: 'Courses not exist'});

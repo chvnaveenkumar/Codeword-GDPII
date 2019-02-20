@@ -72,9 +72,17 @@
                 <div class="col tooltip-test" title="End Date"> End Date:<input type="date" class="form-control" v-model="endDate"  name="endDate" :disabled=true  placeholder="End Date" required></div>
             </div>
             <div class="form-group">
-                <input type="file" ref="file" v-on:change="handleFileUpload()" class="form-control-file" id="file" style="margin-top:1em" required>
+                <input type="file" ref="file" name="file" v-on:change="handleFileUpload()" class="form-control-file" id="file" style="margin-top:1em" required>
                 Upload Student Details(Excel)
             </div>
+                                        <div class="alert alert-info">
+                                 <p v-if="count === 0">                          
+                                 There is no/empty file please upload new excel file.</p>
+                                <p v-else-if="count === false">
+                                    Uploaded excel sheet was not in the format.</p>
+                                <p v-else>
+                                    There are {{ count }} Students in the Uploaded set.</p>
+                            </div>
             <div class="form-group" required>
                 <select class="form-control" v-model="CodeWordSetName" value ="Select codeword set" data-toggle="tooltip"  title="Please select codeword set" >
                   <option disabled value="">Please select CodeWordSet</option>
@@ -89,7 +97,7 @@
             </div>
             <div >
               <button type="cancel" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-              <button type="create" class="btn btn-primary">Create Course</button>
+              <button type="create" :disabled="count === false || count === 0" class="btn btn-primary">Create Course</button>
             </div>
             </div>
             </form></div></div></div>
@@ -113,7 +121,8 @@ export default {
       coursesData: '',
       selectedCourse: '',
       codeWordSetCount: '',
-      isEnabled: true
+      isEnabled: true,
+      count: 0
     }
   },
   created () {
@@ -184,6 +193,11 @@ export default {
     },
     handleFileUpload () {
       this.file = this.$refs.file.files[0]
+      let data = new FormData(document.querySelector('form'))
+      axios.post('/codeword/getdatastudentxlsx', data).then(response => {
+        this.count = response.data.count
+        console.log(this.count + 'student')
+      })
     },
     getStartDate () {
       var today = new Date()

@@ -5,6 +5,66 @@ var Codewordset = require('../model/model.codewordset');
 let XLSX = require('xlsx')
 var { CourseModel } = require('../model/model.course');
 const fs = require('fs');
+let xlsx2json = require('xlsx2json'); // added by Ujjawal Kumar
+multer = require('multer')
+
+var storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, './data')
+    },
+    filename: function (req, file, cb) {
+        cb(null, 'student.xlsx')
+    }
+})
+
+var upload = multer({ storage: storage }).single('file')
+
+// Fetching data from uploaded xls file is added by Ujjawal Kumar
+let getDataStudentXLSX = (req, res) => {
+    upload(req, res, function (err) {
+        if (req && (!req.file || req.file.size == 0)) {
+            return res.status(500).json({ message: "Please provide proper file." });
+        }
+        xlsx2json("./data/student.xlsx",
+            {
+                // dataStartingRow: 2, (This would be required if header would be required in the cordword sheet which would be uploaded by the Instructor)
+                //A, B , C , E is from the input sheet row numbers
+                mapping: {
+                    'email': 'A',
+                    'name': 'B'
+                }
+            }).then(jsonArray => {
+                var emails = _.map(jsonArray[0],'email')
+                emails.splice(0,1)
+                var checking_emails = true
+                console.log(emails)
+                _(emails).forEach(function(value) {
+                    console.log(value+" "+value.length + value.includes("@") )
+                    if(value.length === 0 || !(value.includes("@"))) {
+                         checking_emails = false
+                         return false
+                    }
+                });
+                var names = _.map(jsonArray[0],'name')
+                names.splice(0,1)
+                var checking_names = true
+                _(names).forEach(function(value) {
+                    if(value.length === 0 || value.length < 2) {
+                         checking_names = false
+                         return false
+                    }
+                });
+                console.log(checking_emails + checking_names)
+                if(checking_emails === false || checking_names === false){
+                    return res.status(200).json({ data: 'Uploaded Excel sheet is not in the given format!!', count: false })
+                }else{
+                    return res.status(200).json({ count: emails.length })
+                }
+            })
+    })
+
+}
+module.exports.getDataStudentXLSX = getDataStudentXLSX;
 
 
 let addCourseStudent = (req,res) => {
@@ -13,7 +73,7 @@ let addCourseStudent = (req,res) => {
     var studentidList=[],studentNameList=[];
     var workbook = XLSX.read(req.file.buffer, {type:"buffer"});
     var body = _.pick(req.body,['CourseNameKey','CodeWordSetName']);    
-    studetList = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0].charAt(0).toUpperCase() + workbook.SheetNames[0].slice(1)]);
+    studetList = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0].charAt(0).toLowerCase() + workbook.SheetNames[0].slice(1)]);
     
     Codewordset.find({CodeWordSetName: body.CodeWordSetName}, function (err, CodeWordset) {
         if(err){

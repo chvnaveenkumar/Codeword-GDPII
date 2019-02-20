@@ -4,10 +4,10 @@
 <template>
     <div id="codeWord" class="container-fluid" style="margin-top:5em">
     <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
-      <h3>Codeword set Name: <strong>{{ CodeWordSetName }}</strong></h3>
-      <button type="button" class="btn btn-success" v-if='isPermanent !== true' data-toggle="modal" data-target="#addcodeword" style="marging-left:10px">
+      <div class="codewordsetname"> <h3>Codeword set Name: <strong>{{ CodeWordSetName }}</strong></h3></div>
+     <div class="codewordset"> <button type="button" class="btn btn-success" v-if='isPermanent !== true' data-toggle="modal" data-target="#addcodeword" style="marging-left:10px">
    <span class="fa fa-plus"></span> Add Codeword
-</button>
+</button></div>
 <div class="modal fade" id="addcodeword" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -199,5 +199,11 @@ export default {
 <style>
 .headingstyle {
   font-weight: bold;
+}
+.codewordsetname {
+  text-align: left;
+}
+.codewordset {
+  text-align: right;
 }
 </style>

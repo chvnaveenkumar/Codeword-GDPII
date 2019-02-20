@@ -4,6 +4,7 @@
 const _ = require('lodash');
 const bcrypt = require('bcryptjs');
 var jwt = require('jsonwebtoken');
+var { CourseStudentModel } = require('../model/model.coursestudent');
 var { CourseModel } = require('../model/model.course');
 var { mongoose } = require('./../config/database')
 var mailController = require('../config/user.mail.js')
@@ -36,7 +37,9 @@ module.exports.addCourse = addCourse;
 
 let getCourses = (req,res) => {
     CourseModel.find({emailKey: req.session.email}, function (err, courses) {
-        if (courses)
+        if (courses) {
+
+        }
             return res.json({ code: 200, data: courses });
         }).catch((e) => {
         return res.json({ code: 400, message: e });
@@ -50,7 +53,13 @@ let deleteCourse=(req,res) =>{
         if(err){
             return res.json({ code:200, message:'Deletion of course'});
         }
-        return res.json({ code: 400, message:true})
+        CourseStudentModel.remove({courseNameKey: body.courseNameKey, courseCreater: req.session.email}, function(err, deleteCourseStudent){
+            if(err){
+                return res.json({ code:200, message:'Error in delete Course Student'});
+            }   
+            return res.json({ code: 400, message:true})
+        })
+        
     })
 }
 

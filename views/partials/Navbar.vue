@@ -28,7 +28,6 @@
                     {{ email }}
                     </a>
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" @click.prevent="changePassword" >Change Password</a>
                           <a class="dropdown-item" @click.prevent="onLogout" >Logout</a>
                       </div>
                       </div>

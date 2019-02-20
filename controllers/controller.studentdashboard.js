@@ -14,5 +14,5 @@ var { CourseStudentModel } = require('../model/model.coursestudent');
             }
             return res.json({ code: 400 ,data: studentcourses});
         })
-    } 
+    }
 module.exports.getstudentDetails = getstudentDetails;

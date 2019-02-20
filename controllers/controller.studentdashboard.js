@@ -2,6 +2,7 @@
  * @author Sravya Kancharla <S531500@nwmissouri.edu>
 **/
 var { CourseStudentModel } = require('../model/model.coursestudent');
+const _ = require('lodash');
 
  let getstudentDetails = (req,res) => {
      var email = req.session.email.charAt(0).toLowerCase() + req.session.email.slice(1)
@@ -18,8 +19,8 @@ var { CourseStudentModel } = require('../model/model.coursestudent');
 module.exports.getstudentDetails = getstudentDetails;
 
 let updateAcknowledged=(req,res) =>{
-    var body = _.pick(req.body,['acknowledgedStatus']);  
-        CourseModel.updateOne({CourseNameKey: body.acknowledgedStatus.CourseNameKey, courseCreater: body.acknowledgedStatus.courseCreater, EmailKey: req.session.email}, { $set: { "Acknowledged" : true } }, function(err,updatecoursestudent){
+    var body = _.pick(req.body,['acknowledgedStatus']);
+    CourseStudentModel.updateOne({CourseNameKey: body.acknowledgedStatus.CourseNameKey, courseCreater: body.acknowledgedStatus.courseCreater, EmailKey: req.session.email}, { $set: { "Acknowledged" : true } }, function(err,updatecoursestudent){
         if(err){
             return res.json({ code:200, message:false});
         }

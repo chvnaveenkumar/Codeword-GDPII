@@ -48,6 +48,6 @@ router.get('/getstudentcourses', studentController.getstudentDetails);
 
 //Excel sheet validation
 router.post('/getdatastudentxlsx', courseStudentController.getDataStudentXLSX);
-
 router.post('/codewordAcknowledged', studentController.updateAcknowledged);
+
 module.exports = router;

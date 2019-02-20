@@ -18,7 +18,6 @@ var { CourseStudentModel } = require('../model/model.coursestudent');
 module.exports.getstudentDetails = getstudentDetails;
 
 let updateAcknowledged=(req,res) =>{
-
     var body = _.pick(req.body,['acknowledgedStatus']);  
         CourseModel.updateOne({CourseNameKey: body.acknowledgedStatus.CourseNameKey, courseCreater: body.acknowledgedStatus.courseCreater, EmailKey: req.session.email}, { $set: { "Acknowledged" : true } }, function(err,updatecoursestudent){
         if(err){
@@ -27,4 +26,4 @@ let updateAcknowledged=(req,res) =>{
         return res.json({ code: 400, message:true})
     })
 }
-module.exports.updateCourse = updateCourse;
+module.exports.updateAcknowledged = updateAcknowledged;

@@ -27,7 +27,7 @@ public class ProjectTesting {
             WebDriver driver = new ChromeDriver();
             driver.get(url);
             driver.manage().window().maximize();
-            driver.findElement(By.id("inputEmail")).sendKeys("admin@nwmissouri.edu");
+	    driver.findElement(By.id("inputEmail")).sendKeys("admin@nwmissouri.edu");
             Thread.sleep(500);
             driver.findElement(By.id("inputPassword")).sendKeys("Admin@123");
             Thread.sleep(500);

@@ -9,7 +9,7 @@
                 <h3 style="font-weight:bold;text-align:left"> Course Name: {{ courseNameData }} </h3>
             </div>
             <div class="col-md-6 col-lg-6 col-xs-0 col-sm-0">
-                <h3 style="font-weight:bold;text-align:right"> Acknowledged Status: {{ ( acknowledgedTrue / acknowledgedTotal )  * 100}}% </h3>
+                <h3 style="font-weight:bold;text-align:right"> Acknowledged Status: {{ acknowledged}}% </h3>
             </div>
       </div>
 </h5>
@@ -20,7 +20,7 @@
     End Date: {{ courseData.Enddate }} <br>
     Start Survey URL: <a v-bind:href="'http://'+courseData.PreSurveyURL" class="card-link" target="_blank">{{ courseData.PreSurveyURL }} </a> <br>
     End Survey URL: <a v-bind:href="'http://'+courseData.PostSurveyURL" class="card-link" target="_blank">{{ courseData.PostSurveyURL }} </a> <br>
-    Number of Students: {{ courseStudentData.length }} <br>
+    Number of Students: {{ totalStudents }} <br>
     </div>
      <div class="col-md-6 col-lg-6 col-xs-0 col-sm-0" style="text-align:left;font-weight:bold">
           <button class="btn" data-toggle="modal" data-target="#editCourse" @click="selectCourse(courseData)" style="float:right;">Edit <i class="fa fa-pencil fa-xs"></i></button>
@@ -181,9 +181,7 @@ export default {
       selectstudentName: '',
       selectedEmailKey: '',
       selectedStudentName: '',
-      acknowledgedTotal: 0,
-      acknowledgedTrue: 0,
-      acknowledgedFalse: 0,
+      acknowledged: 0,
       courseInfo: '',
       studentInfo: '',
       editStudentName: '',
@@ -192,7 +190,8 @@ export default {
       currentPage: '',
       pages: '',
       prevUrl: '',
-      nextUrl: ''
+      nextUrl: '',
+      totalStudents: ''
     }
   },
   created () {
@@ -230,14 +229,8 @@ export default {
         this.pages = response.data.pages
         this.nextUrl = response.data.nextUrl
         this.prevUrl = response.data.prevUrl
-        for (var i = 0; i < this.courseStudentData.length; i++) {
-          this.acknowledgedTotal = this.acknowledgedTotal + 1
-          if (this.courseStudentData[0].Acknowledged === true) {
-            this.acknowledgedTrue = this.acknowledgedTrue + 1
-          } else {
-            this.acknowledgedFalse = this.acknowledgedFalse + 1
-          }
-        }
+        this.totalStudents = response.data.totalStudents
+        this.acknowledged = response.data.Acknowledged
       })
     },
     checkPage (url) {

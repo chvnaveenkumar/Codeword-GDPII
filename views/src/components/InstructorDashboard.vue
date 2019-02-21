@@ -95,7 +95,7 @@
             <div class="form-group" >
               <input type="text" class="form-control" placeholder="Enter Survey End URL"  name="endSurveyurl" data-toggle="tooltip" data-placement="bottom" title="Enter Survey End URL" >
             </div>
-            <div >
+            <div>
               <button type="cancel" class="btn btn-danger" data-dismiss="modal">Cancel</button>
               <button type="create" :disabled="count === false || count === 0" class="btn btn-primary">Create Course</button>
             </div>
@@ -154,6 +154,7 @@ export default {
         formData.append('CourseNameKey', this.courseName)
         formData.append('CodeWordSetName', this.CodeWordSetName)
         formData.append('file', this.file)
+        console.log(this.file)
         /* global axios $ */
         axios({
           method: 'post',
@@ -195,6 +196,7 @@ export default {
     handleFileUpload () {
       this.checkFileUpload = true
       this.file = this.$refs.file.files[0]
+      console.log(this.file)
       let data = new FormData(document.querySelector('form'))
       axios.post('/codeword/getdatastudentxlsx', data).then(response => {
         this.count = response.data.count

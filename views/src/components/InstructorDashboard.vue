@@ -65,7 +65,7 @@
             <div class="modal-body">
             <!-- Retrive the course name from input field -->
             <div class="form-group">
-              <input type="text" class="form-control" pattern=".{6,}" id="courseName" name="courseName" placeholder="Enter Course Name" data-toggle="tooltip"  title="Atleast 6 characters" required>
+              <input type="text" class="form-control" pattern=".{6,15}" id="courseName" name="courseName" placeholder="Enter Course Name" data-toggle="tooltip"  onKeyDown="if(this.value.length==15) return false;" title="Atleast 6-15 characters" required>
             </div>
             <div class="row">
                 <div class="col tooltip-test" title="Start Date"> Start Date:<input type="date" name="startDate" class="form-control" v-model="startDate" placeholder="Start Date" required/></div>
@@ -75,14 +75,14 @@
                 <input type="file" ref="file" name="file" v-on:change="handleFileUpload()" class="form-control-file" id="file" style="margin-top:1em" required>
                 Upload Student Details(Excel)
             </div>
-                                        <div class="alert alert-info">
-                                 <p v-if="count === 0">                          
-                                 There is no/empty file please upload new excel file.</p>
-                                <p v-else-if="count === false">
-                                    Uploaded excel sheet was not in the format.</p>
-                                <p v-else>
-                                    There are {{ count }} Students in the Uploaded set.</p>
-                            </div>
+            <div v-if="checkFileUpload === true">
+                <p v-if="count === 0" class="alert alert-danger">                          
+                    No data in excel. Please upload new excel file.</p>
+                <p v-else-if="count === false" class="alert alert-danger">
+                    Uploaded excel sheet was not in the format.</p>
+                <p v-else class="alert alert-info">
+                    There are {{ count }} Students in the Uploaded set.</p>
+            </div>
             <div class="form-group" required>
                 <select class="form-control" v-model="CodeWordSetName" value ="Select codeword set" data-toggle="tooltip"  title="Please select codeword set" >
                   <option disabled value="">Please select CodeWordSet</option>
@@ -122,7 +122,8 @@ export default {
       selectedCourse: '',
       codeWordSetCount: '',
       isEnabled: true,
-      count: 0
+      count: 0,
+      checkFileUpload: false
     }
   },
   created () {
@@ -192,6 +193,7 @@ export default {
       }
     },
     handleFileUpload () {
+      this.checkFileUpload = true
       this.file = this.$refs.file.files[0]
       let data = new FormData(document.querySelector('form'))
       axios.post('/codeword/getdatastudentxlsx', data).then(response => {

@@ -45,8 +45,6 @@
   </div>
 </template>
 <script>
-import {required, minLength, sameAs} from 'vuelidate/lib/validators'
-
 export default {
   data () {
     return {
@@ -56,18 +54,6 @@ export default {
       instructor: false,
       msg: '',
       signed: false
-    }
-  },
-  validations: {
-    password: {
-      required,
-      minLength: minLength(8)
-    },
-    repeatPassword: {
-      sameAsPassword: sameAs('password')
-    },
-    instructor: {
-      sameAs: sameAs(() => true)
     }
   },
   methods: {

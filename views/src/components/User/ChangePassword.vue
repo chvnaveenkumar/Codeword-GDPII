@@ -38,7 +38,6 @@
 </template>
 
 <script>
-import { required, minLength, sameAs } from 'vuelidate/lib/validators'
 export default {
   name: 'ChangePassword',
   data () {
@@ -51,15 +50,6 @@ export default {
   },
   created () {
     console.log('password page')
-  },
-  validations: {
-    newpassword: {
-      required,
-      minLength: minLength(8)
-    },
-    repeatPassword: {
-      sameAsPassword: sameAs('newpassword')
-    }
   },
   methods: {
     changePassword () {

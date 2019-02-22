@@ -116,8 +116,8 @@
         </button>
       </div>
       <div class="modal-body">
-        <input type="text" v-model="editStudentName">
-        <input type="text" v-model="editStudentEmail">
+        <input type="text" v-model="editStudentName" required>
+        <input type="text" v-model="editStudentEmail" required>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" @click="editStudent(editStudentId, editStudentEmail, editStudentName)">Update Details</button>

@@ -65,7 +65,7 @@
             <div class="modal-body">
             <!-- Retrive the course name from input field -->
             <div class="form-group">
-              <input type="text" class="form-control" pattern=".{6,15}" id="courseName" name="courseName" placeholder="Enter Course Name" data-toggle="tooltip"  onKeyDown="if(this.value.length==15) return false;" title="Atleast 6-15 characters" required>
+              <input type="text" class="form-control" pattern=".{6,30}" id="courseName" name="courseName" placeholder="Enter Course Name" data-toggle="tooltip" title="Atleast 6-15 characters" required>
             </div>
             <div class="row">
                 <div class="col tooltip-test" title="Start Date"> Start Date:<input type="date" name="startDate" class="form-control" v-model="startDate" placeholder="Start Date" required/></div>

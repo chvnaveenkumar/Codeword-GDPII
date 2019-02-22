@@ -3,7 +3,6 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router/routes'
-import Vuelidate from 'vuelidate'
 import axios from 'axios'
 import 'bootstrap-css-only/css/bootstrap.min.css'
 import 'mdbvue/build/css/mdb.css'
@@ -22,7 +21,6 @@ window.axios = axios.create({
 })
 window.$ = require('jquery')
 Vue.use(VueSweetalert2)
-Vue.use(Vuelidate)
 Vue.use(ToggleButton)
 Vue.config.productionTip = false
 require('bootstrap')

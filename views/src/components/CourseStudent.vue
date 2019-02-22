@@ -143,10 +143,10 @@
           <div class=" col-md-6">
         Start Date: </div>
           <div class="col-md-6">
-        <input type="date" id="startDate" class="form-control" v-model="courseInfo.Startdate" @change="changeEndDate"></div></div>
+        <input type="date" id="startDate" class="form-control" v-model="courseInfo.Startdate" @click="changeEndDate"></div></div>
         <div class="row">
           <div class=" col-md-6">
-        End Date: </div><div class="col-md-6"><input type="date" id="endDate" class="form-control" :disabled=true v-model="courseInfo.Enddate"></div>
+        End Date: </div><div class="col-md-6"><input type="date" id="endDate" class="form-control" v-model="courseInfo.Enddate"></div>
         </div>
              <div class="row">
           <div class=" col-md-6">

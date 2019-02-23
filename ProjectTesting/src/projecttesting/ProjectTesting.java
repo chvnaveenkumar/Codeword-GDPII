@@ -33,8 +33,6 @@ public class ProjectTesting {
             Thread.sleep(500);
             driver.findElement(By.xpath("//*[@id=\"app\"]/div/div/div/div/div[2]/div/div/form/button")).click();
             Thread.sleep(500);
-            driver.findElement(By.xpath("//*[@id=\"app\"]/div/div/div[2]/div[1]/div/div[2]/a[3]/button/i")).click();
-            Thread.sleep(500);
             driver.close();
     }
        catch(Exception e)

@@ -2,10 +2,18 @@
 <div class="container-fluid" style="margin-top:5em" >
   <div class="col-md-12 col-lg-12 col-xs-2 col-sm-2">
           <div class="row">
-                <div class="col tooltip-test" title="Start Date"><button type="button" class="btn btn-success" title="Create CodeWord Set" data-toggle="modal" data-target="#addcourse" v-on:click="loadCourseModel">
+                <div class="col tooltip-test"><button type="button" class="btn btn-success" title="Create CodeWord Set" data-toggle="modal" data-target="#addcourse" v-on:click="loadCourseModel">
       <span class="fa fa-plus"></span> Add Course </button>
     </div>
-                <div class="col tooltip-test" title="End Date"><toggle-button id="changed-font" :color="{checked: 'green', unchecked: 'red', disabled: '#CCCCCC'}" :width=185 :height=45 v-model="isEnabled" :labels="{checked: 'Active Courses', unchecked: 'InActive Courses'}"/>
+                <div class="col tooltip-test">
+    <input class="form-check-input" type="checkbox" value="Active Courses" id="defaultCheck1">
+    <label class="form-check-label" for="defaultCheck1">
+       Active Courses
+  </label>          
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+    <label class="form-check-label" for="defaultCheck1">
+    Inactive Courses
+  </label>               
     </div>
       </div>      
   </div>

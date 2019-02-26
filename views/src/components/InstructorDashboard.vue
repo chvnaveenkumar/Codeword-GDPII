@@ -1,13 +1,13 @@
 <template>
 <div class="container-fluid" style="margin-top:5em" >
   <div class="col-md-12 col-lg-12 col-xs-2 col-sm-2">
-    <div class="coursebutton">
-      <button type="button" class="btn btn-success" title="Create CodeWord Set" data-toggle="modal" data-target="#addcourse" v-on:click="loadCourseModel">
+          <div class="row">
+                <div class="col tooltip-test" title="Start Date"><button type="button" class="btn btn-success" title="Create CodeWord Set" data-toggle="modal" data-target="#addcourse" v-on:click="loadCourseModel">
       <span class="fa fa-plus"></span> Add Course </button>
     </div>
-      <div class="togglealign">
-          <toggle-button id="changed-font" :color="{checked: 'green', unchecked: 'red', disabled: '#CCCCCC'}" :width=185 :height=45 v-model="isEnabled" :labels="{checked: 'Active Courses', unchecked: 'InActive Courses'}"/>
-      </div>
+                <div class="col tooltip-test" title="End Date"><toggle-button id="changed-font" :color="{checked: 'green', unchecked: 'red', disabled: '#CCCCCC'}" :width=185 :height=45 v-model="isEnabled" :labels="{checked: 'Active Courses', unchecked: 'InActive Courses'}"/>
+    </div>
+      </div>      
   </div>
   <div class="row" style="margin-left: 3rem;margin-right: 7rem;" >
     <div class="col-md-3 col-lg-3 col-xs-0 col-sm-0" v-for="course in coursesData" :key="course._id" v-if="!isEnabled != (new Date() < new Date(course.Enddate))">

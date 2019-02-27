@@ -9,9 +9,10 @@
     <input class="form-check-input" type="checkbox" value="Active Courses" id="defaultCheck1">
     <label class="form-check-label" for="defaultCheck1">
        Active Courses
-  </label>          
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-    <label class="form-check-label" for="defaultCheck1">
+  </label>    
+                <br>
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+    <label class="form-check-label" for="defaultCheck2">
     Inactive Courses
   </label>               
     </div>

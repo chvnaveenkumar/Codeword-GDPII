@@ -11,7 +11,7 @@ import CodeWord from '@/components/CodeWord'
 import CourseStudent from '@/components/CourseStudent'
 Vue.use(Router)
 
-export default new Router({
+var router = new Router({
   linkExactActiveClass: 'active',
   routes: [
     {
@@ -81,3 +81,4 @@ export default new Router({
     }
   ]
 })
+export default router

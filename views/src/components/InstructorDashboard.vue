@@ -6,12 +6,12 @@
       <span class="fa fa-plus"></span> Add Course </button>
     </div>
                 <div class="col tooltip-test">
-    <input class="form-check-input" type="checkbox" value="Active Courses" id="defaultCheck1">
+    <input class="form-check-input" type="checkbox" v-model="active" value="Active Courses" id="defaultCheck1">
     <label class="form-check-label" for="defaultCheck1">
        Active Courses
   </label>    
                 <br>
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+  <input class="form-check-input" type="checkbox" v-model="inactive" value="" id="defaultCheck2">
     <label class="form-check-label" for="defaultCheck2">
     Inactive Courses
   </label>               
@@ -19,7 +19,7 @@
       </div>      
   </div>
   <div class="row" style="margin-left: 3rem;margin-right: 7rem;" >
-    <div class="col-md-3 col-lg-3 col-xs-0 col-sm-0" v-for="course in coursesData" :key="course._id" v-if="!isEnabled != (new Date() < new Date(course.Enddate))">
+    <div class="col-md-3 col-lg-3 col-xs-0 col-sm-0" v-for="course in coursesData" :key="course._id" v-if="!active != (new Date() < new Date(course.Enddate)) || inactive != (new Date() < new Date(course.Enddate))">
       <div class="card border-success mb-3 cardstyle" style="max-width: 20rem;margin-top: 1rem;" >
          <div class="card-header bg-info border-success" id = "boldforcourse"><h4>{{ course.courseNameKey }}</h4>
         <br>
@@ -132,7 +132,9 @@ export default {
       codeWordSetCount: '',
       isEnabled: true,
       count: 0,
-      checkFileUpload: false
+      checkFileUpload: false,
+      active: true,
+      inactive: false
     }
   },
   created () {

@@ -143,17 +143,17 @@
           <div class=" col-md-6">
         Start Date: </div>
           <div class="col-md-6">
-        <input type="date" id="startDate" class="form-control" v-model="courseInfo.Startdate" @click="changeEndDate"></div></div>
+        <input type="date" id="startDate" class="form-control" v-model="selectstartDate" @click="changeEndDate"></div></div>
         <div class="row">
           <div class=" col-md-6">
-        End Date: </div><div class="col-md-6"><input type="date" id="endDate" class="form-control" v-model="courseInfo.Enddate"></div>
+        End Date: </div><div class="col-md-6"><input type="date" id="endDate" class="form-control" v-model="selectendDate"></div>
         </div>
              <div class="row">
           <div class=" col-md-6">
-        Start Survey URL: </div> <div class="col-md-6"><input type="text" class="form-control" v-model="courseInfo.PreSurveyURL"></div></div>
+        Start Survey URL: </div> <div class="col-md-6"><input type="text" class="form-control" v-model="selectstartSurvey"></div></div>
           <div class="row">
           <div class=" col-md-6">
-        End Survey URL: </div> <div class="col-md-6"><input type="text" class="form-control" v-model="courseInfo.PostSurveyURL"></div></div>
+        End Survey URL: </div> <div class="col-md-6"><input type="text" class="form-control" v-model="selectendSurvey"></div></div>
         </div>
       </div>
       <div class="modal-footer">
@@ -191,7 +191,11 @@ export default {
       pages: '',
       prevUrl: '',
       nextUrl: '',
-      totalStudents: ''
+      totalStudents: '',
+      selectstartDate: '',
+      selectendDate: '',
+      selectstartSurvey: '',
+      selectendSurvey: ''
     }
   },
   created () {
@@ -334,7 +338,10 @@ export default {
       })
     },
     selectCourse (courseDetails) {
-      this.courseInfo = courseDetails
+      this.selectstartDate = courseDetails.Startdate,
+      this.selectendDate = courseDetails.Enddate,
+      this.selectstartSurvey = courseDetails.PreSurveyURL,
+      this.selectendSurvey = courseDetails.PostSurveyURL
     },
     selectStudentInfo (studentDetails) {
       this.editStudentName = studentDetails.StudentName

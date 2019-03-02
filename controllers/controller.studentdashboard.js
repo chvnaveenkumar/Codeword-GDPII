@@ -2,6 +2,8 @@
  * @author Sravya Kancharla <S531500@nwmissouri.edu>
 **/
 var { CourseStudentModel } = require('../model/model.coursestudent');
+var { CourseModel } = require('../model/model.course');
+
 const _ = require('lodash');
 
  let getstudentDetails = (req,res) => {
@@ -29,11 +31,9 @@ let updateAcknowledged=(req,res) =>{
 }
 module.exports.updateAcknowledged = updateAcknowledged;
 
-let getCourses = (req,res) => {
-    CourseModel.find({emailKey: req.session.email}, function (err, courses) {
-        if (courses) {
-
-        }
+let getCourse = (req,res) => {
+    var body = _.pick(req.body,['courseNameKey', 'emailKey']);
+    CourseModel.find({courseNameKey: body.courseNameKey}, function (err, courses) {
             return res.json({ code: 200, data: courses });
         }).catch((e) => {
         return res.json({ code: 400, message: e });

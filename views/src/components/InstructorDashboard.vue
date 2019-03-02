@@ -94,8 +94,9 @@
             <div class="form-group" required>
                 <select class="form-control" v-model="CodeWordSetName" value ="Select codeword set" data-toggle="tooltip"  title="Please select codeword set" >
                   <option disabled value="">Please select CodeWordSet</option>
-                  <option v-for="codewordset in codeWordSetData" :key="codewordset._id">{{ codewordset.CodeWordSetName }}</option>
+                  <option v-for="codewordset in codeWordSetData" v-bind:value="'No of Codewords: '+codewordset.Codewords.length" :key="codewordset._id">{{ codewordset.CodeWordSetName }}</option>
                 </select>
+                <span>{{ CodeWordSetName }}</span>
             </div>
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Enter Survey Start URL" name="startSurveyurl" data-toggle="tooltip" data-placement="bottom" title="Enter Survey Start URL" >
@@ -226,6 +227,7 @@ export default {
         }
       }).then(response => {
         this.codeWordSetData = response.data.data
+        console.log(this.codeWordSetData)
       })
     },
     status () {

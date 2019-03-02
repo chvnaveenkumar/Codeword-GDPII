@@ -137,29 +137,31 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      <form @submit.prevent="editCourse">
       <div class="modal-body">
         <div class="container-fluid">
         <div class="row">
           <div class=" col-md-6">
         Start Date: </div>
           <div class="col-md-6">
-        <input type="date" id="startDate" class="form-control" v-model="selectstartDate" @click="changeEndDate"></div></div>
+            <div class="form-group">
+        <input type="date" id="startDate" class="form-control" title="Atleast 6-15 characters" required v-model="selectstartDate" @click="changeEndDate"></div></div>
+       </div>
         <div class="row">
           <div class=" col-md-6">
-        End Date: </div><div class="col-md-6"><input type="date" id="endDate" class="form-control" v-model="selectendDate"></div>
+        End Date: </div><div class="col-md-6"><div class="form-group"><input type="date" required id="endDate" class="form-control" v-model="selectendDate"></div></div>
         </div>
              <div class="row">
           <div class=" col-md-6">
-        Start Survey URL: </div> <div class="col-md-6"><input type="text" class="form-control" v-model="selectstartSurvey"></div></div>
+        Start Survey URL: </div> <div class="col-md-6"><div class="form-group"><input type="text" class="form-control" v-model="selectstartSurvey"></div></div></div>
           <div class="row">
           <div class=" col-md-6">
-        End Survey URL: </div> <div class="col-md-6"><input type="text" class="form-control" v-model="selectendSurvey"></div></div>
+        End Survey URL: </div> <div class="col-md-6"><div class="form-group"><input type="text" class="form-control" v-model="selectendSurvey"></div></div></div>
         </div>
+                <button type="cancel" class="btn btn-primart" data-dismiss="modal">Cancel</button>
+        <button type="create" class="btn btn-danger" >Edit Course</button>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primart" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-danger" @click="editCourse()">Edit Course</button>
-      </div>
+      </form>
     </div>
   </div>
 </div>

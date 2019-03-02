@@ -10,8 +10,8 @@
     
     <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
       <div class="row">
-                <div class="col tooltip-test" title="Start Date"> <h3>Codeword set Name: <strong>{{ CodeWordSetName }}</strong></h3></div>
-                <div class="col tooltip-test" title="End Date"> <h3>No of Codewords: <strong>{{ codewords.length }}</strong></h3></div>
+                <div class="col tooltip-test"> <h3>Codeword set Name: <strong>{{ CodeWordSetName }}</strong></h3></div>
+                <div class="col tooltip-test"> <h3>No of Codewords: <strong>{{ codewords.length }}</strong></h3></div>
       </div>      
      <div class="codewordset"> <button type="button" class="btn btn-success" v-if='isPermanent !== true' data-toggle="modal" data-target="#addcodeword" style="marging-left:10px">
    <span class="fa fa-plus"></span> Add Codeword

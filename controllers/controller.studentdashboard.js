@@ -33,10 +33,10 @@ module.exports.updateAcknowledged = updateAcknowledged;
 
 let getCourse = (req,res) => {
     var body = _.pick(req.body,['courseNameKey', 'emailKey']);
-    CourseModel.find({courseNameKey: body.courseNameKey}, function (err, courses) {
-            return res.json({ code: 200, data: courses });
+    CourseModel.find({courseNameKey: body.courseNameKey, EmailKey: body.emailKey}, function (err, courseDetails) {
+            return res.json({ code: 200, data: courseDetails });
         }).catch((e) => {
         return res.json({ code: 400, message: e });
         })
 }
-module.exports.getCourses = getCourses;
+module.exports.getCourse = getCourse;

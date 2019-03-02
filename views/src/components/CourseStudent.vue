@@ -158,7 +158,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primart" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-danger" @click="editCourse(courseInfo._id)">Edit Course</button>
+        <button type="button" class="btn btn-danger" @click="editCourse()">Edit Course</button>
       </div>
     </div>
   </div>
@@ -327,20 +327,22 @@ export default {
           token: window.localStorage.getItem('token')
         },
         data: {
-          id: courseId,
-          Startdate: this.courseInfo.Startdate,
-          Enddate: this.courseInfo.Enddate,
-          PreSurveyURL: this.courseInfo.PreSurveyURL,
-          PostSurveyURL: this.courseInfo.PostSurveyURL
+          id: this.courseData._id,
+          Startdate: this.selectstartDate,
+          Enddate: this.selectendDate,
+          PreSurveyURL: this.selectstartSurvey,
+          PostSurveyURL: this.selectendSurvey
         }
       }).then(response => {
+        this.getCourseStudentData()
+        this.getCoursesData(this.courseNameData)
         $('#editCourse').modal('hide')
       })
     },
     selectCourse (courseDetails) {
-      this.selectstartDate = courseDetails.Startdate,
-      this.selectendDate = courseDetails.Enddate,
-      this.selectstartSurvey = courseDetails.PreSurveyURL,
+      this.selectstartDate = courseDetails.Startdate
+      this.selectendDate = courseDetails.Enddate
+      this.selectstartSurvey = courseDetails.PreSurveyURL
       this.selectendSurvey = courseDetails.PostSurveyURL
     },
     selectStudentInfo (studentDetails) {

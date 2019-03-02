@@ -213,4 +213,3 @@ let getstudentcodeword=(req,res) =>{
     })
 }
 module.exports.getstudentcodeword=getstudentcodeword;
-

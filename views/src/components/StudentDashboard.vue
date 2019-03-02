@@ -90,6 +90,21 @@ export default {
           this.userCourses[index].Acknowledged = true
         }
       })
+    },
+    getCourseDetails () {
+      // yet to write an API Call to change status as acknowledged
+      // this.userCourses[index].Acknowledged = true
+      axios({
+        method: 'post',
+        url: 'codeword/getcoursedetails',
+        headers: {
+          token: window.localStorage.getItem('token')
+        }
+      }).then(response => {
+        if (response.data.message === true) {
+          this.userCourses[index].Acknowledged = true
+        }
+      })
     }
   }
 }

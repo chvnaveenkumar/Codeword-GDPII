@@ -93,6 +93,6 @@ li a {
   color: white
 }
 .active {
-  color:yellow;
+  color:goldenrod
 }
 </style>

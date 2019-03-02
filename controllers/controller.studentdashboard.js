@@ -28,3 +28,15 @@ let updateAcknowledged=(req,res) =>{
     })
 }
 module.exports.updateAcknowledged = updateAcknowledged;
+
+let getCourses = (req,res) => {
+    CourseModel.find({emailKey: req.session.email}, function (err, courses) {
+        if (courses) {
+
+        }
+            return res.json({ code: 200, data: courses });
+        }).catch((e) => {
+        return res.json({ code: 400, message: e });
+        })
+}
+module.exports.getCourses = getCourses;

@@ -24,7 +24,7 @@ var sendMail = function (email, temp_password) {
             secure: false, 
             auth: {
                 user: decodeJson.email,
-                pass: decodeJson.password
+                pass: 'sunrise@2'
             }
         });
     

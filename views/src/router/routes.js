@@ -12,7 +12,7 @@ import CourseStudent from '@/components/CourseStudent'
 import Authenticate from '@/services/middleware'
 Vue.use(Router)
 
-export default new Router({
+var router = new Router({
   linkExactActiveClass: 'active',
   routes: [
     {
@@ -83,3 +83,4 @@ export default new Router({
     }
   ]
 })
+export default router

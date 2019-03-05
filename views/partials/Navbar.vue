@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="/">Code Word</a>
+            <a class="navbar-brand" href="/">Codeword</a>
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -28,7 +28,6 @@
                     {{ email }}
                     </a>
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" @click.prevent="changePassword" >Change Password</a>
                           <a class="dropdown-item" @click.prevent="onLogout" >Logout</a>
                       </div>
                       </div>
@@ -94,6 +93,6 @@ li a {
   color: white
 }
 .active {
-  color: blue;
+  color:goldenrod
 }
 </style>

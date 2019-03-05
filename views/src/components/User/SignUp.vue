@@ -16,16 +16,17 @@
                       </div>
                           <h2> Register</h2>
                               <div class="form-group">
-                                  <input type="email" class="form-control" placeholder="Enter email" required="required" pattern=".+@nwmissouri.edu" v-model="email">
+                                  <input type="email" class="form-control" placeholder="Enter email" required="required" title="Please enter proper Email ID" pattern="\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+" v-model="email">
                               </div>
-                              <div class="form-group" :class="{invalid: $v.password.$error}">
+                              <div class="form-group">
                                     <input type="password" class="form-control" placeholder="Password" required
-                                        v-model.lazy="password" @blur="$v.password.$touch()" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter">
-                                    <p v-if="!$v.password.minLength"> Password must have at least {{ $v.password.$params.minLength.min }} letters. </p>
+                                        v-model.lazy="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter">
                               </div>
-                              <div class="form-group" :class="{invalid: $v.repeatPassword.$error}">
-                                    <input type="password" class="form-control" placeholder="Confirm Password" v-model="repeatPassword">
-                                    <p v-if="!$v.repeatPassword.sameAsPassword"> Password must be identical. </p>
+                              <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Confirm Password" @input="validate" required>
+                                    <p></p>
+                                    <p v-if="passwordstatus == false && status == true" class="alert alert-danger"> Password not matched </p>
+                                    <p v-if="passwordstatus == true && status == true" class="alert alert-info"> Password matched </p>
                               </div>
                               <div class="form-group">
                                     <input type="checkbox" id="instructor" v-model="instructor">
@@ -45,8 +46,7 @@
   </div>
 </template>
 <script>
-import {required, minLength, sameAs} from 'vuelidate/lib/validators'
-
+/* global axios */
 export default {
   data () {
     return {
@@ -55,26 +55,26 @@ export default {
       repeatPassword: '',
       instructor: false,
       msg: '',
-      signed: false
-    }
-  },
-  validations: {
-    password: {
-      required,
-      minLength: minLength(8)
-    },
-    repeatPassword: {
-      sameAsPassword: sameAs('password')
-    },
-    instructor: {
-      sameAs: sameAs(() => true)
+      signed: false,
+      passwordmsg: '',
+      passwordstatus: '',
+      status: false
     }
   },
   methods: {
+    validate (e) {
+      this.repeatPassword = e.target.value
+      this.status = true
+      if (this.password === this.repeatPassword) {
+        this.passwordstatus = true
+      } else {
+        this.passwordstatus = false
+      }
+    },
     OnRegister () {
       this.msg = ''
       let emailid = this.email
-      /* global axios */
+      this.status = true
       axios({
         method: 'post',
         url: 'codeword/validateEmail',
@@ -84,7 +84,6 @@ export default {
       }).then(res => {
         let _this = this
         if (res.data.message === false) {
-          console.log('onregister clicked fullnaem', this.email)
           axios.post('codeword/signup',
             {
               email: this.email.toLowerCase(),

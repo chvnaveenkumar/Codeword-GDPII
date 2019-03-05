@@ -2,13 +2,21 @@
  * @author Naveen kumar Chandaluri
  */
 <template>
+    
     <div id="codeWord" class="container-fluid" style="margin-top:5em">
+ 
+      <span class="text-md-left"> </span>
+      <span class="text-md-right"> </span>
+    
     <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
-      <div class="codewordsetname"> <h3>Codeword set Name: <strong>{{ CodeWordSetName }}</strong></h3></div>
+      <div class="row">
+                <div class="col tooltip-test"> <h3>Codeword set Name: <strong>{{ CodeWordSetName }}</strong></h3></div>
+                <div class="col tooltip-test"> <h3>No of Codewords: <strong>{{ codewords.length }}</strong></h3></div>
+      </div>      
      <div class="codewordset"> <button type="button" class="btn btn-success" v-if='isPermanent !== true' data-toggle="modal" data-target="#addcodeword" style="marging-left:10px">
    <span class="fa fa-plus"></span> Add Codeword
 </button></div>
-<div class="modal fade" id="addcodeword" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="addcodeword" tabindex="-1"  le="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -55,14 +63,12 @@
 <table class="table">
                 <thead class="thead-dark">
                     <tr>
-                        <th scope="col">#</th>
                         <th scope="col">Codewords</th>
                         <th scope="col" v-if='isPermanent !== true'>Options</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr v-for="(codeword,index) in codewords" :key="codeword._id">
-                        <td scope="row">{{ index+1 }}</td>
                         <td > {{ codeword }}</td>
                         <td v-if='isPermanent !== true'>
                           <button type="button" class="btn btn-info btn-sm" data-toggle="modal" @click="selectCodeword(index)" data-target="#editcodeword" style="marging-left:10px">
@@ -200,10 +206,10 @@ export default {
 .headingstyle {
   font-weight: bold;
 }
-.codewordsetname {
-  text-align: left;
-}
 .codewordset {
   text-align: right;
+}
+.countstyle {
+  float: right;
 }
 </style>

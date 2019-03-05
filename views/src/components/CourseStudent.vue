@@ -9,7 +9,7 @@
                 <h3 style="font-weight:bold;text-align:left"> Course Name: {{ courseNameData }} </h3>
             </div>
             <div class="col-md-6 col-lg-6 col-xs-0 col-sm-0">
-                <h3 style="font-weight:bold;text-align:right"> Acknowledged Status: {{ ( acknowledgedTrue / acknowledgedTotal )  * 100}}% </h3>
+                <h3 style="font-weight:bold;text-align:right"> Acknowledged Status: {{ acknowledged}}% </h3>
             </div>
       </div>
 </h5>
@@ -20,7 +20,7 @@
     End Date: {{ courseData.Enddate }} <br>
     Start Survey URL: <a v-bind:href="'http://'+courseData.PreSurveyURL" class="card-link" target="_blank">{{ courseData.PreSurveyURL }} </a> <br>
     End Survey URL: <a v-bind:href="'http://'+courseData.PostSurveyURL" class="card-link" target="_blank">{{ courseData.PostSurveyURL }} </a> <br>
-    Number of Students: {{ courseStudentData.length }} <br>
+    Number of Students: {{ totalStudents }} <br>
     </div>
      <div class="col-md-6 col-lg-6 col-xs-0 col-sm-0" style="text-align:left;font-weight:bold">
           <button class="btn" data-toggle="modal" data-target="#editCourse" @click="selectCourse(courseData)" style="float:right;">Edit <i class="fa fa-pencil fa-xs"></i></button>
@@ -116,8 +116,8 @@
         </button>
       </div>
       <div class="modal-body">
-        <input type="text" v-model="editStudentName">
-        <input type="text" v-model="editStudentEmail">
+        <input type="text" v-model="editStudentName" required>
+        <input type="text" v-model="editStudentEmail" required>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" @click="editStudent(editStudentId, editStudentEmail, editStudentName)">Update Details</button>
@@ -137,29 +137,31 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      <form @submit.prevent="editCourse">
       <div class="modal-body">
         <div class="container-fluid">
         <div class="row">
           <div class=" col-md-6">
         Start Date: </div>
           <div class="col-md-6">
-        <input type="date" id="startDate" class="form-control" v-model="courseInfo.Startdate" @change="changeEndDate"></div></div>
+            <div class="form-group">
+        <input type="date" id="startDate" class="form-control" title="Atleast 6-15 characters" required v-model="selectstartDate" @click="changeEndDate"></div></div>
+       </div>
         <div class="row">
           <div class=" col-md-6">
-        End Date: </div><div class="col-md-6"><input type="date" id="endDate" class="form-control" :disabled=true v-model="courseInfo.Enddate"></div>
+        End Date: </div><div class="col-md-6"><div class="form-group"><input type="date" required id="endDate" class="form-control" v-model="selectendDate"></div></div>
         </div>
              <div class="row">
           <div class=" col-md-6">
-        Start Survey URL: </div> <div class="col-md-6"><input type="text" class="form-control" v-model="courseInfo.PreSurveyURL"></div></div>
+        Start Survey URL: </div> <div class="col-md-6"><div class="form-group"><input type="text" class="form-control" v-model="selectstartSurvey"></div></div></div>
           <div class="row">
           <div class=" col-md-6">
-        End Survey URL: </div> <div class="col-md-6"><input type="text" class="form-control" v-model="courseInfo.PostSurveyURL"></div></div>
+        End Survey URL: </div> <div class="col-md-6"><div class="form-group"><input type="text" class="form-control" v-model="selectendSurvey"></div></div></div>
         </div>
+                <button type="cancel" class="btn btn-primart" data-dismiss="modal">Cancel</button>
+        <button type="create" class="btn btn-danger" >Edit Course</button>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primart" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-danger" @click="editCourse(courseInfo._id)">Edit Course</button>
-      </div>
+      </form>
     </div>
   </div>
 </div>
@@ -181,9 +183,7 @@ export default {
       selectstudentName: '',
       selectedEmailKey: '',
       selectedStudentName: '',
-      acknowledgedTotal: 0,
-      acknowledgedTrue: 0,
-      acknowledgedFalse: 0,
+      acknowledged: 0,
       courseInfo: '',
       studentInfo: '',
       editStudentName: '',
@@ -192,7 +192,12 @@ export default {
       currentPage: '',
       pages: '',
       prevUrl: '',
-      nextUrl: ''
+      nextUrl: '',
+      totalStudents: '',
+      selectstartDate: '',
+      selectendDate: '',
+      selectstartSurvey: '',
+      selectendSurvey: ''
     }
   },
   created () {
@@ -230,14 +235,8 @@ export default {
         this.pages = response.data.pages
         this.nextUrl = response.data.nextUrl
         this.prevUrl = response.data.prevUrl
-        for (var i = 0; i < this.courseStudentData.length; i++) {
-          this.acknowledgedTotal = this.acknowledgedTotal + 1
-          if (this.courseStudentData[0].Acknowledged === true) {
-            this.acknowledgedTrue = this.acknowledgedTrue + 1
-          } else {
-            this.acknowledgedFalse = this.acknowledgedFalse + 1
-          }
-        }
+        this.totalStudents = response.data.totalStudents
+        this.acknowledged = response.data.Acknowledged
       })
     },
     checkPage (url) {
@@ -330,18 +329,23 @@ export default {
           token: window.localStorage.getItem('token')
         },
         data: {
-          id: courseId,
-          Startdate: this.courseInfo.Startdate,
-          Enddate: this.courseInfo.Enddate,
-          PreSurveyURL: this.courseInfo.PreSurveyURL,
-          PostSurveyURL: this.courseInfo.PostSurveyURL
+          id: this.courseData._id,
+          Startdate: this.selectstartDate,
+          Enddate: this.selectendDate,
+          PreSurveyURL: this.selectstartSurvey,
+          PostSurveyURL: this.selectendSurvey
         }
       }).then(response => {
+        this.getCourseStudentData()
+        this.getCoursesData(this.courseNameData)
         $('#editCourse').modal('hide')
       })
     },
     selectCourse (courseDetails) {
-      this.courseInfo = courseDetails
+      this.selectstartDate = courseDetails.Startdate
+      this.selectendDate = courseDetails.Enddate
+      this.selectstartSurvey = courseDetails.PreSurveyURL
+      this.selectendSurvey = courseDetails.PostSurveyURL
     },
     selectStudentInfo (studentDetails) {
       this.editStudentName = studentDetails.StudentName

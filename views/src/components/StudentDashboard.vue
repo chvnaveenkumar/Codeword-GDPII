@@ -75,7 +75,7 @@ export default {
     },
     getCodeWord (index) {
       // yet to write an API Call to change status as acknowledged
-      this.userCourses[index].Acknowledged = true
+      // this.userCourses[index].Acknowledged = true
       axios({
         method: 'post',
         url: 'codeword/codewordAcknowledged',
@@ -86,11 +86,20 @@ export default {
           acknowledgedStatus: this.userCourses[index]
         }
       }).then(response => {
-        if (response.data.data === 'No courses found') {
-          this.status = false
-        } else {
-          this.userCourses = response.data.data
+        if (response.data.message === true) {
+          this.userCourses[index].Acknowledged = true
         }
+      })
+    },
+    getCourseDetails () {
+      axios({
+        method: 'post',
+        url: 'codeword/getcoursedetails',
+        headers: {
+          token: window.localStorage.getItem('token')
+        }
+      }).then(response => {
+        console.log(response.data.data)
       })
     }
   }

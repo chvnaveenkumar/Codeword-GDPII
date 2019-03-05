@@ -1,16 +1,28 @@
 <template>
 <div class="container-fluid" style="margin-top:5em" >
   <div class="col-md-12 col-lg-12 col-xs-2 col-sm-2">
-    <div class="coursebutton">
-      <button type="button" class="btn btn-success" title="Create CodeWord Set" data-toggle="modal" data-target="#addcourse" v-on:click="loadCourseModel">
+          <div class="row">
+                <div class="col-md-2 tooltip-test"><button type="button" class="btn btn-success" title="Create CodeWord Set" data-toggle="modal" data-target="#addcourse" v-on:click="loadCourseModel">
       <span class="fa fa-plus"></span> Add Course </button>
     </div>
-      <div class="togglealign">
-          <toggle-button id="changed-font" :color="{checked: 'green', unchecked: 'red', disabled: '#CCCCCC'}" :width=185 :height=45 v-model="isEnabled" :labels="{checked: 'Active Courses', unchecked: 'InActive Courses'}"/>
-      </div>
+        <div class="col-md-6">
+        </div>
+    <div class="col-md-2">
+    <input class="form-check-input" type="checkbox" v-model="active" value="Active Courses" id="defaultCheck1">
+    <label class="form-check-label" for="defaultCheck1">
+       Active Courses
+  </label>
+    </div>
+    <div class="col-md-2">
+  <input class="form-check-input" type="checkbox" v-model="inactive" value="" id="defaultCheck2">
+    <label class="form-check-label" for="defaultCheck2">
+    Inactive Courses
+  </label>               
+    </div>
+      </div>      
   </div>
   <div class="row" style="margin-left: 3rem;margin-right: 7rem;" >
-    <div class="col-md-3 col-lg-3 col-xs-0 col-sm-0" v-for="course in coursesData" :key="course._id" v-if="!isEnabled != (new Date() < new Date(course.Enddate))">
+    <div class="col-md-3 col-lg-3 col-xs-0 col-sm-0" v-for="course in coursesData" :key="course._id" v-if="(!active != (new Date() < new Date(course.Enddate)) || inactive != (new Date() < new Date(course.Enddate))) && (active || inactive)">
       <div class="card border-success mb-3 cardstyle" style="max-width: 20rem;margin-top: 1rem;" >
          <div class="card-header bg-info border-success" id = "boldforcourse"><h4>{{ course.courseNameKey }}</h4>
         <br>
@@ -65,29 +77,30 @@
             <div class="modal-body">
             <!-- Retrive the course name from input field -->
             <div class="form-group">
-              <input type="text" class="form-control" pattern=".{6,}" id="courseName" name="courseName" placeholder="Enter Course Name" data-toggle="tooltip"  title="Atleast 6 characters" required>
+              <input type="text" class="form-control" pattern=".{6,30}" id="courseName" name="courseName" placeholder="Enter Course Name" data-toggle="tooltip" title="Atleast 6-15 characters" required>
             </div>
             <div class="row">
                 <div class="col tooltip-test" title="Start Date"> Start Date:<input type="date" name="startDate" class="form-control" v-model="startDate" placeholder="Start Date" required/></div>
-                <div class="col tooltip-test" title="End Date"> End Date:<input type="date" class="form-control" v-model="endDate"  name="endDate" :disabled=true  placeholder="End Date" required></div>
+                <div class="col tooltip-test" title="End Date"> End Date:<input type="date" class="form-control" v-model="endDate"  name="endDate"  placeholder="End Date" required></div>
             </div>
             <div class="form-group">
                 <input type="file" ref="file" name="file" v-on:change="handleFileUpload()" class="form-control-file" id="file" style="margin-top:1em" required>
                 Upload Student Details(Excel)
             </div>
-                                        <div class="alert alert-info">
-                                 <p v-if="count === 0">                          
-                                 There is no/empty file please upload new excel file.</p>
-                                <p v-else-if="count === false">
-                                    Uploaded excel sheet was not in the format.</p>
-                                <p v-else>
-                                    There are {{ count }} Students in the Uploaded set.</p>
-                            </div>
+            <div v-if="checkFileUpload === true">
+                <p v-if="count === 0" class="alert alert-danger">                          
+                    No data in excel. Please upload new excel file.</p>
+                <p v-else-if="count === false" class="alert alert-danger">
+                    Uploaded excel sheet was not in the format.</p>
+                <p v-else class="alert alert-info">
+                    There are {{ count }} Students in the Uploaded set.</p>
+            </div>
             <div class="form-group" required>
                 <select class="form-control" v-model="CodeWordSetName" value ="Select codeword set" data-toggle="tooltip"  title="Please select codeword set" >
                   <option disabled value="">Please select CodeWordSet</option>
-                  <option v-for="codewordset in codeWordSetData" :key="codewordset._id">{{ codewordset.CodeWordSetName }}</option>
+                  <option v-for="codewordset in codeWordSetData" v-bind:value="'No of Codewords: '+codewordset.Codewords.length" :key="codewordset._id">{{ codewordset.CodeWordSetName }}</option>
                 </select>
+                <span>{{ CodeWordSetName }}</span>
             </div>
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Enter Survey Start URL" name="startSurveyurl" data-toggle="tooltip" data-placement="bottom" title="Enter Survey Start URL" >
@@ -95,7 +108,7 @@
             <div class="form-group" >
               <input type="text" class="form-control" placeholder="Enter Survey End URL"  name="endSurveyurl" data-toggle="tooltip" data-placement="bottom" title="Enter Survey End URL" >
             </div>
-            <div >
+            <div>
               <button type="cancel" class="btn btn-danger" data-dismiss="modal">Cancel</button>
               <button type="create" :disabled="count === false || count === 0" class="btn btn-primary">Create Course</button>
             </div>
@@ -122,7 +135,10 @@ export default {
       selectedCourse: '',
       codeWordSetCount: '',
       isEnabled: true,
-      count: 0
+      count: 0,
+      checkFileUpload: false,
+      active: true,
+      inactive: false
     }
   },
   created () {
@@ -153,6 +169,7 @@ export default {
         formData.append('CourseNameKey', this.courseName)
         formData.append('CodeWordSetName', this.CodeWordSetName)
         formData.append('file', this.file)
+        console.log(this.file)
         /* global axios $ */
         axios({
           method: 'post',
@@ -192,7 +209,9 @@ export default {
       }
     },
     handleFileUpload () {
+      this.checkFileUpload = true
       this.file = this.$refs.file.files[0]
+      console.log(this.file)
       let data = new FormData(document.querySelector('form'))
       axios.post('/codeword/getdatastudentxlsx', data).then(response => {
         this.count = response.data.count
@@ -212,6 +231,7 @@ export default {
         }
       }).then(response => {
         this.codeWordSetData = response.data.data
+        console.log(this.codeWordSetData)
       })
     },
     status () {

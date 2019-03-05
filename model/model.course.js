@@ -10,7 +10,7 @@ var CourseModel = mongoose.model('courseModel', {
     type: String,
     required: true,
     trim: true,
-    unique: true,
+    unique:true,
     minlength: 5
    },
    emailKey:{
@@ -40,4 +40,5 @@ var CourseModel = mongoose.model('courseModel', {
     type: String
    }
 });
+
 module.exports.CourseModel = CourseModel

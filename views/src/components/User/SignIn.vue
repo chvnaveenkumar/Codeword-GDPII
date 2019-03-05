@@ -80,7 +80,7 @@ export default {
                 localStorage.setItem('status', response.data.isInstructor)
                 let _this = this
                 setTimeout(function () {
-                  if (data.get('password').length === 5) {
+                  if (data.get('password').length === 4) {
                     _this.$router.push({ name: 'ChangePassword' })
                   } else if (response.data.isInstructor === false) {
                     _this.$router.push({ name: 'StudentDashboard' })

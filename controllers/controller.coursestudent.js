@@ -66,15 +66,13 @@ let getDataStudentXLSX = (req, res) => {
 }
 module.exports.getDataStudentXLSX = getDataStudentXLSX;
 
-
 let addCourseStudent = (req,res) => {
     var codewordslist =[];
     var shuffleCodeWords, studetList;
     var studentidList=[],studentNameList=[];
     var workbook = XLSX.read(req.file.buffer, {type:"buffer"});
     var body = _.pick(req.body,['CourseNameKey','CodeWordSetName']);    
-    studetList = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0].charAt(0).toLowerCase() + workbook.SheetNames[0].slice(1)]);
-    
+    studetList = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]]);
     Codewordset.find({CodeWordSetName: body.CodeWordSetName}, function (err, CodeWordset) {
         if(err){
             return res.status(200).json({ message: 'CodeWord Set Not found error'});
@@ -100,7 +98,7 @@ let addCourseStudent = (req,res) => {
             for(var i=0;i<studentidList.length;i++){
                 var courseStudentModel = CourseStudentModel({
                     CourseNameKey: body.CourseNameKey,
-                    EmailKey:studentidList[i],
+                    EmailKey:studentidList[i].charAt(0).toLowerCase() + studentidList[i].slice(1),
                     Codeword:shuffleCodeWords[i],
                     StudentName: studentNameList[i],
                     Acknowledged: false,
@@ -137,7 +135,14 @@ let getCourseStudent = (req,res) => {
     let pageCount = 10;
     let pageNumber = parseInt(req.param('pageNumber')) || 0;
     let pages = 0;
+    let AcknowledgedTrue = 0,ackPercent = 0;
     CourseStudentModel.find({$and: [{CourseNameKey: body.CourseNameValue}, {courseCreater: req.session.email}]}).exec( function (err, count){
+        _.forEach(count, function(value) {
+            if(value.Acknowledged === true){
+                AcknowledgedTrue = AcknowledgedTrue + 1
+            }
+        });
+        ackPercent = (AcknowledgedTrue / count.length) * 100;
         CourseStudentModel.find({$and: [{CourseNameKey: body.CourseNameValue}, {courseCreater: req.session.email}]}).skip(pageNumber * pageCount).limit(pageCount).exec(function (err, courseStudents) {
             if(err){
                 return res.json({ code: 200, message: 'No courses created!!'});
@@ -148,15 +153,15 @@ let getCourseStudent = (req,res) => {
                 if( pageNumber === 0) {
                     if( pageNumber === (pages-1))
                     {
-                        return res.json({ code: 200, courseStudents, currentPage: pageNumber, pages, prevUrl: '', nextUrl: '' });
+                        return res.json({ code: 200, Acknowledged: ackPercent, totalStudents: count.length, courseStudents, currentPage: pageNumber, pages, prevUrl: '', nextUrl: '' });
                     }else{
-                        return res.json({ code: 200, courseStudents, currentPage: pageNumber, pages, prevUrl: '', nextUrl: `codeword/getcoursestudent?pageNumber=${pageNumber + 1}` });
+                        return res.json({ code: 200, Acknowledged: ackPercent, totalStudents: count.length, courseStudents, currentPage: pageNumber, pages, prevUrl: '', nextUrl: `codeword/getcoursestudent?pageNumber=${pageNumber + 1}` });
                     }
                     }
                 else if( pageNumber ===  (pages -1)) {
-                    return res.json({ code: 200, courseStudents, currentPage: pageNumber, pages, prevUrl: `codeword/getcoursestudent?pageNumber=${pageNumber - 1}`, nextUrl: '' });}
+                    return res.json({ code: 200, Acknowledged: ackPercent, totalStudents: count.length, courseStudents, currentPage: pageNumber, pages, prevUrl: `codeword/getcoursestudent?pageNumber=${pageNumber - 1}`, nextUrl: '' });}
                 else {
-                    return res.json({ code: 200, courseStudents, currentPage: pageNumber, pages, prevUrl: `codeword/getcoursestudent?pageNumber=${pageNumber - 1}`, nextUrl: `codeword/getcoursestudent?pageNumber=${pageNumber + 1}` });
+                    return res.json({ code: 200, Acknowledged: ackPercent, totalStudents: count.length, courseStudents, currentPage: pageNumber, pages, prevUrl: `codeword/getcoursestudent?pageNumber=${pageNumber - 1}`, nextUrl: `codeword/getcoursestudent?pageNumber=${pageNumber + 1}` });
                 }
     
             })    
@@ -208,4 +213,3 @@ let getstudentcodeword=(req,res) =>{
     })
 }
 module.exports.getstudentcodeword=getstudentcodeword;
-

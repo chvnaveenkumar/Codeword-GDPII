@@ -15,8 +15,9 @@
                 <div class="modal-content" style="width:fit-content">
                     <div class="modal-header">
                         <h5 class=  "modal-title" id="addcourseLabel">Create Codeword Set</h5>
-                      <button id="exPopover3" class="btn btn-outline-primary"><i class="fa fa-eye"></i> Hint</button>          
-                      <b-popover target="exPopover3" triggers="click" placement="auto">
+                        
+                      <button type="button" id="exPopover3" class="btn btn-outline-primary"><i class="fa fa-eye"></i> Hint</button>          
+                      <b-popover target="exPopover3" triggers="click" placement="auto" name="popov">
                         <template slot="title">Rules for Creating Codewords</template>
                         <strong>1.</strong> Every codeword should be unique in the set.<br>
                         <strong>2.</strong> The codewords with substring should differ by at least 3 letters.<br>
@@ -25,7 +26,6 @@
                         <strong>5.</strong> Every codeword should be compared with every other codeword in the set.
                       </b-popover>
                     </div>
-                    
                     <!-- Modal Body -->
                     <form @submit.prevent="saveCodeWordData">
                     <div class="modal-body">

@@ -19,9 +19,8 @@ var router = new Router({
       path: '/',
       beforeEnter (to, from, next) {
         let logged = localStorage.getItem('status')
-        console.log(logged + 'logged status')
         if (logged !== null) {
-          if (logged) {
+          if (logged || logged === 'true') {
             console.log('instructordashboard')
             next('/instructordashboard')
           } else {
@@ -61,22 +60,26 @@ var router = new Router({
     {
       path: '/coursestudent',
       name: 'CourseStudent',
+      beforeEnter: Authenticate.auth,
       component: CourseStudent
     },
     {
       path: '/codewordset',
       name: 'CodeWordSet',
+      beforeEnter: Authenticate.auth,
       component: CodeWordSet
     },
     {
       path: '/codeword',
       name: 'CodeWord',
+      beforeEnter: Authenticate.auth,
       component: CodeWord
     },
     {
       path: '/studentdashboard',
       name: 'StudentDashboard',
       component: StudentDashboard,
+      beforeEnter: Authenticate.auth,
       meta: {
         role: 'student'
       }

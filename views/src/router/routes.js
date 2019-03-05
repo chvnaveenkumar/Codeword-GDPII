@@ -9,6 +9,7 @@ import StudentDashboard from '@/components/StudentDashboard'
 import CodeWordSet from '@/components/CodeWordSet'
 import CodeWord from '@/components/CodeWord'
 import CourseStudent from '@/components/CourseStudent'
+import Authenticate from '@/services/middleware'
 Vue.use(Router)
 
 export default new Router({
@@ -42,6 +43,7 @@ export default new Router({
       path: '/instructordashboard',
       name: 'InstructorDashboard',
       component: InstructorDashboard,
+      beforeEnter: Authenticate.auth,
       meta: {
         role: 'instructor'
       }

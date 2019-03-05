@@ -39,7 +39,7 @@
     </nav>
 </template>
 <script>
-import User from "@/../services/auth";
+import User from "@/services/auth";
 export default {
   data() {
     return {

@@ -40,13 +40,5 @@ let updateAcknowledged=(req,res) =>{
 }
 module.exports.updateAcknowledged = updateAcknowledged;
 
-let getCourse = (req,res) => {
-    var body = _.pick(req.body,['courseNameKey', 'emailKey']);
-    CourseModel.find({courseNameKey: body.courseNameKey, EmailKey: body.emailKey}, function (err, courseDetails) {
-            if(courseDetails)
-            return res.json({ code: 200, data: courseDetails });
-        }).catch((e) => {
-        return res.json({ code: 400, message: e });
-        })
-}
-module.exports.getCourse = getCourse;
+
+

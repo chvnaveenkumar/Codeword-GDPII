@@ -21,7 +21,7 @@ Startdate: body.startDate,
 Startdate: body.startDate,
 Enddate: body.endDate,
 PreSurveyURL: body.preSurveyURL,
-PostSurveyURL: body.postSurveyURL 
+PostSurveyURL: body.postSurveyURL
 });
     courseModel.save().then((user) => {
         if(user)

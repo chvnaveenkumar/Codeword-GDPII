@@ -16,6 +16,14 @@ const _ = require('lodash');
                 return res.json({ code: 400 ,data: 'No courses found'});
             }
             console.log(studentcourses)
+            _.forEach(studentcourses, function(value) {
+                CourseModel.find({courseNameKey: value.CourseNameKey, emailKey: value.courseCreater }, function (err, courseDetails) {
+                    value.PostSurveyURL = courseDetails[0].PostSurveyURL
+                    value.PostSurveyURL = courseDetails[0].PostSurveyURL
+                }).catch((e) => {
+                return res.json({ code: 400, message: e });
+                })        
+            });    
             return res.json({ code: 400 ,data: studentcourses});
         })
     }

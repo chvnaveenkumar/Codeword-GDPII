@@ -257,3 +257,267 @@
 2019-03-05T22:15:20.410Z - debug: 92 hootoriginal seeded
 2019-03-05T22:15:20.410Z - debug: 200 largeset seeded
 2019-03-05T22:15:20.410Z - info: END Seeder. Sample data read and verified.
+2019-03-08T00:34:24.098Z - info: START seeder.
+2019-03-08T00:34:24.149Z - debug: 2 dataCodewordset seeded
+2019-03-08T00:34:24.150Z - debug: 292 datacodeword seeded
+2019-03-08T00:34:24.151Z - debug: 6 datacourse seeded
+2019-03-08T00:34:24.151Z - debug: 114 dataCoursestudent seeded
+2019-03-08T00:34:24.152Z - debug: 92 hootoriginal seeded
+2019-03-08T00:34:24.152Z - debug: 200 largeset seeded
+2019-03-08T00:34:24.153Z - info: END Seeder. Sample data read and verified.
+2019-03-08T00:41:16.421Z - error: uncaughtException: Cannot read property 'Codewords' of undefined date=Thu Mar 07 2019 18:41:16 GMT-0600 (Central Standard Time), pid=1972, uid=null, gid=null, cwd=c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.6.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\bin\www], rss=94429184, heapTotal=47984640, heapUsed=42393232, external=22092974, loadavg=[0, 0, 0], uptime=349363
+TypeError: Cannot read property 'Codewords' of undefined
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\controllers\controller.coursestudent.js:80:40
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\model.js:4703:16
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at cb (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:1779:14)
+    at result (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:414:17)
+    at executeCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:406:9)
+    at handleCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at cursor.close (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:62)
+    at handleCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at completeClose (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:893:14)
+    at Cursor.close (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:912:10)
+    at cursor._next (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:23)
+    at handleCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:204:5)
+    at _setCursorNotifiedImpl (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:433:38)
+    at self._endSession (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:441:46)
+    at Cursor._endSession (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:195:5)
+    at Cursor._endSession (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:226:59)
+    at _setCursorNotifiedImpl (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:441:17)
+    at setCursorNotified (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:433:3)
+    at done (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:648:16)
+    at queryCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:699:18)
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\connection\pool.js:532:18
+2019-03-08T00:41:23.097Z - error: uncaughtException: Cannot read property 'Codewords' of undefined date=Thu Mar 07 2019 18:41:23 GMT-0600 (Central Standard Time), pid=1972, uid=null, gid=null, cwd=c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.6.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\bin\www], rss=95391744, heapTotal=47984640, heapUsed=42533800, external=22111339, loadavg=[0, 0, 0], uptime=349370
+TypeError: Cannot read property 'Codewords' of undefined
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\controllers\controller.coursestudent.js:80:40
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\model.js:4703:16
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at cb (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:1779:14)
+    at result (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:414:17)
+    at executeCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:406:9)
+    at handleCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at cursor.close (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:62)
+    at handleCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at completeClose (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:893:14)
+    at Cursor.close (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:912:10)
+    at cursor._next (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:23)
+    at handleCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:204:5)
+    at _setCursorNotifiedImpl (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:433:38)
+    at self._endSession (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:441:46)
+    at Cursor._endSession (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:195:5)
+    at Cursor._endSession (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:226:59)
+    at _setCursorNotifiedImpl (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:441:17)
+    at setCursorNotified (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:433:3)
+    at done (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:648:16)
+    at queryCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:699:18)
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\connection\pool.js:532:18
+2019-03-08T00:42:21.784Z - info: START seeder.
+2019-03-08T00:42:21.796Z - debug: 2 dataCodewordset seeded
+2019-03-08T00:42:21.796Z - debug: 292 datacodeword seeded
+2019-03-08T00:42:21.796Z - debug: 6 datacourse seeded
+2019-03-08T00:42:21.796Z - debug: 114 dataCoursestudent seeded
+2019-03-08T00:42:21.797Z - debug: 92 hootoriginal seeded
+2019-03-08T00:42:21.797Z - debug: 200 largeset seeded
+2019-03-08T00:42:21.797Z - info: END Seeder. Sample data read and verified.
+2019-03-08T00:44:36.027Z - error: uncaughtException: Cannot read property 'Codewords' of undefined date=Thu Mar 07 2019 18:44:36 GMT-0600 (Central Standard Time), pid=4140, uid=null, gid=null, cwd=c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.6.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\bin\www], rss=94363648, heapTotal=47460352, heapUsed=42409072, external=22462027, loadavg=[0, 0, 0], uptime=349562
+TypeError: Cannot read property 'Codewords' of undefined
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\controllers\controller.coursestudent.js:80:40
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\model.js:4703:16
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at cb (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:1779:14)
+    at result (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:414:17)
+    at executeCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:406:9)
+    at handleCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at cursor.close (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:62)
+    at handleCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at completeClose (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:893:14)
+    at Cursor.close (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:912:10)
+    at cursor._next (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:23)
+    at handleCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:204:5)
+    at _setCursorNotifiedImpl (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:433:38)
+    at self._endSession (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:441:46)
+    at Cursor._endSession (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:195:5)
+    at Cursor._endSession (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:226:59)
+    at _setCursorNotifiedImpl (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:441:17)
+    at setCursorNotified (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:433:3)
+    at done (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:648:16)
+    at queryCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:699:18)
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\connection\pool.js:532:18
+2019-03-08T00:46:59.250Z - error: uncaughtException: Cannot read property 'Codewords' of undefined date=Thu Mar 07 2019 18:46:59 GMT-0600 (Central Standard Time), pid=4140, uid=null, gid=null, cwd=c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.6.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\bin\www], rss=95567872, heapTotal=47984640, heapUsed=42168256, external=22011809, loadavg=[0, 0, 0], uptime=349706
+TypeError: Cannot read property 'Codewords' of undefined
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\controllers\controller.coursestudent.js:80:40
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\model.js:4703:16
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at cb (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:1779:14)
+    at result (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:414:17)
+    at executeCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:406:9)
+    at handleCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at cursor.close (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:62)
+    at handleCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at completeClose (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:893:14)
+    at Cursor.close (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:912:10)
+    at cursor._next (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:23)
+    at handleCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:204:5)
+    at _setCursorNotifiedImpl (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:433:38)
+    at self._endSession (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:441:46)
+    at Cursor._endSession (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:195:5)
+    at Cursor._endSession (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:226:59)
+    at _setCursorNotifiedImpl (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:441:17)
+    at setCursorNotified (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:433:3)
+    at done (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:648:16)
+    at queryCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:699:18)
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\connection\pool.js:532:18
+2019-03-08T00:48:37.847Z - error: uncaughtException: Cannot read property 'Codewords' of undefined date=Thu Mar 07 2019 18:48:37 GMT-0600 (Central Standard Time), pid=4140, uid=null, gid=null, cwd=c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.6.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\bin\www], rss=98545664, heapTotal=48508928, heapUsed=43451416, external=22765862, loadavg=[0, 0, 0], uptime=349804
+TypeError: Cannot read property 'Codewords' of undefined
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\controllers\controller.coursestudent.js:80:40
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\model.js:4703:16
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at cb (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:1779:14)
+    at result (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:414:17)
+    at executeCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:406:9)
+    at handleCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at cursor.close (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:62)
+    at handleCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at completeClose (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:893:14)
+    at Cursor.close (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:912:10)
+    at cursor._next (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:23)
+    at handleCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:204:5)
+    at _setCursorNotifiedImpl (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:433:38)
+    at self._endSession (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:441:46)
+    at Cursor._endSession (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:195:5)
+    at Cursor._endSession (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:226:59)
+    at _setCursorNotifiedImpl (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:441:17)
+    at setCursorNotified (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:433:3)
+    at done (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:648:16)
+    at queryCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:699:18)
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\connection\pool.js:532:18
+2019-03-08T00:49:53.864Z - error: uncaughtException: Cannot read property 'Codewords' of undefined date=Thu Mar 07 2019 18:49:53 GMT-0600 (Central Standard Time), pid=4140, uid=null, gid=null, cwd=c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.6.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\bin\www], rss=99680256, heapTotal=50081792, heapUsed=43082808, external=22596587, loadavg=[0, 0, 0], uptime=349880
+TypeError: Cannot read property 'Codewords' of undefined
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\controllers\controller.coursestudent.js:80:40
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\model.js:4703:16
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at cb (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:1779:14)
+    at result (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:414:17)
+    at executeCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:406:9)
+    at handleCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at cursor.close (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:62)
+    at handleCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at completeClose (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:893:14)
+    at Cursor.close (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:912:10)
+    at cursor._next (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:23)
+    at handleCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:204:5)
+    at _setCursorNotifiedImpl (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:433:38)
+    at self._endSession (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:441:46)
+    at Cursor._endSession (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:195:5)
+    at Cursor._endSession (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:226:59)
+    at _setCursorNotifiedImpl (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:441:17)
+    at setCursorNotified (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:433:3)
+    at done (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:648:16)
+    at queryCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:699:18)
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\connection\pool.js:532:18
+2019-03-08T00:50:30.394Z - error: uncaughtException: Cannot read property 'Codewords' of undefined date=Thu Mar 07 2019 18:50:30 GMT-0600 (Central Standard Time), pid=4140, uid=null, gid=null, cwd=c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.6.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\bin\www], rss=101904384, heapTotal=52178944, heapUsed=45628152, external=21997196, loadavg=[0, 0, 0], uptime=349917
+TypeError: Cannot read property 'Codewords' of undefined
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\controllers\controller.coursestudent.js:80:40
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\model.js:4703:16
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at cb (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:1779:14)
+    at result (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:414:17)
+    at executeCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:406:9)
+    at handleCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at cursor.close (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:62)
+    at handleCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at completeClose (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:893:14)
+    at Cursor.close (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:912:10)
+    at cursor._next (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:23)
+    at handleCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:204:5)
+    at _setCursorNotifiedImpl (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:433:38)
+    at self._endSession (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:441:46)
+    at Cursor._endSession (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:195:5)
+    at Cursor._endSession (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:226:59)
+    at _setCursorNotifiedImpl (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:441:17)
+    at setCursorNotified (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:433:3)
+    at done (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:648:16)
+    at queryCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:699:18)
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\connection\pool.js:532:18
+2019-03-08T00:51:15.587Z - error: uncaughtException: Cannot read property 'Codewords' of undefined date=Thu Mar 07 2019 18:51:15 GMT-0600 (Central Standard Time), pid=4140, uid=null, gid=null, cwd=c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.6.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\bin\www], rss=104656896, heapTotal=54276096, heapUsed=47997144, external=22084979, loadavg=[0, 0, 0], uptime=349962
+TypeError: Cannot read property 'Codewords' of undefined
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\controllers\controller.coursestudent.js:80:40
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\model.js:4703:16
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at cb (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:1779:14)
+    at result (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:414:17)
+    at executeCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:406:9)
+    at handleCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at cursor.close (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:62)
+    at handleCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at completeClose (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:893:14)
+    at Cursor.close (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:912:10)
+    at cursor._next (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:23)
+    at handleCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:204:5)
+    at _setCursorNotifiedImpl (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:433:38)
+    at self._endSession (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:441:46)
+    at Cursor._endSession (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:195:5)
+    at Cursor._endSession (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:226:59)
+    at _setCursorNotifiedImpl (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:441:17)
+    at setCursorNotified (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:433:3)
+    at done (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:648:16)
+    at queryCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:699:18)
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\connection\pool.js:532:18
+2019-03-08T00:52:18.543Z - error: uncaughtException: Cannot read property 'Codewords' of undefined date=Thu Mar 07 2019 18:52:18 GMT-0600 (Central Standard Time), pid=4140, uid=null, gid=null, cwd=c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.6.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\bin\www], rss=105152512, heapTotal=54276096, heapUsed=48539472, external=22351137, loadavg=[0, 0, 0], uptime=350025
+TypeError: Cannot read property 'Codewords' of undefined
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\controllers\controller.coursestudent.js:80:40
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\model.js:4703:16
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at cb (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:1779:14)
+    at result (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:414:17)
+    at executeCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:406:9)
+    at handleCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at cursor.close (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:62)
+    at handleCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at completeClose (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:893:14)
+    at Cursor.close (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:912:10)
+    at cursor._next (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:23)
+    at handleCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:204:5)
+    at _setCursorNotifiedImpl (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:433:38)
+    at self._endSession (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:441:46)
+    at Cursor._endSession (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:195:5)
+    at Cursor._endSession (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:226:59)
+    at _setCursorNotifiedImpl (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:441:17)
+    at setCursorNotified (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:433:3)
+    at done (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:648:16)
+    at queryCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:699:18)
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\connection\pool.js:532:18
+2019-03-08T00:57:01.780Z - info: START seeder.
+2019-03-08T00:57:01.792Z - debug: 2 dataCodewordset seeded
+2019-03-08T00:57:01.792Z - debug: 292 datacodeword seeded
+2019-03-08T00:57:01.792Z - debug: 6 datacourse seeded
+2019-03-08T00:57:01.792Z - debug: 114 dataCoursestudent seeded
+2019-03-08T00:57:01.792Z - debug: 92 hootoriginal seeded
+2019-03-08T00:57:01.792Z - debug: 200 largeset seeded
+2019-03-08T00:57:01.792Z - info: END Seeder. Sample data read and verified.
+2019-03-08T00:57:22.012Z - error: uncaughtException: Cannot read property 'Codewords' of undefined date=Thu Mar 07 2019 18:57:21 GMT-0600 (Central Standard Time), pid=7544, uid=null, gid=null, cwd=c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.6.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\bin\www], rss=94937088, heapTotal=47460352, heapUsed=42524368, external=22450108, loadavg=[0, 0, 0], uptime=350328
+TypeError: Cannot read property 'Codewords' of undefined
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\controllers\controller.coursestudent.js:80:40
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\model.js:4703:16
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at cb (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:1779:14)
+    at result (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:414:17)
+    at executeCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:406:9)
+    at handleCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at cursor.close (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:62)
+    at handleCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at completeClose (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:893:14)
+    at Cursor.close (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:912:10)
+    at cursor._next (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:23)
+    at handleCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:204:5)
+    at _setCursorNotifiedImpl (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:433:38)
+    at self._endSession (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:441:46)
+    at Cursor._endSession (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:195:5)
+    at Cursor._endSession (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:226:59)
+    at _setCursorNotifiedImpl (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:441:17)
+    at setCursorNotified (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:433:3)
+    at done (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:648:16)
+    at queryCallback (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:699:18)
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongodb-core\lib\connection\pool.js:532:18

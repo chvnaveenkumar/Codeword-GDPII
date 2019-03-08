@@ -98,7 +98,7 @@
             <div class="form-group" required>
                 <select class="form-control" v-model="CodeWordSetName" value ="Select codeword set" data-toggle="tooltip"  title="Please select codeword set" >
                   <option disabled value="">Please select CodeWordSet</option>
-                  <option v-for="codewordset in codeWordSetData" v-bind:value="'No of Codewords: '+codewordset.Codewords.length" :key="codewordset._id">{{ codewordset.CodeWordSetName }}</option>
+                  <option v-for="codewordset in codeWordSetData" :key="codewordset._id">{{ codewordset.CodeWordSetName }}</option>
                 </select>
                 <span>{{ CodeWordSetName }}</span>
             </div>
@@ -159,6 +159,7 @@ export default {
       if (this.CodeWordSetName === '') {
         swal('Please choose codeword set!')
       } else {
+        console.log('create coure')
         let data = new FormData(document.querySelector('form'))
         this.courseName = data.get('courseName')
         this.startDate = this.startDate
@@ -194,6 +195,7 @@ export default {
                 }).then(response => {
                 console.log(response.data.message)
                 if (response.data.message === 'Course student successfully!') {
+                  console.log('success create course')
                   $('#addcourse').modal('hide')
                   this.fetchCourseList()
                 } else {

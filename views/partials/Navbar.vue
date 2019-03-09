@@ -22,7 +22,6 @@
                     <li class="nav-item" v-if='this.$route.name != "StudentDashboard" && this.$route.name !== "ChangePassword"'>
                         <router-link to="/codewordset">CodeWord Set</router-link>
                     </li>
-                     {{ email }}
                      <li class="nav-item" v-if='this.$route.name != "StudentDashboard" && this.$route.name !== "ChangePassword"'>
                         <router-link to="/codewordset">Logout</router-link>
                     </li>
@@ -97,6 +96,6 @@ li a {
   color: white
 }
 .active {
-  color:goldenrod
+  color:yellow
 }
 </style>

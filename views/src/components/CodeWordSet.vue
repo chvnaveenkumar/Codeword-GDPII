@@ -21,7 +21,7 @@
                         <template slot="title">Rules for Creating Codewords</template>
                         <strong>1.</strong> Every codeword should be unique in the set.<br>
                         <strong>2.</strong> The codewords with substring should differ by at least 3 letters.<br>
-                        <strong>3.</strong> There should not be any codewords like Ex: daa , baa.<br>
+                        <strong>3.</strong> There should not be any codewords like Ex: daa, baa.<br>
                         <strong>4.</strong> Scan the codewords as soon as the upload is done and give the feedback.<br>
                         <strong>5.</strong> Every codeword should be compared with every other codeword in the set.
                       </b-popover>

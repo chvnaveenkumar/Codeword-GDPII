@@ -89,9 +89,9 @@
             </div>
             <div v-if="checkFileUpload === true">
                 <p v-if="count === 0" class="alert alert-danger">                          
-                    No data in excel. Please upload new excel file.</p>
+                You have to upload a new excel file as it contains no data.</p>
                 <p v-else-if="count === false" class="alert alert-danger">
-                    Uploaded excel sheet was not in the format.</p>
+                    The uploaded excel sheet has no format.</p>
                 <p v-else class="alert alert-info">
                     There are {{ count }} Students in the Uploaded set.</p>
             </div>

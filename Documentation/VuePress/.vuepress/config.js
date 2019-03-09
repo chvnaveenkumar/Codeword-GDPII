@@ -14,7 +14,12 @@ module.exports = {
           {
             title: 'Technologies Used',
             collapsable: true,
-            children: [ /* ... */ ]
+            children: [ 
+              '/ Vue.js',
+              '/ Node.js',
+              '/ MongoDB',
+              '/ Heroku'
+            ]
           }
         ]
       }

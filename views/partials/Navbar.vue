@@ -22,10 +22,10 @@
                     <li class="nav-item" v-if='this.$route.name != "StudentDashboard" && this.$route.name !== "ChangePassword"'>
                         <router-link class="nav-link" to="/codewordset">CodeWord Set</router-link>
                     </li>
-                    <li class="nav-item" v-if='this.$route.name != "StudentDashboard" && this.$route.name !== "ChangePassword"'>
+                    <li class="nav-item" >
                     <a class="nav-link" >{{email}}</a>
                     </li>
-                    <li class="nav-item" v-if='this.$route.name != "StudentDashboard" && this.$route.name !== "ChangePassword"'>
+                    <li class="nav-item">
                           <a class="nav-link" @click.prevent="onLogout" >Logout</a>
                     </li>
                 </ul>

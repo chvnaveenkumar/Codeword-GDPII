@@ -625,3 +625,67 @@ TypeError: Cannot read property 'Codewords' of undefined
 2019-03-13T14:11:10.833Z - debug: 92 hootoriginal seeded
 2019-03-13T14:11:10.833Z - debug: 200 largeset seeded
 2019-03-13T14:11:10.834Z - info: END Seeder. Sample data read and verified.
+2019-03-13T14:50:29.898Z - error: uncaughtException: Cannot read property 'PostSurveyURL' of undefined date=Wed Mar 13 2019 09:50:29 GMT-0500 (Central Daylight Time), pid=13724, uid=null, gid=null, cwd=b:\GDP2\Codeword-GDPII\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP2\Codeword-GDPII\Codeword-GDPII\bin\www], rss=79810560, heapTotal=55455744, heapUsed=49003696, external=21547670, loadavg=[0, 0, 0], uptime=431245.4165422
+TypeError: Cannot read property 'PostSurveyURL' of undefined
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\controllers\controller.studentdashboard.js:21:60
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\model.js:4719:16
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at cb (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\query.js:1779:14)
+    at result (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb\lib\utils.js:414:17)
+    at executeCallback (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb\lib\utils.js:406:9)
+    at handleCallback (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at cursor.close (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:62)
+    at handleCallback (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at completeClose (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:893:14)
+    at Cursor.close (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:912:10)
+    at cursor._next (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:23)
+    at handleCallback (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:204:5)
+    at _setCursorNotifiedImpl (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:433:38)
+    at self._endSession (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:441:46)
+    at Cursor._endSession (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:195:5)
+    at Cursor._endSession (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:226:59)
+    at _setCursorNotifiedImpl (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:441:17)
+    at setCursorNotified (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:433:3)
+    at done (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:648:16)
+    at queryCallback (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:699:18)
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb-core\lib\connection\pool.js:532:18
+2019-03-13T14:51:05.744Z - info: START seeder.
+2019-03-13T14:51:05.783Z - debug: 2 dataCodewordset seeded
+2019-03-13T14:51:05.784Z - debug: 292 datacodeword seeded
+2019-03-13T14:51:05.784Z - debug: 6 datacourse seeded
+2019-03-13T14:51:05.784Z - debug: 114 dataCoursestudent seeded
+2019-03-13T14:51:05.785Z - debug: 92 hootoriginal seeded
+2019-03-13T14:51:05.785Z - debug: 200 largeset seeded
+2019-03-13T14:51:05.785Z - info: END Seeder. Sample data read and verified.
+2019-03-13T14:51:43.204Z - error: uncaughtException: Cannot read property 'PostSurveyURL' of undefined date=Wed Mar 13 2019 09:51:43 GMT-0500 (Central Daylight Time), pid=14832, uid=null, gid=null, cwd=b:\GDP2\Codeword-GDPII\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP2\Codeword-GDPII\Codeword-GDPII\bin\www], rss=131383296, heapTotal=53882880, heapUsed=48037256, external=21939192, loadavg=[0, 0, 0], uptime=431318.7196638
+TypeError: Cannot read property 'PostSurveyURL' of undefined
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\controllers\controller.studentdashboard.js:21:58
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\model.js:4719:16
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at cb (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\query.js:1779:14)
+    at result (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb\lib\utils.js:414:17)
+    at executeCallback (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb\lib\utils.js:406:9)
+    at handleCallback (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at cursor.close (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:62)
+    at handleCallback (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at completeClose (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:893:14)
+    at Cursor.close (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:912:10)
+    at cursor._next (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:23)
+    at handleCallback (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:204:5)
+    at _setCursorNotifiedImpl (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:433:38)
+    at self._endSession (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:441:46)
+    at Cursor._endSession (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:195:5)
+    at Cursor._endSession (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:226:59)
+    at _setCursorNotifiedImpl (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:441:17)
+    at setCursorNotified (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:433:3)
+    at done (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:648:16)
+    at queryCallback (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:699:18)
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongodb-core\lib\connection\pool.js:532:18
+2019-03-13T15:22:17.265Z - info: START seeder.
+2019-03-13T15:22:17.310Z - debug: 2 dataCodewordset seeded
+2019-03-13T15:22:17.311Z - debug: 292 datacodeword seeded
+2019-03-13T15:22:17.311Z - debug: 6 datacourse seeded
+2019-03-13T15:22:17.311Z - debug: 114 dataCoursestudent seeded
+2019-03-13T15:22:17.311Z - debug: 92 hootoriginal seeded
+2019-03-13T15:22:17.312Z - debug: 200 largeset seeded
+2019-03-13T15:22:17.312Z - info: END Seeder. Sample data read and verified.

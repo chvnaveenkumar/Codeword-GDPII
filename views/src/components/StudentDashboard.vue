@@ -4,8 +4,7 @@
       <div class="col-md-2 col-lg-2 col-xs-0 col-sm-0">
       </div>
       <div class="table-responsive col-md-8 col-lg-8 col-xs-12 col-sm-12" >
-        <!-- Button trigger modal -->
-      <h2>List of courses registered</h2>
+       <h2>List of courses registered</h2>
   <table class="table col-md-12 col-lg-12 col-xs-12 col-sm-12 table-striped table-bordered table-hover" >
     <thead class="thead-dark">
       <tr>
@@ -23,8 +22,20 @@
           <input  type="button" v-if=!course.Acknowledged @click="getCodeWord(index)" Value="Get CodeWord">
           <div v-else> {{ course.Codeword }}</div>
         </td>
-        <td>  <a> Click Here </a></td>
-        <td> <a> Click Here </a></td>
+         
+        <td v-if="course.PreSurveyURL != null"> 
+          <a v-bind:href="'http://'+course.PreSurveyURL" class="card-link" target="_blank">Start Survey</a>
+        </td>
+        <td else-if> 
+          <a>No Start Survey</a>
+        </td> 
+        <td v-if="course.PostSurveyURL != null">
+          <a v-bind:href="'http://'+course.PostSurveyURL" class="card-link" target="_blank">End Survey</a>
+         </td>
+        <td v-else>
+                    <a>No End Survey</a>
+
+         </td>
       </tr>
     </tbody>
       <div v-else class='nodata'>

@@ -37,7 +37,6 @@ let getDataStudentXLSX = (req, res) => {
                 var emails = _.map(jsonArray[0],'email')
                 emails.splice(0,1)
                 var checking_emails = true
-                console.log(emails)
                 _(emails).forEach(function(value) {
                     console.log(value+" "+value.length + value.includes("@") )
                     if(value.length === 0 || !(value.includes("@"))) {
@@ -54,7 +53,6 @@ let getDataStudentXLSX = (req, res) => {
                          return false
                     }
                 });
-                console.log(checking_emails + checking_names)
                 if(checking_emails === false || checking_names === false){
                     return res.status(200).json({ data: 'Uploaded Excel sheet is not in the given format!!', count: false })
                 }else{
@@ -161,7 +159,6 @@ let getCourseStudent = (req,res) => {
                 else {
                     return res.json({ code: 200, Acknowledged: ackPercent, totalStudents: count.length, courseStudents, currentPage: pageNumber, pages, prevUrl: `codeword/getcoursestudent?pageNumber=${pageNumber - 1}`, nextUrl: `codeword/getcoursestudent?pageNumber=${pageNumber + 1}` });
                 }
-    
             })    
     })
 }

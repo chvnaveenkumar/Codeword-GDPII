@@ -689,3 +689,955 @@ TypeError: Cannot read property 'PostSurveyURL' of undefined
 2019-03-13T15:22:17.311Z - debug: 92 hootoriginal seeded
 2019-03-13T15:22:17.312Z - debug: 200 largeset seeded
 2019-03-13T15:22:17.312Z - info: END Seeder. Sample data read and verified.
+2019-03-13T16:41:17.699Z - info: START seeder.
+2019-03-13T16:41:17.720Z - debug: 2 dataCodewordset seeded
+2019-03-13T16:41:17.721Z - debug: 292 datacodeword seeded
+2019-03-13T16:41:17.721Z - debug: 6 datacourse seeded
+2019-03-13T16:41:17.721Z - debug: 114 dataCoursestudent seeded
+2019-03-13T16:41:17.721Z - debug: 92 hootoriginal seeded
+2019-03-13T16:41:17.721Z - debug: 200 largeset seeded
+2019-03-13T16:41:17.722Z - info: END Seeder. Sample data read and verified.
+2019-03-13T16:42:19.293Z - info: START seeder.
+2019-03-13T16:42:19.304Z - debug: 2 dataCodewordset seeded
+2019-03-13T16:42:19.304Z - debug: 292 datacodeword seeded
+2019-03-13T16:42:19.305Z - debug: 6 datacourse seeded
+2019-03-13T16:42:19.305Z - debug: 114 dataCoursestudent seeded
+2019-03-13T16:42:19.305Z - debug: 92 hootoriginal seeded
+2019-03-13T16:42:19.305Z - debug: 200 largeset seeded
+2019-03-13T16:42:19.306Z - info: END Seeder. Sample data read and verified.
+2019-03-13T16:43:47.983Z - info: START seeder.
+2019-03-13T16:43:48.040Z - debug: 2 dataCodewordset seeded
+2019-03-13T16:43:48.040Z - debug: 292 datacodeword seeded
+2019-03-13T16:43:48.041Z - debug: 6 datacourse seeded
+2019-03-13T16:43:48.041Z - debug: 114 dataCoursestudent seeded
+2019-03-13T16:43:48.041Z - debug: 92 hootoriginal seeded
+2019-03-13T16:43:48.041Z - debug: 200 largeset seeded
+2019-03-13T16:43:48.042Z - info: END Seeder. Sample data read and verified.
+2019-03-13T16:49:45.557Z - info: START seeder.
+2019-03-13T16:49:45.607Z - debug: 2 dataCodewordset seeded
+2019-03-13T16:49:45.607Z - debug: 292 datacodeword seeded
+2019-03-13T16:49:45.608Z - debug: 6 datacourse seeded
+2019-03-13T16:49:45.608Z - debug: 114 dataCoursestudent seeded
+2019-03-13T16:49:45.609Z - debug: 92 hootoriginal seeded
+2019-03-13T16:49:45.609Z - debug: 200 largeset seeded
+2019-03-13T16:49:45.609Z - info: END Seeder. Sample data read and verified.
+2019-03-13T16:50:59.637Z - info: START seeder.
+2019-03-13T16:50:59.690Z - debug: 2 dataCodewordset seeded
+2019-03-13T16:50:59.690Z - debug: 292 datacodeword seeded
+2019-03-13T16:50:59.690Z - debug: 6 datacourse seeded
+2019-03-13T16:50:59.690Z - debug: 114 dataCoursestudent seeded
+2019-03-13T16:50:59.691Z - debug: 92 hootoriginal seeded
+2019-03-13T16:50:59.691Z - debug: 200 largeset seeded
+2019-03-13T16:50:59.692Z - info: END Seeder. Sample data read and verified.
+2019-03-13T16:52:20.462Z - info: START seeder.
+2019-03-13T16:52:20.504Z - debug: 2 dataCodewordset seeded
+2019-03-13T16:52:20.505Z - debug: 292 datacodeword seeded
+2019-03-13T16:52:20.505Z - debug: 6 datacourse seeded
+2019-03-13T16:52:20.505Z - debug: 114 dataCoursestudent seeded
+2019-03-13T16:52:20.505Z - debug: 92 hootoriginal seeded
+2019-03-13T16:52:20.506Z - debug: 200 largeset seeded
+2019-03-13T16:52:20.506Z - info: END Seeder. Sample data read and verified.
+2019-03-13T16:58:46.158Z - info: START seeder.
+2019-03-13T16:58:46.193Z - debug: 2 dataCodewordset seeded
+2019-03-13T16:58:46.193Z - debug: 292 datacodeword seeded
+2019-03-13T16:58:46.193Z - debug: 6 datacourse seeded
+2019-03-13T16:58:46.194Z - debug: 114 dataCoursestudent seeded
+2019-03-13T16:58:46.194Z - debug: 92 hootoriginal seeded
+2019-03-13T16:58:46.194Z - debug: 200 largeset seeded
+2019-03-13T16:58:46.195Z - info: END Seeder. Sample data read and verified.
+2019-03-13T16:59:56.505Z - info: START seeder.
+2019-03-13T16:59:56.545Z - debug: 2 dataCodewordset seeded
+2019-03-13T16:59:56.545Z - debug: 292 datacodeword seeded
+2019-03-13T16:59:56.545Z - debug: 6 datacourse seeded
+2019-03-13T16:59:56.545Z - debug: 114 dataCoursestudent seeded
+2019-03-13T16:59:56.545Z - debug: 92 hootoriginal seeded
+2019-03-13T16:59:56.545Z - debug: 200 largeset seeded
+2019-03-13T16:59:56.546Z - info: END Seeder. Sample data read and verified.
+2019-03-13T17:05:59.733Z - info: START seeder.
+2019-03-13T17:05:59.813Z - debug: 2 dataCodewordset seeded
+2019-03-13T17:05:59.814Z - debug: 292 datacodeword seeded
+2019-03-13T17:05:59.814Z - debug: 6 datacourse seeded
+2019-03-13T17:05:59.815Z - debug: 114 dataCoursestudent seeded
+2019-03-13T17:05:59.815Z - debug: 92 hootoriginal seeded
+2019-03-13T17:05:59.815Z - debug: 200 largeset seeded
+2019-03-13T17:05:59.816Z - info: END Seeder. Sample data read and verified.
+2019-03-13T17:07:39.996Z - info: START seeder.
+2019-03-13T17:07:40.053Z - debug: 2 dataCodewordset seeded
+2019-03-13T17:07:40.053Z - debug: 292 datacodeword seeded
+2019-03-13T17:07:40.053Z - debug: 6 datacourse seeded
+2019-03-13T17:07:40.054Z - debug: 114 dataCoursestudent seeded
+2019-03-13T17:07:40.054Z - debug: 92 hootoriginal seeded
+2019-03-13T17:07:40.054Z - debug: 200 largeset seeded
+2019-03-13T17:07:40.054Z - info: END Seeder. Sample data read and verified.
+2019-03-13T17:12:40.254Z - info: START seeder.
+2019-03-13T17:12:40.295Z - debug: 2 dataCodewordset seeded
+2019-03-13T17:12:40.295Z - debug: 292 datacodeword seeded
+2019-03-13T17:12:40.295Z - debug: 6 datacourse seeded
+2019-03-13T17:12:40.295Z - debug: 114 dataCoursestudent seeded
+2019-03-13T17:12:40.295Z - debug: 92 hootoriginal seeded
+2019-03-13T17:12:40.296Z - debug: 200 largeset seeded
+2019-03-13T17:12:40.296Z - info: END Seeder. Sample data read and verified.
+2019-03-13T17:17:06.637Z - info: START seeder.
+2019-03-13T17:17:06.676Z - debug: 2 dataCodewordset seeded
+2019-03-13T17:17:06.676Z - debug: 292 datacodeword seeded
+2019-03-13T17:17:06.676Z - debug: 6 datacourse seeded
+2019-03-13T17:17:06.676Z - debug: 114 dataCoursestudent seeded
+2019-03-13T17:17:06.676Z - debug: 92 hootoriginal seeded
+2019-03-13T17:17:06.676Z - debug: 200 largeset seeded
+2019-03-13T17:17:06.676Z - info: END Seeder. Sample data read and verified.
+2019-03-13T17:18:01.554Z - info: START seeder.
+2019-03-13T17:18:01.595Z - debug: 2 dataCodewordset seeded
+2019-03-13T17:18:01.595Z - debug: 292 datacodeword seeded
+2019-03-13T17:18:01.595Z - debug: 6 datacourse seeded
+2019-03-13T17:18:01.596Z - debug: 114 dataCoursestudent seeded
+2019-03-13T17:18:01.596Z - debug: 92 hootoriginal seeded
+2019-03-13T17:18:01.598Z - debug: 200 largeset seeded
+2019-03-13T17:18:01.598Z - info: END Seeder. Sample data read and verified.
+2019-03-13T17:18:17.228Z - info: START seeder.
+2019-03-13T17:18:17.270Z - debug: 2 dataCodewordset seeded
+2019-03-13T17:18:17.270Z - debug: 292 datacodeword seeded
+2019-03-13T17:18:17.270Z - debug: 6 datacourse seeded
+2019-03-13T17:18:17.270Z - debug: 114 dataCoursestudent seeded
+2019-03-13T17:18:17.271Z - debug: 92 hootoriginal seeded
+2019-03-13T17:18:17.271Z - debug: 200 largeset seeded
+2019-03-13T17:18:17.271Z - info: END Seeder. Sample data read and verified.
+2019-03-13T17:20:28.085Z - info: START seeder.
+2019-03-13T17:20:28.180Z - debug: 2 dataCodewordset seeded
+2019-03-13T17:20:28.182Z - debug: 292 datacodeword seeded
+2019-03-13T17:20:28.183Z - debug: 6 datacourse seeded
+2019-03-13T17:20:28.184Z - debug: 114 dataCoursestudent seeded
+2019-03-13T17:20:28.185Z - debug: 92 hootoriginal seeded
+2019-03-13T17:20:28.186Z - debug: 200 largeset seeded
+2019-03-13T17:20:28.186Z - info: END Seeder. Sample data read and verified.
+2019-03-13T17:21:48.028Z - info: START seeder.
+2019-03-13T17:21:48.063Z - debug: 2 dataCodewordset seeded
+2019-03-13T17:21:48.063Z - debug: 292 datacodeword seeded
+2019-03-13T17:21:48.063Z - debug: 6 datacourse seeded
+2019-03-13T17:21:48.063Z - debug: 114 dataCoursestudent seeded
+2019-03-13T17:21:48.064Z - debug: 92 hootoriginal seeded
+2019-03-13T17:21:48.064Z - debug: 200 largeset seeded
+2019-03-13T17:21:48.064Z - info: END Seeder. Sample data read and verified.
+2019-03-13T17:22:13.675Z - info: START seeder.
+2019-03-13T17:22:13.721Z - debug: 2 dataCodewordset seeded
+2019-03-13T17:22:13.721Z - debug: 292 datacodeword seeded
+2019-03-13T17:22:13.721Z - debug: 6 datacourse seeded
+2019-03-13T17:22:13.722Z - debug: 114 dataCoursestudent seeded
+2019-03-13T17:22:13.722Z - debug: 92 hootoriginal seeded
+2019-03-13T17:22:13.722Z - debug: 200 largeset seeded
+2019-03-13T17:22:13.722Z - info: END Seeder. Sample data read and verified.
+2019-03-13T17:23:30.206Z - info: START seeder.
+2019-03-13T17:23:30.243Z - debug: 2 dataCodewordset seeded
+2019-03-13T17:23:30.243Z - debug: 292 datacodeword seeded
+2019-03-13T17:23:30.243Z - debug: 6 datacourse seeded
+2019-03-13T17:23:30.243Z - debug: 114 dataCoursestudent seeded
+2019-03-13T17:23:30.243Z - debug: 92 hootoriginal seeded
+2019-03-13T17:23:30.243Z - debug: 200 largeset seeded
+2019-03-13T17:23:30.243Z - info: END Seeder. Sample data read and verified.
+2019-03-13T17:24:31.600Z - info: START seeder.
+2019-03-13T17:24:31.638Z - debug: 2 dataCodewordset seeded
+2019-03-13T17:24:31.638Z - debug: 292 datacodeword seeded
+2019-03-13T17:24:31.638Z - debug: 6 datacourse seeded
+2019-03-13T17:24:31.639Z - debug: 114 dataCoursestudent seeded
+2019-03-13T17:24:31.639Z - debug: 92 hootoriginal seeded
+2019-03-13T17:24:31.639Z - debug: 200 largeset seeded
+2019-03-13T17:24:31.639Z - info: END Seeder. Sample data read and verified.
+2019-03-13T17:25:23.037Z - info: START seeder.
+2019-03-13T17:25:23.078Z - debug: 2 dataCodewordset seeded
+2019-03-13T17:25:23.079Z - debug: 292 datacodeword seeded
+2019-03-13T17:25:23.079Z - debug: 6 datacourse seeded
+2019-03-13T17:25:23.079Z - debug: 114 dataCoursestudent seeded
+2019-03-13T17:25:23.079Z - debug: 92 hootoriginal seeded
+2019-03-13T17:25:23.080Z - debug: 200 largeset seeded
+2019-03-13T17:25:23.080Z - info: END Seeder. Sample data read and verified.
+2019-03-13T17:25:49.423Z - info: START seeder.
+2019-03-13T17:25:49.460Z - debug: 2 dataCodewordset seeded
+2019-03-13T17:25:49.460Z - debug: 292 datacodeword seeded
+2019-03-13T17:25:49.460Z - debug: 6 datacourse seeded
+2019-03-13T17:25:49.460Z - debug: 114 dataCoursestudent seeded
+2019-03-13T17:25:49.460Z - debug: 92 hootoriginal seeded
+2019-03-13T17:25:49.460Z - debug: 200 largeset seeded
+2019-03-13T17:25:49.461Z - info: END Seeder. Sample data read and verified.
+2019-03-13T17:29:35.503Z - info: START seeder.
+2019-03-13T17:29:35.539Z - debug: 2 dataCodewordset seeded
+2019-03-13T17:29:35.539Z - debug: 292 datacodeword seeded
+2019-03-13T17:29:35.539Z - debug: 6 datacourse seeded
+2019-03-13T17:29:35.540Z - debug: 114 dataCoursestudent seeded
+2019-03-13T17:29:35.540Z - debug: 92 hootoriginal seeded
+2019-03-13T17:29:35.540Z - debug: 200 largeset seeded
+2019-03-13T17:29:35.540Z - info: END Seeder. Sample data read and verified.
+2019-03-13T17:35:31.393Z - info: START seeder.
+2019-03-13T17:35:31.430Z - debug: 2 dataCodewordset seeded
+2019-03-13T17:35:31.430Z - debug: 292 datacodeword seeded
+2019-03-13T17:35:31.430Z - debug: 6 datacourse seeded
+2019-03-13T17:35:31.430Z - debug: 114 dataCoursestudent seeded
+2019-03-13T17:35:31.430Z - debug: 92 hootoriginal seeded
+2019-03-13T17:35:31.431Z - debug: 200 largeset seeded
+2019-03-13T17:35:31.431Z - info: END Seeder. Sample data read and verified.
+2019-03-13T17:36:32.197Z - info: START seeder.
+2019-03-13T17:36:32.236Z - debug: 2 dataCodewordset seeded
+2019-03-13T17:36:32.236Z - debug: 292 datacodeword seeded
+2019-03-13T17:36:32.236Z - debug: 6 datacourse seeded
+2019-03-13T17:36:32.236Z - debug: 114 dataCoursestudent seeded
+2019-03-13T17:36:32.236Z - debug: 92 hootoriginal seeded
+2019-03-13T17:36:32.236Z - debug: 200 largeset seeded
+2019-03-13T17:36:32.237Z - info: END Seeder. Sample data read and verified.
+2019-03-13T17:38:34.713Z - info: START seeder.
+2019-03-13T17:38:34.750Z - debug: 2 dataCodewordset seeded
+2019-03-13T17:38:34.750Z - debug: 292 datacodeword seeded
+2019-03-13T17:38:34.750Z - debug: 6 datacourse seeded
+2019-03-13T17:38:34.751Z - debug: 114 dataCoursestudent seeded
+2019-03-13T17:38:34.751Z - debug: 92 hootoriginal seeded
+2019-03-13T17:38:34.751Z - debug: 200 largeset seeded
+2019-03-13T17:38:34.751Z - info: END Seeder. Sample data read and verified.
+2019-03-13T17:39:16.888Z - info: START seeder.
+2019-03-13T17:39:16.927Z - debug: 2 dataCodewordset seeded
+2019-03-13T17:39:16.927Z - debug: 292 datacodeword seeded
+2019-03-13T17:39:16.927Z - debug: 6 datacourse seeded
+2019-03-13T17:39:16.928Z - debug: 114 dataCoursestudent seeded
+2019-03-13T17:39:16.928Z - debug: 92 hootoriginal seeded
+2019-03-13T17:39:16.928Z - debug: 200 largeset seeded
+2019-03-13T17:39:16.928Z - info: END Seeder. Sample data read and verified.
+2019-03-13T17:39:55.713Z - info: START seeder.
+2019-03-13T17:39:55.749Z - debug: 2 dataCodewordset seeded
+2019-03-13T17:39:55.749Z - debug: 292 datacodeword seeded
+2019-03-13T17:39:55.749Z - debug: 6 datacourse seeded
+2019-03-13T17:39:55.750Z - debug: 114 dataCoursestudent seeded
+2019-03-13T17:39:55.750Z - debug: 92 hootoriginal seeded
+2019-03-13T17:39:55.750Z - debug: 200 largeset seeded
+2019-03-13T17:39:55.750Z - info: END Seeder. Sample data read and verified.
+2019-03-13T17:41:18.103Z - info: START seeder.
+2019-03-13T17:41:18.143Z - debug: 2 dataCodewordset seeded
+2019-03-13T17:41:18.143Z - debug: 292 datacodeword seeded
+2019-03-13T17:41:18.143Z - debug: 6 datacourse seeded
+2019-03-13T17:41:18.143Z - debug: 114 dataCoursestudent seeded
+2019-03-13T17:41:18.143Z - debug: 92 hootoriginal seeded
+2019-03-13T17:41:18.144Z - debug: 200 largeset seeded
+2019-03-13T17:41:18.144Z - info: END Seeder. Sample data read and verified.
+2019-03-13T17:44:35.992Z - info: START seeder.
+2019-03-13T17:44:36.043Z - debug: 2 dataCodewordset seeded
+2019-03-13T17:44:36.043Z - debug: 292 datacodeword seeded
+2019-03-13T17:44:36.043Z - debug: 6 datacourse seeded
+2019-03-13T17:44:36.044Z - debug: 114 dataCoursestudent seeded
+2019-03-13T17:44:36.044Z - debug: 92 hootoriginal seeded
+2019-03-13T17:44:36.044Z - debug: 200 largeset seeded
+2019-03-13T17:44:36.045Z - info: END Seeder. Sample data read and verified.
+2019-03-13T17:45:42.612Z - info: START seeder.
+2019-03-13T17:45:42.659Z - debug: 2 dataCodewordset seeded
+2019-03-13T17:45:42.659Z - debug: 292 datacodeword seeded
+2019-03-13T17:45:42.659Z - debug: 6 datacourse seeded
+2019-03-13T17:45:42.659Z - debug: 114 dataCoursestudent seeded
+2019-03-13T17:45:42.659Z - debug: 92 hootoriginal seeded
+2019-03-13T17:45:42.660Z - debug: 200 largeset seeded
+2019-03-13T17:45:42.660Z - info: END Seeder. Sample data read and verified.
+2019-03-13T17:47:56.669Z - info: START seeder.
+2019-03-13T17:47:56.706Z - debug: 2 dataCodewordset seeded
+2019-03-13T17:47:56.706Z - debug: 292 datacodeword seeded
+2019-03-13T17:47:56.707Z - debug: 6 datacourse seeded
+2019-03-13T17:47:56.707Z - debug: 114 dataCoursestudent seeded
+2019-03-13T17:47:56.707Z - debug: 92 hootoriginal seeded
+2019-03-13T17:47:56.707Z - debug: 200 largeset seeded
+2019-03-13T17:47:56.707Z - info: END Seeder. Sample data read and verified.
+2019-03-13T17:50:06.795Z - info: START seeder.
+2019-03-13T17:50:06.832Z - debug: 2 dataCodewordset seeded
+2019-03-13T17:50:06.832Z - debug: 292 datacodeword seeded
+2019-03-13T17:50:06.832Z - debug: 6 datacourse seeded
+2019-03-13T17:50:06.832Z - debug: 114 dataCoursestudent seeded
+2019-03-13T17:50:06.832Z - debug: 92 hootoriginal seeded
+2019-03-13T17:50:06.833Z - debug: 200 largeset seeded
+2019-03-13T17:50:06.833Z - info: END Seeder. Sample data read and verified.
+2019-03-13T17:52:45.893Z - info: START seeder.
+2019-03-13T17:52:45.929Z - debug: 2 dataCodewordset seeded
+2019-03-13T17:52:45.929Z - debug: 292 datacodeword seeded
+2019-03-13T17:52:45.929Z - debug: 6 datacourse seeded
+2019-03-13T17:52:45.929Z - debug: 114 dataCoursestudent seeded
+2019-03-13T17:52:45.929Z - debug: 92 hootoriginal seeded
+2019-03-13T17:52:45.930Z - debug: 200 largeset seeded
+2019-03-13T17:52:45.930Z - info: END Seeder. Sample data read and verified.
+2019-03-13T17:57:20.552Z - info: START seeder.
+2019-03-13T17:57:20.597Z - debug: 2 dataCodewordset seeded
+2019-03-13T17:57:20.597Z - debug: 292 datacodeword seeded
+2019-03-13T17:57:20.597Z - debug: 6 datacourse seeded
+2019-03-13T17:57:20.597Z - debug: 114 dataCoursestudent seeded
+2019-03-13T17:57:20.597Z - debug: 92 hootoriginal seeded
+2019-03-13T17:57:20.598Z - debug: 200 largeset seeded
+2019-03-13T17:57:20.598Z - info: END Seeder. Sample data read and verified.
+2019-03-13T18:02:43.198Z - info: START seeder.
+2019-03-13T18:02:43.233Z - debug: 2 dataCodewordset seeded
+2019-03-13T18:02:43.234Z - debug: 292 datacodeword seeded
+2019-03-13T18:02:43.234Z - debug: 6 datacourse seeded
+2019-03-13T18:02:43.234Z - debug: 114 dataCoursestudent seeded
+2019-03-13T18:02:43.234Z - debug: 92 hootoriginal seeded
+2019-03-13T18:02:43.235Z - debug: 200 largeset seeded
+2019-03-13T18:02:43.235Z - info: END Seeder. Sample data read and verified.
+2019-03-13T18:03:53.298Z - info: START seeder.
+2019-03-13T18:03:53.339Z - debug: 2 dataCodewordset seeded
+2019-03-13T18:03:53.339Z - debug: 292 datacodeword seeded
+2019-03-13T18:03:53.339Z - debug: 6 datacourse seeded
+2019-03-13T18:03:53.340Z - debug: 114 dataCoursestudent seeded
+2019-03-13T18:03:53.340Z - debug: 92 hootoriginal seeded
+2019-03-13T18:03:53.340Z - debug: 200 largeset seeded
+2019-03-13T18:03:53.340Z - info: END Seeder. Sample data read and verified.
+2019-03-13T18:04:04.037Z - info: START seeder.
+2019-03-13T18:04:04.073Z - debug: 2 dataCodewordset seeded
+2019-03-13T18:04:04.073Z - debug: 292 datacodeword seeded
+2019-03-13T18:04:04.073Z - debug: 6 datacourse seeded
+2019-03-13T18:04:04.074Z - debug: 114 dataCoursestudent seeded
+2019-03-13T18:04:04.074Z - debug: 92 hootoriginal seeded
+2019-03-13T18:04:04.074Z - debug: 200 largeset seeded
+2019-03-13T18:04:04.074Z - info: END Seeder. Sample data read and verified.
+2019-03-13T18:07:04.539Z - info: START seeder.
+2019-03-13T18:07:04.573Z - debug: 2 dataCodewordset seeded
+2019-03-13T18:07:04.574Z - debug: 292 datacodeword seeded
+2019-03-13T18:07:04.574Z - debug: 6 datacourse seeded
+2019-03-13T18:07:04.574Z - debug: 114 dataCoursestudent seeded
+2019-03-13T18:07:04.574Z - debug: 92 hootoriginal seeded
+2019-03-13T18:07:04.574Z - debug: 200 largeset seeded
+2019-03-13T18:07:04.575Z - info: END Seeder. Sample data read and verified.
+2019-03-13T18:07:47.042Z - info: START seeder.
+2019-03-13T18:07:47.079Z - debug: 2 dataCodewordset seeded
+2019-03-13T18:07:47.079Z - debug: 292 datacodeword seeded
+2019-03-13T18:07:47.079Z - debug: 6 datacourse seeded
+2019-03-13T18:07:47.080Z - debug: 114 dataCoursestudent seeded
+2019-03-13T18:07:47.080Z - debug: 92 hootoriginal seeded
+2019-03-13T18:07:47.080Z - debug: 200 largeset seeded
+2019-03-13T18:07:47.080Z - info: END Seeder. Sample data read and verified.
+2019-03-13T18:15:43.896Z - info: START seeder.
+2019-03-13T18:15:43.931Z - debug: 2 dataCodewordset seeded
+2019-03-13T18:15:43.931Z - debug: 292 datacodeword seeded
+2019-03-13T18:15:43.932Z - debug: 6 datacourse seeded
+2019-03-13T18:15:43.932Z - debug: 114 dataCoursestudent seeded
+2019-03-13T18:15:43.932Z - debug: 92 hootoriginal seeded
+2019-03-13T18:15:43.932Z - debug: 200 largeset seeded
+2019-03-13T18:15:43.933Z - info: END Seeder. Sample data read and verified.
+2019-03-13T18:32:32.053Z - info: START seeder.
+2019-03-13T18:32:32.086Z - debug: 2 dataCodewordset seeded
+2019-03-13T18:32:32.087Z - debug: 292 datacodeword seeded
+2019-03-13T18:32:32.087Z - debug: 6 datacourse seeded
+2019-03-13T18:32:32.087Z - debug: 114 dataCoursestudent seeded
+2019-03-13T18:32:32.087Z - debug: 92 hootoriginal seeded
+2019-03-13T18:32:32.087Z - debug: 200 largeset seeded
+2019-03-13T18:32:32.087Z - info: END Seeder. Sample data read and verified.
+2019-03-13T18:35:25.713Z - info: START seeder.
+2019-03-13T18:35:25.746Z - debug: 2 dataCodewordset seeded
+2019-03-13T18:35:25.746Z - debug: 292 datacodeword seeded
+2019-03-13T18:35:25.746Z - debug: 6 datacourse seeded
+2019-03-13T18:35:25.746Z - debug: 114 dataCoursestudent seeded
+2019-03-13T18:35:25.746Z - debug: 92 hootoriginal seeded
+2019-03-13T18:35:25.746Z - debug: 200 largeset seeded
+2019-03-13T18:35:25.746Z - info: END Seeder. Sample data read and verified.
+2019-03-13T18:38:12.048Z - info: START seeder.
+2019-03-13T18:38:12.080Z - debug: 2 dataCodewordset seeded
+2019-03-13T18:38:12.080Z - debug: 292 datacodeword seeded
+2019-03-13T18:38:12.080Z - debug: 6 datacourse seeded
+2019-03-13T18:38:12.081Z - debug: 114 dataCoursestudent seeded
+2019-03-13T18:38:12.081Z - debug: 92 hootoriginal seeded
+2019-03-13T18:38:12.081Z - debug: 200 largeset seeded
+2019-03-13T18:38:12.081Z - info: END Seeder. Sample data read and verified.
+2019-03-13T18:39:27.563Z - info: START seeder.
+2019-03-13T18:39:27.595Z - debug: 2 dataCodewordset seeded
+2019-03-13T18:39:27.595Z - debug: 292 datacodeword seeded
+2019-03-13T18:39:27.595Z - debug: 6 datacourse seeded
+2019-03-13T18:39:27.595Z - debug: 114 dataCoursestudent seeded
+2019-03-13T18:39:27.596Z - debug: 92 hootoriginal seeded
+2019-03-13T18:39:27.596Z - debug: 200 largeset seeded
+2019-03-13T18:39:27.596Z - info: END Seeder. Sample data read and verified.
+2019-03-13T18:39:41.352Z - info: START seeder.
+2019-03-13T18:39:41.385Z - debug: 2 dataCodewordset seeded
+2019-03-13T18:39:41.385Z - debug: 292 datacodeword seeded
+2019-03-13T18:39:41.385Z - debug: 6 datacourse seeded
+2019-03-13T18:39:41.386Z - debug: 114 dataCoursestudent seeded
+2019-03-13T18:39:41.386Z - debug: 92 hootoriginal seeded
+2019-03-13T18:39:41.386Z - debug: 200 largeset seeded
+2019-03-13T18:39:41.386Z - info: END Seeder. Sample data read and verified.
+2019-03-13T18:43:34.601Z - info: START seeder.
+2019-03-13T18:43:34.636Z - debug: 2 dataCodewordset seeded
+2019-03-13T18:43:34.636Z - debug: 292 datacodeword seeded
+2019-03-13T18:43:34.636Z - debug: 6 datacourse seeded
+2019-03-13T18:43:34.636Z - debug: 114 dataCoursestudent seeded
+2019-03-13T18:43:34.637Z - debug: 92 hootoriginal seeded
+2019-03-13T18:43:34.637Z - debug: 200 largeset seeded
+2019-03-13T18:43:34.637Z - info: END Seeder. Sample data read and verified.
+2019-03-13T18:44:05.774Z - info: START seeder.
+2019-03-13T18:44:05.806Z - debug: 2 dataCodewordset seeded
+2019-03-13T18:44:05.806Z - debug: 292 datacodeword seeded
+2019-03-13T18:44:05.806Z - debug: 6 datacourse seeded
+2019-03-13T18:44:05.806Z - debug: 114 dataCoursestudent seeded
+2019-03-13T18:44:05.807Z - debug: 92 hootoriginal seeded
+2019-03-13T18:44:05.807Z - debug: 200 largeset seeded
+2019-03-13T18:44:05.807Z - info: END Seeder. Sample data read and verified.
+2019-03-13T18:52:45.215Z - info: START seeder.
+2019-03-13T18:52:45.248Z - debug: 2 dataCodewordset seeded
+2019-03-13T18:52:45.248Z - debug: 292 datacodeword seeded
+2019-03-13T18:52:45.248Z - debug: 6 datacourse seeded
+2019-03-13T18:52:45.248Z - debug: 114 dataCoursestudent seeded
+2019-03-13T18:52:45.248Z - debug: 92 hootoriginal seeded
+2019-03-13T18:52:45.249Z - debug: 200 largeset seeded
+2019-03-13T18:52:45.249Z - info: END Seeder. Sample data read and verified.
+2019-03-13T18:53:56.291Z - info: START seeder.
+2019-03-13T18:53:56.324Z - debug: 2 dataCodewordset seeded
+2019-03-13T18:53:56.324Z - debug: 292 datacodeword seeded
+2019-03-13T18:53:56.325Z - debug: 6 datacourse seeded
+2019-03-13T18:53:56.325Z - debug: 114 dataCoursestudent seeded
+2019-03-13T18:53:56.325Z - debug: 92 hootoriginal seeded
+2019-03-13T18:53:56.325Z - debug: 200 largeset seeded
+2019-03-13T18:53:56.325Z - info: END Seeder. Sample data read and verified.
+2019-03-13T18:54:59.871Z - info: START seeder.
+2019-03-13T18:54:59.914Z - debug: 2 dataCodewordset seeded
+2019-03-13T18:54:59.915Z - debug: 292 datacodeword seeded
+2019-03-13T18:54:59.915Z - debug: 6 datacourse seeded
+2019-03-13T18:54:59.915Z - debug: 114 dataCoursestudent seeded
+2019-03-13T18:54:59.915Z - debug: 92 hootoriginal seeded
+2019-03-13T18:54:59.915Z - debug: 200 largeset seeded
+2019-03-13T18:54:59.916Z - info: END Seeder. Sample data read and verified.
+2019-03-13T19:06:07.054Z - info: START seeder.
+2019-03-13T19:06:07.088Z - debug: 2 dataCodewordset seeded
+2019-03-13T19:06:07.088Z - debug: 292 datacodeword seeded
+2019-03-13T19:06:07.089Z - debug: 6 datacourse seeded
+2019-03-13T19:06:07.089Z - debug: 114 dataCoursestudent seeded
+2019-03-13T19:06:07.089Z - debug: 92 hootoriginal seeded
+2019-03-13T19:06:07.089Z - debug: 200 largeset seeded
+2019-03-13T19:06:07.089Z - info: END Seeder. Sample data read and verified.
+2019-03-13T19:07:05.938Z - info: START seeder.
+2019-03-13T19:07:05.970Z - debug: 2 dataCodewordset seeded
+2019-03-13T19:07:05.970Z - debug: 292 datacodeword seeded
+2019-03-13T19:07:05.970Z - debug: 6 datacourse seeded
+2019-03-13T19:07:05.970Z - debug: 114 dataCoursestudent seeded
+2019-03-13T19:07:05.970Z - debug: 92 hootoriginal seeded
+2019-03-13T19:07:05.970Z - debug: 200 largeset seeded
+2019-03-13T19:07:05.971Z - info: END Seeder. Sample data read and verified.
+2019-03-13T19:07:25.683Z - info: START seeder.
+2019-03-13T19:07:25.715Z - debug: 2 dataCodewordset seeded
+2019-03-13T19:07:25.715Z - debug: 292 datacodeword seeded
+2019-03-13T19:07:25.715Z - debug: 6 datacourse seeded
+2019-03-13T19:07:25.715Z - debug: 114 dataCoursestudent seeded
+2019-03-13T19:07:25.716Z - debug: 92 hootoriginal seeded
+2019-03-13T19:07:25.716Z - debug: 200 largeset seeded
+2019-03-13T19:07:25.716Z - info: END Seeder. Sample data read and verified.
+2019-03-13T19:08:07.521Z - info: START seeder.
+2019-03-13T19:08:07.553Z - debug: 2 dataCodewordset seeded
+2019-03-13T19:08:07.553Z - debug: 292 datacodeword seeded
+2019-03-13T19:08:07.554Z - debug: 6 datacourse seeded
+2019-03-13T19:08:07.554Z - debug: 114 dataCoursestudent seeded
+2019-03-13T19:08:07.554Z - debug: 92 hootoriginal seeded
+2019-03-13T19:08:07.554Z - debug: 200 largeset seeded
+2019-03-13T19:08:07.554Z - info: END Seeder. Sample data read and verified.
+2019-03-13T19:08:35.651Z - info: START seeder.
+2019-03-13T19:08:35.683Z - debug: 2 dataCodewordset seeded
+2019-03-13T19:08:35.683Z - debug: 292 datacodeword seeded
+2019-03-13T19:08:35.684Z - debug: 6 datacourse seeded
+2019-03-13T19:08:35.684Z - debug: 114 dataCoursestudent seeded
+2019-03-13T19:08:35.684Z - debug: 92 hootoriginal seeded
+2019-03-13T19:08:35.684Z - debug: 200 largeset seeded
+2019-03-13T19:08:35.684Z - info: END Seeder. Sample data read and verified.
+2019-03-13T19:09:13.446Z - info: START seeder.
+2019-03-13T19:09:13.478Z - debug: 2 dataCodewordset seeded
+2019-03-13T19:09:13.478Z - debug: 292 datacodeword seeded
+2019-03-13T19:09:13.478Z - debug: 6 datacourse seeded
+2019-03-13T19:09:13.478Z - debug: 114 dataCoursestudent seeded
+2019-03-13T19:09:13.479Z - debug: 92 hootoriginal seeded
+2019-03-13T19:09:13.479Z - debug: 200 largeset seeded
+2019-03-13T19:09:13.479Z - info: END Seeder. Sample data read and verified.
+2019-03-13T19:10:37.195Z - info: START seeder.
+2019-03-13T19:10:37.227Z - debug: 2 dataCodewordset seeded
+2019-03-13T19:10:37.227Z - debug: 292 datacodeword seeded
+2019-03-13T19:10:37.228Z - debug: 6 datacourse seeded
+2019-03-13T19:10:37.228Z - debug: 114 dataCoursestudent seeded
+2019-03-13T19:10:37.228Z - debug: 92 hootoriginal seeded
+2019-03-13T19:10:37.228Z - debug: 200 largeset seeded
+2019-03-13T19:10:37.228Z - info: END Seeder. Sample data read and verified.
+2019-03-13T19:11:28.242Z - info: START seeder.
+2019-03-13T19:11:28.276Z - debug: 2 dataCodewordset seeded
+2019-03-13T19:11:28.276Z - debug: 292 datacodeword seeded
+2019-03-13T19:11:28.277Z - debug: 6 datacourse seeded
+2019-03-13T19:11:28.277Z - debug: 114 dataCoursestudent seeded
+2019-03-13T19:11:28.277Z - debug: 92 hootoriginal seeded
+2019-03-13T19:11:28.277Z - debug: 200 largeset seeded
+2019-03-13T19:11:28.277Z - info: END Seeder. Sample data read and verified.
+2019-03-13T19:12:01.535Z - info: START seeder.
+2019-03-13T19:12:01.567Z - debug: 2 dataCodewordset seeded
+2019-03-13T19:12:01.567Z - debug: 292 datacodeword seeded
+2019-03-13T19:12:01.567Z - debug: 6 datacourse seeded
+2019-03-13T19:12:01.567Z - debug: 114 dataCoursestudent seeded
+2019-03-13T19:12:01.568Z - debug: 92 hootoriginal seeded
+2019-03-13T19:12:01.568Z - debug: 200 largeset seeded
+2019-03-13T19:12:01.568Z - info: END Seeder. Sample data read and verified.
+2019-03-13T19:20:05.157Z - info: START seeder.
+2019-03-13T19:20:05.190Z - debug: 2 dataCodewordset seeded
+2019-03-13T19:20:05.190Z - debug: 292 datacodeword seeded
+2019-03-13T19:20:05.190Z - debug: 6 datacourse seeded
+2019-03-13T19:20:05.191Z - debug: 114 dataCoursestudent seeded
+2019-03-13T19:20:05.191Z - debug: 92 hootoriginal seeded
+2019-03-13T19:20:05.191Z - debug: 200 largeset seeded
+2019-03-13T19:20:05.191Z - info: END Seeder. Sample data read and verified.
+2019-03-13T19:20:49.021Z - info: START seeder.
+2019-03-13T19:20:49.068Z - debug: 2 dataCodewordset seeded
+2019-03-13T19:20:49.069Z - debug: 292 datacodeword seeded
+2019-03-13T19:20:49.069Z - debug: 6 datacourse seeded
+2019-03-13T19:20:49.069Z - debug: 114 dataCoursestudent seeded
+2019-03-13T19:20:49.070Z - debug: 92 hootoriginal seeded
+2019-03-13T19:20:49.070Z - debug: 200 largeset seeded
+2019-03-13T19:20:49.070Z - info: END Seeder. Sample data read and verified.
+2019-03-13T19:21:48.517Z - info: START seeder.
+2019-03-13T19:21:48.549Z - debug: 2 dataCodewordset seeded
+2019-03-13T19:21:48.549Z - debug: 292 datacodeword seeded
+2019-03-13T19:21:48.549Z - debug: 6 datacourse seeded
+2019-03-13T19:21:48.550Z - debug: 114 dataCoursestudent seeded
+2019-03-13T19:21:48.550Z - debug: 92 hootoriginal seeded
+2019-03-13T19:21:48.550Z - debug: 200 largeset seeded
+2019-03-13T19:21:48.550Z - info: END Seeder. Sample data read and verified.
+2019-03-13T19:22:55.885Z - info: START seeder.
+2019-03-13T19:22:55.922Z - debug: 2 dataCodewordset seeded
+2019-03-13T19:22:55.922Z - debug: 292 datacodeword seeded
+2019-03-13T19:22:55.922Z - debug: 6 datacourse seeded
+2019-03-13T19:22:55.922Z - debug: 114 dataCoursestudent seeded
+2019-03-13T19:22:55.922Z - debug: 92 hootoriginal seeded
+2019-03-13T19:22:55.922Z - debug: 200 largeset seeded
+2019-03-13T19:22:55.922Z - info: END Seeder. Sample data read and verified.
+2019-03-13T19:26:03.172Z - info: START seeder.
+2019-03-13T19:26:03.205Z - debug: 2 dataCodewordset seeded
+2019-03-13T19:26:03.205Z - debug: 292 datacodeword seeded
+2019-03-13T19:26:03.205Z - debug: 6 datacourse seeded
+2019-03-13T19:26:03.205Z - debug: 114 dataCoursestudent seeded
+2019-03-13T19:26:03.205Z - debug: 92 hootoriginal seeded
+2019-03-13T19:26:03.206Z - debug: 200 largeset seeded
+2019-03-13T19:26:03.206Z - info: END Seeder. Sample data read and verified.
+2019-03-13T19:27:01.641Z - info: START seeder.
+2019-03-13T19:27:01.673Z - debug: 2 dataCodewordset seeded
+2019-03-13T19:27:01.673Z - debug: 292 datacodeword seeded
+2019-03-13T19:27:01.673Z - debug: 6 datacourse seeded
+2019-03-13T19:27:01.673Z - debug: 114 dataCoursestudent seeded
+2019-03-13T19:27:01.673Z - debug: 92 hootoriginal seeded
+2019-03-13T19:27:01.673Z - debug: 200 largeset seeded
+2019-03-13T19:27:01.674Z - info: END Seeder. Sample data read and verified.
+2019-03-13T19:27:38.077Z - info: START seeder.
+2019-03-13T19:27:38.118Z - debug: 2 dataCodewordset seeded
+2019-03-13T19:27:38.118Z - debug: 292 datacodeword seeded
+2019-03-13T19:27:38.119Z - debug: 6 datacourse seeded
+2019-03-13T19:27:38.119Z - debug: 114 dataCoursestudent seeded
+2019-03-13T19:27:38.119Z - debug: 92 hootoriginal seeded
+2019-03-13T19:27:38.119Z - debug: 200 largeset seeded
+2019-03-13T19:27:38.119Z - info: END Seeder. Sample data read and verified.
+2019-03-13T19:32:07.443Z - info: START seeder.
+2019-03-13T19:32:07.479Z - debug: 2 dataCodewordset seeded
+2019-03-13T19:32:07.479Z - debug: 292 datacodeword seeded
+2019-03-13T19:32:07.479Z - debug: 6 datacourse seeded
+2019-03-13T19:32:07.480Z - debug: 114 dataCoursestudent seeded
+2019-03-13T19:32:07.480Z - debug: 92 hootoriginal seeded
+2019-03-13T19:32:07.480Z - debug: 200 largeset seeded
+2019-03-13T19:32:07.480Z - info: END Seeder. Sample data read and verified.
+2019-03-13T19:32:37.412Z - info: START seeder.
+2019-03-13T19:32:37.485Z - debug: 2 dataCodewordset seeded
+2019-03-13T19:32:37.485Z - debug: 292 datacodeword seeded
+2019-03-13T19:32:37.486Z - debug: 6 datacourse seeded
+2019-03-13T19:32:37.486Z - debug: 114 dataCoursestudent seeded
+2019-03-13T19:32:37.486Z - debug: 92 hootoriginal seeded
+2019-03-13T19:32:37.487Z - debug: 200 largeset seeded
+2019-03-13T19:32:37.487Z - info: END Seeder. Sample data read and verified.
+2019-03-13T19:33:12.203Z - info: START seeder.
+2019-03-13T19:33:12.234Z - debug: 2 dataCodewordset seeded
+2019-03-13T19:33:12.234Z - debug: 292 datacodeword seeded
+2019-03-13T19:33:12.234Z - debug: 6 datacourse seeded
+2019-03-13T19:33:12.234Z - debug: 114 dataCoursestudent seeded
+2019-03-13T19:33:12.235Z - debug: 92 hootoriginal seeded
+2019-03-13T19:33:12.235Z - debug: 200 largeset seeded
+2019-03-13T19:33:12.235Z - info: END Seeder. Sample data read and verified.
+2019-03-13T19:33:46.051Z - info: START seeder.
+2019-03-13T19:33:46.084Z - debug: 2 dataCodewordset seeded
+2019-03-13T19:33:46.084Z - debug: 292 datacodeword seeded
+2019-03-13T19:33:46.084Z - debug: 6 datacourse seeded
+2019-03-13T19:33:46.084Z - debug: 114 dataCoursestudent seeded
+2019-03-13T19:33:46.085Z - debug: 92 hootoriginal seeded
+2019-03-13T19:33:46.085Z - debug: 200 largeset seeded
+2019-03-13T19:33:46.085Z - info: END Seeder. Sample data read and verified.
+2019-03-13T19:37:23.982Z - info: START seeder.
+2019-03-13T19:37:24.017Z - debug: 2 dataCodewordset seeded
+2019-03-13T19:37:24.017Z - debug: 292 datacodeword seeded
+2019-03-13T19:37:24.017Z - debug: 6 datacourse seeded
+2019-03-13T19:37:24.017Z - debug: 114 dataCoursestudent seeded
+2019-03-13T19:37:24.018Z - debug: 92 hootoriginal seeded
+2019-03-13T19:37:24.018Z - debug: 200 largeset seeded
+2019-03-13T19:37:24.018Z - info: END Seeder. Sample data read and verified.
+2019-03-13T19:38:54.505Z - info: START seeder.
+2019-03-13T19:38:54.537Z - debug: 2 dataCodewordset seeded
+2019-03-13T19:38:54.537Z - debug: 292 datacodeword seeded
+2019-03-13T19:38:54.537Z - debug: 6 datacourse seeded
+2019-03-13T19:38:54.538Z - debug: 114 dataCoursestudent seeded
+2019-03-13T19:38:54.538Z - debug: 92 hootoriginal seeded
+2019-03-13T19:38:54.538Z - debug: 200 largeset seeded
+2019-03-13T19:38:54.538Z - info: END Seeder. Sample data read and verified.
+2019-03-13T19:39:38.603Z - info: START seeder.
+2019-03-13T19:39:38.636Z - debug: 2 dataCodewordset seeded
+2019-03-13T19:39:38.636Z - debug: 292 datacodeword seeded
+2019-03-13T19:39:38.636Z - debug: 6 datacourse seeded
+2019-03-13T19:39:38.636Z - debug: 114 dataCoursestudent seeded
+2019-03-13T19:39:38.636Z - debug: 92 hootoriginal seeded
+2019-03-13T19:39:38.636Z - debug: 200 largeset seeded
+2019-03-13T19:39:38.636Z - info: END Seeder. Sample data read and verified.
+2019-03-13T19:41:17.664Z - info: START seeder.
+2019-03-13T19:41:17.696Z - debug: 2 dataCodewordset seeded
+2019-03-13T19:41:17.696Z - debug: 292 datacodeword seeded
+2019-03-13T19:41:17.697Z - debug: 6 datacourse seeded
+2019-03-13T19:41:17.697Z - debug: 114 dataCoursestudent seeded
+2019-03-13T19:41:17.697Z - debug: 92 hootoriginal seeded
+2019-03-13T19:41:17.697Z - debug: 200 largeset seeded
+2019-03-13T19:41:17.697Z - info: END Seeder. Sample data read and verified.
+2019-03-13T19:55:31.287Z - info: START seeder.
+2019-03-13T19:55:31.341Z - debug: 2 dataCodewordset seeded
+2019-03-13T19:55:31.342Z - debug: 292 datacodeword seeded
+2019-03-13T19:55:31.342Z - debug: 6 datacourse seeded
+2019-03-13T19:55:31.342Z - debug: 114 dataCoursestudent seeded
+2019-03-13T19:55:31.344Z - debug: 92 hootoriginal seeded
+2019-03-13T19:55:31.344Z - debug: 200 largeset seeded
+2019-03-13T19:55:31.344Z - info: END Seeder. Sample data read and verified.
+2019-03-13T19:55:45.750Z - info: START seeder.
+2019-03-13T19:55:45.781Z - debug: 2 dataCodewordset seeded
+2019-03-13T19:55:45.782Z - debug: 292 datacodeword seeded
+2019-03-13T19:55:45.782Z - debug: 6 datacourse seeded
+2019-03-13T19:55:45.782Z - debug: 114 dataCoursestudent seeded
+2019-03-13T19:55:45.782Z - debug: 92 hootoriginal seeded
+2019-03-13T19:55:45.782Z - debug: 200 largeset seeded
+2019-03-13T19:55:45.783Z - info: END Seeder. Sample data read and verified.
+2019-03-13T19:55:56.569Z - info: START seeder.
+2019-03-13T19:55:56.601Z - debug: 2 dataCodewordset seeded
+2019-03-13T19:55:56.601Z - debug: 292 datacodeword seeded
+2019-03-13T19:55:56.601Z - debug: 6 datacourse seeded
+2019-03-13T19:55:56.602Z - debug: 114 dataCoursestudent seeded
+2019-03-13T19:55:56.602Z - debug: 92 hootoriginal seeded
+2019-03-13T19:55:56.602Z - debug: 200 largeset seeded
+2019-03-13T19:55:56.602Z - info: END Seeder. Sample data read and verified.
+2019-03-13T20:06:30.302Z - info: START seeder.
+2019-03-13T20:06:30.336Z - debug: 2 dataCodewordset seeded
+2019-03-13T20:06:30.336Z - debug: 292 datacodeword seeded
+2019-03-13T20:06:30.336Z - debug: 6 datacourse seeded
+2019-03-13T20:06:30.337Z - debug: 114 dataCoursestudent seeded
+2019-03-13T20:06:30.337Z - debug: 92 hootoriginal seeded
+2019-03-13T20:06:30.337Z - debug: 200 largeset seeded
+2019-03-13T20:06:30.337Z - info: END Seeder. Sample data read and verified.
+2019-03-13T20:18:44.026Z - info: START seeder.
+2019-03-13T20:18:44.063Z - debug: 2 dataCodewordset seeded
+2019-03-13T20:18:44.063Z - debug: 292 datacodeword seeded
+2019-03-13T20:18:44.063Z - debug: 6 datacourse seeded
+2019-03-13T20:18:44.063Z - debug: 114 dataCoursestudent seeded
+2019-03-13T20:18:44.064Z - debug: 92 hootoriginal seeded
+2019-03-13T20:18:44.064Z - debug: 200 largeset seeded
+2019-03-13T20:18:44.064Z - info: END Seeder. Sample data read and verified.
+2019-03-13T20:23:19.299Z - info: START seeder.
+2019-03-13T20:23:19.332Z - debug: 2 dataCodewordset seeded
+2019-03-13T20:23:19.332Z - debug: 292 datacodeword seeded
+2019-03-13T20:23:19.333Z - debug: 6 datacourse seeded
+2019-03-13T20:23:19.333Z - debug: 114 dataCoursestudent seeded
+2019-03-13T20:23:19.333Z - debug: 92 hootoriginal seeded
+2019-03-13T20:23:19.333Z - debug: 200 largeset seeded
+2019-03-13T20:23:19.333Z - info: END Seeder. Sample data read and verified.
+2019-03-13T20:23:36.925Z - info: START seeder.
+2019-03-13T20:23:36.975Z - debug: 2 dataCodewordset seeded
+2019-03-13T20:23:36.975Z - debug: 292 datacodeword seeded
+2019-03-13T20:23:36.976Z - debug: 6 datacourse seeded
+2019-03-13T20:23:36.976Z - debug: 114 dataCoursestudent seeded
+2019-03-13T20:23:36.977Z - debug: 92 hootoriginal seeded
+2019-03-13T20:23:36.977Z - debug: 200 largeset seeded
+2019-03-13T20:23:36.977Z - info: END Seeder. Sample data read and verified.
+2019-03-13T20:25:05.977Z - info: START seeder.
+2019-03-13T20:25:06.014Z - debug: 2 dataCodewordset seeded
+2019-03-13T20:25:06.014Z - debug: 292 datacodeword seeded
+2019-03-13T20:25:06.014Z - debug: 6 datacourse seeded
+2019-03-13T20:25:06.014Z - debug: 114 dataCoursestudent seeded
+2019-03-13T20:25:06.014Z - debug: 92 hootoriginal seeded
+2019-03-13T20:25:06.014Z - debug: 200 largeset seeded
+2019-03-13T20:25:06.015Z - info: END Seeder. Sample data read and verified.
+2019-03-13T20:25:36.396Z - info: START seeder.
+2019-03-13T20:25:36.431Z - debug: 2 dataCodewordset seeded
+2019-03-13T20:25:36.431Z - debug: 292 datacodeword seeded
+2019-03-13T20:25:36.431Z - debug: 6 datacourse seeded
+2019-03-13T20:25:36.431Z - debug: 114 dataCoursestudent seeded
+2019-03-13T20:25:36.431Z - debug: 92 hootoriginal seeded
+2019-03-13T20:25:36.431Z - debug: 200 largeset seeded
+2019-03-13T20:25:36.432Z - info: END Seeder. Sample data read and verified.
+2019-03-13T20:26:49.576Z - info: START seeder.
+2019-03-13T20:26:49.622Z - debug: 2 dataCodewordset seeded
+2019-03-13T20:26:49.623Z - debug: 292 datacodeword seeded
+2019-03-13T20:26:49.623Z - debug: 6 datacourse seeded
+2019-03-13T20:26:49.624Z - debug: 114 dataCoursestudent seeded
+2019-03-13T20:26:49.624Z - debug: 92 hootoriginal seeded
+2019-03-13T20:26:49.625Z - debug: 200 largeset seeded
+2019-03-13T20:26:49.625Z - info: END Seeder. Sample data read and verified.
+2019-03-13T20:35:45.326Z - info: START seeder.
+2019-03-13T20:35:45.359Z - debug: 2 dataCodewordset seeded
+2019-03-13T20:35:45.359Z - debug: 292 datacodeword seeded
+2019-03-13T20:35:45.360Z - debug: 6 datacourse seeded
+2019-03-13T20:35:45.360Z - debug: 114 dataCoursestudent seeded
+2019-03-13T20:35:45.360Z - debug: 92 hootoriginal seeded
+2019-03-13T20:35:45.360Z - debug: 200 largeset seeded
+2019-03-13T20:35:45.360Z - info: END Seeder. Sample data read and verified.
+2019-03-13T20:36:00.249Z - error: uncaughtException: value is not defined date=Wed Mar 13 2019 15:36:00 GMT-0500 (Central Daylight Time), pid=5396, uid=null, gid=null, cwd=b:\GDP2\Codeword-GDPII\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP2\Codeword-GDPII\Codeword-GDPII\bin\www], rss=132964352, heapTotal=86913024, heapUsed=47972936, external=21486049, loadavg=[0, 0, 0], uptime=451975.7666423
+ReferenceError: value is not defined
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\controllers\controller.studentdashboard.js:20:21
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\model.js:4719:16
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-03-13T20:36:00.983Z - error: uncaughtException: value is not defined date=Wed Mar 13 2019 15:36:00 GMT-0500 (Central Daylight Time), pid=5396, uid=null, gid=null, cwd=b:\GDP2\Codeword-GDPII\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP2\Codeword-GDPII\Codeword-GDPII\bin\www], rss=133459968, heapTotal=86913024, heapUsed=48234544, external=21486593, loadavg=[0, 0, 0], uptime=451976.5046104
+ReferenceError: value is not defined
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\controllers\controller.studentdashboard.js:20:21
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\model.js:4719:16
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-03-13T20:36:54.552Z - info: START seeder.
+2019-03-13T20:36:54.584Z - debug: 2 dataCodewordset seeded
+2019-03-13T20:36:54.584Z - debug: 292 datacodeword seeded
+2019-03-13T20:36:54.584Z - debug: 6 datacourse seeded
+2019-03-13T20:36:54.585Z - debug: 114 dataCoursestudent seeded
+2019-03-13T20:36:54.585Z - debug: 92 hootoriginal seeded
+2019-03-13T20:36:54.585Z - debug: 200 largeset seeded
+2019-03-13T20:36:54.585Z - info: END Seeder. Sample data read and verified.
+2019-03-13T20:37:06.689Z - error: uncaughtException: value is not defined date=Wed Mar 13 2019 15:37:06 GMT-0500 (Central Daylight Time), pid=8296, uid=null, gid=null, cwd=b:\GDP2\Codeword-GDPII\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP2\Codeword-GDPII\Codeword-GDPII\bin\www], rss=130732032, heapTotal=84815872, heapUsed=48217000, external=22040013, loadavg=[0, 0, 0], uptime=452042.2098404
+ReferenceError: value is not defined
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\controllers\controller.studentdashboard.js:20:21
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\model.js:4719:16
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-03-13T20:37:08.540Z - error: uncaughtException: value is not defined date=Wed Mar 13 2019 15:37:08 GMT-0500 (Central Daylight Time), pid=8296, uid=null, gid=null, cwd=b:\GDP2\Codeword-GDPII\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP2\Codeword-GDPII\Codeword-GDPII\bin\www], rss=131538944, heapTotal=84815872, heapUsed=48599104, external=22047420, loadavg=[0, 0, 0], uptime=452044.0607824
+ReferenceError: value is not defined
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\controllers\controller.studentdashboard.js:20:21
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\model.js:4719:16
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-03-13T20:37:17.377Z - error: uncaughtException: value is not defined date=Wed Mar 13 2019 15:37:17 GMT-0500 (Central Daylight Time), pid=8296, uid=null, gid=null, cwd=b:\GDP2\Codeword-GDPII\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP2\Codeword-GDPII\Codeword-GDPII\bin\www], rss=102539264, heapTotal=53882880, heapUsed=48377144, external=21551422, loadavg=[0, 0, 0], uptime=452052.90035
+ReferenceError: value is not defined
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\controllers\controller.studentdashboard.js:20:21
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\model.js:4719:16
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-03-13T20:37:17.381Z - error: uncaughtException: value is not defined date=Wed Mar 13 2019 15:37:17 GMT-0500 (Central Daylight Time), pid=8296, uid=null, gid=null, cwd=b:\GDP2\Codeword-GDPII\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP2\Codeword-GDPII\Codeword-GDPII\bin\www], rss=102686720, heapTotal=53882880, heapUsed=48528648, external=21551942, loadavg=[0, 0, 0], uptime=452052.9043607
+ReferenceError: value is not defined
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\controllers\controller.studentdashboard.js:20:21
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\model.js:4719:16
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-03-13T20:37:26.666Z - error: uncaughtException: value is not defined date=Wed Mar 13 2019 15:37:26 GMT-0500 (Central Daylight Time), pid=8296, uid=null, gid=null, cwd=b:\GDP2\Codeword-GDPII\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP2\Codeword-GDPII\Codeword-GDPII\bin\www], rss=103403520, heapTotal=54407168, heapUsed=50304096, external=21563148, loadavg=[0, 0, 0], uptime=452062.1881211
+ReferenceError: value is not defined
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\controllers\controller.studentdashboard.js:20:21
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\model.js:4719:16
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-03-13T20:37:26.704Z - error: uncaughtException: value is not defined date=Wed Mar 13 2019 15:37:26 GMT-0500 (Central Daylight Time), pid=8296, uid=null, gid=null, cwd=b:\GDP2\Codeword-GDPII\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP2\Codeword-GDPII\Codeword-GDPII\bin\www], rss=102633472, heapTotal=54407168, heapUsed=49537504, external=21550355, loadavg=[0, 0, 0], uptime=452062.2212121
+ReferenceError: value is not defined
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\controllers\controller.studentdashboard.js:20:21
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\model.js:4719:16
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-03-13T20:37:30.557Z - error: uncaughtException: value is not defined date=Wed Mar 13 2019 15:37:30 GMT-0500 (Central Daylight Time), pid=8296, uid=null, gid=null, cwd=b:\GDP2\Codeword-GDPII\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP2\Codeword-GDPII\Codeword-GDPII\bin\www], rss=103325696, heapTotal=54407168, heapUsed=50244992, external=21556458, loadavg=[0, 0, 0], uptime=452066.0794981
+ReferenceError: value is not defined
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\controllers\controller.studentdashboard.js:20:21
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\model.js:4719:16
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-03-13T20:37:30.563Z - error: uncaughtException: value is not defined date=Wed Mar 13 2019 15:37:30 GMT-0500 (Central Daylight Time), pid=8296, uid=null, gid=null, cwd=b:\GDP2\Codeword-GDPII\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP2\Codeword-GDPII\Codeword-GDPII\bin\www], rss=103628800, heapTotal=54407168, heapUsed=49495304, external=21560954, loadavg=[0, 0, 0], uptime=452066.0855145
+ReferenceError: value is not defined
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\controllers\controller.studentdashboard.js:20:21
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\model.js:4719:16
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-03-13T20:37:40.899Z - error: uncaughtException: value is not defined date=Wed Mar 13 2019 15:37:40 GMT-0500 (Central Daylight Time), pid=8296, uid=null, gid=null, cwd=b:\GDP2\Codeword-GDPII\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP2\Codeword-GDPII\Codeword-GDPII\bin\www], rss=104550400, heapTotal=56504320, heapUsed=51412288, external=21554787, loadavg=[0, 0, 0], uptime=452076.4220807
+ReferenceError: value is not defined
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\controllers\controller.studentdashboard.js:20:21
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\model.js:4719:16
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-03-13T20:37:40.903Z - error: uncaughtException: value is not defined date=Wed Mar 13 2019 15:37:40 GMT-0500 (Central Daylight Time), pid=8296, uid=null, gid=null, cwd=b:\GDP2\Codeword-GDPII\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP2\Codeword-GDPII\Codeword-GDPII\bin\www], rss=104689664, heapTotal=56504320, heapUsed=51560168, external=21555307, loadavg=[0, 0, 0], uptime=452076.4260925
+ReferenceError: value is not defined
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\controllers\controller.studentdashboard.js:20:21
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\model.js:4719:16
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-03-13T20:37:48.361Z - info: START seeder.
+2019-03-13T20:37:48.394Z - debug: 2 dataCodewordset seeded
+2019-03-13T20:37:48.394Z - debug: 292 datacodeword seeded
+2019-03-13T20:37:48.395Z - debug: 6 datacourse seeded
+2019-03-13T20:37:48.395Z - debug: 114 dataCoursestudent seeded
+2019-03-13T20:37:48.395Z - debug: 92 hootoriginal seeded
+2019-03-13T20:37:48.395Z - debug: 200 largeset seeded
+2019-03-13T20:37:48.395Z - info: END Seeder. Sample data read and verified.
+2019-03-13T20:37:52.952Z - error: uncaughtException: value is not defined date=Wed Mar 13 2019 15:37:52 GMT-0500 (Central Daylight Time), pid=4944, uid=null, gid=null, cwd=b:\GDP2\Codeword-GDPII\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP2\Codeword-GDPII\Codeword-GDPII\bin\www], rss=129789952, heapTotal=83767296, heapUsed=60733152, external=22210395, loadavg=[0, 0, 0], uptime=452088.4712168
+ReferenceError: value is not defined
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\controllers\controller.studentdashboard.js:20:21
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\model.js:4719:16
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-03-13T20:37:53.290Z - error: uncaughtException: value is not defined date=Wed Mar 13 2019 15:37:53 GMT-0500 (Central Daylight Time), pid=4944, uid=null, gid=null, cwd=b:\GDP2\Codeword-GDPII\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP2\Codeword-GDPII\Codeword-GDPII\bin\www], rss=130301952, heapTotal=83767296, heapUsed=61041304, external=22218826, loadavg=[0, 0, 0], uptime=452088.8121245
+ReferenceError: value is not defined
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\controllers\controller.studentdashboard.js:20:21
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\model.js:4719:16
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-03-13T20:38:10.723Z - info: START seeder.
+2019-03-13T20:38:10.756Z - debug: 2 dataCodewordset seeded
+2019-03-13T20:38:10.756Z - debug: 292 datacodeword seeded
+2019-03-13T20:38:10.756Z - debug: 6 datacourse seeded
+2019-03-13T20:38:10.756Z - debug: 114 dataCoursestudent seeded
+2019-03-13T20:38:10.756Z - debug: 92 hootoriginal seeded
+2019-03-13T20:38:10.756Z - debug: 200 largeset seeded
+2019-03-13T20:38:10.757Z - info: END Seeder. Sample data read and verified.
+2019-03-13T20:38:25.837Z - error: uncaughtException: value is not defined date=Wed Mar 13 2019 15:38:25 GMT-0500 (Central Daylight Time), pid=12568, uid=null, gid=null, cwd=b:\GDP2\Codeword-GDPII\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP2\Codeword-GDPII\Codeword-GDPII\bin\www], rss=99631104, heapTotal=54931456, heapUsed=45651968, external=21438403, loadavg=[0, 0, 0], uptime=452121.3569188
+ReferenceError: value is not defined
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\controllers\controller.studentdashboard.js:20:21
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\model.js:4719:16
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-03-13T20:38:30.032Z - error: uncaughtException: value is not defined date=Wed Mar 13 2019 15:38:30 GMT-0500 (Central Daylight Time), pid=12568, uid=null, gid=null, cwd=b:\GDP2\Codeword-GDPII\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP2\Codeword-GDPII\Codeword-GDPII\bin\www], rss=100851712, heapTotal=53358592, heapUsed=45674824, external=21438639, loadavg=[0, 0, 0], uptime=452125.5531095
+ReferenceError: value is not defined
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\controllers\controller.studentdashboard.js:20:21
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\model.js:4719:16
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-03-13T20:38:41.713Z - error: uncaughtException: value is not defined date=Wed Mar 13 2019 15:38:41 GMT-0500 (Central Daylight Time), pid=12568, uid=null, gid=null, cwd=b:\GDP2\Codeword-GDPII\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP2\Codeword-GDPII\Codeword-GDPII\bin\www], rss=101470208, heapTotal=53882880, heapUsed=46522792, external=21449582, loadavg=[0, 0, 0], uptime=452137.2343277
+ReferenceError: value is not defined
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\controllers\controller.studentdashboard.js:20:21
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\model.js:4719:16
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-03-13T20:39:04.149Z - error: uncaughtException: value is not defined date=Wed Mar 13 2019 15:39:04 GMT-0500 (Central Daylight Time), pid=12568, uid=null, gid=null, cwd=b:\GDP2\Codeword-GDPII\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP2\Codeword-GDPII\Codeword-GDPII\bin\www], rss=100962304, heapTotal=52834304, heapUsed=46523312, external=21448702, loadavg=[0, 0, 0], uptime=452159.6690621
+ReferenceError: value is not defined
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\controllers\controller.studentdashboard.js:20:21
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\model.js:4719:16
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-03-13T20:39:11.959Z - info: START seeder.
+2019-03-13T20:39:11.991Z - debug: 2 dataCodewordset seeded
+2019-03-13T20:39:11.991Z - debug: 292 datacodeword seeded
+2019-03-13T20:39:11.991Z - debug: 6 datacourse seeded
+2019-03-13T20:39:11.991Z - debug: 114 dataCoursestudent seeded
+2019-03-13T20:39:11.991Z - debug: 92 hootoriginal seeded
+2019-03-13T20:39:11.992Z - debug: 200 largeset seeded
+2019-03-13T20:39:11.992Z - info: END Seeder. Sample data read and verified.
+2019-03-13T20:39:31.168Z - error: uncaughtException: value is not defined date=Wed Mar 13 2019 15:39:31 GMT-0500 (Central Daylight Time), pid=15348, uid=null, gid=null, cwd=b:\GDP2\Codeword-GDPII\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP2\Codeword-GDPII\Codeword-GDPII\bin\www], rss=100274176, heapTotal=52310016, heapUsed=48612136, external=21444152, loadavg=[0, 0, 0], uptime=452186.6839339
+ReferenceError: value is not defined
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\controllers\controller.studentdashboard.js:20:21
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\model.js:4719:16
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-03-13T20:39:32.611Z - error: uncaughtException: value is not defined date=Wed Mar 13 2019 15:39:32 GMT-0500 (Central Daylight Time), pid=15348, uid=null, gid=null, cwd=b:\GDP2\Codeword-GDPII\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP2\Codeword-GDPII\Codeword-GDPII\bin\www], rss=100192256, heapTotal=52310016, heapUsed=48027232, external=21442801, loadavg=[0, 0, 0], uptime=452188.1317901
+ReferenceError: value is not defined
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\controllers\controller.studentdashboard.js:20:21
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\model.js:4719:16
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-03-13T20:53:38.472Z - error: uncaughtException: value is not defined date=Wed Mar 13 2019 15:53:38 GMT-0500 (Central Daylight Time), pid=15348, uid=null, gid=null, cwd=b:\GDP2\Codeword-GDPII\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP2\Codeword-GDPII\Codeword-GDPII\bin\www], rss=101863424, heapTotal=54407168, heapUsed=48084576, external=21498055, loadavg=[0, 0, 0], uptime=453033.9924059
+ReferenceError: value is not defined
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\controllers\controller.studentdashboard.js:20:21
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\model.js:4719:16
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-03-13T20:53:38.914Z - error: uncaughtException: value is not defined date=Wed Mar 13 2019 15:53:38 GMT-0500 (Central Daylight Time), pid=15348, uid=null, gid=null, cwd=b:\GDP2\Codeword-GDPII\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP2\Codeword-GDPII\Codeword-GDPII\bin\www], rss=102121472, heapTotal=54407168, heapUsed=48348472, external=21506462, loadavg=[0, 0, 0], uptime=453034.4375896
+ReferenceError: value is not defined
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\controllers\controller.studentdashboard.js:20:21
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\model.js:4719:16
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-03-13T20:53:48.231Z - error: uncaughtException: value is not defined date=Wed Mar 13 2019 15:53:48 GMT-0500 (Central Daylight Time), pid=15348, uid=null, gid=null, cwd=b:\GDP2\Codeword-GDPII\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP2\Codeword-GDPII\Codeword-GDPII\bin\www], rss=102158336, heapTotal=54407168, heapUsed=48261464, external=21512058, loadavg=[0, 0, 0], uptime=453043.7533746
+ReferenceError: value is not defined
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\controllers\controller.studentdashboard.js:20:21
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\model.js:4719:16
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-03-13T20:53:48.236Z - error: uncaughtException: value is not defined date=Wed Mar 13 2019 15:53:48 GMT-0500 (Central Daylight Time), pid=15348, uid=null, gid=null, cwd=b:\GDP2\Codeword-GDPII\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP2\Codeword-GDPII\Codeword-GDPII\bin\www], rss=102293504, heapTotal=54407168, heapUsed=48398600, external=21512575, loadavg=[0, 0, 0], uptime=453043.7573849
+ReferenceError: value is not defined
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\controllers\controller.studentdashboard.js:20:21
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\model.js:4719:16
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-03-13T20:53:50.073Z - error: uncaughtException: value is not defined date=Wed Mar 13 2019 15:53:50 GMT-0500 (Central Daylight Time), pid=15348, uid=null, gid=null, cwd=b:\GDP2\Codeword-GDPII\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP2\Codeword-GDPII\Codeword-GDPII\bin\www], rss=102711296, heapTotal=54407168, heapUsed=48075176, external=21510761, loadavg=[0, 0, 0], uptime=453045.5952763
+ReferenceError: value is not defined
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\controllers\controller.studentdashboard.js:20:21
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\model.js:4719:16
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-03-13T20:53:50.077Z - error: uncaughtException: value is not defined date=Wed Mar 13 2019 15:53:50 GMT-0500 (Central Daylight Time), pid=15348, uid=null, gid=null, cwd=b:\GDP2\Codeword-GDPII\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP2\Codeword-GDPII\Codeword-GDPII\bin\www], rss=102846464, heapTotal=54407168, heapUsed=48212080, external=21519473, loadavg=[0, 0, 0], uptime=453045.5992858
+ReferenceError: value is not defined
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\controllers\controller.studentdashboard.js:20:21
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\model.js:4719:16
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-03-13T20:54:36.120Z - error: uncaughtException: value is not defined date=Wed Mar 13 2019 15:54:36 GMT-0500 (Central Daylight Time), pid=15348, uid=null, gid=null, cwd=b:\GDP2\Codeword-GDPII\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP2\Codeword-GDPII\Codeword-GDPII\bin\www], rss=103067648, heapTotal=54407168, heapUsed=48445232, external=21523049, loadavg=[0, 0, 0], uptime=453091.6437887
+ReferenceError: value is not defined
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\controllers\controller.studentdashboard.js:20:21
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\model.js:4719:16
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-03-13T20:54:36.124Z - error: uncaughtException: value is not defined date=Wed Mar 13 2019 15:54:36 GMT-0500 (Central Daylight Time), pid=15348, uid=null, gid=null, cwd=b:\GDP2\Codeword-GDPII\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP2\Codeword-GDPII\Codeword-GDPII\bin\www], rss=103198720, heapTotal=54407168, heapUsed=48582096, external=21523569, loadavg=[0, 0, 0], uptime=453091.6477979
+ReferenceError: value is not defined
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\controllers\controller.studentdashboard.js:20:21
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\model.js:4719:16
+    at b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (b:\GDP2\Codeword-GDPII\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-03-13T21:02:11.023Z - info: START seeder.
+2019-03-13T21:02:11.056Z - debug: 2 dataCodewordset seeded
+2019-03-13T21:02:11.056Z - debug: 292 datacodeword seeded
+2019-03-13T21:02:11.056Z - debug: 6 datacourse seeded
+2019-03-13T21:02:11.056Z - debug: 114 dataCoursestudent seeded
+2019-03-13T21:02:11.056Z - debug: 92 hootoriginal seeded
+2019-03-13T21:02:11.057Z - debug: 200 largeset seeded
+2019-03-13T21:02:11.057Z - info: END Seeder. Sample data read and verified.
+2019-03-13T21:06:20.391Z - info: START seeder.
+2019-03-13T21:06:20.441Z - debug: 2 dataCodewordset seeded
+2019-03-13T21:06:20.441Z - debug: 292 datacodeword seeded
+2019-03-13T21:06:20.442Z - debug: 6 datacourse seeded
+2019-03-13T21:06:20.442Z - debug: 114 dataCoursestudent seeded
+2019-03-13T21:06:20.442Z - debug: 92 hootoriginal seeded
+2019-03-13T21:06:20.442Z - debug: 200 largeset seeded
+2019-03-13T21:06:20.443Z - info: END Seeder. Sample data read and verified.

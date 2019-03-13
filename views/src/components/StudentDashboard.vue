@@ -12,30 +12,33 @@
         <th>Codeword</th>
         <th>Start Survey</th>
         <th>End Survey</th>
+        <th>End Date</th>
       </tr>
     </thead>
     <tbody v-if="status">
       <tr v-for="(course,index) in userCourses" :key="index">
-        <td>{{ course.CourseNameKey}}</td>
-        
+        <td>{{ course.CourseNameKey }}</td>
         <td>
           <input  type="button" v-if=!course.Acknowledged @click="getCodeWord(index)" Value="Get CodeWord">
-          <div v-else> {{ course.Codeword }}</div>
+          <div v-else> {{ course.PostSurveyURL }}</div>
         </td>
          
         <td v-if="course.PreSurveyURL != null"> 
           <a v-bind:href="'http://'+course.PreSurveyURL" class="card-link" target="_blank">Start Survey</a>
         </td>
         <td else-if> 
-          <a>No Start Survey</a>
+          <a>No Start Survey Url</a>
         </td> 
         <td v-if="course.PostSurveyURL != null">
           <a v-bind:href="'http://'+course.PostSurveyURL" class="card-link" target="_blank">End Survey</a>
          </td>
         <td v-else>
-                    <a>No End Survey</a>
-
+            <a>No End Survey Url</a>
          </td>
+         <td> 
+          <a>{{ course.enddate}}</a>
+        </td> 
+        
       </tr>
     </tbody>
       <div v-else class='nodata'>
@@ -52,13 +55,13 @@ export default {
   name: 'InstructorDashboard',
   data () {
     return {
-      courseName: '',
       startSurveyurldata: '',
       endSurveyurldata: '',
       Codeword: '',
       userCourses: '',
       status: true,
-      show: true
+      show: true,
+      listCourses: []
     }
   },
   /* global axios  */
@@ -81,12 +84,27 @@ export default {
           this.status = false
         } else {
           this.userCourses = response.data.data
+          for (var i = 0; i < this.userCourses.length; i++) {
+            axios({
+              method: 'post',
+              url: 'codeword/getcoursedetails',
+              headers: {
+                token: window.localStorage.getItem('token')
+              },
+              data: {
+                courseName: this.userCourses[i].CourseNameKey,
+                courseCreater: this.userCourses[i].courseCreater
+              }
+            }).then(response => {
+              var survey = {startSurvey: response.data.data[0].PostSurveyURL, endSurvey: response.data.data[0].PostSurveyURL, enddate: response.data.data[0].enddate}
+              this.listCourses.push(survey)
+              console.log(this.listCourses[0].startSurvey)
+            })
+          }
         }
       })
     },
     getCodeWord (index) {
-      // yet to write an API Call to change status as acknowledged
-      // this.userCourses[index].Acknowledged = true
       axios({
         method: 'post',
         url: 'codeword/codewordAcknowledged',
@@ -100,17 +118,6 @@ export default {
         if (response.data.message === true) {
           this.userCourses[index].Acknowledged = true
         }
-      })
-    },
-    getCourseDetails () {
-      axios({
-        method: 'post',
-        url: 'codeword/getcoursedetails',
-        headers: {
-          token: window.localStorage.getItem('token')
-        }
-      }).then(response => {
-        console.log(response.data.data)
       })
     }
   }

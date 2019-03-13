@@ -21,7 +21,7 @@ module.exports.getstudentDetails = getstudentDetails;
 
 let updateAcknowledged=(req,res) =>{
     var body = _.pick(req.body,['acknowledgedStatus']);
-    CourseStudentModel.update({CourseNameKey: body.acknowledgedStatus.CourseNameKey, courseCreater: body.acknowledgedStatus.courseCreater, EmailKey: req.session.email}, { $set: { Acknowledged : true } }, function(err,updatecoursestudent){
+    CourseStudentModel.update({CourseNameKey: body.acknowledgedStatus.courseInfo.courseNameKey, courseCreater: body.acknowledgedStatus.courseInfo.emailKey, EmailKey: req.session.email}, { $set: { Acknowledged : true } }, function(err,updatecoursestudent){
         if(err){
             return res.json({ code:200, message:false});
         }
@@ -32,9 +32,9 @@ let updateAcknowledged=(req,res) =>{
 module.exports.updateAcknowledged = updateAcknowledged;
 
 let getCourseDetails = (req,res) => {
-    var body = _.pick(req.body,['courseName','courseCreater']);
+    var body = _.pick(req.body,['courseName','courseCreater','codeword','ack']);
     CourseModel.find({courseNameKey: req.body.courseName, emailKey: req.body.courseCreater}, function (err, courseinfo) {
-            return res.json({ code: 200, data: courseinfo });
+            return res.json({ code: 200, data: courseinfo, codeword:  req.body.codeword, Acknowledged: req.body.ack});
         }).catch((e) => {
         return res.json({ code: 400, message: e });
         })

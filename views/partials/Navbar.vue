@@ -17,22 +17,17 @@
                 </ul>
                 <ul class="navbar-nav ml-auto" v-if="auth">
                     <li class="nav-item" v-if='this.$route.name != "StudentDashboard" && this.$route.name !== "ChangePassword"'>
-                        <router-link to="/instructordashboard">Dashboard</router-link>
+                        <router-link class="nav-link" to="/instructordashboard">Dashboard</router-link>
                     </li>
                     <li class="nav-item" v-if='this.$route.name != "StudentDashboard" && this.$route.name !== "ChangePassword"'>
-                        <router-link to="/codewordset">CodeWord Set</router-link>
+                        <router-link class="nav-link" to="/codewordset">CodeWord Set</router-link>
                     </li>
-                     <li class="nav-item" v-if='this.$route.name != "StudentDashboard" && this.$route.name !== "ChangePassword"'>
-                        <router-link to="/codewordset">Logout</router-link>
+                    <li class="nav-item" v-if='this.$route.name != "StudentDashboard" && this.$route.name !== "ChangePassword"'>
+                    <a class="nav-link" >{{email}}</a>
                     </li>
-                    <li class="nav-item ">
-                       <router-link to=""> {{ email }}</router-link>
-                   
-                      <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" @click.prevent="onLogout" >Logout</a>
-                      </div> -->
-                     
-                      </li>
+                    <li class="nav-item" v-if='this.$route.name != "StudentDashboard" && this.$route.name !== "ChangePassword"'>
+                          <a class="nav-link" @click.prevent="onLogout" >Logout</a>
+                    </li>
                 </ul>
             </div>
         </div>

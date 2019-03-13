@@ -609,3 +609,19 @@ TypeError: Cannot read property 'Codewords' of undefined
 2019-03-09T05:19:15.129Z - debug: 92 hootoriginal seeded
 2019-03-09T05:19:15.130Z - debug: 200 largeset seeded
 2019-03-09T05:19:15.130Z - info: END Seeder. Sample data read and verified.
+2019-03-11T14:39:42.529Z - info: START seeder.
+2019-03-11T14:39:42.579Z - debug: 2 dataCodewordset seeded
+2019-03-11T14:39:42.579Z - debug: 292 datacodeword seeded
+2019-03-11T14:39:42.580Z - debug: 6 datacourse seeded
+2019-03-11T14:39:42.580Z - debug: 114 dataCoursestudent seeded
+2019-03-11T14:39:42.580Z - debug: 92 hootoriginal seeded
+2019-03-11T14:39:42.580Z - debug: 200 largeset seeded
+2019-03-11T14:39:42.581Z - info: END Seeder. Sample data read and verified.
+2019-03-13T14:11:10.793Z - info: START seeder.
+2019-03-13T14:11:10.833Z - debug: 2 dataCodewordset seeded
+2019-03-13T14:11:10.833Z - debug: 292 datacodeword seeded
+2019-03-13T14:11:10.833Z - debug: 6 datacourse seeded
+2019-03-13T14:11:10.833Z - debug: 114 dataCoursestudent seeded
+2019-03-13T14:11:10.833Z - debug: 92 hootoriginal seeded
+2019-03-13T14:11:10.833Z - debug: 200 largeset seeded
+2019-03-13T14:11:10.834Z - info: END Seeder. Sample data read and verified.

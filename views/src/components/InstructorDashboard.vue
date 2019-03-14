@@ -248,7 +248,24 @@ export default {
         }
       }).then(response => {
         this.coursesData = response.data.data
-        console.log(this.coursesData)
+        for (var i = 0; i < this.coursesData.length; i++) {
+          axios({
+            method: 'post',
+            url: 'codeword/getcoursestudent',
+            data: {
+              CourseNameValue: this.coursesData[i].courseNameKey
+            },
+            headers: {
+              token: window.localStorage.getItem('token')
+            }
+          }).then(response => {
+            console.log(response.data.CourseNameValue)
+            const index = this.coursesData.findIndex(course => course.courseNameKey === response.data.CourseNameValue)
+            console.log(index)
+            this.totalStudents = response.data.totalStudents
+            this.acknowledged = response.data.AcknowledgedTrue
+          })
+        }
       })
     },
     getCourseName (item) {

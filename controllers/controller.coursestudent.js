@@ -145,19 +145,18 @@ let getCourseStudent = (req,res) => {
             }
             if (courseStudents)
                 pages = Math.ceil(count.length / pageCount );
-                console.log(pages + " "+ pageNumber)
                 if( pageNumber === 0) {
                     if( pageNumber === (pages-1))
                     {
-                        return res.json({ code: 200, Acknowledged: ackPercent, totalStudents: count.length, courseStudents, currentPage: pageNumber, pages, prevUrl: '', nextUrl: '' });
+                        return res.json({ code: 200, CourseNameValue: body.CourseNameValue,AcknowledgedTrue: AcknowledgedTrue,Acknowledged: ackPercent, totalStudents: count.length, courseStudents, currentPage: pageNumber, pages, prevUrl: '', nextUrl: '' });
                     }else{
-                        return res.json({ code: 200, Acknowledged: ackPercent, totalStudents: count.length, courseStudents, currentPage: pageNumber, pages, prevUrl: '', nextUrl: `codeword/getcoursestudent?pageNumber=${pageNumber + 1}` });
+                        return res.json({ code: 200,CourseNameValue: body.CourseNameValue, AcknowledgedTrue: AcknowledgedTrue, Acknowledged: ackPercent, totalStudents: count.length, courseStudents, currentPage: pageNumber, pages, prevUrl: '', nextUrl: `codeword/getcoursestudent?pageNumber=${pageNumber + 1}` });
                     }
                     }
                 else if( pageNumber ===  (pages -1)) {
-                    return res.json({ code: 200, Acknowledged: ackPercent, totalStudents: count.length, courseStudents, currentPage: pageNumber, pages, prevUrl: `codeword/getcoursestudent?pageNumber=${pageNumber - 1}`, nextUrl: '' });}
+                    return res.json({ code: 200,CourseNameValue: body.CourseNameValue,AcknowledgedTrue: AcknowledgedTrue, Acknowledged: ackPercent, totalStudents: count.length, courseStudents, currentPage: pageNumber, pages, prevUrl: `codeword/getcoursestudent?pageNumber=${pageNumber - 1}`, nextUrl: '' });}
                 else {
-                    return res.json({ code: 200, Acknowledged: ackPercent, totalStudents: count.length, courseStudents, currentPage: pageNumber, pages, prevUrl: `codeword/getcoursestudent?pageNumber=${pageNumber - 1}`, nextUrl: `codeword/getcoursestudent?pageNumber=${pageNumber + 1}` });
+                    return res.json({ code: 200, CourseNameValue: body.CourseNameValue,AcknowledgedTrue: AcknowledgedTrue, Acknowledged: ackPercent, totalStudents: count.length, courseStudents, currentPage: pageNumber, pages, prevUrl: `codeword/getcoursestudent?pageNumber=${pageNumber - 1}`, nextUrl: `codeword/getcoursestudent?pageNumber=${pageNumber + 1}` });
                 }
             })    
     })

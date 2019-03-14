@@ -16,6 +16,7 @@
      <div class="codewordset"> <button type="button" class="btn btn-success" v-if='isPermanent !== true' data-toggle="modal" data-target="#addcodeword" style="marging-left:10px">
    <span class="fa fa-plus"></span> Add Codeword
 </button></div>
+
 <div class="modal fade" id="addcodeword" tabindex="-1"  le="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -26,7 +27,7 @@
         </button>
       </div>
       <div class="modal-body">
-        Enter new codeword: <input type="text" v-model="newCodeword">
+        Enter new codeword: <input type="text" class="form-control" v-model="newCodeword" pattern="[A-Za-z]{5,10}" placeholder="Enter Course Name" data-toggle="tooltip" title="Atleast 5-10 characters" required>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" @click="addCodeword()">Add Codeword</button>
@@ -87,7 +88,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-                  <form @submit.prevent="editCodeword(selectedCodeword.toUpperCase(), codewordIndex)">
+            <form @submit.prevent="editCodeword(selectedCodeword.toUpperCase(), codewordIndex)">
             <div class="modal-body">
             <div class="form-group">
                Codeword: <input type="text" class="form-control" v-model="selectedCodeword" pattern="[A-Za-z]{5,10}" placeholder="Enter Course Name" data-toggle="tooltip" title="Atleast 5-10 characters" required>

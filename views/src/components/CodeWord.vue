@@ -26,15 +26,20 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      <form @submit.prevent="addCodeword()">
+            
       <div class="modal-body">
+         <div class="form-group">
         Enter new codeword: <input type="text" class="form-control" v-model="newCodeword" pattern="[A-Za-z]{5,10}" placeholder="Enter Course Name" data-toggle="tooltip" title="Atleast 5-10 characters" required>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" @click="addCodeword()">Add Codeword</button>
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-      </div>
-    </div>
+      <div>
+              <button type="cancel" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+              <button type="create" class="btn btn-primary">Add Codeword</button>
+            </div>
+          </div>
+      </form>
   </div>
+</div>
 </div>
 
 <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4 headingstyle">

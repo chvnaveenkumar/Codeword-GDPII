@@ -19,8 +19,9 @@ var router = new Router({
       path: '/',
       beforeEnter (to, from, next) {
         let logged = localStorage.getItem('status')
+        console.log(logged)
         if (logged !== null) {
-          if (logged || logged === 'true') {
+          if (logged && logged === 'true') {
             console.log('instructordashboard')
             next('/instructordashboard')
           } else {

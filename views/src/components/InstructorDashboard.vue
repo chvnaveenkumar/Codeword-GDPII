@@ -22,7 +22,7 @@
       </div>      
   </div>
   <div class="row" style="margin-left: 3rem;margin-right: 7rem;" >
-    <div class="col-md-3 col-lg-3 col-xs-0 col-sm-0" v-for="course in coursesData" :key="course._id" v-if="(!active != (new Date() < new Date(course.Enddate)) || inactive != (new Date() < new Date(course.Enddate))) && (active || inactive)">
+    <div class="col-md-3 col-lg-3 col-xs-0 col-sm-0" v-for="course in courses" :key="course._id" v-if="(!active != (new Date() < new Date(course.Enddate)) || inactive != (new Date() < new Date(course.Enddate))) && (active || inactive)">
       <div class="card border-success mb-3 cardstyle" style="max-width: 20rem;margin-top: 1rem;" >
          <div class="card-header bg-info border-success" id = "boldforcourse"><h4>{{ course.courseNameKey }}</h4>
         <br>
@@ -37,9 +37,13 @@
           <a v-bind:href="'http://'+course.PostSurveyURL" class="card-link" target="_blank">End Survey</a>
           <br>
           <router-link :to="{ name: 'CourseStudent', params: { courseName: course.courseNameKey } }">
-          <button class="btn "><i class="fa fa-eye fa-lg" aria-hidden="true" ></i></button></router-link>
+            <button class="btn "><i class="fa fa-eye fa-lg" aria-hidden="true" ></i></button>
+          </router-link>
           <button class="btn" data-toggle="modal" @click="getCourseName(course.courseNameKey)" data-target="#deleteCourse"><i class="fa fa-trash fa-lg">
-          </i></button>
+          </i>
+          </button>
+          <br>
+          <p>Acknowledged status: {{course.acknowledged}}/{{ course.totalStudents }}</p>
         </div>
       </div>
     </div>
@@ -138,7 +142,8 @@ export default {
       count: 0,
       checkFileUpload: false,
       active: true,
-      inactive: false
+      inactive: false,
+      courses: ''
     }
   },
   created () {
@@ -259,11 +264,11 @@ export default {
               token: window.localStorage.getItem('token')
             }
           }).then(response => {
-            console.log(response.data.CourseNameValue)
             const index = this.coursesData.findIndex(course => course.courseNameKey === response.data.CourseNameValue)
-            console.log(index)
-            this.totalStudents = response.data.totalStudents
-            this.acknowledged = response.data.AcknowledgedTrue
+            this.coursesData[index].totalStudents = response.data.totalStudents
+            this.coursesData[index].acknowledged = response.data.AcknowledgedTrue
+            this.courses = this.coursesData
+            console.log(this.courses)
           })
         }
       })

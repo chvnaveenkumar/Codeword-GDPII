@@ -29,7 +29,7 @@
         Enter new codeword: <input type="text" v-model="newCodeword">
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal" @click="addCodeword()">Add Codeword</button>
+        <button type="button" class="btn btn-primary" @click="addCodeword()">Add Codeword</button>
         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
       </div>
     </div>
@@ -129,6 +129,7 @@
     </div>
 </template>
 <script>
+import swal from 'sweetalert2'
 /* global axios $ */
 
 export default {
@@ -183,8 +184,14 @@ export default {
       this.updateCodeword()
     },
     addCodeword () {
-      this.codewords.push(this.newCodeword.toUpperCase())
-      this.updateCodeword()
+      console.log(this.newCodeword)
+      if (this.codewords.includes(this.newCodeword.toUpperCase())) {
+        swal('Codeword already exists! Please add different Codeword!!')
+      } else {
+        this.codewords.push(this.newCodeword.toUpperCase())
+        this.updateCodeword()
+        $('#addcodeword').modal('hide')
+      }
     },
     updateCodeword () {
       axios({

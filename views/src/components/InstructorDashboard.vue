@@ -100,11 +100,11 @@
                     There are {{ count }} Students in the Uploaded set.</p>
             </div>
             <div class="form-group" required>
-                <select class="form-control" v-model="CodeWordSetName" value ="Select codeword set" data-toggle="tooltip"  title="Please select codeword set" >
+                <select class="form-control" v-model="selectedCodeWordSet" value ="Select codeword set" data-toggle="tooltip"  title="Please select codeword set" >
                   <option disabled value="">Please select CodeWordSet</option>
-                  <option v-for="codewordset in codeWordSetData" :key="codewordset._id">{{ codewordset.CodeWordSetName }}</option>
+                  <option v-for="codewordset in codeWordSetData" :value="codewordset" :key="codewordset._id">{{ codewordset.CodeWordSetName }}</option>
                 </select>
-                <span>{{ CodeWordSetName }}</span>
+                <span>{{ selectedCodeWordSet.CodeWordSetName }} {{ selectedCodeWordSet ? selectedCodeWordSet.Codewords.length : '' }}</span>
             </div>
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Enter Survey Start URL" name="startSurveyurl" data-toggle="tooltip" data-placement="bottom" title="Enter Survey Start URL" >
@@ -132,7 +132,7 @@ export default {
       endDate: '',
       startSurveyurldata: '',
       endSurveyurldata: '',
-      CodeWordSetName: '',
+      selectedCodeWordSet: '',
       file: '',
       codeWordSetData: '',
       coursesData: '',
@@ -161,7 +161,7 @@ export default {
   },
   methods: {
     CreateCourse () {
-      if (this.CodeWordSetName === '') {
+      if (this.selectedCodeWordSet.CodeWordSetName === '') {
         swal('Please choose codeword set!')
       } else {
         console.log('create coure')
@@ -173,7 +173,7 @@ export default {
         this.endSurveyurldata = data.get('endSurveyurl')
         let formData = new FormData()
         formData.append('CourseNameKey', this.courseName)
-        formData.append('CodeWordSetName', this.CodeWordSetName)
+        formData.append('CodeWordSetName', this.selectedCodeWordSet.CodeWordSetName)
         formData.append('file', this.file)
         console.log(this.file)
         /* global axios $ */
@@ -183,7 +183,7 @@ export default {
           data: {
             token: window.localStorage.getItem('token'),
             courseNameKey: this.courseName,
-            codeWordSetName: this.CodeWordSetName,
+            codeWordSetName: this.selectedCodeWordSet.CodeWordSetName,
             startDate: this.startDate,
             endDate: this.endDate,
             preSurveyURL: this.startSurveyurldata,

@@ -9,7 +9,7 @@
                 <h3 style="font-weight:bold;text-align:left"> Course Name: {{ courseNameData }} </h3>
             </div>
             <div class="col-md-6 col-lg-6 col-xs-0 col-sm-0">
-                <h3 style="font-weight:bold;text-align:right"> Acknowledged Status: {{ acknowledged}}% </h3>
+                <h3 style="font-weight:bold;text-align:right"> Acknowledged Status: {{ acknowledged.toFixed(2)}}% </h3>
             </div>
       </div>
 </h5>

@@ -253,6 +253,7 @@ export default {
         }
       }).then(response => {
         this.coursesData = response.data.data
+        this.courses = ''
         for (var i = 0; i < this.coursesData.length; i++) {
           axios({
             method: 'post',
@@ -265,6 +266,7 @@ export default {
             }
           }).then(response => {
             const index = this.coursesData.findIndex(course => course.courseNameKey === response.data.CourseNameValue)
+            console.log(index)
             this.coursesData[index].totalStudents = response.data.totalStudents
             this.coursesData[index].acknowledged = response.data.AcknowledgedTrue
             this.courses = this.coursesData

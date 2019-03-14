@@ -87,13 +87,17 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
-        Codeword: <input type="text" v-model="selectedCodeword">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal" @click="editCodeword(selectedCodeword, codewordIndex)">Update Codeword</button>
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-      </div>
+                  <form @submit.prevent="editCodeword(selectedCodeword.toUpperCase(), codewordIndex)">
+            <div class="modal-body">
+            <div class="form-group">
+               Codeword: <input type="text" class="form-control" v-model="selectedCodeword" pattern="[A-Za-z]{5,10}" placeholder="Enter Course Name" data-toggle="tooltip" title="Atleast 5-10 characters" required>
+            </div>
+            <div>
+              <button type="cancel" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+              <button type="create" class="btn btn-primary">Update Codeword</button>
+            </div>
+            </div>
+            </form>
     </div>
   </div>
 </div>
@@ -125,7 +129,7 @@
     </div>
 </template>
 <script>
-/* global axios */
+/* global axios $ */
 
 export default {
   name: 'CodeWordSet',
@@ -172,6 +176,7 @@ export default {
     editCodeword (selectedCodeword, index) {
       this.codewords[this.codewordIndex] = selectedCodeword
       this.updateCodeword()
+      $('#editcodeword').modal('hide')
     },
     deleteCodeword () {
       this.codewords.splice(this.codewordIndex, 1)

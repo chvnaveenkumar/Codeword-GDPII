@@ -224,7 +224,7 @@ export default {
 }
 #btn{
   width: 80%;
-  align: right;
+  text-align: right;
   /* margin-left: 50%; */
 }
 </style>

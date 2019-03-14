@@ -183,7 +183,7 @@ export default {
       this.updateCodeword()
     },
     addCodeword () {
-      this.codewords.push(this.newCodeword)
+      this.codewords.push(this.newCodeword.toUpperCase())
       this.updateCodeword()
     },
     updateCodeword () {

@@ -32,7 +32,8 @@ let getDataFromXLS = (req, res) => {
                     'codeword': 'A',
                 }
             }).then(jsonArray => {
-                var codewords = _.map(jsonArray[0].toUpperCase(),'codeword')
+                console.log(jsonArray[0]);
+                var codewords = _.map(jsonArray[0],'codeword')
                 var checking = true
                 _.forEach(codewords, function(value) {
                     if(value.length<5 || value.length >10) {
@@ -40,7 +41,6 @@ let getDataFromXLS = (req, res) => {
                          return false
                     }
                 });
-                console.log('cheking' + checking)
                 if(checking === false){
                     return res.status(200).json({ data: 'Codeword not 5 letter', count: false })
                 }else{
@@ -54,6 +54,9 @@ module.exports.getDataFromXLS = getDataFromXLS;
 
 let addcodewordset = (req, res) => {
     var body = _.pick(req.body,['CodeWordSetName','Codewords']);
+    for (var i = 0; i < body.Codewords.length; i++) {
+        body.Codewords[i]=body.Codewords[i].toUpperCase();
+      }
     var codewordset = new Codewordset({
         CodeWordSetName: body.CodeWordSetName,
         CodeWordCreator: req.session.email,

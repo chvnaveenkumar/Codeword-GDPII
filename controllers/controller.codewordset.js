@@ -32,7 +32,7 @@ let getDataFromXLS = (req, res) => {
                     'codeword': 'A',
                 }
             }).then(jsonArray => {
-                var codewords = _.map(jsonArray[0],'codeword')
+                var codewords = _.map(jsonArray[0].toUpperCase(),'codeword')
                 var checking = true
                 _.forEach(codewords, function(value) {
                     if(value.length<5 || value.length >10) {

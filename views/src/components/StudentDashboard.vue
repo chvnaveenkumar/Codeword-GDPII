@@ -22,13 +22,13 @@
           <div v-else> {{ course.codeword }}</div>
         </td>
          
-        <td v-if="course.courseInfo.PreSurveyURL != null"> 
+        <td v-if="course.courseInfo.PreSurveyURL != null && course.courseInfo.PostSurveyURL.length < 5"> 
           <a v-bind:href="'http://'+course.courseInfo.PreSurveyURL" target="_blank">Start Survey</a>
         </td>
         <td v-else> 
           <a>No Start Survey Url</a>
         </td> 
-        <td v-if="course.courseInfo.PostSurveyURL != null">
+        <td v-if="course.courseInfo.PostSurveyURL != null && course.courseInfo.PostSurveyURL.length < 5">
           <a v-bind:href="'http://'+course.courseInfo.PostSurveyURL" target="_blank">End Survey</a>
          </td>
         <td v-else>
@@ -96,6 +96,7 @@ export default {
             }).then(response => {
               var course = {codeword: response.data.codeword, Acknowledged: response.data.Acknowledged, courseInfo: response.data.data[0]}
               this.listCourses.push(course)
+              console.log(this.listCourses)
             })
           }
         }

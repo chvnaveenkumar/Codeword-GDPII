@@ -32,10 +32,8 @@
          </div>
         <div class="card-body text-info">
           <h5 class="card-title" ></h5>
-          <br>
           <!-- <a v-bind:href="'http://'+course.PreSurveyURL" class="card-link" target="_blank">Start Survey</a>
           <a v-bind:href="'http://'+course.PostSurveyURL" class="card-link" target="_blank">End Survey</a> -->
-          <br>
           <router-link :to="{ name: 'CourseStudent', params: { courseName: course.courseNameKey } }">
             <button class="btn "><i class="fa fa-eye fa-lg" aria-hidden="true" ></i></button>
           </router-link>
@@ -79,7 +77,6 @@
             </div>
             <form @submit.prevent="CreateCourse">
             <div class="modal-body">
-            <!-- Retrive the course name from input field -->
             <div class="form-group">
               <input type="text" class="form-control" pattern=".{6,30}" id="courseName" name="courseName" placeholder="Enter Course Name" data-toggle="tooltip" title="Atleast 6-15 characters" required>
             </div>
@@ -88,7 +85,7 @@
                 <div class="col tooltip-test" title="End Date"> End Date:<input type="date" class="form-control" v-model="endDate"  name="endDate"  placeholder="End Date" required></div>
             </div>
             <div class="form-group">
-                <input type="file" ref="file" name="file" v-on:change="handleFileUpload()" class="form-control-file" id="file" style="margin-top:1em" required>
+                <input type="file" ref="file" name="file" v-on:change="handleFileUpload()" class="form-control-file" id="file" style="margin-top:1em">
                 Upload Student Details(Excel)
             </div>
             <div v-if="checkFileUpload === true">
@@ -114,7 +111,7 @@
             </div>
             <div>
               <button type="cancel" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-              <button type="create" :disabled="count === false || count === 0" class="btn btn-primary">Create Course</button>
+              <button type="create" :disabled="count === false" class="btn btn-primary">Create Course</button>
             </div>
             </div>
             </form></div></div></div>
@@ -164,7 +161,6 @@ export default {
       if (this.selectedCodeWordSet.CodeWordSetName === '') {
         swal('Please choose codeword set!')
       } else {
-        console.log('create coure')
         let data = new FormData(document.querySelector('form'))
         this.courseName = data.get('courseName')
         this.startDate = this.startDate
@@ -174,7 +170,9 @@ export default {
         let formData = new FormData()
         formData.append('CourseNameKey', this.courseName)
         formData.append('CodeWordSetName', this.selectedCodeWordSet.CodeWordSetName)
-        formData.append('file', this.file)
+        if (this.file !== '') {
+          formData.append('file', this.file)
+        }
         console.log(this.file)
         /* global axios $ */
         axios({

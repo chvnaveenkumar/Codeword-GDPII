@@ -54,3 +54,126 @@
 2019-03-15T18:09:33.946Z - debug: 92 hootoriginal seeded
 2019-03-15T18:09:33.946Z - debug: 200 largeset seeded
 2019-03-15T18:09:33.946Z - info: END Seeder. Sample data read and verified.
+2019-03-15T18:32:42.239Z - info: START seeder.
+2019-03-15T18:32:42.252Z - debug: 2 dataCodewordset seeded
+2019-03-15T18:32:42.252Z - debug: 292 datacodeword seeded
+2019-03-15T18:32:42.252Z - debug: 6 datacourse seeded
+2019-03-15T18:32:42.252Z - debug: 114 dataCoursestudent seeded
+2019-03-15T18:32:42.252Z - debug: 92 hootoriginal seeded
+2019-03-15T18:32:42.252Z - debug: 200 largeset seeded
+2019-03-15T18:32:42.252Z - info: END Seeder. Sample data read and verified.
+2019-03-15T18:33:42.265Z - info: START seeder.
+2019-03-15T18:33:42.276Z - debug: 2 dataCodewordset seeded
+2019-03-15T18:33:42.276Z - debug: 292 datacodeword seeded
+2019-03-15T18:33:42.276Z - debug: 6 datacourse seeded
+2019-03-15T18:33:42.276Z - debug: 114 dataCoursestudent seeded
+2019-03-15T18:33:42.276Z - debug: 92 hootoriginal seeded
+2019-03-15T18:33:42.276Z - debug: 200 largeset seeded
+2019-03-15T18:33:42.277Z - info: END Seeder. Sample data read and verified.
+2019-03-15T18:35:04.564Z - info: START seeder.
+2019-03-15T18:35:04.576Z - debug: 2 dataCodewordset seeded
+2019-03-15T18:35:04.576Z - debug: 292 datacodeword seeded
+2019-03-15T18:35:04.576Z - debug: 6 datacourse seeded
+2019-03-15T18:35:04.576Z - debug: 114 dataCoursestudent seeded
+2019-03-15T18:35:04.576Z - debug: 92 hootoriginal seeded
+2019-03-15T18:35:04.576Z - debug: 200 largeset seeded
+2019-03-15T18:35:04.576Z - info: END Seeder. Sample data read and verified.
+2019-03-15T18:40:38.226Z - info: START seeder.
+2019-03-15T18:40:38.238Z - debug: 2 dataCodewordset seeded
+2019-03-15T18:40:38.238Z - debug: 292 datacodeword seeded
+2019-03-15T18:40:38.238Z - debug: 6 datacourse seeded
+2019-03-15T18:40:38.238Z - debug: 114 dataCoursestudent seeded
+2019-03-15T18:40:38.238Z - debug: 92 hootoriginal seeded
+2019-03-15T18:40:38.239Z - debug: 200 largeset seeded
+2019-03-15T18:40:38.239Z - info: END Seeder. Sample data read and verified.
+2019-03-15T18:41:26.917Z - info: START seeder.
+2019-03-15T18:41:26.933Z - debug: 2 dataCodewordset seeded
+2019-03-15T18:41:26.933Z - debug: 292 datacodeword seeded
+2019-03-15T18:41:26.933Z - debug: 6 datacourse seeded
+2019-03-15T18:41:26.934Z - debug: 114 dataCoursestudent seeded
+2019-03-15T18:41:26.934Z - debug: 92 hootoriginal seeded
+2019-03-15T18:41:26.934Z - debug: 200 largeset seeded
+2019-03-15T18:41:26.934Z - info: END Seeder. Sample data read and verified.
+2019-03-15T18:41:56.621Z - info: START seeder.
+2019-03-15T18:41:56.633Z - debug: 2 dataCodewordset seeded
+2019-03-15T18:41:56.633Z - debug: 292 datacodeword seeded
+2019-03-15T18:41:56.633Z - debug: 6 datacourse seeded
+2019-03-15T18:41:56.633Z - debug: 114 dataCoursestudent seeded
+2019-03-15T18:41:56.633Z - debug: 92 hootoriginal seeded
+2019-03-15T18:41:56.633Z - debug: 200 largeset seeded
+2019-03-15T18:41:56.633Z - info: END Seeder. Sample data read and verified.
+2019-03-15T18:42:36.047Z - info: START seeder.
+2019-03-15T18:42:36.059Z - debug: 2 dataCodewordset seeded
+2019-03-15T18:42:36.059Z - debug: 292 datacodeword seeded
+2019-03-15T18:42:36.059Z - debug: 6 datacourse seeded
+2019-03-15T18:42:36.059Z - debug: 114 dataCoursestudent seeded
+2019-03-15T18:42:36.060Z - debug: 92 hootoriginal seeded
+2019-03-15T18:42:36.060Z - debug: 200 largeset seeded
+2019-03-15T18:42:36.060Z - info: END Seeder. Sample data read and verified.
+2019-03-15T18:42:49.653Z - info: START seeder.
+2019-03-15T18:42:49.666Z - debug: 2 dataCodewordset seeded
+2019-03-15T18:42:49.666Z - debug: 292 datacodeword seeded
+2019-03-15T18:42:49.667Z - debug: 6 datacourse seeded
+2019-03-15T18:42:49.667Z - debug: 114 dataCoursestudent seeded
+2019-03-15T18:42:49.667Z - debug: 92 hootoriginal seeded
+2019-03-15T18:42:49.667Z - debug: 200 largeset seeded
+2019-03-15T18:42:49.667Z - info: END Seeder. Sample data read and verified.
+2019-03-15T18:42:57.985Z - error: uncaughtException: Cannot read property 'length' of undefined date=Fri Mar 15 2019 13:42:57 GMT-0500 (Central Daylight Time), pid=12336, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=118849536, heapTotal=77869056, heapUsed=42528880, external=21822755, loadavg=[0, 0, 0], uptime=818954
+TypeError: Cannot read property 'length' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.coursestudent.js:83:46
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4759:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-03-15T18:43:58.246Z - info: START seeder.
+2019-03-15T18:43:58.257Z - debug: 2 dataCodewordset seeded
+2019-03-15T18:43:58.258Z - debug: 292 datacodeword seeded
+2019-03-15T18:43:58.258Z - debug: 6 datacourse seeded
+2019-03-15T18:43:58.258Z - debug: 114 dataCoursestudent seeded
+2019-03-15T18:43:58.258Z - debug: 92 hootoriginal seeded
+2019-03-15T18:43:58.258Z - debug: 200 largeset seeded
+2019-03-15T18:43:58.258Z - info: END Seeder. Sample data read and verified.
+2019-03-15T18:44:06.302Z - error: uncaughtException: Cannot read property 'length' of undefined date=Fri Mar 15 2019 13:44:06 GMT-0500 (Central Daylight Time), pid=16280, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=115298304, heapTotal=75812864, heapUsed=51377392, external=23108067, loadavg=[0, 0, 0], uptime=819023
+TypeError: Cannot read property 'length' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.coursestudent.js:83:46
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4759:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-03-15T18:44:35.272Z - error: uncaughtException: Cannot read property 'length' of undefined date=Fri Mar 15 2019 13:44:35 GMT-0500 (Central Daylight Time), pid=16280, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=97247232, heapTotal=50606080, heapUsed=43954648, external=21705079, loadavg=[0, 0, 0], uptime=819052
+TypeError: Cannot read property 'length' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.coursestudent.js:83:46
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4759:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-03-15T18:45:04.396Z - info: START seeder.
+2019-03-15T18:45:04.409Z - debug: 2 dataCodewordset seeded
+2019-03-15T18:45:04.409Z - debug: 292 datacodeword seeded
+2019-03-15T18:45:04.409Z - debug: 6 datacourse seeded
+2019-03-15T18:45:04.409Z - debug: 114 dataCoursestudent seeded
+2019-03-15T18:45:04.409Z - debug: 92 hootoriginal seeded
+2019-03-15T18:45:04.409Z - debug: 200 largeset seeded
+2019-03-15T18:45:04.409Z - info: END Seeder. Sample data read and verified.
+2019-03-15T18:45:13.393Z - error: uncaughtException: Cannot read property 'length' of undefined date=Fri Mar 15 2019 13:45:13 GMT-0500 (Central Daylight Time), pid=9072, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=118464512, heapTotal=77869056, heapUsed=48277680, external=22299684, loadavg=[0, 0, 0], uptime=819090
+TypeError: Cannot read property 'length' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.coursestudent.js:82:46
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4759:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-03-15T18:45:22.306Z - error: uncaughtException: Cannot read property 'length' of undefined date=Fri Mar 15 2019 13:45:22 GMT-0500 (Central Daylight Time), pid=9072, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=119746560, heapTotal=77869056, heapUsed=49289056, external=22315867, loadavg=[0, 0, 0], uptime=819099
+TypeError: Cannot read property 'length' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.coursestudent.js:82:46
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4759:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-03-15T18:46:49.644Z - info: START seeder.
+2019-03-15T18:46:49.657Z - debug: 2 dataCodewordset seeded
+2019-03-15T18:46:49.657Z - debug: 292 datacodeword seeded
+2019-03-15T18:46:49.657Z - debug: 6 datacourse seeded
+2019-03-15T18:46:49.657Z - debug: 114 dataCoursestudent seeded
+2019-03-15T18:46:49.657Z - debug: 92 hootoriginal seeded
+2019-03-15T18:46:49.657Z - debug: 200 largeset seeded
+2019-03-15T18:46:49.657Z - info: END Seeder. Sample data read and verified.

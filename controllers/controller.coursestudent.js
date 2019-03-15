@@ -66,11 +66,13 @@ module.exports.getDataStudentXLSX = getDataStudentXLSX;
 
 let addCourseStudent = (req,res) => {
     var codewordslist =[];
-    var shuffleCodeWords, studetList;
+    var shuffleCodeWords, studetList=[];
     var studentidList=[],studentNameList=[];
-    var workbook = XLSX.read(req.file.buffer, {type:"buffer"});
-    var body = _.pick(req.body,['CourseNameKey','CodeWordSetName']);    
-    studetList = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]]);
+    var body = _.pick(req.body,['CourseNameKey','CodeWordSetName']);
+    if(req.file != undefined){        
+        var workbook = XLSX.read(req.file.buffer, {type:"buffer"});
+        studetList = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]]);    
+    }    
     Codewordset.find({CodeWordSetName: body.CodeWordSetName}, function (err, CodeWordset) {
         if(err){
             return res.status(200).json({ message: 'CodeWord Set Not found error'});

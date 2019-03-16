@@ -225,3 +225,11 @@ TypeError: Cannot read property 'length' of undefined
 2019-03-15T19:01:04.309Z - debug: 92 hootoriginal seeded
 2019-03-15T19:01:04.309Z - debug: 200 largeset seeded
 2019-03-15T19:01:04.309Z - info: END Seeder. Sample data read and verified.
+2019-03-16T01:28:24.718Z - info: START seeder.
+2019-03-16T01:28:24.735Z - debug: 2 dataCodewordset seeded
+2019-03-16T01:28:24.735Z - debug: 292 datacodeword seeded
+2019-03-16T01:28:24.735Z - debug: 6 datacourse seeded
+2019-03-16T01:28:24.735Z - debug: 114 dataCoursestudent seeded
+2019-03-16T01:28:24.736Z - debug: 92 hootoriginal seeded
+2019-03-16T01:28:24.736Z - debug: 200 largeset seeded
+2019-03-16T01:28:24.736Z - info: END Seeder. Sample data read and verified.

@@ -30,6 +30,9 @@
 </div>
 <br>
 <br>
+ <button type="button" class="btn btn-success" title="Add New Student" data-toggle="modal" data-target="#addcodeword">
+                    <span class="fa fa-plus"></span> Add New Student
+                </button>
  <table class="table table-striped table-sm" >
  <thead class="thead-dark">
             <tr>

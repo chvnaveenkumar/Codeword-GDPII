@@ -142,7 +142,7 @@ export default {
       inactive: false,
       courses: '',
       tempdate: '',
-      status: true
+      endDateChanged: true
     }
   },
   created () {
@@ -152,7 +152,7 @@ export default {
   },
   watch: {
     startDate (value) {
-      if (this.status) {
+      if (this.endDateChanged) {
         let start = new Date(value)
         this.startDate = new Date(start) && new Date(start).toISOString().split('T')[0]
         this.endDate = new Date(start.setMonth(start.getMonth())) && new Date(start.setMonth(start.getMonth() + 4)).toISOString().split('T')[0]
@@ -161,7 +161,7 @@ export default {
     },
     endDate (value) {
       if (this.tempdate !== value) {
-        this.status = false
+        this.endDateChanged = false
       }
     },
     '$route': 'fetchCourseList'

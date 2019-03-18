@@ -140,19 +140,29 @@ export default {
       checkFileUpload: false,
       active: true,
       inactive: false,
-      courses: ''
+      courses: '',
+      tempdate: '',
+      status: true
     }
   },
   created () {
     this.startDate = new Date() && new Date().toISOString().split('T')[0]
-    this.endDate = new Date() && new Date(new Date().getMonth() + 4).toISOString().split('T')[0]
+    this.endDate = new Date(new Date().setMonth(new Date().getMonth())) && new Date(new Date().setMonth(new Date().getMonth() + 4)).toISOString().split('T')[0]
     this.fetchCourseList()
   },
   watch: {
     startDate (value) {
-      let start = new Date(value)
-      this.startDate = new Date(start) && new Date(start).toISOString().split('T')[0]
-      this.endDate = new Date(start.setMonth(start.getMonth())) && new Date(start.setMonth(start.getMonth() + 4)).toISOString().split('T')[0]
+      if (this.status) {
+        let start = new Date(value)
+        this.startDate = new Date(start) && new Date(start).toISOString().split('T')[0]
+        this.endDate = new Date(start.setMonth(start.getMonth())) && new Date(start.setMonth(start.getMonth() + 4)).toISOString().split('T')[0]
+        this.tempdate = this.endDate
+      }
+    },
+    endDate (value) {
+      if (this.tempdate !== value) {
+        this.status = false
+      }
     },
     '$route': 'fetchCourseList'
   },

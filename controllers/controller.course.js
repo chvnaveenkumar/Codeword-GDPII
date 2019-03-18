@@ -3,7 +3,7 @@
  */
 const _ = require('lodash');
 const bcrypt = require('bcryptjs');
-var jwt = require('jsonwebtoken');
+var async = require("async");
 var { CourseStudentModel } = require('../model/model.coursestudent');
 var { CourseModel } = require('../model/model.course');
 var { mongoose } = require('./../config/database')
@@ -38,9 +38,16 @@ module.exports.addCourse = addCourse;
 let getCourses = (req,res) => {
     CourseModel.find({emailKey: req.session.email}, function (err, courses) {
         if (courses) {
-
-        }
+            async.forEach(courses, function(course, callback,index){
+                CourseStudentModel.find({$and: [{CourseNameKey: course.courseNameKey}, {courseCreater: req.session.email}]}, function (err, courseStudents){
+                    console.log(courseStudents);
+                    courses[index]['courseStudent'] = courseStudents;
+                    callback();
+                })
+            });
+            console.log(courses)
             return res.json({ code: 200, data: courses });
+        }
         }).catch((e) => {
         return res.json({ code: 400, message: e });
         })

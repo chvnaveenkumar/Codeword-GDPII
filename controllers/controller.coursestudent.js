@@ -65,7 +65,7 @@ let getDataStudentXLSX = (req, res) => {
 module.exports.getDataStudentXLSX = getDataStudentXLSX;
 
 let addCourseStudent = (req,res) => {
-    var codewordslist =[];
+    var codewordslist =[], remainingCodewordList = [];
     var shuffleCodeWords, studetList=[];
     var studentidList=[],studentNameList=[];
     var body = _.pick(req.body,['CourseNameKey','CodeWordSetName']);
@@ -94,6 +94,9 @@ let addCourseStudent = (req,res) => {
             studentidList.push(studentData[Object.keys(studentData)[0]])
             studentNameList.push(studentData[Object.keys(studentData)[1]])
             }
+            for(var j=studetList.length;j<shuffleCodeWords.length;j++) {
+                remainingCodewordList.push(shuffleCodeWords[j]);
+            }
             var coursestudent=[];
             for(var i=0;i<studentidList.length;i++){
                 var courseStudentModel = CourseStudentModel({
@@ -102,10 +105,12 @@ let addCourseStudent = (req,res) => {
                     Codeword:shuffleCodeWords[i],
                     StudentName: studentNameList[i],
                     Acknowledged: false,
-                    courseCreater: req.session.email 
+                    courseCreater: req.session.email,
+                    oldCodewords: remainingCodewordList
                 });
                 coursestudent.push(courseStudentModel);
             }
+            CourseModel.updateOne()
                 CourseStudentModel.insertMany(coursestudent).then((courseStudent) => {
                     return res.status(200).json({message: 'Course student successfully!'})    
                 })

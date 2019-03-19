@@ -195,7 +195,8 @@ export default {
             startDate: this.startDate,
             endDate: this.endDate,
             preSurveyURL: this.startSurveyurldata,
-            postSurveyURL: this.endSurveyurldata
+            postSurveyURL: this.endSurveyurldata,
+            oldCodewords: []
           }
         })
           .then((response) => {

@@ -38,6 +38,10 @@ var CourseModel = mongoose.model('courseModel', {
    },
    PostSurveyURL: {
     type: String
+   },
+   oldCodewords: {
+    type: Array,
+    required: true
    }
 });
 

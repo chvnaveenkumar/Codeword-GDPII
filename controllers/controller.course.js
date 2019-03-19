@@ -21,7 +21,8 @@ Startdate: body.startDate,
 Startdate: body.startDate,
 Enddate: body.endDate,
 PreSurveyURL: body.preSurveyURL,
-PostSurveyURL: body.postSurveyURL
+PostSurveyURL: body.postSurveyURL,
+oldCodewords: []
 });
     courseModel.save().then((user) => {
         if(user)
@@ -82,3 +83,13 @@ let updateCourse=(req,res) =>{
     })
 }
 module.exports.updateCourse = updateCourse;
+
+let addCodewords=(remaingCodewords) =>{
+        CourseModel.updateOne({_id: body.id}, { $set: { "oldCodewords" : remaingCodewords } }, function(err,updatecoursestudent){
+        if(err){
+            return res.json({ code:200, message:err});
+        }
+        return res.json({ code: 400, message:true})
+    })
+}
+module.exports.addCodewords = addCodewords;

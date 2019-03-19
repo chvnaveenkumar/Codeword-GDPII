@@ -380,30 +380,42 @@ export default {
       })
     },
     addStudent (studentName, studentEmail) {
-      axios({
-        method: 'post',
-        url: 'codeword/addstudent',
-        headers: {
-          token: window.localStorage.getItem('token')
-        },
-        data: {
-          courseName: this.courseNameData,
-          courseCreater: this.courseData.emailKey,
-          newStudentEmail: studentEmail,
-          newStudentName: studentName,
-          newCodeword: this.courseData.oldCodewords[0],
-          id: this.courseData._id,
-          remainingCodewords: this.courseData.oldCodewords
-        }
-      }).then(response => {
-        console.log(response.data.message)
-        if (response.data.message === true) {
-          $('#addStudentModel').modal('hide')
-          swal('Success', 'Added new Student Successfully!!', 'success')
-          this.getCourseStudentData()
-          this.getCoursesData(this.courseNameData)
+      console.log()
+      var studentValidate = true
+      var studentData = this.courseStudentData
+      studentData.forEach(students => {
+        if (students.EmailKey.toUpperCase() === studentEmail.toUpperCase()) {
+          studentValidate = false
         }
       })
+      if (studentValidate === false) {
+        swal('Student already exists!!')
+      } else {
+        axios({
+          method: 'post',
+          url: 'codeword/addstudent',
+          headers: {
+            token: window.localStorage.getItem('token')
+          },
+          data: {
+            courseName: this.courseNameData,
+            courseCreater: this.courseData.emailKey,
+            newStudentEmail: studentEmail,
+            newStudentName: studentName.toUpperCase(),
+            newCodeword: this.courseData.oldCodewords[0],
+            id: this.courseData._id,
+            remainingCodewords: this.courseData.oldCodewords
+          }
+        }).then(response => {
+          console.log(response.data.message)
+          if (response.data.message === true) {
+            $('#addStudentModel').modal('hide')
+            swal('Success', 'Added new Student Successfully!!', 'success')
+            this.getCourseStudentData()
+            this.getCoursesData(this.courseNameData)
+          }
+        })
+      }
     },
     editCourse (courseId) {
       axios({

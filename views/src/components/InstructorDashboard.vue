@@ -89,10 +89,8 @@
                 Upload Student Details(Excel)
             </div>
             <div v-if="checkFileUpload === true">
-                <p v-if="count === 0" class="alert alert-danger">                          
-                You have to upload a new excel file as it contains no data.</p>
-                <p v-else-if="count === false" class="alert alert-danger">
-                    The uploaded excel sheet has no format.</p>
+                <p v-if="excelstatus.length > 0" class="alert alert-danger">                          
+                {{ excelstatus }}</p>
                 <p v-else class="alert alert-info">
                     There are {{ count }} Students in the Uploaded set.</p>
             </div>
@@ -142,7 +140,8 @@ export default {
       inactive: false,
       courses: '',
       tempdate: '',
-      endDateChanged: true
+      endDateChanged: true,
+      excelstatus: ''
     }
   },
   created () {
@@ -231,7 +230,11 @@ export default {
       console.log(this.file)
       let data = new FormData(document.querySelector('form'))
       axios.post('/codeword/getdatastudentxlsx', data).then(response => {
-        this.count = response.data.count
+        if (!response.data.status) {
+          this.excelstatus = response.data.data
+        } else {
+          this.count = response.data.count
+        }
         console.log(this.count + 'student')
       })
     },

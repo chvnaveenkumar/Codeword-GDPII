@@ -37,13 +37,21 @@ let getDataStudentXLSX = (req, res) => {
                 var emails = _.map(jsonArray[0],'email')
                 emails.splice(0,1)
                 var checking_emails = true
+                var email_duplicates = false
                 _(emails).forEach(function(value) {
-                    console.log(value+" "+value.length + value.includes("@") )
                     if(value.length === 0 || !(value.includes("@"))) {
                          checking_emails = false
                          return false
                     }
-                });
+                    for(var i = 0; i <= emails.length; i++) {
+                        for(var j = i; j <= emails.length; j++) {
+                            if(i != j && emails[i] == emails[j]) {
+                                email_duplicates = true
+                                return false 
+                            }
+                        }
+                    }
+                }); 
                 var names = _.map(jsonArray[0],'name')
                 names.splice(0,1)
                 var checking_names = true
@@ -53,10 +61,12 @@ let getDataStudentXLSX = (req, res) => {
                          return false
                     }
                 });
-                if(checking_emails === false || checking_names === false){
-                    return res.status(200).json({ data: 'Uploaded Excel sheet is not in the given format!!', count: false })
+                if(email_duplicates){
+                    return res.status(200).json({ data: 'Duplicates found in uploaded excel!!', status: false })
+                }else if(checking_emails === false || checking_names === false){
+                    return res.status(200).json({ data: 'Uploaded Excel sheet is not in the given format!!', status: false })
                 }else{
-                    return res.status(200).json({ count: emails.length })
+                    return res.status(200).json({ count: emails.length, status: true })
                 }
             })
     })

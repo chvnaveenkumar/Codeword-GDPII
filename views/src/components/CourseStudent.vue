@@ -24,15 +24,13 @@
     </div>
      <div class="col-md-6 col-lg-6 col-xs-0 col-sm-0" style="text-align:left;font-weight:bold">
           <button class="btn" data-toggle="modal" data-target="#editCourse" @click="selectCourse(courseData)" style="float:right;">Edit <i class="fa fa-pencil fa-xs"></i></button>
+          <button class="btn" title="Add New Student" data-toggle="modal" data-target="#addStudent" style="float:right;"><i class="fa fa-plus"></i> Add New Student</button>
     </div>
     </div>
   </div>
 </div>
 <br>
 <br>
- <button type="button" class="btn btn-success" title="Add New Student" data-toggle="modal" data-target="#addcodeword">
-                    <span class="fa fa-plus"></span> Add New Student
-                </button>
  <table class="table table-striped table-sm" >
  <thead class="thead-dark">
             <tr>
@@ -85,6 +83,44 @@
             </li>
         </ul>
   </div>
+<!-- Modal Add Student -->
+<div class="modal fade" id="addStudent" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edit Student</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Cancel">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+        <div class="row">
+            <div class=" col-md-6">
+        Enter Student Name: 
+            </div>
+             <div class=" col-md-6">
+            <input type="text" v-model="addStudentName" required>
+        </div>
+        </div>
+        <br>
+           <div class="row">
+            <div class=" col-md-6">
+        Enter Student Email: 
+            </div>
+             <div class=" col-md-6">
+        <input type="text" v-model="addStudentEmail" required>
+        </div>
+      </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" @click="addStudent(addStudentName, addStudentEmail)">Add Student</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Modal Delete Student -->
 <div class="modal fade" id="deleteStudent" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -119,8 +155,14 @@
         </button>
       </div>
       <div class="modal-body">
-        <input type="text" v-model="editStudentName" required>
-        <input type="text" v-model="editStudentEmail" required>
+          <div class="row">
+          <div class=" col-md-6">
+            <input type="text" v-model="editStudentName" required>
+          </div>
+          <div class="col-md-6">
+            <input type="text" v-model="editStudentEmail" required>
+          </div>
+          </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" @click="editStudent(editStudentId, editStudentEmail, editStudentName)">Update Details</button>
@@ -315,6 +357,26 @@ export default {
           _id: studentId,
           NewEmailKey: selectEmailKey,
           Newstudentkey: selectStudent
+        }
+      }).then(response => {
+        if (response.data.message === true) {
+          $('#editStudent').modal('hide')
+          this.getCourseStudentData()
+          this.getCoursesData(this.courseNameData)
+        }
+      })
+    },
+    addStudent (studentName, studentEmail) {
+      console.log(studentName + ' ' + studentEmail)
+      axios({
+        method: 'post',
+        url: 'codeword/addcoursestudent',
+        headers: {
+          token: window.localStorage.getItem('token')
+        },
+        data: {
+          NewEmailKey: studentEmail,
+          Newstudentkey: studentName
         }
       }).then(response => {
         if (response.data.message === true) {

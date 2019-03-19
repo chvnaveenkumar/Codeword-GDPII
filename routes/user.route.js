@@ -26,7 +26,7 @@ router.post('/addnewCourse', courseController.addCourse);
 router.get('/getCourseList', courseController.getCourses)
 router.post('/getdataxlsx',codewordsetController.getDataFromXLS)
 router.post('/deleteCourse', courseController.deleteCourse)
-router.post('/addcoursestudent',multer().single('file'), courseStudentController.addCourseStudent);
+router.post('/addcoursestudent',multer().single('file'), courseStudentController.addCourseStudent)
 router.post('/getcoursestudent', courseStudentController.getCourseStudent);
 router.post('/deletecoursestudent', courseStudentController.deletecoursestudent);
 router.post('/updatecoursestudent', courseStudentController.updatecoursestudent);
@@ -46,7 +46,7 @@ router.post('/addnewcodewords', codewordController.addcodewords);
 // API calls for student
 router.get('/getstudentcourses', studentController.getstudentDetails);
 router.post('/getcoursedetails', studentController.getCourseDetails);
-
+router.post('/addstudent', courseStudentController.addStudent);
 //Excel sheet validation
 router.post('/getdatastudentxlsx', courseStudentController.getDataStudentXLSX);
 router.post('/codewordAcknowledged', studentController.updateAcknowledged);

@@ -24,7 +24,7 @@
     </div>
      <div class="col-md-6 col-lg-6 col-xs-0 col-sm-0" style="text-align:left;font-weight:bold">
           <button class="btn" data-toggle="modal" data-target="#editCourse" @click="selectCourse(courseData)" style="float:right;">Edit <i class="fa fa-pencil fa-xs"></i></button>
-          <button class="btn" title="Add New Student" data-toggle="modal" data-target="#addStudent" style="float:right;"><i class="fa fa-plus"></i> Add New Student</button>
+          <button class="btn" title="Add New Student" data-toggle="modal" data-target="#addStudentModel" style="float:right;"><i class="fa fa-plus"></i> Add New Student</button>
     </div>
     </div>
   </div>
@@ -84,7 +84,7 @@
         </ul>
   </div>
 <!-- Modal Add Student -->
-<div class="modal fade" id="addStudent" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="addStudentModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -93,31 +93,41 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      <form @submit.prevent="addStudent(addStudentName, addStudentEmail)">
       <div class="modal-body">
         <div class="container-fluid">
         <div class="row">
             <div class=" col-md-6">
-        Enter Student Name: 
+            Enter Student Name: 
             </div>
              <div class=" col-md-6">
-            <input type="text" v-model="addStudentName" required>
+             <input type="text" class="form-control" pattern=".{3,16}" v-model="addStudentName" placeholder="Enter Student Name" data-toggle="tooltip" title="Atleast 3-16 characters" required>
         </div>
         </div>
         <br>
            <div class="row">
             <div class=" col-md-6">
-        Enter Student Email: 
+            Enter Student Email: 
             </div>
              <div class=" col-md-6">
-        <input type="text" v-model="addStudentEmail" required>
+              <input type="email" class="form-control" placeholder="Enter Student Email" required title="Please enter proper Email ID" pattern="\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+" v-model="addStudentEmail">
         </div>
+      </div>
+        <div class="row">
+            <div class=" col-md-6">
+            Remaining Codewords : 
+            </div>
+            <div class=" col-md-6">
+               {{  courseData.oldCodewords.length }} 
+            </div>
       </div>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" @click="addStudent(addStudentName, addStudentEmail)">Add Student</button>
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+        <button type="create" class="btn btn-primary" :disabled="courseData.oldCodewords.length <= 0">Add Student</button>
+        <button type="cancel" class="btn btn-danger" data-dismiss="modal">Cancel</button>
       </div>
+      </form>
     </div>
   </div>
 </div>
@@ -154,6 +164,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+       <form @submit.prevent="editStudent(editStudentId, editStudentEmail, editStudentName)">
       <div class="modal-body">
           <div class="row">
           <div class=" col-md-6">
@@ -165,9 +176,10 @@
           </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" @click="editStudent(editStudentId, editStudentEmail, editStudentName)">Update Details</button>
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+        <button type="create" class="btn btn-primary">Update Details</button>
+        <button type="cancel" class="btn btn-danger" data-dismiss="modal">Cancel</button>
       </div>
+       </form>
     </div>
   </div>
 </div>
@@ -318,7 +330,6 @@ export default {
             this.courseData = this.coursesData[index]
           }
         }
-        console.log(this.coursesData.length + this.coursesData[0].PostSurveyURL)
       })
     },
     selectStudent (courseName, emailKey, studentName) {
@@ -371,17 +382,22 @@ export default {
     addStudent (studentName, studentEmail) {
       axios({
         method: 'post',
-        url: 'codeword/addcoursestudent',
+        url: 'codeword/addstudent',
         headers: {
           token: window.localStorage.getItem('token')
         },
         data: {
-          NewEmailKey: studentEmail,
-          Newstudentkey: studentName
+          courseName: this.courseNameData,
+          courseCreater: this.courseData.emailKey,
+          newStudentEmail: studentEmail,
+          newStudentName: studentName,
+          newCodeword: this.courseData.oldCodewords[0]
         }
       }).then(response => {
+        console.log(response.data.message)
         if (response.data.message === true) {
-          $('#addStudent').modal('hide')
+          $('#addStudentModel').modal('hide')
+          swal('Success', 'Added new Student Successfully!!', 'success')
           this.getCourseStudentData()
           this.getCoursesData(this.courseNameData)
         }

@@ -24,9 +24,9 @@ PreSurveyURL: body.preSurveyURL,
 PostSurveyURL: body.postSurveyURL,
 oldCodewords: []
 });
-    courseModel.save().then((user) => {
-        if(user)
-        return res.status(200).json({ message: "Course created successfully."});
+    courseModel.save().then((course) => {
+        if(course)
+        return res.status(200).json({ message: "Course created successfully.", data: course});
     }).catch((error) => {
         if (error.name === 'MongoError' && error.code === 11000) {
             return res.status(403).json({message:'There was a duplicate course error'});
@@ -83,13 +83,3 @@ let updateCourse=(req,res) =>{
     })
 }
 module.exports.updateCourse = updateCourse;
-
-let addCodewords=(remaingCodewords) =>{
-        CourseModel.updateOne({_id: body.id}, { $set: { "oldCodewords" : remaingCodewords } }, function(err,updatecoursestudent){
-        if(err){
-            return res.json({ code:200, message:err});
-        }
-        return res.json({ code: 400, message:true})
-    })
-}
-module.exports.addCodewords = addCodewords;

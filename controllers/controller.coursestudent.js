@@ -68,7 +68,7 @@ let addCourseStudent = (req,res) => {
     var codewordslist =[], remainingCodewordList = [];
     var shuffleCodeWords, studetList=[];
     var studentidList=[],studentNameList=[];
-    var body = _.pick(req.body,['CourseNameKey','CodeWordSetName']);
+    var body = _.pick(req.body,['CourseNameKey','CodeWordSetName','id']);
     if(req.file != undefined){        
         var workbook = XLSX.read(req.file.buffer, {type:"buffer"});
         studetList = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]]);    
@@ -105,18 +105,21 @@ let addCourseStudent = (req,res) => {
                     Codeword:shuffleCodeWords[i],
                     StudentName: studentNameList[i],
                     Acknowledged: false,
-                    courseCreater: req.session.email,
-                    oldCodewords: remainingCodewordList
+                    courseCreater: req.session.email
                 });
                 coursestudent.push(courseStudentModel);
             }
-            CourseModel.updateOne()
-                CourseStudentModel.insertMany(coursestudent).then((courseStudent) => {
-                    return res.status(200).json({message: 'Course student successfully!'})    
-                })
-                .catch(error => {
-                    return res.status(403).json({ message:error.message});   
-                })                 
+            CourseModel.updateOne({_id: body.id}, { $set: { "oldCodewords" : remainingCodewordList } }, function(err,updateoldCodewords){
+                if(err){
+                    return res.json({ code:200, message:err});
+                }
+            })
+            CourseStudentModel.insertMany(coursestudent).then((courseStudent) => {
+                return res.status(200).json({message: 'Course student successfully!'})    
+            })
+            .catch(error => {
+                return res.status(403).json({ message:error.message});   
+            })                 
         }
     })
 }
@@ -194,23 +197,21 @@ let updatecoursestudent=(req,res) =>{
 }
 module.exports.updatecoursestudent=updatecoursestudent;
 
-let getstudentcodeword=(req,res) =>{
-    CourseStudentModel.find({EmailKey: 'S531500@nwmissouri.edu  '}, function(err,getstudentcodeword){
-    if(err){
-        return res.json({ code:200, message:'EmailKeys are fetched'});
-    }
-        if (getstudentcodeword)
-        {
-            console.log(getstudentcodeword[0].CourseNameKey)
-            CourseModel.find({CourseNameKey: getstudentcodeword[0].CourseNameKey}, function(err,getstudentcodeword){
-            if(err){
-                return res.json({ code:200,message:'URL is fetched'});
-            }
-            })
-            return res.json({ code: 200, data: getstudentcodeword });
+let addStudent=(req,res) =>{
+    var body = _.pick(req.body,['courseName','courseCreater','newStudentEmail','newStudentName','newCodeword']);  
+        CourseStudentModel.insertMany([{
+            Acknowledged: false,
+            CourseNameKey: body.courseName,
+            EmailKey: body.newStudentEmail,
+            Codeword: body.newCodeword,
+            StudentName: body.newStudentName,
+            courseCreater: body.courseCreater
+         }]).then((addStudentModel) => {
+        if(addStudentModel){
+            return res.json({ code: 400, message:true})
         }
-    }).catch((e) => {
-    return res.json({ code: 400, message: e });
+    }).catch((error) => {
+        return res.status(403).json({ message:error.message})
     })
 }
-module.exports.getstudentcodeword=getstudentcodeword;
+module.exports.addStudent=addStudent;

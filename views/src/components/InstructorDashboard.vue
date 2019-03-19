@@ -201,6 +201,7 @@ export default {
         })
           .then((response) => {
             if (response) {
+              formData.append('id', response.data.data._id)
               axios.post('codeword/addcoursestudent',
                 formData, {headers: {
                   'Content-Type': 'multipart/form-data',

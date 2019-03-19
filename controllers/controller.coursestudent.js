@@ -198,7 +198,7 @@ let updatecoursestudent=(req,res) =>{
 module.exports.updatecoursestudent=updatecoursestudent;
 
 let addStudent=(req,res) =>{
-    var body = _.pick(req.body,['courseName','courseCreater','newStudentEmail','newStudentName','newCodeword']);  
+    var body = _.pick(req.body,['courseName','courseCreater','newStudentEmail','newStudentName','newCodeword','id','remainingCodewords']);  
         CourseStudentModel.insertMany([{
             Acknowledged: false,
             CourseNameKey: body.courseName,
@@ -208,6 +208,11 @@ let addStudent=(req,res) =>{
             courseCreater: body.courseCreater
          }]).then((addStudentModel) => {
         if(addStudentModel){
+            CourseModel.updateOne({_id: body.id}, { $set: { "oldCodewords" : body.remainingCodewords.slice(1, body.remainingCodewords.length) }}, function(err,updateoldCodewords){
+                if(err){
+                    return res.json({ code:200, message:err});
+                }
+            })
             return res.json({ code: 400, message:true})
         }
     }).catch((error) => {

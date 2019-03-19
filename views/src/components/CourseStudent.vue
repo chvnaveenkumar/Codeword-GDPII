@@ -391,7 +391,9 @@ export default {
           courseCreater: this.courseData.emailKey,
           newStudentEmail: studentEmail,
           newStudentName: studentName,
-          newCodeword: this.courseData.oldCodewords[0]
+          newCodeword: this.courseData.oldCodewords[0],
+          id: this.courseData._id,
+          remainingCodewords: this.courseData.oldCodewords
         }
       }).then(response => {
         console.log(response.data.message)

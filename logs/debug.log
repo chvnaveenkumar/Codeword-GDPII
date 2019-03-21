@@ -13097,3 +13097,67 @@ TypeError: Cannot set property 'courseStudent' of undefined
     at process.nextTick (c:\Users\S530742\Desktop\CI\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
     at _combinedTickCallback (internal/process/next_tick.js:131:7)
     at process._tickCallback (internal/process/next_tick.js:180:9)
+2019-03-21T02:14:51.998Z - info: START seeder.
+2019-03-21T02:14:52.015Z - debug: 2 dataCodewordset seeded
+2019-03-21T02:14:52.015Z - debug: 292 datacodeword seeded
+2019-03-21T02:14:52.015Z - debug: 6 datacourse seeded
+2019-03-21T02:14:52.016Z - debug: 114 dataCoursestudent seeded
+2019-03-21T02:14:52.016Z - debug: 92 hootoriginal seeded
+2019-03-21T02:14:52.016Z - debug: 200 largeset seeded
+2019-03-21T02:14:52.016Z - info: END Seeder. Sample data read and verified.
+2019-03-21T02:15:10.438Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Mar 20 2019 21:15:10 GMT-0500 (Central Daylight Time), pid=7844, uid=null, gid=null, cwd=c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.6.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\bin\www], rss=119463936, heapTotal=78917632, heapUsed=46023888, external=21915004, loadavg=[0, 0, 0], uptime=1478197
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\model.js:4759:16
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at process.internalTickCallback (internal/process/next_tick.js:70:11)
+2019-03-21T02:15:10.791Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Mar 20 2019 21:15:10 GMT-0500 (Central Daylight Time), pid=7844, uid=null, gid=null, cwd=c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.6.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\bin\www], rss=119705600, heapTotal=78917632, heapUsed=46886040, external=22006440, loadavg=[0, 0, 0], uptime=1478197
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\model.js:4759:16
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at process.internalTickCallback (internal/process/next_tick.js:70:11)
+2019-03-21T02:15:14.421Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Mar 20 2019 21:15:14 GMT-0500 (Central Daylight Time), pid=7844, uid=null, gid=null, cwd=c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.6.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\bin\www], rss=120737792, heapTotal=78917632, heapUsed=50811904, external=22128890, loadavg=[0, 0, 0], uptime=1478201
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\model.js:4759:16
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at process.internalTickCallback (internal/process/next_tick.js:70:11)
+2019-03-21T02:15:14.759Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Mar 20 2019 21:15:14 GMT-0500 (Central Daylight Time), pid=7844, uid=null, gid=null, cwd=c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.6.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\bin\www], rss=119873536, heapTotal=78917632, heapUsed=51564656, external=22212134, loadavg=[0, 0, 0], uptime=1478201
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\model.js:4759:16
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at process.internalTickCallback (internal/process/next_tick.js:70:11)
+2019-03-21T02:17:17.773Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Mar 20 2019 21:17:17 GMT-0500 (Central Daylight Time), pid=7844, uid=null, gid=null, cwd=c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.6.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\bin\www], rss=93540352, heapTotal=47460352, heapUsed=41119976, external=21954276, loadavg=[0, 0, 0], uptime=1478324
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\model.js:4759:16
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at process.internalTickCallback (internal/process/next_tick.js:70:11)
+2019-03-21T02:17:17.790Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Mar 20 2019 21:17:17 GMT-0500 (Central Daylight Time), pid=7844, uid=null, gid=null, cwd=c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.6.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\bin\www], rss=94302208, heapTotal=47460352, heapUsed=40951000, external=21957509, loadavg=[0, 0, 0], uptime=1478324
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\model.js:4759:16
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at process.internalTickCallback (internal/process/next_tick.js:70:11)
+2019-03-21T02:17:24.075Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Mar 20 2019 21:17:24 GMT-0500 (Central Daylight Time), pid=7844, uid=null, gid=null, cwd=c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.6.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\bin\www], rss=94769152, heapTotal=47460352, heapUsed=41379224, external=21978095, loadavg=[0, 0, 0], uptime=1478330
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\model.js:4759:16
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at process.internalTickCallback (internal/process/next_tick.js:70:11)
+2019-03-21T02:17:24.096Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Mar 20 2019 21:17:24 GMT-0500 (Central Daylight Time), pid=7844, uid=null, gid=null, cwd=c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.6.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\bin\www], rss=94859264, heapTotal=47460352, heapUsed=41328808, external=21980567, loadavg=[0, 0, 0], uptime=1478330
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\model.js:4759:16
+    at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at process.internalTickCallback (internal/process/next_tick.js:70:11)

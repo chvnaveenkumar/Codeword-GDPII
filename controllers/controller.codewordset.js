@@ -35,15 +35,24 @@ let getDataFromXLS = (req, res) => {
                 console.log(jsonArray[0]);
                 var codewords = _.map(jsonArray[0],'codeword')
                 var checking = true
+                var validatecodeword = true
                 _.forEach(codewords, function(value) {
                     if(value.length<5 || value.length >10) {
                          checking = false
                          return false
                     }
+                    var tests = /^([A-Z])$/.test(value.toUpperCase())
+                    if(!tests) {
+                        validatecodeword = false
+                        return false
+                    }
                 });
                 if(checking === false){
                     return res.status(200).json({ data: 'Codeword not 5 letter', count: false })
-                }else{
+                }else if(validatecodeword === false){
+                    return res.status(200).json({ data: 'Codewords should be alphabets', count: false })
+                }
+                else{
                     return res.status(200).json({ data: codewords, count: jsonArray[0].length })
                 }
             })

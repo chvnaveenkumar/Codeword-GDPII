@@ -13161,3 +13161,107 @@ TypeError: Cannot set property 'courseStudent' of undefined
     at c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
     at process.nextTick (c:\Users\s531383\Desktop\GDP 2 Codeword\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
     at process.internalTickCallback (internal/process/next_tick.js:70:11)
+2019-03-21T03:12:09.624Z - info: START seeder.
+2019-03-21T03:12:09.694Z - debug: 2 dataCodewordset seeded
+2019-03-21T03:12:09.694Z - debug: 292 datacodeword seeded
+2019-03-21T03:12:09.694Z - debug: 6 datacourse seeded
+2019-03-21T03:12:09.697Z - debug: 114 dataCoursestudent seeded
+2019-03-21T03:12:09.697Z - debug: 92 hootoriginal seeded
+2019-03-21T03:12:09.697Z - debug: 200 largeset seeded
+2019-03-21T03:12:09.698Z - info: END Seeder. Sample data read and verified.
+2019-03-21T03:12:30.726Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Mar 20 2019 22:12:30 GMT-0500 (Central Daylight Time), pid=12328, uid=null, gid=null, cwd=c:\Users\S531384\Desktop\Codeword\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.9.4, argv=[C:\Program Files\nodejs\node.exe, c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\bin\www], rss=100536320, heapTotal=53907456, heapUsed=48872200, external=21501386, loadavg=[0, 0, 0], uptime=544571.5277139
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\model.js:4759:16
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+2019-03-21T03:12:30.789Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Mar 20 2019 22:12:30 GMT-0500 (Central Daylight Time), pid=12328, uid=null, gid=null, cwd=c:\Users\S531384\Desktop\Codeword\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.9.4, argv=[C:\Program Files\nodejs\node.exe, c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\bin\www], rss=101453824, heapTotal=53907456, heapUsed=49007096, external=21518889, loadavg=[0, 0, 0], uptime=544571.5900295
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\model.js:4759:16
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+2019-03-21T03:22:13.417Z - info: START seeder.
+2019-03-21T03:22:13.456Z - debug: 2 dataCodewordset seeded
+2019-03-21T03:22:13.456Z - debug: 292 datacodeword seeded
+2019-03-21T03:22:13.456Z - debug: 6 datacourse seeded
+2019-03-21T03:22:13.456Z - debug: 114 dataCoursestudent seeded
+2019-03-21T03:22:13.456Z - debug: 92 hootoriginal seeded
+2019-03-21T03:22:13.458Z - debug: 200 largeset seeded
+2019-03-21T03:22:13.458Z - info: END Seeder. Sample data read and verified.
+2019-03-21T03:22:49.343Z - info: START seeder.
+2019-03-21T03:22:49.381Z - debug: 2 dataCodewordset seeded
+2019-03-21T03:22:49.385Z - debug: 292 datacodeword seeded
+2019-03-21T03:22:49.386Z - debug: 6 datacourse seeded
+2019-03-21T03:22:49.386Z - debug: 114 dataCoursestudent seeded
+2019-03-21T03:22:49.386Z - debug: 92 hootoriginal seeded
+2019-03-21T03:22:49.386Z - debug: 200 largeset seeded
+2019-03-21T03:22:49.386Z - info: END Seeder. Sample data read and verified.
+2019-03-21T03:29:49.022Z - info: START seeder.
+2019-03-21T03:29:49.058Z - debug: 2 dataCodewordset seeded
+2019-03-21T03:29:49.058Z - debug: 292 datacodeword seeded
+2019-03-21T03:29:49.059Z - debug: 6 datacourse seeded
+2019-03-21T03:29:49.059Z - debug: 114 dataCoursestudent seeded
+2019-03-21T03:29:49.059Z - debug: 92 hootoriginal seeded
+2019-03-21T03:29:49.059Z - debug: 200 largeset seeded
+2019-03-21T03:29:49.059Z - info: END Seeder. Sample data read and verified.
+2019-03-21T03:30:13.325Z - info: START seeder.
+2019-03-21T03:30:13.358Z - debug: 2 dataCodewordset seeded
+2019-03-21T03:30:13.358Z - debug: 292 datacodeword seeded
+2019-03-21T03:30:13.358Z - debug: 6 datacourse seeded
+2019-03-21T03:30:13.360Z - debug: 114 dataCoursestudent seeded
+2019-03-21T03:30:13.360Z - debug: 92 hootoriginal seeded
+2019-03-21T03:30:13.360Z - debug: 200 largeset seeded
+2019-03-21T03:30:13.360Z - info: END Seeder. Sample data read and verified.
+2019-03-21T03:31:12.798Z - info: START seeder.
+2019-03-21T03:31:12.833Z - debug: 2 dataCodewordset seeded
+2019-03-21T03:31:12.833Z - debug: 292 datacodeword seeded
+2019-03-21T03:31:12.834Z - debug: 6 datacourse seeded
+2019-03-21T03:31:12.834Z - debug: 114 dataCoursestudent seeded
+2019-03-21T03:31:12.834Z - debug: 92 hootoriginal seeded
+2019-03-21T03:31:12.834Z - debug: 200 largeset seeded
+2019-03-21T03:31:12.834Z - info: END Seeder. Sample data read and verified.
+2019-03-21T03:32:54.995Z - info: START seeder.
+2019-03-21T03:32:55.061Z - debug: 2 dataCodewordset seeded
+2019-03-21T03:32:55.062Z - debug: 292 datacodeword seeded
+2019-03-21T03:32:55.062Z - debug: 6 datacourse seeded
+2019-03-21T03:32:55.062Z - debug: 114 dataCoursestudent seeded
+2019-03-21T03:32:55.062Z - debug: 92 hootoriginal seeded
+2019-03-21T03:32:55.062Z - debug: 200 largeset seeded
+2019-03-21T03:32:55.062Z - info: END Seeder. Sample data read and verified.
+2019-03-21T03:42:58.980Z - info: START seeder.
+2019-03-21T03:42:59.038Z - debug: 2 dataCodewordset seeded
+2019-03-21T03:42:59.038Z - debug: 292 datacodeword seeded
+2019-03-21T03:42:59.039Z - debug: 6 datacourse seeded
+2019-03-21T03:42:59.039Z - debug: 114 dataCoursestudent seeded
+2019-03-21T03:42:59.039Z - debug: 92 hootoriginal seeded
+2019-03-21T03:42:59.039Z - debug: 200 largeset seeded
+2019-03-21T03:42:59.039Z - info: END Seeder. Sample data read and verified.
+2019-03-21T03:43:17.698Z - info: START seeder.
+2019-03-21T03:43:17.760Z - debug: 2 dataCodewordset seeded
+2019-03-21T03:43:17.761Z - debug: 292 datacodeword seeded
+2019-03-21T03:43:17.761Z - debug: 6 datacourse seeded
+2019-03-21T03:43:17.761Z - debug: 114 dataCoursestudent seeded
+2019-03-21T03:43:17.762Z - debug: 92 hootoriginal seeded
+2019-03-21T03:43:17.762Z - debug: 200 largeset seeded
+2019-03-21T03:43:17.762Z - info: END Seeder. Sample data read and verified.
+2019-03-21T03:43:47.501Z - info: START seeder.
+2019-03-21T03:43:47.538Z - debug: 2 dataCodewordset seeded
+2019-03-21T03:43:47.538Z - debug: 292 datacodeword seeded
+2019-03-21T03:43:47.538Z - debug: 6 datacourse seeded
+2019-03-21T03:43:47.542Z - debug: 114 dataCoursestudent seeded
+2019-03-21T03:43:47.542Z - debug: 92 hootoriginal seeded
+2019-03-21T03:43:47.542Z - debug: 200 largeset seeded
+2019-03-21T03:43:47.542Z - info: END Seeder. Sample data read and verified.
+2019-03-21T03:45:14.396Z - info: START seeder.
+2019-03-21T03:45:14.436Z - debug: 2 dataCodewordset seeded
+2019-03-21T03:45:14.436Z - debug: 292 datacodeword seeded
+2019-03-21T03:45:14.436Z - debug: 6 datacourse seeded
+2019-03-21T03:45:14.439Z - debug: 114 dataCoursestudent seeded
+2019-03-21T03:45:14.439Z - debug: 92 hootoriginal seeded
+2019-03-21T03:45:14.439Z - debug: 200 largeset seeded
+2019-03-21T03:45:14.439Z - info: END Seeder. Sample data read and verified.

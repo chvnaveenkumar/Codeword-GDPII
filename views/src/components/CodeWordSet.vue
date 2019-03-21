@@ -36,12 +36,12 @@
                                 Upload Cordword Set(Excel)
                                 <input type="file"  name="file" ref="myFile" @change="previewFiles" class="form-control-file" id="exampleFormControlFile1" style="margin-top:.2em" required>
                             </div>
-                            <div class="alert alert-info">
-                                 <p v-if="count === 0">                          
+                            <div>
+                                 <p v-if="count === 0" class="alert alert-danger">                          
                                  No File is uploaded. Waiting for user to upload the CodeWord Set.</p>
-                                <p v-else-if="count === false">
-                                    Codeword is not 5 letter Please upload another excel.</p>
-                                <p v-else>
+                                <p v-else-if="count === false" class="alert alert-danger">
+                                    {{ codeWordSetData }} </p>
+                                <p v-else class="alert alert-info">
                                     There are {{ count }} codewords in the Uploaded set.</p>
                             </div>
                     </div>

@@ -41,14 +41,14 @@ let getDataFromXLS = (req, res) => {
                          checking = false
                          return false
                     }
-                    var tests = /^([A-Z])$/.test(value.toUpperCase())
+                    var tests = /[A-Za-z]/.test(value.toUpperCase())
                     if(!tests) {
                         validatecodeword = false
                         return false
                     }
                 });
                 if(checking === false){
-                    return res.status(200).json({ data: 'Codeword not 5 letter', count: false })
+                    return res.status(200).json({ data: 'Codewords in the set are less than 5 alphabets', count: false })
                 }else if(validatecodeword === false){
                     return res.status(200).json({ data: 'Codewords should be alphabets', count: false })
                 }

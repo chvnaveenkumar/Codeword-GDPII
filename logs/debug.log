@@ -13265,3 +13265,35 @@ TypeError: Cannot set property 'courseStudent' of undefined
 2019-03-21T03:45:14.439Z - debug: 92 hootoriginal seeded
 2019-03-21T03:45:14.439Z - debug: 200 largeset seeded
 2019-03-21T03:45:14.439Z - info: END Seeder. Sample data read and verified.
+2019-03-22T02:14:38.171Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Thu Mar 21 2019 21:14:38 GMT-0500 (Central Daylight Time), pid=17016, uid=null, gid=null, cwd=c:\Users\S531384\Desktop\Codeword\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.9.4, argv=[C:\Program Files\nodejs\node.exe, c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\bin\www], rss=53084160, heapTotal=61771776, heapUsed=54433120, external=21518257, loadavg=[0, 0, 0], uptime=627498.9675476
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\model.js:4759:16
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+2019-03-22T02:14:38.208Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Thu Mar 21 2019 21:14:38 GMT-0500 (Central Daylight Time), pid=17016, uid=null, gid=null, cwd=c:\Users\S531384\Desktop\Codeword\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.9.4, argv=[C:\Program Files\nodejs\node.exe, c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\bin\www], rss=54747136, heapTotal=61771776, heapUsed=54557968, external=21535424, loadavg=[0, 0, 0], uptime=627499.011987
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\model.js:4759:16
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+2019-03-22T02:19:50.838Z - info: START seeder.
+2019-03-22T02:19:50.889Z - debug: 2 dataCodewordset seeded
+2019-03-22T02:19:50.889Z - debug: 292 datacodeword seeded
+2019-03-22T02:19:50.889Z - debug: 6 datacourse seeded
+2019-03-22T02:19:50.889Z - debug: 114 dataCoursestudent seeded
+2019-03-22T02:19:50.890Z - debug: 92 hootoriginal seeded
+2019-03-22T02:19:50.890Z - debug: 200 largeset seeded
+2019-03-22T02:19:50.890Z - info: END Seeder. Sample data read and verified.
+2019-03-22T02:20:40.044Z - info: START seeder.
+2019-03-22T02:20:40.080Z - debug: 2 dataCodewordset seeded
+2019-03-22T02:20:40.080Z - debug: 292 datacodeword seeded
+2019-03-22T02:20:40.080Z - debug: 6 datacourse seeded
+2019-03-22T02:20:40.083Z - debug: 114 dataCoursestudent seeded
+2019-03-22T02:20:40.083Z - debug: 92 hootoriginal seeded
+2019-03-22T02:20:40.083Z - debug: 200 largeset seeded
+2019-03-22T02:20:40.083Z - info: END Seeder. Sample data read and verified.

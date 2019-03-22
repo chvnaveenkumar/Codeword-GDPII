@@ -13297,3 +13297,83 @@ TypeError: Cannot set property 'courseStudent' of undefined
 2019-03-22T02:20:40.083Z - debug: 92 hootoriginal seeded
 2019-03-22T02:20:40.083Z - debug: 200 largeset seeded
 2019-03-22T02:20:40.083Z - info: END Seeder. Sample data read and verified.
+2019-03-22T02:21:26.669Z - info: START seeder.
+2019-03-22T02:21:26.709Z - debug: 2 dataCodewordset seeded
+2019-03-22T02:21:26.709Z - debug: 292 datacodeword seeded
+2019-03-22T02:21:26.709Z - debug: 6 datacourse seeded
+2019-03-22T02:21:26.709Z - debug: 114 dataCoursestudent seeded
+2019-03-22T02:21:26.710Z - debug: 92 hootoriginal seeded
+2019-03-22T02:21:26.710Z - debug: 200 largeset seeded
+2019-03-22T02:21:26.710Z - info: END Seeder. Sample data read and verified.
+2019-03-22T02:26:52.112Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Thu Mar 21 2019 21:26:52 GMT-0500 (Central Daylight Time), pid=11848, uid=null, gid=null, cwd=c:\Users\S531384\Desktop\Codeword\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.9.4, argv=[C:\Program Files\nodejs\node.exe, c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\bin\www], rss=104730624, heapTotal=55480320, heapUsed=50480744, external=21607143, loadavg=[0, 0, 0], uptime=628232.9144469
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\model.js:4759:16
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+2019-03-22T02:26:52.583Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Thu Mar 21 2019 21:26:52 GMT-0500 (Central Daylight Time), pid=11848, uid=null, gid=null, cwd=c:\Users\S531384\Desktop\Codeword\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.9.4, argv=[C:\Program Files\nodejs\node.exe, c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\bin\www], rss=106070016, heapTotal=55480320, heapUsed=50947616, external=21634536, loadavg=[0, 0, 0], uptime=628233.3859805
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\model.js:4759:16
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+2019-03-22T02:26:54.055Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Thu Mar 21 2019 21:26:54 GMT-0500 (Central Daylight Time), pid=11848, uid=null, gid=null, cwd=c:\Users\S531384\Desktop\Codeword\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.9.4, argv=[C:\Program Files\nodejs\node.exe, c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\bin\www], rss=108339200, heapTotal=55480320, heapUsed=51098072, external=21652718, loadavg=[0, 0, 0], uptime=628234.8601168
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\model.js:4759:16
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+2019-03-22T02:26:54.077Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Thu Mar 21 2019 21:26:54 GMT-0500 (Central Daylight Time), pid=11848, uid=null, gid=null, cwd=c:\Users\S531384\Desktop\Codeword\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.9.4, argv=[C:\Program Files\nodejs\node.exe, c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\bin\www], rss=108331008, heapTotal=55480320, heapUsed=51158264, external=21653810, loadavg=[0, 0, 0], uptime=628234.8808916
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\model.js:4759:16
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+2019-03-22T02:27:21.669Z - info: START seeder.
+2019-03-22T02:27:21.705Z - debug: 2 dataCodewordset seeded
+2019-03-22T02:27:21.705Z - debug: 292 datacodeword seeded
+2019-03-22T02:27:21.705Z - debug: 6 datacourse seeded
+2019-03-22T02:27:21.708Z - debug: 114 dataCoursestudent seeded
+2019-03-22T02:27:21.708Z - debug: 92 hootoriginal seeded
+2019-03-22T02:27:21.708Z - debug: 200 largeset seeded
+2019-03-22T02:27:21.708Z - info: END Seeder. Sample data read and verified.
+2019-03-22T02:27:59.747Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Thu Mar 21 2019 21:27:59 GMT-0500 (Central Daylight Time), pid=4976, uid=null, gid=null, cwd=c:\Users\S531384\Desktop\Codeword\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.9.4, argv=[C:\Program Files\nodejs\node.exe, c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\bin\www], rss=102072320, heapTotal=53383168, heapUsed=49211168, external=21516341, loadavg=[0, 0, 0], uptime=628300.5426241
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\model.js:4759:16
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+2019-03-22T02:27:59.767Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Thu Mar 21 2019 21:27:59 GMT-0500 (Central Daylight Time), pid=4976, uid=null, gid=null, cwd=c:\Users\S531384\Desktop\Codeword\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.9.4, argv=[C:\Program Files\nodejs\node.exe, c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\bin\www], rss=102055936, heapTotal=53383168, heapUsed=49103072, external=21531276, loadavg=[0, 0, 0], uptime=628300.5706617
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\model.js:4759:16
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+2019-03-22T02:28:00.154Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Thu Mar 21 2019 21:28:00 GMT-0500 (Central Daylight Time), pid=4976, uid=null, gid=null, cwd=c:\Users\S531384\Desktop\Codeword\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.9.4, argv=[C:\Program Files\nodejs\node.exe, c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\bin\www], rss=102883328, heapTotal=54431744, heapUsed=49817112, external=21604500, loadavg=[0, 0, 0], uptime=628300.9601946
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\model.js:4759:16
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+2019-03-22T02:28:00.184Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Thu Mar 21 2019 21:28:00 GMT-0500 (Central Daylight Time), pid=4976, uid=null, gid=null, cwd=c:\Users\S531384\Desktop\Codeword\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.9.4, argv=[C:\Program Files\nodejs\node.exe, c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\bin\www], rss=103788544, heapTotal=54431744, heapUsed=50555672, external=21609782, loadavg=[0, 0, 0], uptime=628300.9852369
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\model.js:4759:16
+    at c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
+    at process.nextTick (c:\Users\S531384\Desktop\Codeword\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)

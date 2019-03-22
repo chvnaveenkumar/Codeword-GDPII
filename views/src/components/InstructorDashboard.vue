@@ -167,7 +167,8 @@ export default {
   },
   methods: {
     CreateCourse () {
-      if (this.selectedCodeWordSet.CodeWordSetName === '') {
+      console.log(this.selectedCodeWordSet.CodeWordSetName)
+      if (this.selectedCodeWordSet.CodeWordSetName === '' || this.selectedCodeWordSet.CodeWordSetName === undefined) {
         swal('Please choose codeword set!')
       } else {
         let data = new FormData(document.querySelector('form'))

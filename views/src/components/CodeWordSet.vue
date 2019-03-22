@@ -6,7 +6,7 @@
 <div id="codeWordSet" class="container-fluid" style="margin-top:5em">
     <div class="col-md-4 col-lg-4 col-xs-0 col-sm-0">
         <button type="button" class="btn btn-success" title="Create CodeWord Set" data-toggle="modal" data-target="#addcodeword">
-                    <span class="fa fa-plus"></span> Create Codeword Set
+                    <span class="fa fa-plus"></span> Upload New Codeword Set
                 </button>
 
         <!-- Modal -->        
@@ -14,9 +14,9 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content" style="width:fit-content">
                     <div class="modal-header">
-                        <h5 class=  "modal-title" id="addcourseLabel">Create Codeword Set</h5>
+                        <h5 class=  "modal-title" id="addcourseLabel">Upload New Codeword Set</h5>
                         
-                      <button type="button" id="exPopover3" class="btn btn-outline-primary"><i class="fa fa-eye"></i> Hint</button>          
+                      <button type="button" id="exPopover3" class="btn btn-outline-primary"><i class="fa fa-eye"></i> Hint</button>
                       <b-popover target="exPopover3" triggers="click" placement="auto" name="popov">
                         <template slot="title">Rules for Creating Codewords</template>
                         <strong>1.</strong> Every codeword should be unique in the set.<br>

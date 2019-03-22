@@ -32,8 +32,17 @@ module.exports.addcodewords = addcodewords;
 let getCodewords = (req,res) => {
     var body = _.pick(req.body,['CodeWordSetKey']);
     Codewordset.findOne({CodeWordSetName : body.CodeWordSetKey}).then((codewordset) => {
+        var codewordsjson = [];
         if (codewordset)
+        {   
+            _.forEach(codewordset.Codewords, (value) =>{
+                var codeword = new Object()
+                codeword.CodewordName = value;
+                codewordsjson.push(codeword);    
+            })
+            console.log(codewordsjson)
             return res.json({ code: 200, codewords: codewordset.Codewords, isPermanent: codewordset.isPermanent});
+        }
         })
 }
 module.exports.getCodewords = getCodewords;

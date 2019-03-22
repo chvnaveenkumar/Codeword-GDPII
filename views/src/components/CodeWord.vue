@@ -66,24 +66,16 @@
   </div>
 </div>
 </div>
-<table class="table">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">Codewords</th>
-                        <th scope="col" v-if='isPermanent !== true'>Options</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr v-for="(codeword,index) in codewords" :key="codeword._id">
-                        <td > {{ codeword }}</td>
-                        <td v-if='isPermanent !== true'>
-                          <button type="button" class="btn btn-info btn-sm" data-toggle="modal" @click="selectCodeword(index)" data-target="#editcodeword" style="marging-left:10px">
-                             <i class="fas fa-pencil-alt"></i>
-                        </button> 
-                        <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#deletecodeword" @click="selectCodeword(index)" style="marging-left:10px">
-                             <i class="fas fa-trash"></i>
-                        </button>
-<!-- Modal Edit Course -->
+
+  <v-client-table :columns="columns" :data="data" :options="options">
+      <button type="button" slot="edit" slot-scope="props" class="btn btn-info btn-sm" data-toggle="modal" @click="selectCodeword(props.row.index)" data-target="#editcodeword" style="marging-left:10px">
+        <i class="fas fa-pencil-alt"></i>
+      </button>
+      <button type="button" slot="delete" class="btn btn-info btn-sm" data-toggle="modal" data-target="#deletecodeword" @click="selectCodeword(props.row.index)" style="marging-left:10px">
+        <i class="fas fa-trash"></i>
+      </button>
+  </v-client-table>
+      <!-- Modal Edit Course -->
 <div class="modal fade" id="editcodeword" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -127,10 +119,6 @@
     </div>
   </div>
 </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
     </div>
     </div>
 </template>
@@ -142,15 +130,25 @@ export default {
   name: 'CodeWordSet',
   data () {
     return {
+      columns: ['CodewordName', 'edit', 'delete'],
+      data: [],
+      options: {
+        headings: {
+          CodewordName: 'Codeword'
+        },
+        sortable: ['CodewordName'],
+        filterable: ['CodewordName']
+      },
       CodeWordSetName: '',
       codewords: [],
       selectedCodeword: '',
       codewordIndex: '',
       newCodeword: '',
-      isPermanent: Boolean
+      isPermanent: Boolean,
+      status: false
     }
   },
-  created () {
+  mounted () {
     if (this.$route.params.CodeWordSetName == null) {
       this.CodeWordSetName = window.localStorage.getItem('setId')
       this.getCodeWords()
@@ -161,7 +159,7 @@ export default {
     }
   },
   methods: {
-    getCodeWords () {
+    async getCodeWords () {
       axios({
         method: 'post',
         url: '/codeword/getCodewords',
@@ -172,13 +170,23 @@ export default {
           token: window.localStorage.getItem('token')
         }
       }).then(response => {
-        this.codewords = response.data.codewords
+        this.codewordlist = response.data.codewords
         this.isPermanent = response.data.isPermanent
+        this.codewords = response.data.codewords
+        var codewordsjson = []
+        this.codewordlist.forEach((value, i) => {
+          var codeword = {}
+          codeword['CodewordName'] = value
+          codeword['index'] = i
+          codewordsjson.push(codeword)
+        })
+        this.data = JSON.parse(JSON.stringify(codewordsjson))
       })
     },
     selectCodeword (index) {
+      console.log(index)
       this.codewordIndex = index
-      this.selectedCodeword = this.codewords[index]
+      this.selectedCodeword = this.data[index].CodewordName
     },
     editCodeword (selectedCodeword, index) {
       this.codewords[this.codewordIndex] = selectedCodeword

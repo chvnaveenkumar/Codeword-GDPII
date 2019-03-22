@@ -10,7 +10,7 @@ import {store} from './store'
 import 'font-awesome/css/font-awesome.min.css'
 import VueSweetalert2 from 'vue-sweetalert2'
 import ToggleButton from 'vue-js-toggle-button'
-
+import VueTables from 'vue-tables-2'
 import jQuery from 'jquery'
 
 window.jQuery = jQuery
@@ -22,7 +22,9 @@ window.axios = axios.create({
 window.$ = require('jquery')
 Vue.use(VueSweetalert2)
 Vue.use(ToggleButton)
+Vue.use(VueTables.ClientTable)
 Vue.config.productionTip = false
+
 require('bootstrap')
 require('bootstrap-toggle')
 /* eslint-disable no-new */

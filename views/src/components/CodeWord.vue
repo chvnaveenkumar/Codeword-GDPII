@@ -71,7 +71,7 @@
       <button type="button" slot="edit" slot-scope="props" class="btn btn-info btn-sm" data-toggle="modal" @click="selectCodeword(props.row.index)" data-target="#editcodeword" style="marging-left:10px">
         <i class="fas fa-pencil-alt"></i>
       </button>
-      <button type="button" slot="delete" class="btn btn-info btn-sm" data-toggle="modal" data-target="#deletecodeword" @click="selectCodeword(props.row.index)" style="marging-left:10px">
+      <button type="button" slot="delete" slot-scope="props" class="btn btn-info btn-sm" data-toggle="modal" data-target="#deletecodeword" @click="selectCodeword(props.row.index)" style="marging-left:10px">
         <i class="fas fa-trash"></i>
       </button>
   </v-client-table>

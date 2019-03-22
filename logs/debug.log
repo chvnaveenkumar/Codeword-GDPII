@@ -21606,3 +21606,11 @@ TypeError: Cannot set property 'courseStudent' of undefined
     at c:\Users\s531496\Desktop\gdp3\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
     at process.nextTick (c:\Users\s531496\Desktop\gdp3\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
     at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-03-22T20:23:42.690Z - info: START seeder.
+2019-03-22T20:23:42.738Z - debug: 2 dataCodewordset seeded
+2019-03-22T20:23:42.738Z - debug: 292 datacodeword seeded
+2019-03-22T20:23:42.738Z - debug: 6 datacourse seeded
+2019-03-22T20:23:42.738Z - debug: 114 dataCoursestudent seeded
+2019-03-22T20:23:42.738Z - debug: 92 hootoriginal seeded
+2019-03-22T20:23:42.738Z - debug: 200 largeset seeded
+2019-03-22T20:23:42.739Z - info: END Seeder. Sample data read and verified.

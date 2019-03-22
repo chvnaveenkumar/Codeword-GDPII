@@ -101,7 +101,7 @@
             Enter Student Name: 
             </div>
              <div class=" col-md-6">
-             <input type="text" class="form-control" pattern=".{3,16}" v-model="addStudentName" placeholder="Enter Student Name" data-toggle="tooltip" title="Atleast 3-16 characters" required>
+             <input type="text" class="form-control" pattern=".{3,30}" v-model="addStudentName" placeholder="Enter Student Name" data-toggle="tooltip" title="Name Should be of 3-30 characters" required>
         </div>
         </div>
         <br>

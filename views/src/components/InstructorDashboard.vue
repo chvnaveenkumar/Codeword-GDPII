@@ -21,7 +21,20 @@
     </div>
       </div>      
   </div>
+  <div v-if="courses.length <= 0">
+    <br>
+   <div class="card" style="width: 29rem;">
+              <div class="card-header">
+   Welcome
+  </div>
+  <div class="card-body">
+    There is no courses.
+  </div>
+</div>
+  </div>
+<div v-else-if="courses.length >0">
   <div class="row" style="margin-left: 3rem;margin-right: 7rem;" >
+        
     <div class="col-md-3 col-lg-3 col-xs-0 col-sm-0" v-for="course in courses" :key="course._id" v-if="(!active != (new Date() < new Date(course.Enddate)) || inactive != (new Date() < new Date(course.Enddate))) && (active || inactive)">
       <div class="card border-success mb-3 cardstyle" style="max-width: 20rem;margin-top: 1rem;" >
          <div class="card-header bg-info border-success" id = "boldforcourse"><h4>{{ course.courseNameKey }}</h4>
@@ -45,6 +58,7 @@
         </div>
       </div>
     </div>
+  </div>
   </div>
 <!-- Modal Delete course -->
 <div class="modal fade" id="deleteCourse" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

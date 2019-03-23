@@ -126,13 +126,13 @@
             Remaining Codewords : 
             </div>
             <div class=" col-md-6">
-               {{  courseData.oldCodewords.length }} 
+               {{  courseData.oldCodewords }} 
             </div>
       </div>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="create" class="btn btn-primary" :disabled="courseData.oldCodewords.length <= 0">Add Student</button>
+        <button type="create" class="btn btn-primary" :disabled="courseData.oldCodewords <= 0">Add Student</button>
         <button type="cancel" class="btn btn-danger" data-dismiss="modal">Cancel</button>
       </div>
       </form>
@@ -243,8 +243,8 @@ export default {
       data: [],
       options: {
         headings: {
-          EmailKey: 'EmailKey',
-          studentName: 'studentName',
+          EmailKey: 'Student Email',
+          studentName: 'Student Name',
           Codeword: 'Codeword',
           id: 'id'
         },

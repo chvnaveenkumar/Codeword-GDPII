@@ -31,6 +31,14 @@
 </div>
 <br>
 <br>
+  <v-client-table :columns="columns" :data="data" :options="options">
+      <button type="button" slot="edit" slot-scope="props" class="btn btn-info btn-sm" data-toggle="modal" @click="selectStudentInfo(courseStudent)" data-target="#editStudent" style="marging-left:10px">
+        <i class="fas fa-pencil-alt"></i>
+      </button>
+      <button type="button" slot="delete" slot-scope="props" class="btn btn-info btn-sm" data-toggle="modal" data-target="#deletecodeword" @click="selectCodeword(props.row.index)" style="marging-left:10px">
+        <i class="fas fa-trash"></i>
+      </button>
+  </v-client-table>
  <table class="table table-striped table-sm" >
  <thead class="thead-dark">
             <tr>
@@ -231,6 +239,17 @@ export default {
   name: 'CourseStudent',
   data () {
     return {
+      columns: ['EmailKey', 'studentName', 'Codeword', 'edit', 'delete'],
+      data: [],
+      options: {
+        headings: {
+          EmailKey: 'EmailKey',
+          studentName: 'studentName',
+          Codeword: 'Codeword'
+        },
+        sortable: ['EmailKey', 'studentName', 'Codeword'],
+        filterable: ['EmailKey', 'studentName', 'Codeword']
+      },
       courseNameData: '',
       courseStudentData: [],
       courseData: '',
@@ -290,6 +309,18 @@ export default {
         }
       }).then(response => {
         this.courseStudentData = response.data.courseStudents
+        this.courseStudentList = response.data.courseStudents
+        var courseStudentjson = []
+        this.courseStudentList.forEach((value, i) => {
+          var student = {}
+          student['studentName'] = value.StudentName
+          student['EmailKey'] = value.EmailKey
+          student['Codeword'] = value.Codeword
+          student['index'] = i
+          courseStudentjson.push(student)
+        })
+        this.data = JSON.parse(JSON.stringify(courseStudentjson))
+        console.log(this.courseStudentData)
         this.currentPage = response.data.currentPage
         this.pages = response.data.pages
         this.nextUrl = response.data.nextUrl

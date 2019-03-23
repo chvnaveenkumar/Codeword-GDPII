@@ -32,10 +32,10 @@
 <br>
 <br>
   <v-client-table :columns="columns" :data="data" :options="options">
-      <button type="button" slot="edit" slot-scope="props" class="btn btn-info btn-sm" data-toggle="modal" @click="selectStudentInfo(courseStudent)" data-target="#editStudent" style="marging-left:10px">
+      <button type="button" slot="edit" slot-scope="props" class="btn btn-info btn-sm" data-toggle="modal" @click="selectStudentInfo(props.row.studentName,props.row.EmailKey,props.row.id)" data-target="#editStudent" style="marging-left:10px">
         <i class="fas fa-pencil-alt"></i>
       </button>
-      <button type="button" slot="delete" slot-scope="props" class="btn btn-info btn-sm" data-toggle="modal" data-target="#deletecodeword" @click="selectCodeword(props.row.index)" style="marging-left:10px">
+      <button type="button" slot="delete" slot-scope="props" class="btn btn-info btn-sm" data-toggle="modal" data-target="#deleteStudent" @click="selectStudent(courseNameData,props.row.EmailKey, props.row.studentName)" style="marging-left:10px">
         <i class="fas fa-trash"></i>
       </button>
   </v-client-table>
@@ -155,7 +155,7 @@
         <h6> Student Email: {{ selectEmailKey}} </h6>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" @click="deleteStudent(selectCourseName, selectEmailKey)">Delete Student</button>
+        <button type="button" class="btn btn-danger" @click="deleteStudent(selectEmailKey)">Delete Student</button>
         <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
       </div>
     </div>
@@ -245,7 +245,8 @@ export default {
         headings: {
           EmailKey: 'EmailKey',
           studentName: 'studentName',
-          Codeword: 'Codeword'
+          Codeword: 'Codeword',
+          id: 'id'
         },
         sortable: ['EmailKey', 'studentName', 'Codeword'],
         filterable: ['EmailKey', 'studentName', 'Codeword']
@@ -317,11 +318,11 @@ export default {
           student['studentName'] = value.StudentName
           student['EmailKey'] = value.EmailKey
           student['Codeword'] = value.Codeword
+          student['id'] = value._id
           student['index'] = i
           courseStudentjson.push(student)
         })
         this.data = JSON.parse(JSON.stringify(courseStudentjson))
-        console.log(this.courseStudentData)
         this.currentPage = response.data.currentPage
         this.pages = response.data.pages
         this.nextUrl = response.data.nextUrl
@@ -365,13 +366,14 @@ export default {
       })
     },
     selectStudent (courseName, emailKey, studentName) {
-      this.selectCourseName = courseName
+      this.selectCourseName = this.courseNameData
       this.selectEmailKey = emailKey
       this.selectstudentName = studentName
       this.selectedEmailKey = emailKey
       this.selectedStudentName = studentName
     },
-    deleteStudent (courseName, emailKey) {
+    deleteStudent (emailKey) {
+      console.log(emailKey)
       axios({
         method: 'post',
         url: 'codeword/deletecoursestudent',
@@ -379,7 +381,7 @@ export default {
           token: window.localStorage.getItem('token')
         },
         data: {
-          CourseNameKey: courseName,
+          CourseNameKey: this.courseNameData,
           EmailKey: emailKey
         }
       }).then(response => {
@@ -475,10 +477,10 @@ export default {
       this.selectstartSurvey = courseDetails.PreSurveyURL
       this.selectendSurvey = courseDetails.PostSurveyURL
     },
-    selectStudentInfo (studentDetails) {
-      this.editStudentName = studentDetails.StudentName
-      this.editStudentEmail = studentDetails.EmailKey
-      this.editStudentId = studentDetails._id
+    selectStudentInfo (studentName, studentEmail, studentid) {
+      this.editStudentName = studentName
+      this.editStudentEmail = studentEmail
+      this.editStudentId = studentid
     }
   }
 }

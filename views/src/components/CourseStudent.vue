@@ -39,58 +39,6 @@
         <i class="fas fa-trash"></i>
       </button>
   </v-client-table>
- <table class="table table-striped table-sm" >
- <thead class="thead-dark">
-            <tr>
-                <th>
-                    <h4>
-                        <u>Email</u>
-                    </h4>
-                </th>
-                <th>
-                    <h4>
-                        <u>Name</u>
-                    </h4>
-                </th>
-				<th>
-                    <h4>
-                        <u>CodeWord</u>
-                    </h4>
-                </th>
-                	<th>
-                    <h4>
-                        <u></u>
-                    </h4>
-                </th>
-                	<th>
-                    <h4>
-                        <u></u>
-                    </h4>
-                </th>
-            </tr>
-        </thead>
-
-  <tbody>    
-    <tr v-for="courseStudent in courseStudentData" :key="courseStudent._id">
-      <td scope="row">{{ courseStudent.EmailKey }}</td>
-      <td>{{ courseStudent.StudentName }}</td>
-       <td>{{ courseStudent.Codeword }}</td>
-      <td><a><button class="btn" data-toggle="modal" @click="selectStudentInfo(courseStudent)" data-target="#editStudent"><i class="fa fa-pencil fa-xs"></i></button></a></td>
-      <td><a><button class="btn" data-toggle="modal" @click="selectStudent(courseNameData, courseStudent.EmailKey, courseStudent.StudentName)" data-target="#deleteStudent"><i class="fa fa-trash fa-xs"></i></button></a></td>
-    </tr>
-  </tbody>
-</table>
-  <div>
-        <p class="text-center mb-0">{{ currentPage+1 }} / {{ pages }}</p>
-        <ul class="pagination justify-content-center">
-            <li class="page-item" :class="{disabled: prevUrl === ''}">
-                <button class="page-link" @click="checkPage(prevUrl)">Previous</button>
-            </li>
-            <li class="page-item" :class="{disabled: nextUrl === ''}">
-                <button class="page-link" @click="checkPage(nextUrl)">Next</button>
-            </li>
-        </ul>
-  </div>
 <!-- Modal Add Student -->
 <div class="modal fade" id="addStudentModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">

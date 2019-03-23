@@ -74,13 +74,13 @@
             Remaining Codewords : 
             </div>
             <div class=" col-md-6">
-               {{  courseData.oldCodewords }} 
+               {{  courseData.oldCodewords.length }} 
             </div>
       </div>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="create" class="btn btn-primary" :disabled="courseData.oldCodewords <= 0">Add Student</button>
+        <button type="create" class="btn btn-primary" :disabled="courseData.oldCodewords.length <= 0">Add Student</button>
         <button type="cancel" class="btn btn-danger" data-dismiss="modal">Cancel</button>
       </div>
       </form>

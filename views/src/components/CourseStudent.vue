@@ -309,6 +309,7 @@ export default {
         }
       }).then(response => {
         this.courseStudentData = response.data.courseStudents
+        console.log(this.courseStudentData)
         this.courseStudentList = response.data.courseStudents
         var courseStudentjson = []
         this.courseStudentList.forEach((value, i) => {

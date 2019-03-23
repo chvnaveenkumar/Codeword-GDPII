@@ -57,7 +57,7 @@
             Enter Student Name: 
             </div>
              <div class=" col-md-6">
-             <input type="text" class="form-control" pattern=".{3,30}" v-model="addStudentName" placeholder="Enter Student Name" data-toggle="tooltip" title="Name Should be of 3-30 characters" required>
+             <input type="text" class="form-control" v-model="addStudentName" pattern="[A-Za-z]{3,15}" placeholder="Enter Student Name" data-toggle="tooltip" title="Name Should be of 3-15 alphabets" required>
         </div>
         </div>
         <br>
@@ -124,10 +124,10 @@
       <div class="modal-body">
           <div class="row">
           <div class=" col-md-6">
-            <input type="text" v-model="editStudentName" required>
+            <input type="text" v-model="editStudentName" required pattern="[A-Za-z]{3,15}" placeholder="Enter Student Name" data-toggle="tooltip" title="Name Should be of 3-15 alphabets">
           </div>
           <div class="col-md-6">
-            <input type="text" v-model="editStudentEmail" required>
+            <input type="email" v-model="editStudentEmail" required placeholder="Enter Student Email" title="Please enter proper Email ID" pattern="\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+">
           </div>
           </div>
       </div>

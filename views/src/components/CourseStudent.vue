@@ -172,8 +172,8 @@
           <div class=" col-md-6">
         End Survey URL: </div> <div class="col-md-6"><div class="form-group"><input type="text" class="form-control" v-model="selectendSurvey"></div></div></div>
         </div>
-                <button type="cancel" class="btn btn-primart" data-dismiss="modal">Cancel</button>
-        <button type="create" class="btn btn-danger" >Save Changes</button>
+                <button type="cancel" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+        <button type="create" class="btn btn-primary" >Save Changes</button>
       </div>
       </form>
     </div>

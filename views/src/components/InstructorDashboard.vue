@@ -23,14 +23,11 @@
   </div>
   <div v-if="courses.length <= 0">
     <br>
-   <div class="card" style="width: 29rem;">
-              <div class="card-header">
-   Welcome
-  </div>
+   <div class="card text-center" style="text-align=center;">
   <div class="card-body">
-    There is no courses.
+    There are no courses.
   </div>
-</div>
+</div> 
   </div>
 <div v-else-if="courses.length >0">
   <div class="row" style="margin-left: 3rem;margin-right: 7rem;" >

@@ -110,12 +110,12 @@ export default {
   methods: {
     // Getting the data from uploaded xls file
     previewFiles () {
+      console.log('previewfiles')
       this.files = this.$refs.myFile
       let data = new FormData(document.querySelector('form'))
       axios.post('/codeword/getdataxlsx', data).then(response => {
         this.codeWordSetData = response.data.data
         this.count = response.data.count
-        console.log(this.count)
       })
     },
 

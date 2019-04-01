@@ -23698,3 +23698,91 @@ TypeError: Cannot set property 'courseStudent' of undefined
     at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4099:12
     at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
     at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-01T14:36:33.709Z - info: START seeder.
+2019-04-01T14:36:33.754Z - debug: 2 dataCodewordset seeded
+2019-04-01T14:36:33.754Z - debug: 292 datacodeword seeded
+2019-04-01T14:36:33.755Z - debug: 6 datacourse seeded
+2019-04-01T14:36:33.755Z - debug: 114 dataCoursestudent seeded
+2019-04-01T14:36:33.756Z - debug: 92 hootoriginal seeded
+2019-04-01T14:36:33.756Z - debug: 200 largeset seeded
+2019-04-01T14:36:33.757Z - info: END Seeder. Sample data read and verified.
+2019-04-01T14:40:43.522Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Mon Apr 01 2019 09:40:43 GMT-0500 (Central Daylight Time), pid=3160, uid=null, gid=null, cwd=b:\GDP II, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP II\bin\www], rss=99315712, heapTotal=52310016, heapUsed=47517208, external=21567447, loadavg=[0, 0, 0], uptime=4372.0275996
+TypeError: Cannot set property 'courseStudent' of undefined
+    at b:\GDP II\controllers\controller.course.js:45:53
+    at b:\GDP II\node_modules\mongoose\lib\model.js:4560:16
+    at b:\GDP II\node_modules\mongoose\lib\query.js:4105:12
+    at cb (b:\GDP II\node_modules\mongoose\lib\query.js:1785:14)
+    at result (b:\GDP II\node_modules\mongodb\lib\utils.js:414:17)
+    at executeCallback (b:\GDP II\node_modules\mongodb\lib\utils.js:406:9)
+    at handleCallback (b:\GDP II\node_modules\mongodb\lib\utils.js:128:55)
+    at cursor.close (b:\GDP II\node_modules\mongodb\lib\operations\cursor_ops.js:224:62)
+    at handleCallback (b:\GDP II\node_modules\mongodb\lib\utils.js:128:55)
+    at completeClose (b:\GDP II\node_modules\mongodb\lib\cursor.js:893:14)
+    at Cursor.close (b:\GDP II\node_modules\mongodb\lib\cursor.js:912:10)
+    at cursor._next (b:\GDP II\node_modules\mongodb\lib\operations\cursor_ops.js:224:23)
+    at handleCallback (b:\GDP II\node_modules\mongodb-core\lib\cursor.js:204:5)
+    at _setCursorNotifiedImpl (b:\GDP II\node_modules\mongodb-core\lib\cursor.js:433:38)
+    at self._endSession (b:\GDP II\node_modules\mongodb-core\lib\cursor.js:441:46)
+    at Cursor._endSession (b:\GDP II\node_modules\mongodb-core\lib\cursor.js:195:5)
+    at Cursor._endSession (b:\GDP II\node_modules\mongodb\lib\cursor.js:226:59)
+    at _setCursorNotifiedImpl (b:\GDP II\node_modules\mongodb-core\lib\cursor.js:441:17)
+    at setCursorNotified (b:\GDP II\node_modules\mongodb-core\lib\cursor.js:433:3)
+    at done (b:\GDP II\node_modules\mongodb-core\lib\cursor.js:648:16)
+    at queryCallback (b:\GDP II\node_modules\mongodb-core\lib\cursor.js:699:18)
+    at b:\GDP II\node_modules\mongodb-core\lib\connection\pool.js:532:18
+2019-04-01T14:43:42.998Z - info: START seeder.
+2019-04-01T14:43:43.042Z - debug: 2 dataCodewordset seeded
+2019-04-01T14:43:43.042Z - debug: 292 datacodeword seeded
+2019-04-01T14:43:43.043Z - debug: 6 datacourse seeded
+2019-04-01T14:43:43.043Z - debug: 114 dataCoursestudent seeded
+2019-04-01T14:43:43.043Z - debug: 92 hootoriginal seeded
+2019-04-01T14:43:43.044Z - debug: 200 largeset seeded
+2019-04-01T14:43:43.044Z - info: END Seeder. Sample data read and verified.
+2019-04-01T14:45:34.388Z - info: START seeder.
+2019-04-01T14:45:34.429Z - debug: 2 dataCodewordset seeded
+2019-04-01T14:45:34.429Z - debug: 292 datacodeword seeded
+2019-04-01T14:45:34.430Z - debug: 6 datacourse seeded
+2019-04-01T14:45:34.430Z - debug: 114 dataCoursestudent seeded
+2019-04-01T14:45:34.430Z - debug: 92 hootoriginal seeded
+2019-04-01T14:45:34.430Z - debug: 200 largeset seeded
+2019-04-01T14:45:34.430Z - info: END Seeder. Sample data read and verified.
+2019-04-01T14:46:05.790Z - info: START seeder.
+2019-04-01T14:46:05.830Z - debug: 2 dataCodewordset seeded
+2019-04-01T14:46:05.830Z - debug: 292 datacodeword seeded
+2019-04-01T14:46:05.830Z - debug: 6 datacourse seeded
+2019-04-01T14:46:05.830Z - debug: 114 dataCoursestudent seeded
+2019-04-01T14:46:05.830Z - debug: 92 hootoriginal seeded
+2019-04-01T14:46:05.831Z - debug: 200 largeset seeded
+2019-04-01T14:46:05.831Z - info: END Seeder. Sample data read and verified.
+2019-04-01T14:46:21.929Z - info: START seeder.
+2019-04-01T14:46:21.968Z - debug: 2 dataCodewordset seeded
+2019-04-01T14:46:21.968Z - debug: 292 datacodeword seeded
+2019-04-01T14:46:21.968Z - debug: 6 datacourse seeded
+2019-04-01T14:46:21.968Z - debug: 114 dataCoursestudent seeded
+2019-04-01T14:46:21.969Z - debug: 92 hootoriginal seeded
+2019-04-01T14:46:21.969Z - debug: 200 largeset seeded
+2019-04-01T14:46:21.969Z - info: END Seeder. Sample data read and verified.
+2019-04-01T14:48:55.607Z - info: START seeder.
+2019-04-01T14:48:55.684Z - debug: 2 dataCodewordset seeded
+2019-04-01T14:48:55.684Z - debug: 292 datacodeword seeded
+2019-04-01T14:48:55.685Z - debug: 6 datacourse seeded
+2019-04-01T14:48:55.685Z - debug: 114 dataCoursestudent seeded
+2019-04-01T14:48:55.686Z - debug: 92 hootoriginal seeded
+2019-04-01T14:48:55.687Z - debug: 200 largeset seeded
+2019-04-01T14:48:55.688Z - info: END Seeder. Sample data read and verified.
+2019-04-01T14:49:40.381Z - info: START seeder.
+2019-04-01T14:49:40.416Z - debug: 2 dataCodewordset seeded
+2019-04-01T14:49:40.416Z - debug: 292 datacodeword seeded
+2019-04-01T14:49:40.416Z - debug: 6 datacourse seeded
+2019-04-01T14:49:40.417Z - debug: 114 dataCoursestudent seeded
+2019-04-01T14:49:40.417Z - debug: 92 hootoriginal seeded
+2019-04-01T14:49:40.417Z - debug: 200 largeset seeded
+2019-04-01T14:49:40.417Z - info: END Seeder. Sample data read and verified.
+2019-04-01T14:50:40.125Z - info: START seeder.
+2019-04-01T14:50:40.161Z - debug: 2 dataCodewordset seeded
+2019-04-01T14:50:40.161Z - debug: 292 datacodeword seeded
+2019-04-01T14:50:40.161Z - debug: 6 datacourse seeded
+2019-04-01T14:50:40.161Z - debug: 114 dataCoursestudent seeded
+2019-04-01T14:50:40.162Z - debug: 92 hootoriginal seeded
+2019-04-01T14:50:40.162Z - debug: 200 largeset seeded
+2019-04-01T14:50:40.162Z - info: END Seeder. Sample data read and verified.

@@ -34,22 +34,33 @@ let getDataFromXLS = (req, res) => {
             }).then(jsonArray => {
                 console.log(jsonArray[0]);
                 var codewords = _.map(jsonArray[0],'codeword')
-                var checking = true
-                var validatecodeword = true
+                var checking = false
+                var validatecodeword = false
+                var codeword_duplicates = false
                 _.forEach(codewords, function(value) {
                     if(value.length<5 || value.length >10) {
-                         checking = false
-                         return false
+                         checking = true
+                         return true
                     }
                     var tests = /[A-Za-z]/.test(value.toUpperCase())
                     if(!tests) {
-                        validatecodeword = false
-                        return false
+                        validatecodeword = true
+                        return true
+                    }
+                    for(var i = 0; i <= codewords.length; i++) {
+                        for(var j = i; j <= codewords.length; j++) {
+                            if(i != j && codewords[i] == codewords[j]) {
+                                codeword_duplicates = true
+                                return true 
+                            }
+                        }
                     }
                 });
-                if(checking === false){
+                if(codeword_duplicates){
+                    return res.status(200).json({ data: 'Duplicates codewords found in uploaded excel!!', status: false })
+                }else if(checking){
                     return res.status(200).json({ data: 'Codewords in the set are less than 5 alphabets', count: false })
-                }else if(validatecodeword === false){
+                }else if(validatecodeword){
                     return res.status(200).json({ data: 'Codewords should be alphabets', count: false })
                 }
                 else{

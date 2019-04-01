@@ -15,7 +15,7 @@
                 <div class="modal-content" style="width:fit-content">
                     <div class="modal-header">
                         <h5 class=  "modal-title" id="addcourseLabel">Upload New Codeword Set</h5>
-                      <button @click="codewordhint" class="btn btn-info btn-sm"><i class="fa fa-eye"></i> Hint</button>                      
+                        
                     </div>
                     <!-- Modal Body -->
                     <form @submit.prevent="saveCodeWordData">
@@ -23,9 +23,22 @@
                             <div class="form-group">
                                 <input name="dataSetName" pattern=".{5,}" type="text" class="form-control" placeholder="Enter Cordword Set Name" data-toggle="tooltip" data-placement="top" title="Cordword Set Name atleast 5 letters" required>
                             </div>
-                            <div class="form-group text-left">
-                                Upload Cordword Set(Excel)
+                            <div class="row">
+                              <div class="col-8 tooltip-test"> 
+                            <div class="form-group">
+                               
                                 <input type="file"  name="file" ref="myFile" @change="previewFiles" class="form-control-file" id="exampleFormControlFile1" style="margin-top:.2em" required>
+                             Upload Cordword Set(Excel)
+                            </div>
+                              </div>
+                            <div class="col-4"> 
+                            <b-button id="popover-3" variant="primary">Hint</b-button>
+        <b-popover target="popover-3" triggers="hover focus">
+          <template slot="title">Rules for codeword</template>
+          1.Every codeword should be unique in the set. <br/>2. The codewords with substring should differ by at least 3 letters.<br/> 3.There should not be any codewords like Ex: daa, baa. <br/> 4. Scan the codewords as soon as the upload is done and give the feedback.<br/> 5. Every codeword should be compared with every other codeword in the set.
+        </b-popover>
+        </div>
+                            
                             </div>
                             <div>
                                  <p v-if="count === 0" class="alert alert-danger">                          

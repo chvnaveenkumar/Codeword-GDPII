@@ -49,7 +49,7 @@ let getDataFromXLS = (req, res) => {
                     }
                     for(var i = 0; i <= codewords.length; i++) {
                         for(var j = i; j <= codewords.length; j++) {
-                            if(i != j && codewords[i] == codewords[j]) {
+                            if(i != j && codewords[i].toUpperCase() === codewords[j].toUpperCase()) {
                                 codeword_duplicates = true
                                 return true 
                             }
@@ -57,11 +57,11 @@ let getDataFromXLS = (req, res) => {
                     }
                 });
                 if(codeword_duplicates){
-                    return res.status(200).json({ data: 'Duplicates codewords found in uploaded excel!!', status: false })
+                    return res.status(200).json({ data: 'Duplicates codewords found in uploaded excel!!', count: false })
                 }else if(checking){
                     return res.status(200).json({ data: 'Codewords in the set are less than 5 alphabets', count: false })
                 }else if(validatecodeword){
-                    return res.status(200).json({ data: 'Codewords should be alphabets', count: false })
+                    return res.status(200).json({ data: 'Codewords should be alphabets only. Special character or number are not allowed.', count: false })
                 }
                 else{
                     return res.status(200).json({ data: codewords, count: jsonArray[0].length })

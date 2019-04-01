@@ -72,7 +72,7 @@
         <h1> {{selectedCourse}} </h1>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primart" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
         <button type="button" class="btn btn-danger" @click="deleteCourseKey">Delete Course</button>
       </div>
     </div>
@@ -100,9 +100,17 @@
             <div class="col-8 tooltip-test"> <div class="form-group">
                 <input type="file" ref="file" name="file" v-on:change="handleFileUpload()" class="form-control-file" id="file" style="margin-top:1em">
             </div></div>
-                <div class="col-4 tooltip-test">    <button @click="studentexcelhint" class="btn btn-info btn-sm col"><i class="fa fa-eye"></i> Hint</button></div>
+                <div class="col-4 tooltip-test">   
+                  <b-button id="popover-3" variant="primary">hint</b-button>
+        <b-popover target="popover-3" triggers="hover focus">
+          <template slot="title">Rules for student excel</template>
+          write rules here
+        </b-popover></div>
+            
             </div>
             Upload Student Details(Excel)
+            <div class="text-center my-3">
+</div>
             <div v-if="checkFileUpload === true">
                 <p v-if="excelstatus.length > 0" class="alert alert-danger">                          
                 {{ excelstatus }}</p>
@@ -298,7 +306,7 @@ export default {
             }
           }).then(response => {
             const index = this.coursesData.findIndex(course => course.courseNameKey === response.data.CourseNameValue)
-            console.log(index)
+            console.log(response.data.AcknowledgedTrue)
             this.coursesData[index].totalStudents = response.data.totalStudents
             this.coursesData[index].acknowledged = response.data.AcknowledgedTrue
             this.courses = this.coursesData

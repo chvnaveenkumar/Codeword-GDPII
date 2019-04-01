@@ -42,7 +42,7 @@ export default {
       email: ""
     };
   },
-  created () {
+  mounted () {
     this.auth = User.check();
     if (this.auth) {
       axios({

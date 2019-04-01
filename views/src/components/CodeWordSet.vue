@@ -187,6 +187,9 @@ export default {
   },
   mounted () {
     this.getCodeWordData()
+    $('#addcodeword').on('hidden.bs.modal', function () {
+      $('#addcodeword form')[0].reset()
+    })
   }
 }
 </script>

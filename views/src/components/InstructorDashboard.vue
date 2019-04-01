@@ -172,6 +172,11 @@ export default {
     this.endDate = new Date(new Date().setMonth(new Date().getMonth())) && new Date(new Date().setMonth(new Date().getMonth() + 4)).toISOString().split('T')[0]
     this.fetchCourseList()
   },
+  mounted () {
+    $('#addcourse').on('hidden.bs.modal', function () {
+      $('#addcourse form')[0].reset()
+    })
+  },
   watch: {
     startDate (value) {
       if (this.endDateChanged) {
@@ -265,9 +270,6 @@ export default {
     getStartDate () {
       var today = new Date()
       document.getElementById('startDate').value = today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2)
-    },
-    studentexcelhint () {
-      swal({html: 'Write excel hints<br/>2. The codewords with substring should differ by at least 3 letters.<br/> 3.There should not be any codewords like Ex: daa, baa. <br/> 4. Scan the codewords as soon as the upload is done and give the feedback.<br/> 5. Every codeword should be compared with every other codeword in the set.'})
     },
     loadCourseModel () {
       axios({

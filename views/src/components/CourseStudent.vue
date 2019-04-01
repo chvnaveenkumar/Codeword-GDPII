@@ -23,13 +23,14 @@
     Number of Students: {{ totalStudents }} <br>
     </div>
      <div class="col-md-6 col-lg-6 col-xs-0 col-sm-0" style="text-align:left;font-weight:bold">
-          <button class="btn" data-toggle="modal" data-target="#editCourse" @click="selectCourse(courseData)" style="float:right;">Edit <i class="fa fa-pencil fa-xs"></i></button>
-          <button class="btn" title="Add New Student" data-toggle="modal" data-target="#addStudentModel" style="float:right;"><i class="fa fa-plus"></i> Add New Student</button>
+          <button class="btn" data-toggle="modal" data-target="#editCourse" @click="selectCourse(courseData)" style="float:right;">Edit Course Details <i class="fa fa-pencil fa-xs"></i></button>
     </div>
     </div>
+    
   </div>
 </div>
 <br>
+      <button class="btn" title="Add New Student" data-toggle="modal" data-target="#addStudentModel" style="float:right;"><i class="fa fa-plus"></i> Add New Student</button>
 <br>
   <v-client-table :columns="columns" :data="data" :options="options">
       <button type="button" slot="edit" slot-scope="props" class="btn btn-info btn-sm" data-toggle="modal" @click="selectStudentInfo(props.row.studentName,props.row.EmailKey,props.row.id)" data-target="#editStudent" style="marging-left:10px">
@@ -57,7 +58,7 @@
             Enter Student Name: 
             </div>
              <div class=" col-md-6">
-             <input type="text" class="form-control" v-model="addStudentName" pattern="[A-Za-z]{3,15}" placeholder="Enter Student Name" data-toggle="tooltip" title="Name Should be of 3-15 alphabets" required>
+             <input type="text" class="form-control" v-model="addStudentName" pattern="[A-Za-z ]{3,25}" placeholder="Enter Student Name" data-toggle="tooltip" title="Name Should be of 3-25 alphabets" required>
         </div>
         </div>
         <br>
@@ -124,7 +125,7 @@
       <div class="modal-body">
           <div class="row">
           <div class=" col-md-6">
-            <input type="text" v-model="editStudentName" required pattern="[A-Za-z]{3,15}" placeholder="Enter Student Name" data-toggle="tooltip" title="Name Should be of 3-15 alphabets">
+            <input type="text" v-model="editStudentName" required pattern="[A-Za-z ]{3,25}" placeholder="Enter Student Name" data-toggle="tooltip" title="Name Should be of 3-25 alphabets">
           </div>
           <div class="col-md-6">
             <input type="email" v-model="editStudentEmail" required placeholder="Enter Student Email" title="Please enter proper Email ID" pattern="\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+">
@@ -362,7 +363,6 @@ export default {
       })
     },
     addStudent (studentName, studentEmail) {
-      console.log()
       var studentValidate = true
       var studentData = this.courseStudentData
       studentData.forEach(students => {
@@ -383,7 +383,7 @@ export default {
             courseName: this.courseNameData,
             courseCreater: this.courseData.emailKey,
             newStudentEmail: studentEmail,
-            newStudentName: studentName.toUpperCase(),
+            newStudentName: studentName,
             newCodeword: this.courseData.oldCodewords[0],
             id: this.courseData._id,
             remainingCodewords: this.courseData.oldCodewords

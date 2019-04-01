@@ -15,16 +15,7 @@
                 <div class="modal-content" style="width:fit-content">
                     <div class="modal-header">
                         <h5 class=  "modal-title" id="addcourseLabel">Upload New Codeword Set</h5>
-                        
-                      <button type="button" id="exPopover3" class="btn btn-outline-primary"><i class="fa fa-eye"></i> Hint</button>
-                      <b-popover target="exPopover3" triggers="click" placement="auto" name="popov">
-                        <template slot="title">Rules for Creating Codewords</template>
-                        <strong>1.</strong> Every codeword should be unique in the set.<br>
-                        <strong>2.</strong> The codewords with substring should differ by at least 3 letters.<br>
-                        <strong>3.</strong> There should not be any codewords like Ex: daa, baa.<br>
-                        <strong>4.</strong> Scan the codewords as soon as the upload is done and give the feedback.<br>
-                        <strong>5.</strong> Every codeword should be compared with every other codeword in the set.
-                      </b-popover>
+                      <button @click="codewordhint" class="btn btn-info btn-sm"><i class="fa fa-eye"></i> Hint</button>                      
                     </div>
                     <!-- Modal Body -->
                     <form @submit.prevent="saveCodeWordData">
@@ -70,7 +61,7 @@
             <tr v-for="code in codeWordTempSetData" :key="code._id">
                 <td> {{ code.CodeWordSetName }} </td>
                 <td id="count">{{ code.Codewords.length }}</td>
-                <td v-if='code.isPermanent !== true'> <router-link :to="{ name: 'CodeWord', params: { CodeWordSetName: code.CodeWordSetName } }"><button type="button" class="btn btn-info btn-sm" data-toggle="tooltip" data-placement="bottom" title="Edit" ><i class="fa fa-pencil fa-xs"></i></button></router-link></td>
+                <td v-if='code.isPermanent !== true'> <router-link :to="{ name: 'CodeWord', params: { CodeWordSetName: code.CodeWordSetName } }"><button type="button" class="btn btn-info btn-sm" data-toggle="tooltip" data-placement="bottom" title="Edit" ><i class="fas fa-pencil-alt"></i></button></router-link></td>
                 <td v-if='code.isPermanent == true'> <router-link :to="{ name: 'CodeWord', params: { CodeWordSetName: code.CodeWordSetName } }"><button type="button" class="btn btn-info btn-sm" data-toggle="tooltip" data-placement="bottom" title="Edit" ><i class="fa fa-eye fa-xs"></i></button></router-link></td>
                 <td> <button type="button" data-toggle="modal" v-if='code.isPermanent !== true' class="btn btn-info btn-sm" data-target="#deleteCodwordsetmodel" @click="selectCodewordSet(code.CodeWordSetName)"><i class="fa fa-trash fa-xs"></i></button></td>
             </tr>
@@ -101,6 +92,7 @@
 </template>
 
 <script>
+import swal from 'sweetalert2'
 /* global axios $ */
 export default {
   name: 'CodeWordSet',
@@ -156,6 +148,9 @@ export default {
       }).then(response => {
         this.codeWordTempSetData = response.data.data
       })
+    },
+    codewordhint () {
+      swal({html: '1.Every codeword should be unique in the set. <br/>2. The codewords with substring should differ by at least 3 letters.<br/> 3.There should not be any codewords like Ex: daa, baa. <br/> 4. Scan the codewords as soon as the upload is done and give the feedback.<br/> 5. Every codeword should be compared with every other codeword in the set.'})
     },
     codewordSetDelete () {
       console.log('test')

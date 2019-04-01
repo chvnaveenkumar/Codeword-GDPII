@@ -1,5 +1,5 @@
 <template>
-<div class="container-fluid" style="margin-top:5em" >
+<div class="container-fluid" style="margin-top:5em" >            
   <div class="col-md-12 col-lg-12 col-xs-2 col-sm-2">
           <div class="row">
                 <div class="col-md-2 tooltip-test"><button type="button" class="btn btn-success" title="Create CodeWord Set" data-toggle="modal" data-target="#addcourse" v-on:click="loadCourseModel">
@@ -47,10 +47,11 @@
           <h5 class="card-title" ></h5>
           <!-- <a v-bind:href="'http://'+course.PreSurveyURL" class="card-link" target="_blank">Start Survey</a>
           <a v-bind:href="'http://'+course.PostSurveyURL" class="card-link" target="_blank">End Survey</a> -->
+          
           <router-link :to="{ name: 'CourseStudent', params: { courseName: course.courseNameKey } }">
-            <button class="btn "><i class="fa fa-eye fa-lg" aria-hidden="true" ></i></button>
+            <button class="btn btn-info btn-md "><i class="fa fa-eye fa-lg" aria-hidden="true" ></i></button>
           </router-link>
-          <button class="btn" data-toggle="modal" @click="getCourseName(course.courseNameKey)" data-target="#deleteCourse"><i class="fa fa-trash fa-lg">
+          <button class="btn btn-info btn-md" data-toggle="modal" @click="getCourseName(course.courseNameKey)" data-target="#deleteCourse"><i class="fa fa-trash fa-xs">
           </i>
           </button>
           <br>
@@ -98,10 +99,13 @@
                 <div class="col tooltip-test" title="Start Date"> Start Date:<input type="date" name="startDate" class="form-control" v-model="startDate" placeholder="Start Date" required/></div>
                 <div class="col tooltip-test" title="End Date"> End Date:<input type="date" class="form-control" v-model="endDate"  name="endDate"  placeholder="End Date" required></div>
             </div>
-            <div class="form-group">
+            <div class="row">
+            <div class="col-8 tooltip-test"> <div class="form-group">
                 <input type="file" ref="file" name="file" v-on:change="handleFileUpload()" class="form-control-file" id="file" style="margin-top:1em">
-                Upload Student Details(Excel)
+            </div></div>
+                <div class="col-4 tooltip-test">    <button @click="studentexcelhint" class="btn btn-info btn-sm col"><i class="fa fa-eye"></i> Hint</button></div>
             </div>
+            Upload Student Details(Excel)
             <div v-if="checkFileUpload === true">
                 <p v-if="excelstatus.length > 0" class="alert alert-danger">                          
                 {{ excelstatus }}</p>
@@ -257,6 +261,9 @@ export default {
       var today = new Date()
       document.getElementById('startDate').value = today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2)
     },
+    studentexcelhint () {
+      swal({html: 'Write excel hints<br/>2. The codewords with substring should differ by at least 3 letters.<br/> 3.There should not be any codewords like Ex: daa, baa. <br/> 4. Scan the codewords as soon as the upload is done and give the feedback.<br/> 5. Every codeword should be compared with every other codeword in the set.'})
+    },
     loadCourseModel () {
       axios({
         method: 'get',
@@ -329,31 +336,12 @@ export default {
 #message{
     margin-top:5em;
 }
-#boldforcourse{
-  background-color: white;
-  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  font-weight: bold;
-  padding-top: 10%;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  text-align: center;
-  color: black
-}
 #sizeofDate {
   font-size:125%;
   font-weight: bold;
 }
 #leftAlign {
   text-align: left;
-}
-.btn {
-        border-radius: 5px;
-        background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        color: darkviolet;
-   }
-/* Darker background on mouse-over */
-.btn:hover {
-    background-color: RoyalBlue;
 }
 .cardstyle {
   

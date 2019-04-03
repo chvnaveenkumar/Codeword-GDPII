@@ -104,7 +104,8 @@
                   <b-button id="popover-3" variant="primary">hint</b-button>
         <b-popover target="popover-3" triggers="hover focus">
           <template slot="title">Rules for student excel</template>
-          write rules here
+           1. The uploaded excelsheet should have 2 columns. </br> 2. First column should contain email address (should be in @ format example:abc@nwmissouri.edu). </br> 3. In this excelsheet email address should be unique. </br>
+         4. Second column should contain name of the student. </br> 5. Student name should be of range between 5-25 characters.</br>
         </b-popover></div>
             
             </div>

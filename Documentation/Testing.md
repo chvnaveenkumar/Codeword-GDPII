@@ -3,7 +3,7 @@
  and HTML that have a level of execution and convenience that is almost indistinguishable from local applications. 
   
  - There are basic abilities that different a Progressive website from a customary site. Progressive websites applications must have the capacity to do the accompanying
-
+ - Selenium is a portable framework for testing web applications. 
  - Work with most programs and gadgets  with a Progressive codebase 
  - Fit all screen and shape factors utilizing a responsive outline 
  - Use benefit specialists to empower disconnected network 

@@ -127,7 +127,7 @@ import swal from 'sweetalert2'
 /* global axios $ */
 
 export default {
-  name: 'CodeWordSet',
+  name: 'CodeWord',
   data () {
     return {
       columns: ['CodewordName', 'edit', 'delete'],
@@ -137,7 +137,11 @@ export default {
           CodewordName: 'Codeword'
         },
         sortable: ['CodewordName'],
-        filterable: ['CodewordName']
+        filterable: ['CodewordName'],
+        texts: {
+          filterPlaceholder: 'Search Codeword',
+          filter: ''
+        }
       },
       CodeWordSetName: '',
       codewords: [],

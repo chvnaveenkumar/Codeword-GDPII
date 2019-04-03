@@ -198,7 +198,11 @@ export default {
           id: 'id'
         },
         sortable: ['EmailKey', 'studentName', 'Codeword'],
-        filterable: ['EmailKey', 'studentName', 'Codeword']
+        filterable: ['EmailKey', 'studentName', 'Codeword'],
+        texts: {
+          filterPlaceholder: 'Search Student',
+          filter: ''
+        }
       },
       courseNameData: '',
       courseStudentData: [],

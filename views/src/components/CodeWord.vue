@@ -140,7 +140,8 @@ export default {
         filterable: ['CodewordName'],
         texts: {
           filterPlaceholder: 'Search Codeword',
-          filter: ''
+          filter: '',
+          limit: ''
         }
       },
       CodeWordSetName: '',

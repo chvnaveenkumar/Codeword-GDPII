@@ -30,3 +30,7 @@ Use a web application show to depict the utilized assets
 - Address bar matches mark hues 
 
 - Configuration is versatile well disposed
+
+- All the results are noted
+
+- In documentation, we are done with Tools and Technologies used, and Instructions to execute the project.

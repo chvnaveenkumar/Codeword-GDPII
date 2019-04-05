@@ -81,8 +81,9 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="create" class="btn btn-primary" :disabled="courseData.oldCodewords.length <= 0">Add Student</button>
         <button type="cancel" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+        <button type="create" class="btn btn-primary" :disabled="courseData.oldCodewords.length <= 0">Add Student</button>
+        
       </div>
       </form>
     </div>
@@ -104,8 +105,9 @@
         <h6> Student Email: {{ selectEmailKey}} </h6>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" @click="deleteStudent(selectEmailKey)">Delete Student</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" @click="deleteStudent(selectEmailKey)">Delete Student</button>
+        
       </div>
     </div>
   </div>
@@ -133,8 +135,9 @@
           </div>
       </div>
       <div class="modal-footer">
+         <button type="cancel" class="btn btn-danger" data-dismiss="modal">Cancel</button>
         <button type="create" class="btn btn-primary">Update Details</button>
-        <button type="cancel" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+       
       </div>
        </form>
     </div>

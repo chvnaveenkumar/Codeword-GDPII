@@ -72,8 +72,8 @@
         <h1> {{selectedCourse}} </h1>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-danger" @click="deleteCourseKey">Delete Course</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" @click="deleteCourseKey">Delete Course</button>
       </div>
     </div>
   </div>

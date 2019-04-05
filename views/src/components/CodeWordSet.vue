@@ -76,7 +76,7 @@
                 <td id="count">{{ code.Codewords.length }}</td>
                 <td v-if='code.isPermanent !== true'> <router-link :to="{ name: 'CodeWord', params: { CodeWordSetName: code.CodeWordSetName } }"><button type="button" class="btn btn-info btn-sm" data-toggle="tooltip" data-placement="bottom" title="Edit" ><i class="fas fa-pencil-alt"></i></button></router-link></td>
                 <td v-if='code.isPermanent == true'> <router-link :to="{ name: 'CodeWord', params: { CodeWordSetName: code.CodeWordSetName } }"><button type="button" class="btn btn-info btn-sm" data-toggle="tooltip" data-placement="bottom" title="Edit" ><i class="fa fa-eye fa-xs"></i></button></router-link></td>
-                <td> <button type="button" data-toggle="modal" v-if='code.isPermanent !== true' class="btn btn-info btn-sm" data-target="#deleteCodwordsetmodel" @click="selectCodewordSet(code.CodeWordSetName)"><i class="fa fa-trash fa-xs"></i></button></td>
+                <td> <button type="button" data-toggle="modal" v-if='code.isPermanent !== true' class="btn btn-danger btn-sm" data-target="#deleteCodwordsetmodel" @click="selectCodewordSet(code.CodeWordSetName)"><i class="fa fa-trash fa-xs"></i></button></td>
             </tr>
         </tbody>
             </table>

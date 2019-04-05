@@ -36,7 +36,7 @@
       <button type="button" slot="edit" slot-scope="props" class="btn btn-info btn-sm" data-toggle="modal" @click="selectStudentInfo(props.row.studentName,props.row.EmailKey,props.row.id)" data-target="#editStudent" style="marging-left:10px">
         <i class="fas fa-pencil-alt"></i>
       </button>
-      <button type="button" slot="delete" slot-scope="props" class="btn btn-info btn-sm" data-toggle="modal" data-target="#deleteStudent" @click="selectStudent(courseNameData,props.row.EmailKey, props.row.studentName)" style="marging-left:10px">
+      <button type="button" slot="delete" slot-scope="props" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteStudent" @click="selectStudent(courseNameData,props.row.EmailKey, props.row.studentName)" style="marging-left:10px">
         <i class="fas fa-trash"></i>
       </button>
   </v-client-table>

@@ -48,7 +48,7 @@
           <router-link :to="{ name: 'CourseStudent', params: { courseName: course.courseNameKey } }">
             <button class="btn btn-info btn-md "><i class="fa fa-eye fa-lg" aria-hidden="true" ></i></button>
           </router-link>
-          <button class="btn btn-info btn-md" data-toggle="modal" @click="getCourseName(course.courseNameKey)" data-target="#deleteCourse"><i class="fa fa-trash fa-xs">
+          <button class="btn btn-danger btn-md" data-toggle="modal" @click="getCourseName(course.courseNameKey)" data-target="#deleteCourse"><i class="fa fa-trash fa-xs">
           </i>
           </button>
           <br>

@@ -66,3 +66,4 @@ As an instructor, I want to add a student to an active course (e.g. when a new s
     d. The pre-survey URL and the post-survey URLAs an instructor, I want to edit a course by clicking "Edit" on a course entry. I want to be able to modify:
 As an instructor, I want to delete an active course, by clicking the delete button on the view courses screen, getting a confirmation box that says" Are you sure you want to delete course <Unique Name>? This action is not reversible. with two buttons "Delete", "Cancel". If I click cancel, I return to the view courses screen, if I click "Delete", the course will be deleted (along with the course student list). New!
 As a user, I want to navigate between multiple pages (Home (list of active courses), + New Course, View a Set of Codewords and Confirm Delete Course). This should be available in the earlier MVPs. 
+As a instructor, I want to update the courses date and students.

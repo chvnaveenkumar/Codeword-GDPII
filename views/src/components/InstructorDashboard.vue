@@ -7,7 +7,7 @@
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
-          <div class="row">
+        <div class="row">
                 <div class="col-md-2 tooltip-test"><button type="button" class="btn btn-success" title="Create CodeWord Set" data-toggle="modal" data-target="#addcourse" v-on:click="loadCourseModel">
       <span class="fa fa-plus"></span> Add Course </button>
     </div>
@@ -99,8 +99,8 @@
               <input type="text" class="form-control" pattern=".{6,30}" id="courseName" name="courseName" placeholder="Enter Course Name" data-toggle="tooltip" title="Atleast 6-15 characters" required>
             </div>
             <div class="row">
-                <div class="col tooltip-test" title="Start Date"> Start Date:<input type="date" name="startDate" v-model="startDate" required/></div>
-                <div class="col tooltip-test" title="End Date"> End Date:<input type="date" value=endDate v-model="endDate"  name="endDate"  required></div>
+                <div class="col tooltip-test" title="Start Date"> Start Date:<datepicker type="date" name="startDate" v-model="startDate" required></datepicker></div>
+                <div class="col tooltip-test" title="End Date"> End Date:<datepicker type="date"  :disabledDates="disabledDates" value=endDate v-model="endDate"  name="endDate"  required></datepicker></div>
             </div>
             <div class="row">
             <div class="col-8 tooltip-test"> <div class="form-group">
@@ -147,6 +147,7 @@
 </template>
 <script>
 import swal from 'sweetalert2'
+import Datepicker from 'vuejs-datepicker'
 
 export default {
   name: 'InstructorDashboard',
@@ -171,12 +172,19 @@ export default {
       courses: '',
       tempdate: '',
       endDateChanged: true,
-      excelstatus: ''
+      excelstatus: '',
+      disabledDates: {
+        to: new Date(2019, new Date(this.startDate).getMonth(), 26) // Disable all dates up to specific date
+      }
     }
+  },
+  components: {
+    Datepicker
   },
   created () {
     this.startDate = new Date() && new Date().toISOString().split('T')[0]
-    console.log(this.startDate)
+    console.log(new Date(this.startDate).getDate())
+    this.disabledDates.to = new Date(new Date(this.startDate).getFullYear(), new Date(this.startDate).getMonth(), new Date(this.startDate).getDate() + 1)
     this.endDate = new Date(new Date().setMonth(new Date().getMonth())) && new Date(new Date().setMonth(new Date().getMonth() + 4)).toISOString().split('T')[0]
     this.fetchCourseList()
   },
@@ -195,6 +203,10 @@ export default {
         this.startDate = new Date(start) && new Date(start).toISOString().split('T')[0]
         this.endDate = new Date(start.setMonth(start.getMonth())) && new Date(start.setMonth(start.getMonth() + 4)).toISOString().split('T')[0]
         this.tempdate = this.endDate
+        console.log(new Date(this.startDate).getDate())
+        this.disabledDates.to = new Date(new Date(this.startDate).getFullYear(), new Date(this.startDate).getMonth(), new Date(this.startDate).getDate() + 1)
+      } else {
+        this.disabledDates.to = new Date(new Date(this.startDate).getFullYear(), new Date(this.startDate).getMonth(), new Date(this.startDate).getDate() + 1)
       }
     },
     endDate (value) {

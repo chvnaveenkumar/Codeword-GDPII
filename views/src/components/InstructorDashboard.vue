@@ -2,7 +2,7 @@
 <div class="container-fluid" style="margin-top:5em" >            
   <div class="col-md-12 col-lg-12 col-xs-2 col-sm-2">
     <div class="alert alert-primary alert-dismissible fade show" role="alert" id="welcome-alert" >
-  <strong>Welcome to Instructor's dashboard. </strong>
+  <strong>Welcome to Instructor's Dashboard. </strong>
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>

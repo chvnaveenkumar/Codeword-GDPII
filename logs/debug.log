@@ -3344,3 +3344,241 @@ TypeError: Cannot set property 'courseStudent' of undefined
     at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
     at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
     at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-08T04:07:38.253Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Sun Apr 07 2019 23:07:38 GMT-0500 (Central Daylight Time), pid=12768, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=88719360, heapTotal=57946112, heapUsed=48981216, external=22224578, loadavg=[0, 0, 0], uptime=2840035
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4598:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-08T04:07:38.527Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Sun Apr 07 2019 23:07:38 GMT-0500 (Central Daylight Time), pid=12768, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=89395200, heapTotal=57946112, heapUsed=49792240, external=22247329, loadavg=[0, 0, 0], uptime=2840035
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4598:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-08T04:08:57.533Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Sun Apr 07 2019 23:08:57 GMT-0500 (Central Daylight Time), pid=12768, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=89214976, heapTotal=57946112, heapUsed=49771400, external=22296720, loadavg=[0, 0, 0], uptime=2840114
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4598:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-08T04:08:57.542Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Sun Apr 07 2019 23:08:57 GMT-0500 (Central Daylight Time), pid=12768, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=88846336, heapTotal=57946112, heapUsed=49536768, external=22301944, loadavg=[0, 0, 0], uptime=2840114
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4598:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-08T04:08:59.116Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Sun Apr 07 2019 23:08:59 GMT-0500 (Central Daylight Time), pid=12768, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=88834048, heapTotal=57946112, heapUsed=49795336, external=22348573, loadavg=[0, 0, 0], uptime=2840116
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4598:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-08T04:08:59.183Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Sun Apr 07 2019 23:08:59 GMT-0500 (Central Daylight Time), pid=12768, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=89153536, heapTotal=57946112, heapUsed=50267544, external=22363867, loadavg=[0, 0, 0], uptime=2840116
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4598:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-08T04:09:10.240Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Sun Apr 07 2019 23:09:10 GMT-0500 (Central Daylight Time), pid=12768, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=88772608, heapTotal=57946112, heapUsed=50166184, external=22403706, loadavg=[0, 0, 0], uptime=2840127
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4598:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-08T04:09:10.254Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Sun Apr 07 2019 23:09:10 GMT-0500 (Central Daylight Time), pid=12768, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=89423872, heapTotal=57946112, heapUsed=50734120, external=22413730, loadavg=[0, 0, 0], uptime=2840127
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4598:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-08T04:09:52.599Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Sun Apr 07 2019 23:09:52 GMT-0500 (Central Daylight Time), pid=12768, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=89575424, heapTotal=57946112, heapUsed=50884680, external=22469363, loadavg=[0, 0, 0], uptime=2840169
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4598:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-08T04:09:52.612Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Sun Apr 07 2019 23:09:52 GMT-0500 (Central Daylight Time), pid=12768, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=90107904, heapTotal=57946112, heapUsed=51431168, external=22478682, loadavg=[0, 0, 0], uptime=2840169
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4598:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-08T04:10:30.857Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Sun Apr 07 2019 23:10:30 GMT-0500 (Central Daylight Time), pid=12768, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=89833472, heapTotal=57946112, heapUsed=51570816, external=22543953, loadavg=[0, 0, 0], uptime=2840207
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4598:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-08T04:10:30.877Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Sun Apr 07 2019 23:10:30 GMT-0500 (Central Daylight Time), pid=12768, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=89452544, heapTotal=57946112, heapUsed=51317936, external=22538475, loadavg=[0, 0, 0], uptime=2840207
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4598:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-08T04:10:37.234Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Sun Apr 07 2019 23:10:37 GMT-0500 (Central Daylight Time), pid=12768, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=89620480, heapTotal=57946112, heapUsed=51758408, external=22585941, loadavg=[0, 0, 0], uptime=2840214
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4598:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-08T04:10:37.245Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Sun Apr 07 2019 23:10:37 GMT-0500 (Central Daylight Time), pid=12768, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=89272320, heapTotal=57946112, heapUsed=51562824, external=22592094, loadavg=[0, 0, 0], uptime=2840214
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4598:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-08T04:10:58.566Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Sun Apr 07 2019 23:10:58 GMT-0500 (Central Daylight Time), pid=12768, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=89706496, heapTotal=57946112, heapUsed=52265952, external=22647149, loadavg=[0, 0, 0], uptime=2840235
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4598:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-08T04:10:58.573Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Sun Apr 07 2019 23:10:58 GMT-0500 (Central Daylight Time), pid=12768, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=89341952, heapTotal=57946112, heapUsed=52038368, external=22652380, loadavg=[0, 0, 0], uptime=2840235
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4598:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-08T04:11:13.808Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Sun Apr 07 2019 23:11:13 GMT-0500 (Central Daylight Time), pid=12768, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=89845760, heapTotal=58994688, heapUsed=52591856, external=22702282, loadavg=[0, 0, 0], uptime=2840250
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4598:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-08T04:11:13.868Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Sun Apr 07 2019 23:11:13 GMT-0500 (Central Daylight Time), pid=12768, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=90324992, heapTotal=58994688, heapUsed=53048400, external=22717576, loadavg=[0, 0, 0], uptime=2840250
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4598:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-08T04:11:16.210Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Sun Apr 07 2019 23:11:16 GMT-0500 (Central Daylight Time), pid=12768, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=90701824, heapTotal=58994688, heapUsed=53353504, external=22757674, loadavg=[0, 0, 0], uptime=2840253
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4598:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-08T04:11:16.227Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Sun Apr 07 2019 23:11:16 GMT-0500 (Central Daylight Time), pid=12768, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=90488832, heapTotal=58994688, heapUsed=53134312, external=22759373, loadavg=[0, 0, 0], uptime=2840253
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4598:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-08T04:11:21.811Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Sun Apr 07 2019 23:11:21 GMT-0500 (Central Daylight Time), pid=12768, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=91582464, heapTotal=59518976, heapUsed=53762152, external=22818913, loadavg=[0, 0, 0], uptime=2840258
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4598:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-08T04:11:21.822Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Sun Apr 07 2019 23:11:21 GMT-0500 (Central Daylight Time), pid=12768, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=91664384, heapTotal=59518976, heapUsed=53843776, external=22819710, loadavg=[0, 0, 0], uptime=2840258
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4598:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-08T04:12:47.271Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Sun Apr 07 2019 23:12:47 GMT-0500 (Central Daylight Time), pid=12768, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=91770880, heapTotal=60043264, heapUsed=54167808, external=22897428, loadavg=[0, 0, 0], uptime=2840344
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4598:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-08T04:12:47.286Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Sun Apr 07 2019 23:12:47 GMT-0500 (Central Daylight Time), pid=12768, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=91541504, heapTotal=60043264, heapUsed=53937552, external=22893021, loadavg=[0, 0, 0], uptime=2840344
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4598:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-08T04:12:52.422Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Sun Apr 07 2019 23:12:52 GMT-0500 (Central Daylight Time), pid=12768, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=92033024, heapTotal=60043264, heapUsed=54425120, external=22943157, loadavg=[0, 0, 0], uptime=2840349
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4598:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-08T04:12:52.439Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Sun Apr 07 2019 23:12:52 GMT-0500 (Central Daylight Time), pid=12768, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=91762688, heapTotal=60567552, heapUsed=54155008, external=22947317, loadavg=[0, 0, 0], uptime=2840349
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4598:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-08T04:12:58.663Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Sun Apr 07 2019 23:12:58 GMT-0500 (Central Daylight Time), pid=12768, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=92307456, heapTotal=60567552, heapUsed=54723664, external=22997585, loadavg=[0, 0, 0], uptime=2840355
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4598:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-08T04:12:58.677Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Sun Apr 07 2019 23:12:58 GMT-0500 (Central Daylight Time), pid=12768, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=92073984, heapTotal=60567552, heapUsed=54488072, external=23002816, loadavg=[0, 0, 0], uptime=2840355
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4598:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-08T04:13:11.348Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Sun Apr 07 2019 23:13:11 GMT-0500 (Central Daylight Time), pid=12768, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=93794304, heapTotal=61091840, heapUsed=55071840, external=23053423, loadavg=[0, 0, 0], uptime=2840368
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4598:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-08T04:13:11.359Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Sun Apr 07 2019 23:13:11 GMT-0500 (Central Daylight Time), pid=12768, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=93548544, heapTotal=61091840, heapUsed=54807072, external=23057583, loadavg=[0, 0, 0], uptime=2840368
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4598:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-08T04:13:23.513Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Sun Apr 07 2019 23:13:23 GMT-0500 (Central Daylight Time), pid=12768, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=88117248, heapTotal=56373248, heapUsed=49350104, external=22120217, loadavg=[0, 0, 0], uptime=2840380
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4598:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-08T04:13:23.525Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Sun Apr 07 2019 23:13:23 GMT-0500 (Central Daylight Time), pid=12768, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=87912448, heapTotal=56897536, heapUsed=49133064, external=22117956, loadavg=[0, 0, 0], uptime=2840380
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4598:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-08T04:13:27.043Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Sun Apr 07 2019 23:13:27 GMT-0500 (Central Daylight Time), pid=12768, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=88174592, heapTotal=56897536, heapUsed=49356768, external=22128953, loadavg=[0, 0, 0], uptime=2840383
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4598:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+2019-04-08T04:13:27.052Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Sun Apr 07 2019 23:13:27 GMT-0500 (Central Daylight Time), pid=12768, uid=null, gid=null, cwd=c:\Users\s531382\Music\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v11.7.0, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531382\Music\Codeword-GDPII\bin\www], rss=88735744, heapTotal=56897536, heapUsed=49921120, external=22138272, loadavg=[0, 0, 0], uptime=2840384
+TypeError: Cannot set property 'courseStudent' of undefined
+    at c:\Users\s531382\Music\Codeword-GDPII\controllers\controller.course.js:45:53
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\model.js:4598:16
+    at c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\query.js:4122:12
+    at process.nextTick (c:\Users\s531382\Music\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)

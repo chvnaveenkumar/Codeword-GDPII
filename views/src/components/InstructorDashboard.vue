@@ -1,7 +1,7 @@
 <template>
 <div class="container-fluid" style="margin-top:5em" >            
   <div class="col-md-12 col-lg-12 col-xs-2 col-sm-2">
-    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+    <div class="alert alert-primary alert-dismissible fade show" role="alert" id="welcome-alert" >
   <strong>Welcome! to Instructor's dashboard. </strong>
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
@@ -181,9 +181,11 @@ export default {
     this.fetchCourseList()
   },
   mounted () {
-    console.log(this.startDate)
     $('#addcourse').on('hidden.bs.modal', function () {
       $('#addcourse form')[0].reset()
+    })
+    $('#welcome-alert').fadeTo(10000, 500).slideUp(500, function () {
+      $('#welcome-alert').slideUp(500)
     })
   },
   watch: {

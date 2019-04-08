@@ -1,6 +1,12 @@
 <template>
 <div class="container-fluid" style="margin-top:5em" >            
   <div class="col-md-12 col-lg-12 col-xs-2 col-sm-2">
+    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+  <strong>Welcome! to Instructor's dashboard. </strong>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
           <div class="row">
                 <div class="col-md-2 tooltip-test"><button type="button" class="btn btn-success" title="Create CodeWord Set" data-toggle="modal" data-target="#addcourse" v-on:click="loadCourseModel">
       <span class="fa fa-plus"></span> Add Course </button>

@@ -23,16 +23,15 @@
     Number of Students: {{ totalStudents }} <br>
     </div>
      <div class="col-md-6 col-lg-6 col-xs-0 col-sm-0" style="text-align:left;font-weight:bold">
-                 <button type="button" class="btn btn-danger btn-md" data-toggle="modal" @click="getCourseName(course.courseNameKey)" data-target="#deleteCourse"><i class="fa fa-trash fa-xs">
-
-          <button type="button" class="btn" data-toggle="modal" data-target="#editCourse" @click="selectCourse(courseData)" style="float:right;">Edit Course Details <i class="fa fa-pencil fa-xs"></i></button>
+          <button type="button" class="btn btn-danger btn-md" data-toggle="modal" @click="getCourseName(course.courseNameKey)" data-target="#deleteCourse"><i class="fa fa-trash fa-xs">
+          <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#editCourse" @click="selectCourse(courseData)" style="float:right;"><i class="fa fa-pencil fa-xs"></i>Edit Course Details</button>
     </div>
     </div>
     
   </div>
 </div>
 <br>
-      <button type="button" class="btn" title="Add New Student" data-toggle="modal" data-target="#addStudentModel" style="float:right;"><i class="fa fa-plus"></i> Add New Student</button>
+      <button type="button" class="btn btn-primary btn-sm" title="Add New Student" data-toggle="modal" data-target="#addStudentModel" style="float:right;"><i class="fa fa-plus"></i> Add New Student</button>
 <br>
   <v-client-table :columns="columns" :data="data" :options="options">
       <button type="button" slot="edit" slot-scope="props" class="btn btn-info btn-sm" data-toggle="modal" @click="selectStudentInfo(props.row.studentName,props.row.EmailKey,props.row.id)" data-target="#editStudent" style="marging-left:10px">
@@ -331,7 +330,6 @@ export default {
       this.selectedStudentName = studentName
     },
     deleteStudent (emailKey) {
-      console.log(emailKey)
       axios({
         method: 'post',
         url: 'codeword/deletecoursestudent',
@@ -442,17 +440,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.btn {
-    background-color: DodgerBlue;
-    border: none;
-    color: white;
-    padding: 12px 16px;
-    font-size: 16px;
-    cursor: pointer;
-}
-.btn:hover {
-    background-color: RoyalBlue;
-}
-</style>

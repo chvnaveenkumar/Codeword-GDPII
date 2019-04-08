@@ -93,8 +93,8 @@
               <input type="text" class="form-control" pattern=".{6,30}" id="courseName" name="courseName" placeholder="Enter Course Name" data-toggle="tooltip" title="Atleast 6-15 characters" required>
             </div>
             <div class="row">
-                <div class="col tooltip-test" title="Start Date"> Start Date:<input type="date" name="startDate" class="form-control" v-model="startDate" placeholder="Start Date" required/></div>
-                <div class="col tooltip-test" title="End Date"> End Date:<input type="date" class="form-control" v-model="endDate"  name="endDate"  placeholder="End Date" required></div>
+                <div class="col tooltip-test" title="Start Date"> Start Date:<input type="date" name="startDate" v-model="startDate" required/></div>
+                <div class="col tooltip-test" title="End Date"> End Date:<input type="date" value=endDate v-model="endDate"  name="endDate"  required></div>
             </div>
             <div class="row">
             <div class="col-8 tooltip-test"> <div class="form-group">
@@ -170,10 +170,12 @@ export default {
   },
   created () {
     this.startDate = new Date() && new Date().toISOString().split('T')[0]
+    console.log(this.startDate)
     this.endDate = new Date(new Date().setMonth(new Date().getMonth())) && new Date(new Date().setMonth(new Date().getMonth() + 4)).toISOString().split('T')[0]
     this.fetchCourseList()
   },
   mounted () {
+    console.log(this.startDate)
     $('#addcourse').on('hidden.bs.modal', function () {
       $('#addcourse form')[0].reset()
     })

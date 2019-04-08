@@ -88,7 +88,14 @@
             <form @submit.prevent="editCodeword(selectedCodeword.toUpperCase(), codewordIndex)">
             <div class="modal-body">
             <div class="form-group">
-               Codeword: <input type="text" class="form-control" v-model="selectedCodeword" pattern="[A-Za-z]{5,10}" placeholder="Enter Course Name" data-toggle="tooltip" title="Atleast 5-10 characters" required>
+                          <div class="row">
+                <div class="col tooltip-test"> 
+               Codeword:
+                </div>
+                <div class="col tooltip-test"> 
+                <input type="text" class="form-control" v-model="selectedCodeword" pattern="[A-Za-z]{5,10}" placeholder="Enter Course Name" data-toggle="tooltip" title="Atleast 5-10 characters" required>
+                </div>
+                          </div>
             </div>
             <div>
               <button type="cancel" class="btn btn-danger" data-dismiss="modal">Cancel</button>

@@ -1,7 +1,6 @@
 /**
  * @author Ujjawal Kumar
  */
-
 <template>
 <div id="codeWordSet" class="container-fluid" style="margin-top:5em">
     <div class="col-md-4 col-lg-4 col-xs-0 col-sm-0">

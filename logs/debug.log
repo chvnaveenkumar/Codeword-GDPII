@@ -3992,3 +3992,19 @@ TypeError: Cannot set property 'courseStudent' of undefined
     at process.nextTick (b:\GDP II\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
     at _combinedTickCallback (internal/process/next_tick.js:132:7)
     at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-04-08T14:25:37.906Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Mon Apr 08 2019 09:25:37 GMT-0500 (Central Daylight Time), pid=9248, uid=null, gid=null, cwd=b:\GDP II, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP II\bin\www], rss=138838016, heapTotal=56504320, heapUsed=52340808, external=21896617, loadavg=[0, 0, 0], uptime=608266.4353139
+TypeError: Cannot set property 'courseStudent' of undefined
+    at b:\GDP II\controllers\controller.course.js:45:53
+    at b:\GDP II\node_modules\mongoose\lib\model.js:4560:16
+    at b:\GDP II\node_modules\mongoose\lib\query.js:4105:12
+    at process.nextTick (b:\GDP II\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-04-08T14:25:37.918Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Mon Apr 08 2019 09:25:37 GMT-0500 (Central Daylight Time), pid=9248, uid=null, gid=null, cwd=b:\GDP II, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP II\bin\www], rss=138915840, heapTotal=56504320, heapUsed=52065296, external=21900105, loadavg=[0, 0, 0], uptime=608266.4473449
+TypeError: Cannot set property 'courseStudent' of undefined
+    at b:\GDP II\controllers\controller.course.js:45:53
+    at b:\GDP II\node_modules\mongoose\lib\model.js:4560:16
+    at b:\GDP II\node_modules\mongoose\lib\query.js:4105:12
+    at process.nextTick (b:\GDP II\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)

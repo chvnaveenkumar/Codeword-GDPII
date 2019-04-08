@@ -54,7 +54,8 @@
           <router-link :to="{ name: 'CourseStudent', params: { courseName: course.courseNameKey } }">
             <button class="btn btn-info btn-md "><i class="fa fa-eye fa-lg" aria-hidden="true" ></i></button>
           </router-link>
-          <button type="button" class="btn btn-danger btn-md" data-toggle="modal" @click="getCourseName(course.courseNameKey)" data-target="#deleteCourse"><i class="fa fa-trash-alt">
+          <button type="button" data-toggle="modal" class="btn btn-danger btn-sm"><i class="fa fa-trash fa-xs"></i></button>
+          <button type="button" class="btn btn-danger btn-md" data-toggle="modal" @click="getCourseName(course.courseNameKey)" data-target="#deleteCourse"><i class="fa fa-trash fa-xs">
           </i>
           </button>
           <br>
@@ -363,11 +364,9 @@ export default {
 }
 .cardstyle {
   
-background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         width: 260px;
     height: 320px;
-   background-color: floralwhite;
      margin-top: 100px;
     margin-bottom: 100px;
     margin-right: 160px;
@@ -379,13 +378,7 @@ background-color: white;
 #boldforcourse{
   color: aliceblue;
 }
-.vue-js-switch#changed-font {
-  font-size: 16px;
-}
 .togglealign {
   text-align: right
-}
-.coursebutton {
-  text-align: left
 }
 </style>

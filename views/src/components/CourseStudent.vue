@@ -23,8 +23,7 @@
     Number of Students: {{ totalStudents }} <br>
     </div>
      <div class="col-md-6 col-lg-6 col-xs-0 col-sm-0" style="text-align:left;font-weight:bold">
-          <button type="button" class="btn btn-danger btn-md" data-toggle="modal" @click="getCourseName(course.courseNameKey)" data-target="#deleteCourse"><i class="fa fa-trash fa-xs">
-          <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#editCourse" @click="selectCourse(courseData)" style="float:right;"><i class="fa fa-pencil fa-xs"></i>Edit Course Details</button>
+          <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#editCourse" @click="selectCourse(courseData)" style="float:right;"><i class="fa fa-pencil"></i>Edit Course Details</button>
     </div>
     </div>
     

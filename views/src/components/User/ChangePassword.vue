@@ -27,16 +27,17 @@
     <div class="col-lg-7">
       <input type="password" class="form-control" placeholder="Confirm Password" v-model="repeatPassword" v-on:keyup="validatePassword">
     </div>
-    <div class="alert alert-success" v-if="matchPassword" role="alert">
+  </div>
+      <div class="alert alert-success " v-if="matchPassword" role="alert">
                       Password Matched successfully!!
     </div>
-     <div class="alert alert-danger" v-if="matchPassword" role="alert">
+     <div class="alert alert-danger" v-else-if="matchPassword === false" role="alert">
                       Password not Matched!!
     </div>
-  </div>
+
   <div class="form-group row">
     <label class="col-lg-5 col-form-label"></label>
-    <button type="create" :disabled="matchPassword == true" class="btn btn-primary">Change Password</button>
+    <button type="create" :disabled="!matchPassword" class="btn btn-primary">Change Password</button>
 </div>
 </form>
   </div></div></div></div>
@@ -53,7 +54,8 @@ export default {
       repeatPassword: '',
       changed: '',
       loginrole: this.$route.params.loginrole,
-      matchPassword: false
+      matchPassword: '',
+      msg: ''
     }
   },
   created () {
@@ -62,30 +64,35 @@ export default {
   methods: {
     changePassword () {
       this.msg = ''
-      /* global axios */
-      axios({
-        method: 'post',
-        url: 'codeword/changepassword',
-        data: {
-          token: window.localStorage.getItem('token'),
-          password: this.newpassword
-        }
-      }).then(res => {
-        var _this = this
-        if (res.data.message === true) {
-          setTimeout(function () {
-            this.msg = 'Changed Password Successfully!!'
-            if (_this.loginrole === true) {
-              _this.$router.push({ path: '/instructordashboard' })
-            } else {
-              _this.$router.push({ path: '/studentdashboard' })
-            }
-          }, 1000)
-        }
-      })
+      if (this.newpassword !== this.repeatPassword) {
+        this.matchPassword = false
+      } else {
+        this.matchPassword = true
+        /* global axios */
+        axios({
+          method: 'post',
+          url: 'codeword/changepassword',
+          data: {
+            token: window.localStorage.getItem('token'),
+            password: this.newpassword
+          }
+        }).then(res => {
+          var _this = this
+          if (res.data.message === true) {
+            setTimeout(function () {
+              this.msg = 'Changed Password Successfully!!'
+              if (_this.loginrole === true) {
+                _this.$router.push({ path: '/instructordashboard' })
+              } else {
+                _this.$router.push({ path: '/studentdashboard' })
+              }
+            }, 1000)
+          }
+        })
+      }
     },
     validatePassword: function (e) {
-      if (this.newpassword === e) {
+      if (this.newpassword === this.repeatPassword) {
         this.matchPassword = true
       } else {
         this.matchPassword = false

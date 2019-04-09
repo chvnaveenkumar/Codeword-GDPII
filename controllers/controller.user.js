@@ -92,7 +92,6 @@ module.exports.validateEmail = validateEmail;
 
 let tempPassword = (req, res ) => {
     var body = _.pick(req.body,['email']);
-    console.log('Tempa'+ body.email);
     var chars = "abcdefghijklmnopqrstuvwxyz@#$%&*ABCDEFGHIJKLMNOP123456789";
     var temporaryPassword = "";
     for (var x = 0; x < 5; x++) {
@@ -106,7 +105,6 @@ let tempPassword = (req, res ) => {
         if(!res){
             return  res.status(400).send("Error");
         }
-        console.log(body.email+"   "+temporaryPassword);
         mailController.sendMail(body.email,temporaryPassword);
         return res.json({ code: 200, message: true});
      });

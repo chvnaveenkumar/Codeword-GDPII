@@ -1,7 +1,7 @@
 <template>
 <div class="container-fluid" style="margin-top:5em" >            
   <div class="col-md-12 col-lg-12 col-xs-2 col-sm-2">
-    <div class="alert alert-primary alert-dismissible fade show" role="alert" id="welcome-alert" >
+    <div class="alert alert-primary alert-dismissible fade show" role="alert" v-if="welcomealert" id="welcome-alert" >
   <strong>Welcome to Instructor's dashboard. </strong>
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
@@ -96,11 +96,11 @@
             <form @submit.prevent="CreateCourse">
             <div class="modal-body">
             <div class="form-group">
-              <input type="text" class="form-control" pattern=".{6,30}" id="courseName" name="courseName" placeholder="Enter Course Name" data-toggle="tooltip" title="Atleast 6-15 characters" required>
+              <input type="text" class="form-control" pattern="[A-Za-z0-9 ]{6,15}" id="courseName" name="courseName" placeholder="Enter Course Name" data-toggle="tooltip" title="Course Name should be 6-15 characters/numbers only" required>
             </div>
             <div class="row">
-                <div class="col tooltip-test" title="Start Date"> Start Date:<datepicker type="date" name="startDate" v-model="startDate" required></datepicker></div>
-                <div class="col tooltip-test" title="End Date"> End Date:<datepicker type="date"  :disabledDates="disabledDates" value=endDate v-model="endDate"  name="endDate"  required></datepicker></div>
+                <div class="col tooltip-test" title="Start Date"> Start Date:<datepicker type="date" :disabledDates="startdisabledDates" name="startDate" v-model="startDate" required></datepicker></div>
+                <div class="col tooltip-test" title="End Date"> End Date:<datepicker type="date"  :disabledDates="enddisabledDates" value=endDate v-model="endDate"  name="endDate"  required></datepicker></div>
             </div>
             <div class="row">
             <div class="col-8 tooltip-test"> <div class="form-group">
@@ -173,8 +173,12 @@ export default {
       tempdate: '',
       endDateChanged: true,
       excelstatus: '',
-      disabledDates: {
-        to: new Date(2019, new Date(this.startDate).getMonth(), 26) // Disable all dates up to specific date
+      welcomealert: true,
+      enddisabledDates: {
+        to: '' // Disable all dates up to specific date
+      },
+      startdisabledDates: {
+        from: '' // Disable all dates up to specific date
       }
     }
   },
@@ -183,8 +187,7 @@ export default {
   },
   created () {
     this.startDate = new Date() && new Date().toISOString().split('T')[0]
-    console.log(new Date(this.startDate).getDate())
-    this.disabledDates.to = new Date(new Date(this.startDate).getFullYear(), new Date(this.startDate).getMonth(), new Date(this.startDate).getDate() + 1)
+    this.enddisabledDates.to = new Date(new Date(this.startDate).getFullYear(), new Date(this.startDate).getMonth(), new Date(this.startDate).getDate() + 1)
     this.endDate = new Date(new Date().setMonth(new Date().getMonth())) && new Date(new Date().setMonth(new Date().getMonth() + 4)).toISOString().split('T')[0]
     this.fetchCourseList()
   },
@@ -194,6 +197,7 @@ export default {
     })
     $('#welcome-alert').fadeTo(10000, 500).slideUp(500, function () {
       $('#welcome-alert').slideUp(500)
+      this.welcomealert = false
     })
   },
   watch: {
@@ -203,15 +207,15 @@ export default {
         this.startDate = new Date(start) && new Date(start).toISOString().split('T')[0]
         this.endDate = new Date(start.setMonth(start.getMonth())) && new Date(start.setMonth(start.getMonth() + 4)).toISOString().split('T')[0]
         this.tempdate = this.endDate
-        console.log(new Date(this.startDate).getDate())
-        this.disabledDates.to = new Date(new Date(this.startDate).getFullYear(), new Date(this.startDate).getMonth(), new Date(this.startDate).getDate() + 1)
+        this.enddisabledDates.to = new Date(new Date(this.startDate).getFullYear(), new Date(this.startDate).getMonth(), new Date(this.startDate).getDate() + 1)
       } else {
-        this.disabledDates.to = new Date(new Date(this.startDate).getFullYear(), new Date(this.startDate).getMonth(), new Date(this.startDate).getDate() + 1)
+        this.enddisabledDates.to = new Date(new Date(this.startDate).getFullYear(), new Date(this.startDate).getMonth(), new Date(this.startDate).getDate() + 1)
       }
     },
     endDate (value) {
       if (this.tempdate !== value) {
         this.endDateChanged = false
+        this.startdisabledDates.from = new Date(new Date(this.endDate).getFullYear(), new Date(this.endDate).getMonth(), new Date(this.endDate).getDate())
       }
     },
     '$route': 'fetchCourseList'
@@ -259,9 +263,7 @@ export default {
                   token: window.localStorage.getItem('token')
                 }
                 }).then(response => {
-                console.log(response.data.message)
                 if (response.data.message === 'Course student successfully!') {
-                  console.log('success create course')
                   $('#addcourse').modal('hide')
                   this.fetchCourseList()
                 } else {

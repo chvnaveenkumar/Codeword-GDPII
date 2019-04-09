@@ -8,32 +8,39 @@
             <div class="card">
             <div class="card-body">
             <h2> Change Password</h2>  
-            <div class="alert alert-success" v-if="changed && msg" role="alert"> {{ msg }} </div> 
+            <div class="alert alert-success" v-if="changed && msg" role="alert">
+                      {{ msg }}
+                  </div>
+                  <div class="alert alert-danger" v-else-if="!changed && msg" role="alert">
+                      {{ msg }}
+            </div>
+            </div>
         <form @submit.prevent="changePassword">
             <div class="form-group row">
             <label for="inputPassword" class="col-lg-5 col-form-label">New Password:</label>
-            <div class="col-lg-7" :class="{invalid: $v.newpassword.$error}">
-            <input type="password" class="form-control" placeholder="New Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" v-model="newpassword" @blur="$v.newpassword.$touch()">
-      <p v-if="!$v.newpassword.minLength"> Password must have at least {{ $v.newpassword.$params.minLength.min }} letters. </p>
+            <div class="col-lg-7">
+            <input type="password" class="form-control" placeholder="New Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password should have atleast 8 Small, Large character and numbers" v-model="newpassword">
     </div>
   </div>
     <div class="form-group row">
     <label for="inputPassword" class="col-lg-5 col-form-label">Confirm Password:</label>
-    <div class="col-lg-7" :class="{invalid: $v.repeatPassword.$error}">
-      <input type="password" class="form-control" placeholder="Confirm Password" v-model="repeatPassword">
-      <p v-if="!$v.repeatPassword.sameAsPassword"> Password must be identical. </p>
+    <div class="col-lg-7">
+      <input type="password" class="form-control" placeholder="Confirm Password" v-model="repeatPassword" v-on:keyup="validatePassword">
+    </div>
+    <div class="alert alert-success" v-if="matchPassword" role="alert">
+                      Password Matched successfully!!
+    </div>
+     <div class="alert alert-danger" v-if="matchPassword" role="alert">
+                      Password not Matched!!
     </div>
   </div>
   <div class="form-group row">
-    <label for="changePassword" class="col-lg-5 col-form-label"></label>
-    <div class="col-lg-7">
-    <button type="submit" class="btn btn-primary" :disabled="this.$v.$invalid">Change Password</button>
-    </div>
+    <label class="col-lg-5 col-form-label"></label>
+    <button type="create" :disabled="matchPassword == true" class="btn btn-primary">Change Password</button>
 </div>
 </form>
   </div></div></div></div>
   <div class="col-md-3 col-lg-3 col-xs-1 col-sm-1"></div>
-  </div>
   </div>
 </template>
 
@@ -45,7 +52,8 @@ export default {
       newpassword: '',
       repeatPassword: '',
       changed: '',
-      loginrole: this.$route.params.loginrole
+      loginrole: this.$route.params.loginrole,
+      matchPassword: false
     }
   },
   created () {
@@ -75,6 +83,13 @@ export default {
           }, 1000)
         }
       })
+    },
+    validatePassword: function (e) {
+      if (this.newpassword === e) {
+        this.matchPassword = true
+      } else {
+        this.matchPassword = false
+      }
     }
   }
 }

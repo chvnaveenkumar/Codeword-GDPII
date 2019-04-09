@@ -8,8 +8,7 @@ var sendMail = function (email, temp_password) {
     var decodedvalue = "";
     var decodeJson="";
     nodemailer.createTestAccount((err, account) => {
-    var newToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlM1MzA3NDJAbndtaXNzb3VyaS5lZHUiLCJwYXNzd29yZCI6IlN1dmFybmE5JCIsImlhdCI6MTU0MDUwMTAxOSwiZXhwIjoxNTcyMDM3MDE5fQ.Z1RJF2noETqetSDvivi004vp27iMnt2uoCARPqS_6yc';
-
+    var newToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InM1MzA3NDJAbndtaXNzb3VyaS5lZHUiLCJwYXNzd29yZCI6Ik4wMjI1MTljIiwiaWF0IjoxNTU0ODQzNDY1LCJleHAiOjE1NjM0ODM0NjV9._932sKuPEAaPEhFfWA1NfQxIh6KlW6jUD4RPvmKjr_w';
     jwt.verify(newToken, 'donttry', (err, decoded, res) =>{
         if(err)
         {
@@ -24,7 +23,7 @@ var sendMail = function (email, temp_password) {
             secure: false, 
             auth: {
                 user: decodeJson.email,
-                pass: 'sunrise@2'
+                pass: decodeJson.password
             }
         });
     

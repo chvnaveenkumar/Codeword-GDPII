@@ -9,7 +9,8 @@
                 <h3 style="font-weight:bold;text-align:left"> Course Name: {{ courseNameData }} </h3>
             </div>
             <div class="col-md-6 col-lg-6 col-xs-0 col-sm-0">
-                <h3 style="font-weight:bold;text-align:right"> Acknowledged Status: {{ acknowledged.toFixed(2) }}% </h3>
+                <h5 style="font-weight:bold;text-align:right"> Acknowledged Status: {{acknowledged}} / {{totalStudents}} </h5>
+                <h5 style="font-weight:bold;text-align:right"> Acknowledged Percentage: {{ acknowledged/totalStudents }}%</h5>
             </div>
       </div>
 </h5>
@@ -284,7 +285,7 @@ export default {
         this.nextUrl = response.data.nextUrl
         this.prevUrl = response.data.prevUrl
         this.totalStudents = response.data.totalStudents
-        this.acknowledged = response.data.Acknowledged
+        this.acknowledged = response.data.AcknowledgedTrue
       })
     },
     checkPage (url) {

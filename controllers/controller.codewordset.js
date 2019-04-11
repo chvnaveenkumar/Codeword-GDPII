@@ -47,8 +47,8 @@ let getDataFromXLS = (req, res) => {
                         validatecodeword = true
                         return true
                     }
-                    for(var i = 0; i <= codewords.length; i++) {
-                        for(var j = i; j <= codewords.length; j++) {
+                    for(var i = 0; i < codewords.length; i++) {
+                        for(var j = i; j < codewords.length; j++) {
                             if(i != j && codewords[i].toUpperCase() === codewords[j].toUpperCase()) {
                                 codeword_duplicates = true
                                 return true 

@@ -201,9 +201,13 @@ export default {
       this.selectedCodeword = this.data[index].CodewordName
     },
     editCodeword (selectedCodeword, index) {
-      this.codewords[this.codewordIndex] = selectedCodeword
-      this.updateCodeword()
-      $('#editcodeword').modal('hide')
+      if (this.codewords.includes(this.selectedCodeword.toUpperCase())) {
+        swal('Codeword already exists! Please add different Codeword!!')
+      } else {
+        this.codewords[this.codewordIndex] = selectedCodeword
+        this.updateCodeword()
+        $('#editcodeword').modal('hide')
+      }
     },
     deleteCodeword () {
       this.codewords.splice(this.codewordIndex, 1)

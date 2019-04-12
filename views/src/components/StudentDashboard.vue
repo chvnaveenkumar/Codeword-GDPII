@@ -22,7 +22,7 @@
           <div v-else> {{ course.codeword }}</div>
         </td>
          
-        <td v-if="course.courseInfo.PreSurveyURL != null && course.courseInfo.PostSurveyURL.length > 5"> 
+        <td v-if="course.courseInfo.PreSurveyURL != null && course.courseInfo.PreSurveyURL.length > 5"> 
           <a v-bind:href="'http://'+course.courseInfo.PreSurveyURL" target="_blank">Start Survey</a>
         </td>
         <td v-else> 

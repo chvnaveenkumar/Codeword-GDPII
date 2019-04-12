@@ -34,17 +34,28 @@ let getDataFromXLS = (req, res) => {
             }).then(jsonArray => {
                 console.log(jsonArray[0]);
                 var codewords = _.map(jsonArray[0],'codeword')
-                var checking = false
+                var validatinglength = false
+                var empty_codeword = false
                 var validatecodeword = false
                 var codeword_duplicates = false
+                var codeword_space = false
                 _.forEach(codewords, function(value) {
-                    if(value.length<5 || value.length >10) {
-                         checking = true
-                         return true
+                    if(value.length<5 || value.length >15) {
+                         if(value.length == 0){
+                            empty_codeword = true
+                            return true
+                         }else{
+                            validatinglength = true
+                            return true
+                         }
                     }
                     var tests = /[A-Za-z]/.test(value.toUpperCase())
                     if(!tests) {
                         validatecodeword = true
+                        return true
+                    }
+                    if(value.includes(' ')){
+                        codeword_space = true
                         return true
                     }
                     for(var i = 0; i < codewords.length; i++) {
@@ -57,13 +68,17 @@ let getDataFromXLS = (req, res) => {
                     }
                 });
                 if(codeword_duplicates){
-                    return res.status(200).json({ data: 'Duplicates codewords found in uploaded excel!!', count: false })
-                }else if(checking){
-                    return res.status(200).json({ data: 'Codewords in the set are less than 5 alphabets', count: false })
-                }else if(validatecodeword){
-                    return res.status(200).json({ data: 'Codewords should be alphabets only. Special character or number are not allowed.', count: false })
+                    return res.status(200).json({ data: 'Uploaded excel has duplicates codewords!! Please choose another excel file!!', count: false })
+                }else if(empty_codeword){
+                    return res.status(200).json({ data: 'Uploaded excel sheet has empty data or empty cell!!', count: false })
                 }
-                else{
+                else if(validatinglength){
+                    return res.status(200).json({ data: 'Codewords in the uploaded set has less than 5 characters!!', count: false })
+                }else if(validatecodeword){
+                    return res.status(200).json({ data: 'Uploaded excel has special characters or numbers but it should have only characters.', count: false })
+                }else if(codeword_space){
+                    return res.status(200).json({ data: 'Uploaded excel has codeword with space!! space in the codeword should not be allowed!!', count: false })
+                }else{
                     return res.status(200).json({ data: codewords, count: jsonArray[0].length })
                 }
             })

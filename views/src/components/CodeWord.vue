@@ -30,7 +30,7 @@
             
       <div class="modal-body">
          <div class="form-group">
-        Enter new codeword: <input type="text" class="form-control" v-model="newCodeword" pattern="[A-Za-z]{5,10}" placeholder="Enter Course Name" data-toggle="tooltip" title="Codeword should be 5-10 alphabets only (Example:FANCY)" required>
+        Enter new codeword: <input type="text" class="form-control" v-model="newCodeword" pattern="[A-Za-z]{5,15}" placeholder="Enter Course Name" data-toggle="tooltip" title="Codeword should be 5-15 alphabets only (Example:FANCY)" required>
       </div>
       <div>
               <button type="cancel" class="btn btn-danger" data-dismiss="modal">Cancel</button>
@@ -93,7 +93,7 @@
                Codeword:
                 </div>
                 <div class="col tooltip-test"> 
-                <input type="text" class="form-control" v-model="selectedCodeword" pattern="[A-Za-z]{5,10}" placeholder="Enter Course Name" data-toggle="tooltip" title="Atleast 5-10 characters" required>
+                <input type="text" class="form-control" v-model="selectedCodeword" pattern="[A-Za-z]{5,15}" placeholder="Enter Course Name" data-toggle="tooltip" title="Atleast 5-15 characters" required>
                 </div>
                           </div>
             </div>

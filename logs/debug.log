@@ -8447,3 +8447,43 @@ TypeError: Cannot set property 'courseStudent' of undefined
     at process.nextTick (c:\Users\s531383\Desktop\GDP\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
     at process.internalTickCallback (internal/process/next_tick.js:70:11)
 >>>>>>> 36746c664708cbcad188173bb947f824423a7223
+2019-04-12T13:19:44.864Z - info: START seeder.
+2019-04-12T13:19:44.906Z - debug: 2 dataCodewordset seeded
+2019-04-12T13:19:44.906Z - debug: 292 datacodeword seeded
+2019-04-12T13:19:44.907Z - debug: 6 datacourse seeded
+2019-04-12T13:19:44.907Z - debug: 114 dataCoursestudent seeded
+2019-04-12T13:19:44.907Z - debug: 92 hootoriginal seeded
+2019-04-12T13:19:44.908Z - debug: 200 largeset seeded
+2019-04-12T13:19:44.908Z - info: END Seeder. Sample data read and verified.
+2019-04-12T13:19:47.133Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Fri Apr 12 2019 08:19:47 GMT-0500 (Central Daylight Time), pid=11884, uid=null, gid=null, cwd=b:\GDP Project, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP Project\bin\www], rss=131063808, heapTotal=84647936, heapUsed=50375712, external=21648752, loadavg=[0, 0, 0], uptime=37640.6299293
+TypeError: Cannot set property 'courseStudent' of undefined
+    at b:\GDP Project\controllers\controller.course.js:45:53
+    at b:\GDP Project\node_modules\mongoose\lib\model.js:4675:16
+    at b:\GDP Project\node_modules\mongoose\lib\query.js:4184:12
+    at process.nextTick (b:\GDP Project\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-04-12T13:19:47.173Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Fri Apr 12 2019 08:19:47 GMT-0500 (Central Daylight Time), pid=11884, uid=null, gid=null, cwd=b:\GDP Project, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP Project\bin\www], rss=131612672, heapTotal=84647936, heapUsed=51078816, external=21658529, loadavg=[0, 0, 0], uptime=37640.6730022
+TypeError: Cannot set property 'courseStudent' of undefined
+    at b:\GDP Project\controllers\controller.course.js:45:53
+    at b:\GDP Project\node_modules\mongoose\lib\model.js:4675:16
+    at b:\GDP Project\node_modules\mongoose\lib\query.js:4184:12
+    at process.nextTick (b:\GDP Project\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-04-12T13:19:47.230Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Fri Apr 12 2019 08:19:47 GMT-0500 (Central Daylight Time), pid=11884, uid=null, gid=null, cwd=b:\GDP Project, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP Project\bin\www], rss=131842048, heapTotal=84647936, heapUsed=51987392, external=21715650, loadavg=[0, 0, 0], uptime=37640.7311572
+TypeError: Cannot set property 'courseStudent' of undefined
+    at b:\GDP Project\controllers\controller.course.js:45:53
+    at b:\GDP Project\node_modules\mongoose\lib\model.js:4675:16
+    at b:\GDP Project\node_modules\mongoose\lib\query.js:4184:12
+    at process.nextTick (b:\GDP Project\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-04-12T13:25:25.983Z - info: START seeder.
+2019-04-12T13:25:26.024Z - debug: 2 dataCodewordset seeded
+2019-04-12T13:25:26.024Z - debug: 292 datacodeword seeded
+2019-04-12T13:25:26.024Z - debug: 6 datacourse seeded
+2019-04-12T13:25:26.025Z - debug: 114 dataCoursestudent seeded
+2019-04-12T13:25:26.025Z - debug: 92 hootoriginal seeded
+2019-04-12T13:25:26.025Z - debug: 200 largeset seeded
+2019-04-12T13:25:26.025Z - info: END Seeder. Sample data read and verified.

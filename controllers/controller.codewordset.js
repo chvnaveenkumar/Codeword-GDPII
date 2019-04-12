@@ -49,7 +49,7 @@ let getDataFromXLS = (req, res) => {
                             return true
                          }
                     }
-                    var tests = /^([a-zA-Z])$/.test(value.toUpperCase())
+                    var tests = /^([a-zA-Z]{5,15})$/.test(value.toUpperCase())
                     if(!tests) {
                         validatecodeword = true
                         return true

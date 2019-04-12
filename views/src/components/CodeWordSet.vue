@@ -34,7 +34,7 @@
                             <b-button id="popover-3" variant="primary">Hint</b-button>
         <b-popover target="popover-3" triggers="hover focus">
           <template slot="title">Rules for codeword</template>
-          1.Every codeword should be unique in the set. <br/>2. The codewords with substring should differ by at least 3 letters.<br/> 3.There should not be any codewords like Ex: daa, baa. <br/> 4. Scan the codewords as soon as the upload is done and give the feedback.<br/> 5. Every codeword should be compared with every other codeword in the set.
+          1.In the uploaded excel sheet codeword should be unique. <br/>2.Codeword should be of single word.<br/> 3.Codeword should be of only characters but not numbers or special characters. <br/> 4. Excel sheet should not be empty.<br/> 5. Excel sheet should not have empty cells.
         </b-popover>
         </div>
                             

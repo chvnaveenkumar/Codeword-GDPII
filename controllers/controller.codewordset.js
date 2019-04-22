@@ -34,50 +34,52 @@ let getDataFromXLS = (req, res) => {
             }).then(jsonArray => {
                 console.log(jsonArray[0]);
                 var codewords = _.map(jsonArray[0],'codeword')
-                var validatinglength = false
-                var empty_codeword = false
-                var validatecodeword = false
-                var codeword_duplicates = false
-                var codeword_space = false
-                _.forEach(codewords, function(value) {
+                var validatinglength = 0
+                var empty_codeword = 0
+                var validatecodeword = 0
+                var codeword_duplicates_1 = 0
+                var codeword_duplicates_2 = 0
+                var codeword_space = 0
+                _.forEach(codewords, function(value,index) {
                     if(value.length<5 || value.length >15) {
                          if(value.length == 0){
-                            empty_codeword = true
+                            empty_codeword = index
                             return true
                          }else{
-                            validatinglength = true
+                            validatinglength = index
                             return true
                          }
                     }
                     var tests = /^([a-zA-Z]{5,15})$/.test(value.toUpperCase())
                     if(!tests) {
-                        validatecodeword = true
+                        validatecodeword = index
                         return true
                     }
                     if(value.includes(' ')){
-                        codeword_space = true
+                        codeword_space = index
                         return true
                     }
                     for(var i = 0; i < codewords.length; i++) {
                         for(var j = i; j < codewords.length; j++) {
                             if(i != j && codewords[i].toUpperCase() === codewords[j].toUpperCase()) {
-                                codeword_duplicates = true
+                                codeword_duplicates_1 = i + 1
+                                codeword_duplicates_2 = j + 1
                                 return true 
                             }
                         }
                     }
                 });
-                if(codeword_duplicates){
-                    return res.status(200).json({ data: 'Uploaded excel has duplicates codewords!! Please choose another excel file!!', count: false })
-                }else if(empty_codeword){
-                    return res.status(200).json({ data: 'Uploaded excel sheet has empty data or empty cell!!', count: false })
+                if(codeword_duplicates_1 >= 0 || codeword_duplicates_2 >= 0){
+                    return res.status(200).json({ data: 'Uploaded excel has duplicates codewords in row '+ codeword_duplicates_1 + ' and ' +codeword_duplicates_2 + ' has same! ', count: false })
+                }else if(empty_codeword !== 0){
+                    return res.status(200).json({ data: 'Uploaded excel sheet has empty cell in the row '+ empty_codeword, count: false })
                 }
-                else if(validatinglength){
-                    return res.status(200).json({ data: 'Codewords in the uploaded set has less than 5 characters!!', count: false })
-                }else if(validatecodeword){
-                    return res.status(200).json({ data: 'Uploaded excel has special characters or numbers but it should have only characters.', count: false })
-                }else if(codeword_space){
-                    return res.status(200).json({ data: 'Uploaded excel has codeword with space!! space in the codeword should not be allowed!!', count: false })
+                else if(validatinglength !== 0){
+                    return res.status(200).json({ data: 'Codeword has less than 5 characters in the row '+ validatinglength, count: false })
+                }else if(validatecodeword !== 0){
+                    return res.status(200).json({ data: 'Codeword has special characters or numbers in the row '+ validatecodeword, count: false })
+                }else if(codeword_space !== 0){
+                    return res.status(200).json({ data: 'Codeword has empty space in the row '+ codeword_space, count: false })
                 }else{
                     return res.status(200).json({ data: codewords, count: jsonArray[0].length })
                 }

@@ -38,9 +38,12 @@ let getDataStudentXLSX = (req, res) => {
                 emails.splice(0,1)
                 var checking_emails = true
                 var email_duplicates = false
-                _(emails).forEach(function(value) {
+                var email_validation_row = false
+                var name_validation_row = false
+                _(emails).forEach(function(value,index) {
                     if(value.length === 0 || !(value.includes("@"))) {
                          checking_emails = false
+                         email_validation_row = index 
                          return false
                     }
                     for(var i = 0; i <= emails.length; i++) {
@@ -55,16 +58,19 @@ let getDataStudentXLSX = (req, res) => {
                 var names = _.map(jsonArray[0],'name')
                 names.splice(0,1)
                 var checking_names = true
-                _(names).forEach(function(value) {
-                    if(value.length === 0 || value.length < 2) {
+                _(names).forEach(function(value, index) {
+                    if(value.length === 0 || value.length < 3 || value.length > 30) {
                          checking_names = false
+                         name_validation_row = index
                          return false
                     }
                 });
                 if(email_duplicates){
                     return res.status(200).json({ data: 'Duplicates found in uploaded excel!!', status: false })
-                }else if(checking_emails === false || checking_names === false){
-                    return res.status(200).json({ data: 'Uploaded Excel sheet is not in the given format!!', status: false })
+                }else if(checking_emails === false){
+                    return res.status(200).json({ data: 'Student email is not given format in the row '+ (email_validation_row +2), status: false })
+                }else if(checking_names === false){
+                    return res.status(200).json({ data: 'Student name should be 3-30 characters in the row '+ (name_validation_row+2) , status: false })
                 }else{
                     return res.status(200).json({ count: emails.length, status: true })
                 }

@@ -50,36 +50,38 @@ let getDataFromXLS = (req, res) => {
                             return true
                          }
                     }
+                    if(value.includes(' ')){
+                        if(codeword_space === 0){
+                            codeword_space = index
+                        }
+                        return true  
+                      }
                     var tests = /^([a-zA-Z]{5,15})$/.test(value.toUpperCase())
                     if(!tests) {
                         validatecodeword = index
                         return true
                     }
-                    if(value.includes(' ')){
-                        codeword_space = index
-                        return true
-                    }
                     for(var i = 0; i < codewords.length; i++) {
                         for(var j = i; j < codewords.length; j++) {
                             if(i != j && codewords[i].toUpperCase() === codewords[j].toUpperCase()) {
-                                codeword_duplicates_1 = i + 1
-                                codeword_duplicates_2 = j + 1
+                                codeword_duplicates_1 = i+1
+                                codeword_duplicates_2 = j+1
                                 return true 
                             }
                         }
                     }
                 });
-                if(codeword_duplicates_1 >= 0 || codeword_duplicates_2 >= 0){
+                if(codeword_duplicates_1 > 0){
                     return res.status(200).json({ data: 'Uploaded excel has duplicates codewords in row '+ codeword_duplicates_1 + ' and ' +codeword_duplicates_2 + ' has same! ', count: false })
                 }else if(empty_codeword !== 0){
-                    return res.status(200).json({ data: 'Uploaded excel sheet has empty cell in the row '+ empty_codeword, count: false })
+                    return res.status(200).json({ data: 'Uploaded excel sheet has empty!! ', count: false })
                 }
                 else if(validatinglength !== 0){
-                    return res.status(200).json({ data: 'Codeword has less than 5 characters in the row '+ validatinglength, count: false })
+                    return res.status(200).json({ data: 'Codeword has less than 5 characters in the row '+ (validatinglength + 1), count: false })
                 }else if(validatecodeword !== 0){
-                    return res.status(200).json({ data: 'Codeword has special characters or numbers in the row '+ validatecodeword, count: false })
+                    return res.status(200).json({ data: 'Codeword has special characters or numbers in the row '+ (validatecodeword + 1), count: false })
                 }else if(codeword_space !== 0){
-                    return res.status(200).json({ data: 'Codeword has empty space in the row '+ codeword_space, count: false })
+                    return res.status(200).json({ data: 'Codeword has empty space in the row '+ (codeword_space + 1), count: false })
                 }else{
                     return res.status(200).json({ data: codewords, count: jsonArray[0].length })
                 }

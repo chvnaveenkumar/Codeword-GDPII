@@ -66,12 +66,14 @@
   </div>
 </div>
 </div>
-
+<div class="alert alert-primary" v-if='isPermanent' role="alert">
+  This is the default codeword set can not be edited or deleted.
+</div>
   <v-client-table :columns="columns" :data="data" :options="options">
-      <button type="button" slot="edit" slot-scope="props" class="btn btn-info btn-sm" data-toggle="modal" @click="selectCodeword(props.row.index)" data-target="#editcodeword" style="marging-left:10px">
+      <button type="button" slot="edit" :disabled='isPermanent' slot-scope="props" class="btn btn-info btn-sm" data-toggle="modal" @click="selectCodeword(props.row.index)" data-target="#editcodeword" style="marging-left:10px">
         <i class="fas fa-pencil-alt"></i>
       </button>
-      <button type="button" slot="delete" slot-scope="props" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deletecodeword" @click="selectCodeword(props.row.index)" style="marging-left:10px">
+      <button type="button" slot="delete" :disabled='isPermanent' slot-scope="props" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deletecodeword" @click="selectCodeword(props.row.index)" style="marging-left:10px">
         <i class="fas fa-trash"></i>
       </button>
   </v-client-table>
@@ -184,6 +186,7 @@ export default {
       }).then(response => {
         this.codewordlist = response.data.codewords
         this.isPermanent = response.data.isPermanent
+        console.log(this.isPermanent)
         this.codewords = response.data.codewords
         var codewordsjson = []
         this.codewordlist.forEach((value, i) => {

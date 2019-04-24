@@ -59,7 +59,7 @@ let getDataStudentXLSX = (req, res) => {
                 names.splice(0,1)
                 var checking_names = true
                 _(names).forEach(function(value, index) {
-                    if(value.length === 0 || value.length < 3 || value.length > 30) {
+                    if(value.length === 0 || value.length < 3 || value.length > 40) {
                          checking_names = false
                          name_validation_row = index
                          return false

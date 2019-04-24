@@ -20,7 +20,7 @@
                         <router-link class="nav-link" to="/instructordashboard">Instructor Dashboard</router-link>
                     </li> 
                     <li class="nav-item" v-if='this.$route.name != "StudentDashboard" && this.$route.name !== "ChangePassword"'>
-                        <router-link class="nav-link" to="/codewordset">CodeWord SetS</router-link>
+                        <router-link class="nav-link" to="/codewordset">CodeWord Sets</router-link>
                     </li>
                     <li class="nav-item" v-if='this.$route.name == "StudentDashboard" && this.$route.name !== "ChangePassword"'>
                         <h6><a class="navbar-brand" href="/">Student Dashboard</a></h6>

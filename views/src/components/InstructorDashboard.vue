@@ -1,6 +1,6 @@
 <template>
 <div class="container-fluid" style="margin-top:5em" >            
-  <div class="col-md-12 col-lg-12 col-xs-2 col-sm-2">
+  <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
     <div class="alert alert-primary alert-dismissible fade show" role="alert" v-if="welcomealert" id="welcome-alert" >
   <strong>Welcome to Instructor's dashboard. </strong>
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -8,18 +8,18 @@
   </button>
 </div>
         <div class="row">
-                <div class="col-md-2 tooltip-test"><button type="button" class="btn btn-success" title="Create CodeWord Set" data-toggle="modal" data-target="#addcourse" v-on:click="loadCourseModel">
+                <div class="col-md-2 col-lg-2 col-xs-2 col-sm-2 tooltip-test"><button type="button" class="btn btn-success" title="Create CodeWord Set" data-toggle="modal" data-target="#addcourse" v-on:click="loadCourseModel">
       <span class="fa fa-plus"></span> Add Course </button>
     </div>
-        <div class="col-md-6">
+        <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
         </div>
-    <div class="col-md-2">
+    <div class="col-md-2 col-lg-2 col-xs-2 col-sm-2">
     <input class="form-check-input" type="checkbox" v-model="active" value="Active Courses" id="defaultCheck1">
     <label class="form-check-label" for="defaultCheck1">
        Active Courses
   </label>
     </div>
-    <div class="col-md-2">
+    <div class="col-md-2 col-lg-2 col-xs-2 col-sm-2">
   <input class="form-check-input" type="checkbox" v-model="inactive" value="" id="defaultCheck2">
     <label class="form-check-label" for="defaultCheck2">
     Inactive Courses
@@ -36,9 +36,9 @@
 </div> 
   </div>
 <div v-else-if="courses.length >0">
-  <div class="row" style="margin-left: 3rem;margin-right: 7rem;" >
+  <div class="row" >
         
-    <div class="col-md-3 col-lg-3 col-xs-0 col-sm-0" v-for="course in courses" :key="course._id" v-if="(!active != (new Date() < new Date(course.Enddate)) || inactive != (new Date() < new Date(course.Enddate))) && (active || inactive)">
+    <div class="col-md-3 col-lg-3 col-xs-3 col-sm-3" v-for="course in courses" :key="course._id" v-if="(!active != (new Date() < new Date(course.Enddate)) || inactive != (new Date() < new Date(course.Enddate))) && (active || inactive)">
       <div class="card border-success mb-3 cardstyle" style="max-width: 20rem;margin-top: 1rem;" >
          <div class="card-header bg-info border-success" id = "boldforcourse"><h4>{{ course.courseNameKey }}</h4>
         <br>
@@ -103,10 +103,10 @@
                 <div class="col tooltip-test" title="End Date"> End Date:<datepicker type="date"  :disabledDates="enddisabledDates" value=endDate v-model="endDate"  name="endDate"  required></datepicker></div>
             </div>
             <div class="row">
-            <div class="col-8 tooltip-test"> <div class="form-group">
+            <div class="col-md-8 col-lg-8 col-xs-8 col-sm-8 tooltip-test"> <div class="form-group">
                 <input type="file" ref="file" name="file" v-on:change="handleFileUpload()" class="form-control-file" id="file" style="margin-top:1em">
             </div></div>
-                <div class="col-4 tooltip-test">   
+                <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4 tooltip-test">   
                   <b-button id="popover-3" variant="primary">hint</b-button>
         <b-popover target="popover-3" triggers="hover focus">
           <template slot="title">Rules for student excel</template>
@@ -383,7 +383,7 @@ export default {
      margin-top: 100px;
     margin-bottom: 100px;
     margin-right: 160px;
-    margin-left: 80px;
+    margin-left: 20px;
 }
 .bg-info {
     background-color: #3e5c67 !important;

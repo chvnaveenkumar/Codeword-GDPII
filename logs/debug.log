@@ -2446,3 +2446,459 @@ TypeError: Cannot set property 'courseStudent' of undefined
     at process.nextTick (b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
     at _combinedTickCallback (internal/process/next_tick.js:132:7)
     at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-04-24T15:51:32.634Z - info: START seeder.
+2019-04-24T15:51:32.668Z - debug: 2 dataCodewordset seeded
+2019-04-24T15:51:32.668Z - debug: 292 datacodeword seeded
+2019-04-24T15:51:32.668Z - debug: 6 datacourse seeded
+2019-04-24T15:51:32.669Z - debug: 114 dataCoursestudent seeded
+2019-04-24T15:51:32.669Z - debug: 92 hootoriginal seeded
+2019-04-24T15:51:32.670Z - debug: 200 largeset seeded
+2019-04-24T15:51:32.670Z - info: END Seeder. Sample data read and verified.
+2019-04-24T15:51:39.207Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Apr 24 2019 10:51:39 GMT-0500 (Central Daylight Time), pid=9792, uid=null, gid=null, cwd=b:\GDP II\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP II\Codeword-GDPII\bin\www], rss=127102976, heapTotal=84647936, heapUsed=61019920, external=22124854, loadavg=[0, 0, 0], uptime=144049.7450242
+TypeError: Cannot set property 'courseStudent' of undefined
+    at b:\GDP II\Codeword-GDPII\controllers\controller.course.js:45:53
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\model.js:4675:16
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:4184:12
+    at cb (b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:1818:14)
+    at result (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:410:17)
+    at executeCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:402:9)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at cursor.close (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:62)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at completeClose (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:898:14)
+    at Cursor.close (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:917:10)
+    at cursor._next (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:23)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:204:5)
+    at _setCursorNotifiedImpl (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:426:38)
+    at self._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:434:46)
+    at Cursor._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:195:5)
+    at Cursor._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:231:59)
+    at _setCursorNotifiedImpl (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:434:17)
+    at setCursorNotified (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:426:3)
+    at done (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:650:16)
+    at queryCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:701:18)
+    at b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\connection\pool.js:397:18
+2019-04-24T15:51:39.216Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Apr 24 2019 10:51:39 GMT-0500 (Central Daylight Time), pid=9792, uid=null, gid=null, cwd=b:\GDP II\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP II\Codeword-GDPII\bin\www], rss=127770624, heapTotal=84647936, heapUsed=61509448, external=22146340, loadavg=[0, 0, 0], uptime=144049.7550332
+TypeError: Cannot set property 'courseStudent' of undefined
+    at b:\GDP II\Codeword-GDPII\controllers\controller.course.js:45:53
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\model.js:4675:16
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:4184:12
+    at cb (b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:1818:14)
+    at result (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:410:17)
+    at executeCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:402:9)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at cursor.close (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:62)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at completeClose (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:898:14)
+    at Cursor.close (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:917:10)
+    at cursor._next (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:23)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:204:5)
+    at _setCursorNotifiedImpl (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:426:38)
+    at self._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:434:46)
+    at Cursor._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:195:5)
+    at Cursor._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:231:59)
+    at _setCursorNotifiedImpl (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:434:17)
+    at setCursorNotified (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:426:3)
+    at done (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:650:16)
+    at queryCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:701:18)
+    at b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\connection\pool.js:397:18
+2019-04-24T15:51:39.506Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Apr 24 2019 10:51:39 GMT-0500 (Central Daylight Time), pid=9792, uid=null, gid=null, cwd=b:\GDP II\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP II\Codeword-GDPII\bin\www], rss=127967232, heapTotal=84647936, heapUsed=62473952, external=22174654, loadavg=[0, 0, 0], uptime=144050.0458093
+TypeError: Cannot set property 'courseStudent' of undefined
+    at b:\GDP II\Codeword-GDPII\controllers\controller.course.js:45:53
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\model.js:4675:16
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:4184:12
+    at process.nextTick (b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-04-24T15:51:39.513Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Apr 24 2019 10:51:39 GMT-0500 (Central Daylight Time), pid=9792, uid=null, gid=null, cwd=b:\GDP II\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP II\Codeword-GDPII\bin\www], rss=127975424, heapTotal=84647936, heapUsed=62693752, external=22183771, loadavg=[0, 0, 0], uptime=144050.0528255
+TypeError: Cannot set property 'courseStudent' of undefined
+    at b:\GDP II\Codeword-GDPII\controllers\controller.course.js:45:53
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\model.js:4675:16
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:4184:12
+    at process.nextTick (b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-04-24T15:52:28.893Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Apr 24 2019 10:52:28 GMT-0500 (Central Daylight Time), pid=9792, uid=null, gid=null, cwd=b:\GDP II\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP II\Codeword-GDPII\bin\www], rss=101687296, heapTotal=52834304, heapUsed=47411432, external=21667662, loadavg=[0, 0, 0], uptime=144099.4321822
+TypeError: Cannot set property 'courseStudent' of undefined
+    at b:\GDP II\Codeword-GDPII\controllers\controller.course.js:45:53
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\model.js:4675:16
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:4184:12
+    at cb (b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:1818:14)
+    at result (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:410:17)
+    at executeCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:402:9)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at cursor.close (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:62)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at completeClose (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:898:14)
+    at Cursor.close (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:917:10)
+    at cursor._next (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:23)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:204:5)
+    at _setCursorNotifiedImpl (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:426:38)
+    at self._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:434:46)
+    at Cursor._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:195:5)
+    at Cursor._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:231:59)
+    at _setCursorNotifiedImpl (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:434:17)
+    at setCursorNotified (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:426:3)
+    at done (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:650:16)
+    at queryCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:701:18)
+    at b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\connection\pool.js:397:18
+2019-04-24T15:52:28.901Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Apr 24 2019 10:52:28 GMT-0500 (Central Daylight Time), pid=9792, uid=null, gid=null, cwd=b:\GDP II\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP II\Codeword-GDPII\bin\www], rss=101941248, heapTotal=52834304, heapUsed=47666976, external=21676096, loadavg=[0, 0, 0], uptime=144099.4402047
+TypeError: Cannot set property 'courseStudent' of undefined
+    at b:\GDP II\Codeword-GDPII\controllers\controller.course.js:45:53
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\model.js:4675:16
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:4184:12
+    at cb (b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:1818:14)
+    at result (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:410:17)
+    at executeCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:402:9)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at cursor.close (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:62)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at completeClose (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:898:14)
+    at Cursor.close (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:917:10)
+    at cursor._next (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:23)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:204:5)
+    at _setCursorNotifiedImpl (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:426:38)
+    at self._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:434:46)
+    at Cursor._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:195:5)
+    at Cursor._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:231:59)
+    at _setCursorNotifiedImpl (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:434:17)
+    at setCursorNotified (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:426:3)
+    at done (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:650:16)
+    at queryCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:701:18)
+    at b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\connection\pool.js:397:18
+2019-04-24T15:52:28.909Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Apr 24 2019 10:52:28 GMT-0500 (Central Daylight Time), pid=9792, uid=null, gid=null, cwd=b:\GDP II\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP II\Codeword-GDPII\bin\www], rss=102268928, heapTotal=52834304, heapUsed=47988936, external=21685213, loadavg=[0, 0, 0], uptime=144099.4482253
+TypeError: Cannot set property 'courseStudent' of undefined
+    at b:\GDP II\Codeword-GDPII\controllers\controller.course.js:45:53
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\model.js:4675:16
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:4184:12
+    at process.nextTick (b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-04-24T15:52:29.183Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Apr 24 2019 10:52:29 GMT-0500 (Central Daylight Time), pid=9792, uid=null, gid=null, cwd=b:\GDP II\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP II\Codeword-GDPII\bin\www], rss=102240256, heapTotal=52834304, heapUsed=47894608, external=21689317, loadavg=[0, 0, 0], uptime=144099.7229584
+TypeError: Cannot set property 'courseStudent' of undefined
+    at b:\GDP II\Codeword-GDPII\controllers\controller.course.js:45:53
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\model.js:4675:16
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:4184:12
+    at process.nextTick (b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-04-24T15:52:34.494Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Apr 24 2019 10:52:34 GMT-0500 (Central Daylight Time), pid=9792, uid=null, gid=null, cwd=b:\GDP II\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP II\Codeword-GDPII\bin\www], rss=103084032, heapTotal=52834304, heapUsed=48426232, external=21744880, loadavg=[0, 0, 0], uptime=144105.031078
+TypeError: Cannot set property 'courseStudent' of undefined
+    at b:\GDP II\Codeword-GDPII\controllers\controller.course.js:45:53
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\model.js:4675:16
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:4184:12
+    at cb (b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:1818:14)
+    at result (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:410:17)
+    at executeCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:402:9)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at cursor.close (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:62)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at completeClose (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:898:14)
+    at Cursor.close (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:917:10)
+    at cursor._next (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:23)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:204:5)
+    at _setCursorNotifiedImpl (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:426:38)
+    at self._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:434:46)
+    at Cursor._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:195:5)
+    at Cursor._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:231:59)
+    at _setCursorNotifiedImpl (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:434:17)
+    at setCursorNotified (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:426:3)
+    at done (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:650:16)
+    at queryCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:701:18)
+    at b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\connection\pool.js:397:18
+2019-04-24T15:52:34.501Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Apr 24 2019 10:52:34 GMT-0500 (Central Daylight Time), pid=9792, uid=null, gid=null, cwd=b:\GDP II\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP II\Codeword-GDPII\bin\www], rss=102486016, heapTotal=52834304, heapUsed=47818352, external=21717752, loadavg=[0, 0, 0], uptime=144105.0401063
+TypeError: Cannot set property 'courseStudent' of undefined
+    at b:\GDP II\Codeword-GDPII\controllers\controller.course.js:45:53
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\model.js:4675:16
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:4184:12
+    at process.nextTick (b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-04-24T15:52:34.512Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Apr 24 2019 10:52:34 GMT-0500 (Central Daylight Time), pid=9792, uid=null, gid=null, cwd=b:\GDP II\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP II\Codeword-GDPII\bin\www], rss=103116800, heapTotal=52834304, heapUsed=48455736, external=21727681, loadavg=[0, 0, 0], uptime=144105.0521319
+TypeError: Cannot set property 'courseStudent' of undefined
+    at b:\GDP II\Codeword-GDPII\controllers\controller.course.js:45:53
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\model.js:4675:16
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:4184:12
+    at process.nextTick (b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-04-24T15:52:34.519Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Apr 24 2019 10:52:34 GMT-0500 (Central Daylight Time), pid=9792, uid=null, gid=null, cwd=b:\GDP II\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP II\Codeword-GDPII\bin\www], rss=102318080, heapTotal=52834304, heapUsed=47657208, external=21716111, loadavg=[0, 0, 0], uptime=144105.0571458
+TypeError: Cannot set property 'courseStudent' of undefined
+    at b:\GDP II\Codeword-GDPII\controllers\controller.course.js:45:53
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\model.js:4675:16
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:4184:12
+    at cb (b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:1818:14)
+    at result (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:410:17)
+    at executeCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:402:9)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at cursor.close (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:62)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at completeClose (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:898:14)
+    at Cursor.close (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:917:10)
+    at cursor._next (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:23)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:204:5)
+    at _setCursorNotifiedImpl (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:426:38)
+    at self._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:434:46)
+    at Cursor._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:195:5)
+    at Cursor._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:231:59)
+    at _setCursorNotifiedImpl (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:434:17)
+    at setCursorNotified (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:426:3)
+    at done (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:650:16)
+    at queryCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:701:18)
+    at b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\connection\pool.js:397:18
+2019-04-24T15:52:39.041Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Apr 24 2019 10:52:39 GMT-0500 (Central Daylight Time), pid=9792, uid=null, gid=null, cwd=b:\GDP II\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP II\Codeword-GDPII\bin\www], rss=103071744, heapTotal=52834304, heapUsed=48177600, external=21756549, loadavg=[0, 0, 0], uptime=144109.5803844
+TypeError: Cannot set property 'courseStudent' of undefined
+    at b:\GDP II\Codeword-GDPII\controllers\controller.course.js:45:53
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\model.js:4675:16
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:4184:12
+    at cb (b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:1818:14)
+    at result (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:410:17)
+    at executeCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:402:9)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at cursor.close (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:62)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at completeClose (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:898:14)
+    at Cursor.close (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:917:10)
+    at cursor._next (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:23)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:204:5)
+    at _setCursorNotifiedImpl (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:426:38)
+    at self._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:434:46)
+    at Cursor._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:195:5)
+    at Cursor._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:231:59)
+    at _setCursorNotifiedImpl (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:434:17)
+    at setCursorNotified (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:426:3)
+    at done (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:650:16)
+    at queryCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:701:18)
+    at b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\connection\pool.js:397:18
+2019-04-24T15:52:39.049Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Apr 24 2019 10:52:39 GMT-0500 (Central Daylight Time), pid=9792, uid=null, gid=null, cwd=b:\GDP II\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP II\Codeword-GDPII\bin\www], rss=103391232, heapTotal=52834304, heapUsed=48498712, external=21765666, loadavg=[0, 0, 0], uptime=144109.588405
+TypeError: Cannot set property 'courseStudent' of undefined
+    at b:\GDP II\Codeword-GDPII\controllers\controller.course.js:45:53
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\model.js:4675:16
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:4184:12
+    at process.nextTick (b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-04-24T15:52:39.055Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Apr 24 2019 10:52:39 GMT-0500 (Central Daylight Time), pid=9792, uid=null, gid=null, cwd=b:\GDP II\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP II\Codeword-GDPII\bin\www], rss=103522304, heapTotal=52834304, heapUsed=48630944, external=21765908, loadavg=[0, 0, 0], uptime=144109.5934182
+TypeError: Cannot set property 'courseStudent' of undefined
+    at b:\GDP II\Codeword-GDPII\controllers\controller.course.js:45:53
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\model.js:4675:16
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:4184:12
+    at cb (b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:1818:14)
+    at result (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:410:17)
+    at executeCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:402:9)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at cursor.close (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:62)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at completeClose (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:898:14)
+    at Cursor.close (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:917:10)
+    at cursor._next (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:23)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:204:5)
+    at _setCursorNotifiedImpl (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:426:38)
+    at self._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:434:46)
+    at Cursor._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:195:5)
+    at Cursor._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:231:59)
+    at _setCursorNotifiedImpl (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:434:17)
+    at setCursorNotified (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:426:3)
+    at done (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:650:16)
+    at queryCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:701:18)
+    at b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\connection\pool.js:397:18
+2019-04-24T15:52:39.068Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Apr 24 2019 10:52:39 GMT-0500 (Central Daylight Time), pid=9792, uid=null, gid=null, cwd=b:\GDP II\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP II\Codeword-GDPII\bin\www], rss=103530496, heapTotal=52834304, heapUsed=48450544, external=21770293, loadavg=[0, 0, 0], uptime=144109.6074559
+TypeError: Cannot set property 'courseStudent' of undefined
+    at b:\GDP II\Codeword-GDPII\controllers\controller.course.js:45:53
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\model.js:4675:16
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:4184:12
+    at process.nextTick (b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-04-24T15:53:16.592Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Apr 24 2019 10:53:16 GMT-0500 (Central Daylight Time), pid=9792, uid=null, gid=null, cwd=b:\GDP II\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP II\Codeword-GDPII\bin\www], rss=103440384, heapTotal=52834304, heapUsed=48356120, external=21768557, loadavg=[0, 0, 0], uptime=144147.1312733
+TypeError: Cannot set property 'courseStudent' of undefined
+    at b:\GDP II\Codeword-GDPII\controllers\controller.course.js:45:53
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\model.js:4675:16
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:4184:12
+    at process.nextTick (b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-04-24T15:53:16.598Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Apr 24 2019 10:53:16 GMT-0500 (Central Daylight Time), pid=9792, uid=null, gid=null, cwd=b:\GDP II\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP II\Codeword-GDPII\bin\www], rss=103575552, heapTotal=52834304, heapUsed=48490688, external=21768799, loadavg=[0, 0, 0], uptime=144147.1372897
+TypeError: Cannot set property 'courseStudent' of undefined
+    at b:\GDP II\Codeword-GDPII\controllers\controller.course.js:45:53
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\model.js:4675:16
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:4184:12
+    at cb (b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:1818:14)
+    at result (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:410:17)
+    at executeCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:402:9)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at cursor.close (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:62)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at completeClose (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:898:14)
+    at Cursor.close (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:917:10)
+    at cursor._next (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:23)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:204:5)
+    at _setCursorNotifiedImpl (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:426:38)
+    at self._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:434:46)
+    at Cursor._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:195:5)
+    at Cursor._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:231:59)
+    at _setCursorNotifiedImpl (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:434:17)
+    at setCursorNotified (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:426:3)
+    at done (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:650:16)
+    at queryCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:701:18)
+    at b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\connection\pool.js:397:18
+2019-04-24T15:53:16.610Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Apr 24 2019 10:53:16 GMT-0500 (Central Daylight Time), pid=9792, uid=null, gid=null, cwd=b:\GDP II\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP II\Codeword-GDPII\bin\www], rss=104476672, heapTotal=52834304, heapUsed=48346528, external=21773903, loadavg=[0, 0, 0], uptime=144147.1493217
+TypeError: Cannot set property 'courseStudent' of undefined
+    at b:\GDP II\Codeword-GDPII\controllers\controller.course.js:45:53
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\model.js:4675:16
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:4184:12
+    at process.nextTick (b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-04-24T15:53:16.617Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Apr 24 2019 10:53:16 GMT-0500 (Central Daylight Time), pid=9792, uid=null, gid=null, cwd=b:\GDP II\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP II\Codeword-GDPII\bin\www], rss=104615936, heapTotal=52834304, heapUsed=48486328, external=21774145, loadavg=[0, 0, 0], uptime=144147.1553381
+TypeError: Cannot set property 'courseStudent' of undefined
+    at b:\GDP II\Codeword-GDPII\controllers\controller.course.js:45:53
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\model.js:4675:16
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:4184:12
+    at cb (b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:1818:14)
+    at result (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:410:17)
+    at executeCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:402:9)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at cursor.close (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:62)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at completeClose (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:898:14)
+    at Cursor.close (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:917:10)
+    at cursor._next (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:23)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:204:5)
+    at _setCursorNotifiedImpl (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:426:38)
+    at self._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:434:46)
+    at Cursor._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:195:5)
+    at Cursor._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:231:59)
+    at _setCursorNotifiedImpl (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:434:17)
+    at setCursorNotified (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:426:3)
+    at done (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:650:16)
+    at queryCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:701:18)
+    at b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\connection\pool.js:397:18
+2019-04-24T15:53:56.332Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Apr 24 2019 10:53:56 GMT-0500 (Central Daylight Time), pid=9792, uid=null, gid=null, cwd=b:\GDP II\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP II\Codeword-GDPII\bin\www], rss=108953600, heapTotal=52834304, heapUsed=48435256, external=21779573, loadavg=[0, 0, 0], uptime=144186.870988
+TypeError: Cannot set property 'courseStudent' of undefined
+    at b:\GDP II\Codeword-GDPII\controllers\controller.course.js:45:53
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\model.js:4675:16
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:4184:12
+    at cb (b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:1818:14)
+    at result (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:410:17)
+    at executeCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:402:9)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at cursor.close (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:62)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at completeClose (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:898:14)
+    at Cursor.close (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:917:10)
+    at cursor._next (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:23)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:204:5)
+    at _setCursorNotifiedImpl (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:426:38)
+    at self._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:434:46)
+    at Cursor._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:195:5)
+    at Cursor._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:231:59)
+    at _setCursorNotifiedImpl (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:434:17)
+    at setCursorNotified (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:426:3)
+    at done (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:650:16)
+    at queryCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:701:18)
+    at b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\connection\pool.js:397:18
+2019-04-24T15:53:56.338Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Apr 24 2019 10:53:56 GMT-0500 (Central Daylight Time), pid=9792, uid=null, gid=null, cwd=b:\GDP II\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP II\Codeword-GDPII\bin\www], rss=109199360, heapTotal=52834304, heapUsed=48679384, external=21779815, loadavg=[0, 0, 0], uptime=144186.8759996
+TypeError: Cannot set property 'courseStudent' of undefined
+    at b:\GDP II\Codeword-GDPII\controllers\controller.course.js:45:53
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\model.js:4675:16
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:4184:12
+    at cb (b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:1818:14)
+    at result (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:410:17)
+    at executeCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:402:9)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at cursor.close (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:62)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at completeClose (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:898:14)
+    at Cursor.close (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:917:10)
+    at cursor._next (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:23)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:204:5)
+    at _setCursorNotifiedImpl (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:426:38)
+    at self._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:434:46)
+    at Cursor._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:195:5)
+    at Cursor._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:231:59)
+    at _setCursorNotifiedImpl (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:434:17)
+    at setCursorNotified (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:426:3)
+    at done (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:650:16)
+    at queryCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:701:18)
+    at b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\connection\pool.js:397:18
+2019-04-24T15:53:56.346Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Apr 24 2019 10:53:56 GMT-0500 (Central Daylight Time), pid=9792, uid=null, gid=null, cwd=b:\GDP II\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP II\Codeword-GDPII\bin\www], rss=109510656, heapTotal=52834304, heapUsed=48997880, external=21788932, loadavg=[0, 0, 0], uptime=144186.8840214
+TypeError: Cannot set property 'courseStudent' of undefined
+    at b:\GDP II\Codeword-GDPII\controllers\controller.course.js:45:53
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\model.js:4675:16
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:4184:12
+    at process.nextTick (b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-04-24T15:53:56.357Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Apr 24 2019 10:53:56 GMT-0500 (Central Daylight Time), pid=9792, uid=null, gid=null, cwd=b:\GDP II\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP II\Codeword-GDPII\bin\www], rss=110354432, heapTotal=52834304, heapUsed=48734256, external=21785822, loadavg=[0, 0, 0], uptime=144186.8960519
+TypeError: Cannot set property 'courseStudent' of undefined
+    at b:\GDP II\Codeword-GDPII\controllers\controller.course.js:45:53
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\model.js:4675:16
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:4184:12
+    at process.nextTick (b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-04-24T15:54:08.724Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Apr 24 2019 10:54:08 GMT-0500 (Central Daylight Time), pid=9792, uid=null, gid=null, cwd=b:\GDP II\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP II\Codeword-GDPII\bin\www], rss=114962432, heapTotal=53358592, heapUsed=49276160, external=21816548, loadavg=[0, 0, 0], uptime=144199.262951
+TypeError: Cannot set property 'courseStudent' of undefined
+    at b:\GDP II\Codeword-GDPII\controllers\controller.course.js:45:53
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\model.js:4675:16
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:4184:12
+    at cb (b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:1818:14)
+    at result (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:410:17)
+    at executeCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:402:9)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at cursor.close (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:62)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at completeClose (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:898:14)
+    at Cursor.close (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:917:10)
+    at cursor._next (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:23)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:204:5)
+    at _setCursorNotifiedImpl (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:426:38)
+    at self._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:434:46)
+    at Cursor._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:195:5)
+    at Cursor._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:231:59)
+    at _setCursorNotifiedImpl (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:434:17)
+    at setCursorNotified (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:426:3)
+    at done (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:650:16)
+    at queryCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:701:18)
+    at b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\connection\pool.js:397:18
+2019-04-24T15:54:08.730Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Apr 24 2019 10:54:08 GMT-0500 (Central Daylight Time), pid=9792, uid=null, gid=null, cwd=b:\GDP II\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP II\Codeword-GDPII\bin\www], rss=115347456, heapTotal=53358592, heapUsed=48608128, external=21789010, loadavg=[0, 0, 0], uptime=144199.268967
+TypeError: Cannot set property 'courseStudent' of undefined
+    at b:\GDP II\Codeword-GDPII\controllers\controller.course.js:45:53
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\model.js:4675:16
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:4184:12
+    at cb (b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:1818:14)
+    at result (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:410:17)
+    at executeCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:402:9)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at cursor.close (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:62)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\utils.js:128:55)
+    at completeClose (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:898:14)
+    at Cursor.close (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:917:10)
+    at cursor._next (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\operations\cursor_ops.js:224:23)
+    at handleCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:204:5)
+    at _setCursorNotifiedImpl (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:426:38)
+    at self._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:434:46)
+    at Cursor._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:195:5)
+    at Cursor._endSession (b:\GDP II\Codeword-GDPII\node_modules\mongodb\lib\cursor.js:231:59)
+    at _setCursorNotifiedImpl (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:434:17)
+    at setCursorNotified (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:426:3)
+    at done (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:650:16)
+    at queryCallback (b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\cursor.js:701:18)
+    at b:\GDP II\Codeword-GDPII\node_modules\mongodb-core\lib\connection\pool.js:397:18
+2019-04-24T15:54:08.740Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Apr 24 2019 10:54:08 GMT-0500 (Central Daylight Time), pid=9792, uid=null, gid=null, cwd=b:\GDP II\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP II\Codeword-GDPII\bin\www], rss=116088832, heapTotal=53358592, heapUsed=49352592, external=21807131, loadavg=[0, 0, 0], uptime=144199.2799958
+TypeError: Cannot set property 'courseStudent' of undefined
+    at b:\GDP II\Codeword-GDPII\controllers\controller.course.js:45:53
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\model.js:4675:16
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:4184:12
+    at process.nextTick (b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2019-04-24T15:54:08.747Z - error: uncaughtException: Cannot set property 'courseStudent' of undefined date=Wed Apr 24 2019 10:54:08 GMT-0500 (Central Daylight Time), pid=9792, uid=null, gid=null, cwd=b:\GDP II\Codeword-GDPII, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP II\Codeword-GDPII\bin\www], rss=116297728, heapTotal=53358592, heapUsed=49560960, external=21808056, loadavg=[0, 0, 0], uptime=144199.2860122
+TypeError: Cannot set property 'courseStudent' of undefined
+    at b:\GDP II\Codeword-GDPII\controllers\controller.course.js:45:53
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\model.js:4675:16
+    at b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\query.js:4184:12
+    at process.nextTick (b:\GDP II\Codeword-GDPII\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)

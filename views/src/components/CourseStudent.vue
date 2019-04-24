@@ -350,14 +350,14 @@ export default {
       })
     },
     editStudent (studentId, selectEmailKey, selectStudent) {
-      var studentValidate = true
+      var studentValidate = 0
       var studentData = this.courseStudentData
       studentData.forEach(students => {
         if (students.EmailKey.toUpperCase() === selectEmailKey.toUpperCase()) {
-          studentValidate = false
+          studentValidate = studentValidate + 1
         }
       })
-      if (studentValidate === false) {
+      if (studentValidate > 1) {
         swal('Student already exists!!')
       } else {
         axios({

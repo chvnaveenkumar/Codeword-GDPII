@@ -75,7 +75,7 @@ module.exports.deleteCourse=deleteCourse;
 
 let updateCourse=(req,res) =>{
     var body = _.pick(req.body,['id','Startdate','Enddate','PreSurveyURL','PostSurveyURL']);  
-        CourseModel.updateOne({_id: body.id}, { $set: { "Startdate" : body.Startdate,"Enddate":body.Enddate , "PreSurveyURL":body.PreSurveyURL, "PostSurveyURL": body.PostSurveyURL } }, function(err,updatecoursestudent){
+        CourseModel.updateOne({_id: body.id}, { $set: { "Startdate" : new Date(body.Startdate) && new Date(body.Startdate).toISOString().split('T')[0],"Enddate":new Date(body.Enddate) && new Date(body.Enddate).toISOString().split('T')[0] , "PreSurveyURL":body.PreSurveyURL, "PostSurveyURL": body.PostSurveyURL } }, function(err,updatecoursestudent){
         if(err){
             return res.json({ code:200, message:err});
         }

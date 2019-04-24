@@ -261,23 +261,10 @@ export default {
   },
   watch: {
     selectstartDate (value) {
-      console.log('start date')
-      if (this.endDateChanged) {
-        let start = new Date(value)
-        this.selectstartDate = new Date(start) && new Date(start).toISOString().split('T')[0]
-        this.selectendDate = new Date(start.setMonth(start.getMonth())) && new Date(start.setMonth(start.getMonth() + 4)).toISOString().split('T')[0]
-        this.tempdate = this.selectendDate
-        this.enddisabledDates.to = new Date(new Date(this.selectstartDate).getFullYear(), new Date(this.selectstartDate).getMonth(), new Date(this.selectstartDate).getDate() + 1)
-      } else {
-        this.enddisabledDates.to = new Date(new Date(this.selectstartDate).getFullYear(), new Date(this.selectstartDate).getMonth(), new Date(this.selectstartDate).getDate() + 1)
-      }
+      this.enddisabledDates.to = new Date(new Date(this.selectstartDate).getFullYear(), new Date(this.selectstartDate).getMonth(), new Date(this.selectstartDate).getDate() + 1)
     },
     selectendDate (value) {
-      console.log('selectenddate')
-      if (this.tempdate !== value) {
-        this.endDateChanged = false
-        this.startdisabledDates.from = new Date(new Date(this.selectendDate).getFullYear(), new Date(this.selectendDate).getMonth(), new Date(this.selectendDate).getDate())
-      }
+      this.startdisabledDates.from = new Date(new Date(this.selectendDate).getFullYear(), new Date(this.selectendDate).getMonth(), new Date(this.selectendDate).getDate() - 1)
     }
   },
   methods: {
@@ -470,8 +457,8 @@ export default {
       })
     },
     selectCourse (courseDetails) {
-      this.selectstartDate = courseDetails.Startdate
-      this.selectendDate = courseDetails.Enddate
+      this.selectstartDate = new Date(new Date(courseDetails.Startdate).getFullYear(), new Date(courseDetails.Startdate).getMonth(), new Date(courseDetails.Startdate).getDate() + 1)
+      this.selectendDate = new Date(new Date(courseDetails.Enddate).getFullYear(), new Date(courseDetails.Enddate).getMonth(), new Date(courseDetails.Enddate).getDate() + 1)
       this.selectstartSurvey = courseDetails.PreSurveyURL
       this.selectendSurvey = courseDetails.PostSurveyURL
     },

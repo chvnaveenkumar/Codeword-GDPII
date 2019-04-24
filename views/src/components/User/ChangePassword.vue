@@ -3,8 +3,8 @@
   <div>
     <div class="container ">
         <div class="row">
-        <div class="col-md-4 col-xs-0 col-sm-0"></div>
-        <div class="col-md-5 col-xs-8 col-sm-8" style="margin-top:6em">
+        <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4"></div>
+        <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4" style="margin-top:6em">
             <div class="card">
             <div class="card-body">
             <h2> Change Password</h2>  
@@ -41,7 +41,7 @@
 </div>
 </form>
   </div></div></div></div>
-  <div class="col-md-3 col-lg-3 col-xs-1 col-sm-1"></div>
+  <div class="col-md-3 col-lg-3 col-xs-3 col-sm-3"></div>
   </div>
 </template>
 

@@ -5,10 +5,10 @@
   </div>
  <div class="card">
    <h5 class="card-header">      <div class="row" >
-            <div class="col-md-6 col-lg-6 col-xs-0 col-sm-0">
+            <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
                 <h3 style="font-weight:bold;text-align:left"> Course Name: {{ courseNameData }} </h3>
             </div>
-            <div class="col-md-6 col-lg-6 col-xs-0 col-sm-0">
+            <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
                 <h5 style="font-weight:bold;text-align:right"> Acknowledged Status: {{acknowledged}} / {{totalStudents}} </h5>
                 <h5 style="font-weight:bold;text-align:right"> Acknowledged Percentage: {{ ((acknowledged/totalStudents)*100).toFixed(2) }}%</h5>
             </div>
@@ -16,14 +16,14 @@
 </h5>
   <div class="card-body">
     <div class="row" >
-    <div class="col-md-6 col-lg-6 col-xs-0 col-sm-0" style="text-align:left;font-weight:bold">
+    <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6" style="text-align:left;font-weight:bold">
     Start Date: {{ courseData.Startdate }} <br>
     End Date: {{ courseData.Enddate }} <br>
     Start Survey URL: <a v-bind:href="'http://'+courseData.PreSurveyURL" class="card-link" target="_blank">{{ courseData.PreSurveyURL }} </a> <br>
     End Survey URL: <a v-bind:href="'http://'+courseData.PostSurveyURL" class="card-link" target="_blank">{{ courseData.PostSurveyURL }} </a> <br>
     Number of Students: {{ totalStudents }} <br>
     </div>
-     <div class="col-md-6 col-lg-6 col-xs-0 col-sm-0" style="text-align:left;font-weight:bold">
+     <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6" style="text-align:left;font-weight:bold">
           <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#editCourse" @click="selectCourse(courseData)" style="float:right;"><i class="fa fa-pencil"></i>Edit Course Details</button>
     </div>
     </div>
@@ -55,27 +55,27 @@
       <div class="modal-body">
         <div class="container-fluid">
         <div class="row">
-            <div class=" col-md-6">
+            <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
             Enter Student Name: 
             </div>
-             <div class=" col-md-6">
+             <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
              <input type="text" class="form-control" v-model="addStudentName" pattern="[A-Za-z ]{3,25}" placeholder="Enter Student Name" data-toggle="tooltip" title="Name Should be of 3-25 alphabets" required>
         </div>
         </div>
         <br>
            <div class="row">
-            <div class=" col-md-6">
+            <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
             Enter Student Email: 
             </div>
-             <div class=" col-md-6">
+             <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
               <input type="email" class="form-control" placeholder="Enter Student Email" required title="Please enter proper Email ID" pattern="\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+" v-model="addStudentEmail">
         </div>
       </div>
         <div class="row">
-            <div class=" col-md-6">
+            <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
             Remaining Codewords : 
             </div>
-            <div class=" col-md-6">
+            <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
                {{  courseData.oldCodewords.length }} 
             </div>
       </div>
@@ -127,10 +127,10 @@
        <form @submit.prevent="editStudent(editStudentId, editStudentEmail, editStudentName)">
       <div class="modal-body">
           <div class="row">
-          <div class=" col-md-6">
+          <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
             <input type="text" v-model="editStudentName" required pattern="[A-Za-z ]{3,25}" placeholder="Enter Student Name" data-toggle="tooltip" title="Name Should be of 3-25 alphabets">
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
             <input type="email" v-model="editStudentEmail" required placeholder="Enter Student Email" title="Please enter proper Email ID" pattern="\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+">
           </div>
           </div>
@@ -159,22 +159,22 @@
       <div class="modal-body">
         <div class="container-fluid">
         <div class="row">
-          <div class=" col-md-6">
+          <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
         Start Date: </div>
-          <div class="col-md-6">
+          <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
             <div class="form-group">
         <input type="date" id="startDate" class="form-control" title="Atleast 6-15 characters" required v-model="selectstartDate" @click="changeEndDate"></div></div>
        </div>
         <div class="row">
-          <div class=" col-md-6">
-        End Date: </div><div class="col-md-6"><div class="form-group"><input type="date" required id="endDate" class="form-control" v-model="selectendDate"></div></div>
+          <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
+        End Date: </div><div class="col-md-6 col-lg-6 col-xs-6 col-sm-6"><div class="form-group"><input type="date" required id="endDate" class="form-control" v-model="selectendDate"></div></div>
         </div>
              <div class="row">
-          <div class=" col-md-6">
-        Start Survey URL: </div> <div class="col-md-6"><div class="form-group"><input type="text" class="form-control" v-model="selectstartSurvey"></div></div></div>
+          <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
+        Start Survey URL: </div> <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6"><div class="form-group"><input type="text" class="form-control" v-model="selectstartSurvey"></div></div></div>
           <div class="row">
-          <div class=" col-md-6">
-        End Survey URL: </div> <div class="col-md-6"><div class="form-group"><input type="text" class="form-control" v-model="selectendSurvey"></div></div></div>
+          <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
+        End Survey URL: </div> <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6"><div class="form-group"><input type="text" class="form-control" v-model="selectendSurvey"></div></div></div>
         </div>
                 <button type="cancel" class="btn btn-danger" data-dismiss="modal">Cancel</button>
         <button type="create" class="btn btn-primary" >Save Changes</button>

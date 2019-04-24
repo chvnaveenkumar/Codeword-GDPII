@@ -189,7 +189,6 @@ export default {
     this.startDate = new Date() && new Date().toISOString().split('T')[0]
     this.enddisabledDates.to = new Date(new Date(this.startDate).getFullYear(), new Date(this.startDate).getMonth(), new Date(this.startDate).getDate() + 1)
     this.endDate = new Date(new Date().setMonth(new Date().getMonth())) && new Date(new Date().setMonth(new Date().getMonth() + 4)).toISOString().split('T')[0]
-    this.fetchCourseList()
   },
   mounted () {
     $('#addcourse').on('hidden.bs.modal', function () {
@@ -199,6 +198,7 @@ export default {
       $('#welcome-alert').slideUp(500)
       this.welcomealert = false
     })
+    this.fetchCourseList()
   },
   watch: {
     startDate (value) {
@@ -333,11 +333,9 @@ export default {
             }
           }).then(response => {
             const index = this.coursesData.findIndex(course => course.courseNameKey === response.data.CourseNameValue)
-            console.log(response.data.AcknowledgedTrue)
             this.coursesData[index].totalStudents = response.data.totalStudents
             this.coursesData[index].acknowledged = response.data.AcknowledgedTrue
             this.courses = this.coursesData
-            console.log(this.courses)
           })
         }
       })

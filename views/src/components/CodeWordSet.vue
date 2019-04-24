@@ -34,7 +34,7 @@
                             <b-button id="popover-3" variant="primary">Hint</b-button>
         <b-popover target="popover-3" triggers="hover focus">
           <template slot="title">Rules for codeword</template>
-          1.In the uploaded excel sheet codeword should be unique. <br/>2.Codeword should contain letters.<br/> 3. Excel sheet should not be empty.<br/> 4. Excel sheet should not have empty cells. <br/> 6. There is no space in the codeword.
+          1.In the uploaded excel sheet codeword should be unique. <br/>2.Codeword should contain only alphabets but not letters or special characters.<br/> 3. Excel sheet should not be empty.
         </b-popover>
         </div>
                             

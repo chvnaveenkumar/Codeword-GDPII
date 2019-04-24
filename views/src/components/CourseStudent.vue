@@ -27,7 +27,6 @@
           <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#editCourse" @click="selectCourse(courseData)" style="float:right;"><i class="fa fa-pencil"></i>Edit Course Details</button>
     </div>
     </div>
-    
   </div>
 </div>
 <br>
@@ -163,12 +162,13 @@
         Start Date: </div>
           <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
             <div class="form-group">
-        <input type="date" id="startDate" class="form-control" title="Atleast 6-15 characters" required v-model="selectstartDate" @click="changeEndDate"></div></div>
+        <datepicker type="date" id="startDate" title="Atleast 6-15 characters" required :disabledDates="startdisabledDates" v-model="selectstartDate" @click="changeEndDate"></datepicker></div></div>
        </div>
         <div class="row">
           <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
-        End Date: </div><div class="col-md-6 col-lg-6 col-xs-6 col-sm-6"><div class="form-group"><input type="date" required id="endDate" class="form-control" v-model="selectendDate"></div></div>
+        End Date: </div><div class="col-md-6 col-lg-6 col-xs-6 col-sm-6"><datepicker type="date" :disabledDates="enddisabledDates" required id="endDate" v-model="selectendDate"></datepicker></div>
         </div>
+        <br/>
              <div class="row">
           <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
         Start Survey URL: </div> <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6"><div class="form-group"><input type="text" class="form-control" v-model="selectstartSurvey"></div></div></div>
@@ -187,6 +187,7 @@
 </template>
 <script>
 import swal from 'sweetalert2'
+import Datepicker from 'vuejs-datepicker'
 /* global axios $ */
 export default {
   name: 'CourseStudent',
@@ -224,6 +225,7 @@ export default {
       editStudentEmail: '',
       editStudentId: '',
       currentPage: '',
+      endDateChanged: true,
       pages: '',
       prevUrl: '',
       nextUrl: '',
@@ -233,8 +235,17 @@ export default {
       selectstartSurvey: '',
       selectendSurvey: '',
       addStudentName: '',
-      addStudentEmail: ''
+      addStudentEmail: '',
+      enddisabledDates: {
+        to: '' // Disable all dates up to specific date
+      },
+      startdisabledDates: {
+        from: '' // Disable all dates up to specific date
+      }
     }
+  },
+  components: {
+    Datepicker
   },
   created () {
     if (this.$route.params.courseName == null) {
@@ -246,6 +257,27 @@ export default {
       window.localStorage.setItem('courseName', this.courseNameData)
       this.getCourseStudentData()
       this.getCoursesData(this.courseNameData)
+    }
+  },
+  watch: {
+    selectstartDate (value) {
+      console.log('start date')
+      if (this.endDateChanged) {
+        let start = new Date(value)
+        this.selectstartDate = new Date(start) && new Date(start).toISOString().split('T')[0]
+        this.selectendDate = new Date(start.setMonth(start.getMonth())) && new Date(start.setMonth(start.getMonth() + 4)).toISOString().split('T')[0]
+        this.tempdate = this.selectendDate
+        this.enddisabledDates.to = new Date(new Date(this.selectstartDate).getFullYear(), new Date(this.selectstartDate).getMonth(), new Date(this.selectstartDate).getDate() + 1)
+      } else {
+        this.enddisabledDates.to = new Date(new Date(this.selectstartDate).getFullYear(), new Date(this.selectstartDate).getMonth(), new Date(this.selectstartDate).getDate() + 1)
+      }
+    },
+    selectendDate (value) {
+      console.log('selectenddate')
+      if (this.tempdate !== value) {
+        this.endDateChanged = false
+        this.startdisabledDates.from = new Date(new Date(this.selectendDate).getFullYear(), new Date(this.selectendDate).getMonth(), new Date(this.selectendDate).getDate())
+      }
     }
   },
   methods: {

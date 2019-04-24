@@ -35,9 +35,8 @@
   </div>
 </div> 
   </div>
-<div v-else-if="courses.length >0">
-  <div class="row" >
-        
+<div v-else-if="(courses.length >0) && (loading = true)">
+  <div class="row" >      
     <div class="col-md-3 col-lg-3 col-xs-3 col-sm-3" v-for="course in courses" :key="course._id" v-if="(!active != (new Date() < new Date(course.Enddate)) || inactive != (new Date() < new Date(course.Enddate))) && (active || inactive)">
       <div class="card border-success mb-3 cardstyle" style="max-width: 20rem;margin-top: 1rem;" >
          <div class="card-header bg-info border-success" id = "boldforcourse"><h4>{{ course.courseNameKey }}</h4>
@@ -129,7 +128,8 @@
                   <option disabled value="">Please select CodeWordSet</option>
                   <option v-for="codewordset in codeWordSetData" :value="codewordset" :key="codewordset._id">{{ codewordset.CodeWordSetName }}</option>
                 </select>
-                <span>{{ selectedCodeWordSet.CodeWordSetName }} {{ selectedCodeWordSet ? selectedCodeWordSet.Codewords.length : '' }}</span>
+                <br/>
+                <span>{{ selectedCodeWordSet.CodeWordSetName }} : {{ selectedCodeWordSet ? selectedCodeWordSet.Codewords.length : '' }}</span>
             </div>
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Enter Survey Start URL" name="startSurveyurl" data-toggle="tooltip" data-placement="bottom" title="Enter Survey Start URL" >
@@ -179,7 +179,8 @@ export default {
       },
       startdisabledDates: {
         from: '' // Disable all dates up to specific date
-      }
+      },
+      loading: false
     }
   },
   components: {
@@ -189,6 +190,7 @@ export default {
     this.startDate = new Date() && new Date().toISOString().split('T')[0]
     this.enddisabledDates.to = new Date(new Date(this.startDate).getFullYear(), new Date(this.startDate).getMonth(), new Date(this.startDate).getDate() + 1)
     this.endDate = new Date(new Date().setMonth(new Date().getMonth())) && new Date(new Date().setMonth(new Date().getMonth() + 4)).toISOString().split('T')[0]
+    this.fetchCourseList()
   },
   mounted () {
     $('#addcourse').on('hidden.bs.modal', function () {
@@ -201,6 +203,7 @@ export default {
     this.fetchCourseList()
   },
   watch: {
+    '$route': 'fetchCourseList',
     startDate (value) {
       if (this.endDateChanged) {
         let start = new Date(value)
@@ -217,8 +220,7 @@ export default {
         this.endDateChanged = false
         this.startdisabledDates.from = new Date(new Date(this.endDate).getFullYear(), new Date(this.endDate).getMonth(), new Date(this.endDate).getDate())
       }
-    },
-    '$route': 'fetchCourseList'
+    }
   },
   methods: {
     CreateCourse () {
@@ -246,7 +248,7 @@ export default {
           data: {
             token: window.localStorage.getItem('token'),
             courseNameKey: this.courseName,
-            codeWordSetName: this.selectedCodeWordSet.CodeWordSetName,
+            codfeWordSetName: this.selectedCodeWordSet.CodeWordSetName,
             startDate: this.startDate,
             endDate: this.endDate,
             preSurveyURL: this.startSurveyurldata,
@@ -336,6 +338,8 @@ export default {
             this.coursesData[index].totalStudents = response.data.totalStudents
             this.coursesData[index].acknowledged = response.data.AcknowledgedTrue
             this.courses = this.coursesData
+            this.loading = true
+            this.$forceUpdate()
           })
         }
       })

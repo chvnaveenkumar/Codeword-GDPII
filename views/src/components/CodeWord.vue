@@ -66,17 +66,16 @@
   </div>
 </div>
 </div>
-<div class="alert alert-primary" v-if='isPermanent' role="alert">
-  This is the default codeword set can not be edited or deleted.
-</div>
   <v-client-table :columns="columns" :data="data" :options="options">
-      <button type="button" slot="edit" :disabled='isPermanent' slot-scope="props" class="btn btn-info btn-sm" data-toggle="modal" @click="selectCodeword(props.row.index)" data-target="#editcodeword" style="marging-left:10px">
+      <button type="button" slot="edit" slot-scope="props" class="btn btn-info btn-sm" data-toggle="modal" @click="selectCodeword(props.row.index)" data-target="#editcodeword" style="marging-left:10px">
         <i class="fas fa-pencil-alt"></i>
       </button>
-      <button type="button" slot="delete" :disabled='isPermanent' slot-scope="props" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deletecodeword" @click="selectCodeword(props.row.index)" style="marging-left:10px">
+      <button type="button" slot="delete" slot-scope="props" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deletecodeword" @click="selectCodeword(props.row.index)" style="marging-left:10px">
         <i class="fas fa-trash"></i>
       </button>
   </v-client-table>
+
+
       <!-- Modal Edit Course -->
 <div class="modal fade" id="editcodeword" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -151,7 +150,8 @@ export default {
           filterPlaceholder: 'Search Codeword',
           filter: '',
           limit: ''
-        }
+        },
+        sortIcon: { base: 'fas', up: 'fa-chevron-up', down: 'fa-chevron-down', is: 'fa-sort' }
       },
       CodeWordSetName: '',
       codewords: [],
@@ -170,6 +170,13 @@ export default {
       window.localStorage.setItem('setId', this.$route.params.CodeWordSetName)
       this.CodeWordSetName = this.$route.params.CodeWordSetName
       this.getCodeWords()
+    }
+  },
+  watch: {
+    isPermanent () {
+      if (this.isPermanent) {
+        this.columns = ['CodewordName']
+      }
     }
   },
   methods: {

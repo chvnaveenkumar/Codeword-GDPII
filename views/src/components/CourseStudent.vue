@@ -193,21 +193,22 @@ export default {
   name: 'CourseStudent',
   data () {
     return {
-      columns: ['EmailKey', 'studentName', 'Codeword', 'edit', 'delete'],
+      columns: ['EmailKey', 'studentName', 'edit', 'delete'],
       data: [],
       options: {
         headings: {
           EmailKey: 'Student Email',
           studentName: 'Student Name',
-          Codeword: 'Codeword',
           id: 'id'
         },
-        sortable: ['EmailKey', 'studentName', 'Codeword'],
-        filterable: ['EmailKey', 'studentName', 'Codeword'],
+        sortable: ['EmailKey', 'studentName'],
+        filterable: ['EmailKey', 'studentName'],
         texts: {
           filterPlaceholder: 'Search Student',
-          filter: ''
-        }
+          filter: '',
+          noResults: 'No Students'
+        },
+        sortIcon: { base: 'fas', up: 'fa-chevron-up', down: 'fa-chevron-down', is: 'fa-sort' }
       },
       courseNameData: '',
       courseStudentData: [],

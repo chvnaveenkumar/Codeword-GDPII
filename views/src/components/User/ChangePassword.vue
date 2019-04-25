@@ -3,8 +3,8 @@
   <div>
     <div class="container ">
         <div class="row">
-        <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4"></div>
-        <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4" style="margin-top:6em">
+        <div class="col-md-3 col-lg-3 col-xs-3 col-sm-3"></div>
+        <div class="col-md-5 col-lg-5 col-xs-5 col-sm-5" style="margin-top:6em">
             <div class="card">
             <div class="card-body">
             <h2> Change Password</h2>  
@@ -17,14 +17,17 @@
             </div>
         <form @submit.prevent="changePassword">
             <div class="form-group row">
-            <label for="inputPassword" class="col-lg-5 col-form-label">New Password:</label>
-            <div class="col-lg-7">
-            <input type="password" class="form-control" placeholder="New Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password should have atleast 8 Small, Large character and numbers" v-model="newpassword">
+            <label for="inputPassword" class="col-md-5 col-lg-5 col-xs-5 col-sm-5 col-form-label">New Password:</label>
+            <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
+            <input type="password" class="form-control" placeholder="New Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}" v-on:keyup="validatePattern" title="Password should have (8-10) combination of Small, Large letters and numbers" v-model="newpassword">
     </div>
+                  <div class="alert alert-danger" v-if="!validate && validateMsg" role="alert">
+                      {{ validateMsg }}
+            </div>
   </div>
     <div class="form-group row">
-    <label for="inputPassword" class="col-lg-5 col-form-label">Confirm Password:</label>
-    <div class="col-lg-7">
+    <label for="inputPassword" class="col-md-5 col-lg-5 col-xs-5 col-sm-5">Confirm Password:</label>
+    <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
       <input type="password" class="form-control" placeholder="Confirm Password" v-model="repeatPassword" v-on:keyup="validatePassword">
     </div>
   </div>
@@ -36,10 +39,15 @@
     </div>
 
   <div class="form-group row">
-    <label class="col-lg-5 col-form-label"></label>
-    <button type="create" :disabled="!matchPassword" class="btn btn-primary">Change Password</button>
+    <label class="col-lg-2 col-form-label"></label>
+    <div class="col-lg-8">
+    <button type="create" :disabled="!matchPassword" class="btn btn-success">Change Password</button>
+    </div>
 </div>
 </form>
+ <form @submit.prevent="changeLater">
+    <button type="create" class="btn btn-success">Change Later</button>
+ </form>
   </div></div></div></div>
   <div class="col-md-3 col-lg-3 col-xs-3 col-sm-3"></div>
   </div>
@@ -54,13 +62,24 @@ export default {
       repeatPassword: '',
       changed: '',
       matchPassword: '',
-      msg: ''
+      msg: '',
+      validate: '',
+      validateMsg: ''
     }
   },
   created () {
     console.log('password page')
   },
   methods: {
+    changeLater () {
+      var statusCheck = window.localStorage.getItem('status')
+      console.log(statusCheck === 'true' || statusCheck === true)
+      if (statusCheck === 'true' || statusCheck === true) {
+        this.$router.push({ path: '/instructordashboard' })
+      } else {
+        this.$router.push({ path: '/studentdashboard' })
+      }
+    },
     changePassword () {
       this.msg = ''
       if (this.newpassword !== this.repeatPassword) {
@@ -97,6 +116,15 @@ export default {
         this.matchPassword = true
       } else {
         this.matchPassword = false
+      }
+    },
+    validatePattern: function (e) {
+      var tests = /^((?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,20})$/.test(this.newpassword)
+      if (!tests) {
+        this.validate = false
+        this.validateMsg = 'Password should have (8-20) combination of small, upper case letters and numbers.'
+      } else {
+        this.validate = true
       }
     }
   }

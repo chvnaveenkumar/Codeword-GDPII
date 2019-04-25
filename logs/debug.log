@@ -20990,3 +20990,11 @@ TypeError: Cannot set property 'courseStudent' of undefined
 2019-04-25T19:06:25.250Z - debug: 92 hootoriginal seeded
 2019-04-25T19:06:25.250Z - debug: 200 largeset seeded
 2019-04-25T19:06:25.250Z - info: END Seeder. Sample data read and verified.
+2019-04-25T19:20:51.250Z - info: START seeder.
+2019-04-25T19:20:51.285Z - debug: 2 dataCodewordset seeded
+2019-04-25T19:20:51.285Z - debug: 292 datacodeword seeded
+2019-04-25T19:20:51.285Z - debug: 6 datacourse seeded
+2019-04-25T19:20:51.285Z - debug: 114 dataCoursestudent seeded
+2019-04-25T19:20:51.285Z - debug: 92 hootoriginal seeded
+2019-04-25T19:20:51.286Z - debug: 200 largeset seeded
+2019-04-25T19:20:51.286Z - info: END Seeder. Sample data read and verified.

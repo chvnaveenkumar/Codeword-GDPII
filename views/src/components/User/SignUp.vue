@@ -9,7 +9,7 @@
             <div style="text-align: center">       
             </div>
             <div>
-            <div class="alert alert-success" v-if="signed && msg" role="alert"> {{ msg }} </div>
+            <div class="alert alert-success" v-if="signed && msg" role="alert"> {{ msg }} <router-link to="/forgetpassword">Click here</router-link> </div>
             <div class="alert alert-danger" v-else-if="!signed && msg" role="alert"> {{ msg }} </div>
             <form>
                 <div class="form-group">
@@ -66,7 +66,7 @@ export default {
             }, 2000)
           })
         } else {
-          this.msg = 'User already registered!! If you forget password then click here!!'
+          this.msg = 'User already registered!! If you forget password then '
           this.signed = true
         }
       })

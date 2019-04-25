@@ -53,7 +53,6 @@ export default {
       newpassword: '',
       repeatPassword: '',
       changed: '',
-      loginrole: this.$route.params.loginrole,
       matchPassword: '',
       msg: ''
     }
@@ -81,7 +80,9 @@ export default {
           if (res.data.message === true) {
             setTimeout(function () {
               this.msg = 'Changed Password Successfully!!'
-              if (_this.loginrole === true) {
+              var statusCheck = window.localStorage.getItem('status')
+              console.log(statusCheck === 'true' || statusCheck === true)
+              if (statusCheck === 'true' || statusCheck === true) {
                 _this.$router.push({ path: '/instructordashboard' })
               } else {
                 _this.$router.push({ path: '/studentdashboard' })

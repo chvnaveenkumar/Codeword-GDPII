@@ -122,7 +122,8 @@ let changePassword = (req,res) => {
         hashPassword = hash;
     
     UserModel.updateOne({_id: req.session.id },{$set: {password: hashPassword}}, (err,result) =>{
-        if(!res){
+        console.log(result)
+        if(!result){
             return  res.status(400).send("Unable to change Password!!");
         }
         return res.json({ code: 200, message: true});
@@ -131,3 +132,37 @@ let changePassword = (req,res) => {
    });
 }
 module.exports.changePassword = changePassword;
+
+
+let signUpUser = (req,res) => {
+    var body = _.pick(req.body,['email','instructor']);
+    var chars = "abcdefghijklmnopqrstuvwxyz@#$%&*ABCDEFGHIJKLMNOP123456789";
+    var temporaryPassword = "";
+    var gen_token = jwt.sign({email: body.email },'codewordnwmsu',{expiresIn:  1* 300 }).toString();
+    body.token = gen_token;
+   
+    for (var x = 0; x < 5; x++) {
+        var i = Math.floor(Math.random() * chars.length);
+        temporaryPassword += chars.charAt(i);
+    }
+    bcrypt.genSalt(10, (err,salt) => {
+        bcrypt.hash(temporaryPassword,salt,(err,hash) => {
+            hashPassword = hash;
+            var userModel = new UserModel({
+                emailKey: body.email.charAt(0).toLowerCase() + body.email.slice(1),
+                password: hashPassword,
+                isInstructor: body.instructor
+            });
+            userModel.save().then((user) => {
+                if(user){
+                    mailController.sendMail(body.email,temporaryPassword);
+                    return res.json({ code: 200, message: true});
+                }
+            }).catch((e) => {
+                console.log(e);
+                return res.json({ code: 400, message: e});        
+            })
+        })
+    })
+}
+module.exports.signUpUser = signUpUser;

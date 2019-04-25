@@ -1,80 +1,50 @@
 <!-- @author Naveen Kumar Chandaluri <S530742@nwmissouri.edu> -->
 <template>
-  <div>
-    <div class="container ">
-        <div class="row">
-        <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4"></div>
-        <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4" style="margin-top:5em">
-            <div class="card">
-                <div class="card-body">
-                    <form @submit.prevent="OnRegister">
-                       <div class="alert alert-success" v-if="signed && msg" role="alert">
-                      {{ msg }}
-                       </div>
-                      <div class="alert alert-danger" v-else-if="!signed && msg" role="alert">
-                      {{ msg }}
-                      </div>
-                          <h2> Register</h2>
-                              <div class="form-group">
-                                  <input type="email" class="form-control" placeholder="Enter email" required="required" title="Please enter proper Email ID" pattern="\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+" v-model="email">
-                              </div>
-                              <div class="form-group">
-                                    <input type="password" class="form-control" placeholder="Password" required
-                                        v-model.lazy="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter">
-                              </div>
-                              <div class="form-group">
-                                    <input type="password" class="form-control" placeholder="Confirm Password" @input="validate" required>
-                                    <p></p>
-                                    <p v-if="passwordstatus == false && status == true" class="alert alert-danger"> Password not matched </p>
-                                    <p v-if="passwordstatus == true && status == true" class="alert alert-info"> Password matched </p>
-                              </div>
-                              <div class="form-group">
-                                    <input type="checkbox" id="instructor" v-model="instructor">
-                                    <label for="terms">Instructor</label>
-                              </div>
-                              <div class="form-group">
-                                    <button type="submit" class="btn btn-success btn-sm btn-block">Register Now</button>
-                              </div>
-                              <div class="text-center">Already have an account?<router-link to="/">Sign in</router-link></div>                        
-                    </form>
-                </div>
+<div class="container">
+        <div class="row" style="margin-top: 7em">
+            <div class="col-md-3 col-lg-3 col-xs-1 col-sm-1"></div>
+            <div class="card col-md-4 col-lg-4 col-xs-12 col-sm-12">
+            <div class="card-body">
+            <h3> Signup </h3>
+            <div style="text-align: center">       
             </div>
+            <div>
+            <div class="alert alert-success" v-if="signed && msg" role="alert"> {{ msg }} </div>
+            <div class="alert alert-danger" v-else-if="!signed && msg" role="alert"> {{ msg }} </div>
+            <form>
+                <div class="form-group">
+                  <input type="email" class="form-control" placeholder="Enter email" required="required" pattern=".+@*.edu" v-model="email" >
+                </div>
+                <div class="form-group">
+                  <input type="checkbox" id="instructor" v-model="instructor">
+                  <label for="terms">Instructor</label>
+                </div>
+                <button type="button" class="btn btn-success btn-sm btn-block" @click="forget">Sent Temporary Password</button>
+            </form>
+            </div>
+            </div>
+            </div>
+            <div class="col-md-3 col-lg-3 col-xs-1 col-sm-1"></div>
         </div>
-        <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4"></div>
     </div>
-    </div>
-  </div>
 </template>
+
 <script>
-/* global axios */
 export default {
+  name: 'ForgetPage',
   data () {
     return {
-      email: '',
-      password: '',
-      repeatPassword: '',
-      instructor: false,
       msg: '',
       signed: false,
-      passwordmsg: '',
-      passwordstatus: '',
-      status: false
+      email: '',
+      instructor: false
     }
   },
   methods: {
-    validate (e) {
-      this.repeatPassword = e.target.value
-      this.status = true
-      if (this.password === this.repeatPassword) {
-        this.passwordstatus = true
-      } else {
-        this.passwordstatus = false
-      }
-    },
-    OnRegister () {
+    forget () {
       this.msg = ''
-      let emailid = this.email
-      this.status = true
+      let emailid = this.email.toLowerCase()
+      /* global axios */
       axios({
         method: 'post',
         url: 'codeword/validateEmail',
@@ -82,25 +52,22 @@ export default {
           email: emailid
         }
       }).then(res => {
-        let _this = this
+        console.log(res.data.message)
         if (res.data.message === false) {
-          axios.post('codeword/signup',
-            {
-              email: this.email.toLowerCase(),
-              password: this.password,
-              instructor: this.instructor
-            }).then(res => {
-            this.msg = 'Successfully Registered and Redirecting to SignIn Page.'
+          axios.post('codeword/signupuser', {
+            email: emailid,
+            instructor: this.instructor
+          }).then(response => {
+            this.msg = 'Sent temporary password to your email'
             this.signed = true
-            if (res.data.message) {
-              setTimeout(function () {
-                _this.$router.push({ path: '/' })
-              }, 1000)
-            }
+            let _this = this
+            setTimeout(function () {
+              _this.$router.push({ path: '/' })
+            }, 2000)
           })
         } else {
-          this.msg = 'This user registerd already!!'
-          this.signed = false
+          this.msg = 'User already registered!! If you forget password then click here!!'
+          this.signed = true
         }
       })
     }

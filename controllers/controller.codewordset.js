@@ -101,7 +101,7 @@ let getDataFromXLS = (req, res) => {
                 })
                 console.log(similarcodewords.length)
                 if(similarcodewords.length > 0){
-                    return res.status(200).json({data: similarcodewords, count: false})
+                    return res.status(200).json({data: similarcodewords, heading: 'Below codewords has 3 letter sequence similarity : ',count: false})
                 }else if(codeword_duplicates_1 > 0){
                     return res.status(200).json({ data: 'Uploaded excel has duplicates codewords in row '+ codeword_duplicates_1 + ' and ' +codeword_duplicates_2 + ' has same! ', count: false })
                 }else if(empty_codeword !== 0){

@@ -43,7 +43,7 @@
                                  <p v-if="count === 0" class="alert alert-danger">                          
                                  No File is uploaded. Waiting for user to upload the CodeWord Set.</p>
                                 <p v-else-if="count === false" class="alert alert-danger">
-                                    {{ codeWordSetData }} </p>
+                                    {{ codewordheading }} {{ codeWordSetData }} </p>
                                 <p v-else class="alert alert-info">
                                     There are {{ count }} codewords in the Uploaded set.</p>
                             </div>
@@ -115,7 +115,8 @@ export default {
       codeWordTempSetData: [],
       codeWordSetData: [],
       count: 0,
-      CodewordSetName: ''
+      CodewordSetName: '',
+      codewordheading: ''
     }
   },
   /* global axios */
@@ -130,6 +131,7 @@ export default {
       axios.post('/codeword/getdataxlsx', data, {
         timeout: 20000}).then(response => {
         this.codeWordSetData = response.data.data
+        this.codewordheading = response.data.heading || ' '
         this.count = response.data.count
       }, 5000)
     },

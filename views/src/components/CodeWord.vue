@@ -163,6 +163,7 @@ export default {
   mounted () {
     if (this.$route.params.CodeWordSetName == null) {
       this.CodeWordSetName = window.localStorage.getItem('setId')
+      console.log(window.localStorage.getItem('setId'))
       this.getCodeWords()
     } else {
       window.localStorage.setItem('setId', this.$route.params.CodeWordSetName)
@@ -191,7 +192,6 @@ export default {
       }).then(response => {
         this.codewordlist = response.data.codewords
         this.isPermanent = response.data.isPermanent
-        console.log(this.isPermanent)
         this.codewords = response.data.codewords
         var codewordsjson = []
         this.codewordlist.forEach((value, i) => {
@@ -204,7 +204,6 @@ export default {
       })
     },
     selectCodeword (index) {
-      console.log(index)
       this.codewordIndex = index
       this.selectedCodeword = this.data[index].CodewordName
     },
@@ -222,8 +221,33 @@ export default {
       this.updateCodeword()
     },
     addCodeword () {
-      console.log(this.newCodeword)
-      if (this.codewords.includes(this.newCodeword.toUpperCase())) {
+      var seqcodewords = []
+      var similarcodewords = []
+      for (var i = 0; i < this.codewords.length; i++) {
+        seqcodewords = []
+        for (var j = 0; j < this.codewords[i].length; j++) {
+          for (var k = 0; k <= this.codewords[i].length - 2; k++) {
+            seqcodewords.push(this.codewords[i].substring(k, k + 2).toUpperCase())
+            for (var l = 0; l <= this.newCodeword.length; l++) {
+              for (var m = 0; m <= this.newCodeword.length - 2; m++) {
+                if (seqcodewords.includes(this.newCodeword.substring(m, m + 2).toUpperCase())) {
+                  if (!similarcodewords.includes(this.codewords[i])) {
+                    similarcodewords.push(this.codewords[i])
+                    break
+                  }
+                }
+              }
+              if (seqcodewords.includes(this.newCodeword.substring(m, m + 3).toUpperCase())) {
+                break
+              }
+            }
+          }
+        }
+      }
+      console.log(similarcodewords)
+      if (similarcodewords.length > 0) {
+        swal('New codeword is similar to existing codewords: ' + similarcodewords)
+      } else if (this.codewords.includes(this.newCodeword.toUpperCase())) {
         swal('Codeword already exists! Please add different Codeword!!')
       } else {
         this.codewords.push(this.newCodeword.toUpperCase())

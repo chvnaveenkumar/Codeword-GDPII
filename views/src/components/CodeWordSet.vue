@@ -4,7 +4,7 @@
 <template>
 <div id="codeWordSet" class="container-fluid" style="margin-top:5em">
     <div class="col-md-4 col-lg-4 col-xs-0 col-sm-0">
-        <button type="button" class="btn btn-success" title="Create CodeWord Set" data-toggle="modal" data-target="#addcodeword">
+        <button type="button" class="btn btn-success" title="Create CodeWord Set" data-toggle="modal" @click="newcodewordmsg" data-target="#addcodeword">
                     <span class="fa fa-plus"></span> Upload New Codeword Set
                 </button>
 
@@ -129,11 +129,11 @@ export default {
       this.files = this.$refs.myFile
       let data = new FormData(document.querySelector('form'))
       axios.post('/codeword/getdataxlsx', data, {
-        timeout: 20000}).then(response => {
+        timeout: 1000}).then(response => {
         this.codeWordSetData = response.data.data
         this.codewordheading = response.data.heading || ' '
         this.count = response.data.count
-      }, 5000)
+      })
     },
     // Calling API of codeWordSet controller and sending xls data in form of json
     saveCodeWordData () {
@@ -188,6 +188,11 @@ export default {
     },
     selectCodewordSet (setName) {
       this.CodewordSetName = setName
+    },
+    newcodewordmsg () {
+      console.log('msg')
+      this.codeWordSetData = 'No File is uploaded. Waiting for user to upload the CodeWord Set.'
+      this.codewordheading = ''
     }
   },
   mounted () {

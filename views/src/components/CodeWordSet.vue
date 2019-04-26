@@ -123,14 +123,16 @@ export default {
     // Getting the data from uploaded xls file
     previewFiles () {
       console.log('previewfiles')
+      this.codeWordSetData = 'Uploading codewordset and validating codewords!!'
+      this.count = false
       this.files = this.$refs.myFile
       let data = new FormData(document.querySelector('form'))
-      axios.post('/codeword/getdataxlsx', data).then(response => {
+      axios.post('/codeword/getdataxlsx', data, {
+        timeout: 20000}).then(response => {
         this.codeWordSetData = response.data.data
         this.count = response.data.count
-      })
+      }, 5000)
     },
-
     // Calling API of codeWordSet controller and sending xls data in form of json
     saveCodeWordData () {
       let data = new FormData(document.querySelector('form'))
@@ -156,7 +158,8 @@ export default {
         url: '/codeword/getcodewordset',
         headers: {
           token: window.localStorage.getItem('token')
-        }
+        },
+        timeout: 3000
       }).then(response => {
         this.codeWordTempSetData = response.data.data
       })
@@ -176,6 +179,7 @@ export default {
           CodeWordSetName: this.CodewordSetName
         }
       }).then(response => {
+        swal('Success', this.CodewordSetName + ' codeword set is successfully deleted!!', 'success')
         $('#deleteCodwordsetmodel').modal('hide')
         this.getCodeWordData()
       })

@@ -40,6 +40,8 @@ let getDataFromXLS = (req, res) => {
                 var codeword_duplicates_1 = 0
                 var codeword_duplicates_2 = 0
                 var codeword_space = 0
+                var seqcodewords = []
+                var similarcodewords = []    
                 _.forEach(codewords, function(value,index) {
                     if(value.length<5 || value.length >15) {
                          if(value.length == 0){
@@ -70,8 +72,37 @@ let getDataFromXLS = (req, res) => {
                             }
                         }
                     }
-                });
-                if(codeword_duplicates_1 > 0){
+                })
+                _.forEach(codewords, function(value,index) {
+                        for (var k = 0; k <= value.length - 3; k++) {
+                            seqcodewords.push(value.substring(k, k + 3).toUpperCase())
+                        }
+                })
+                _.forEach(codewords, function(value,index) {
+                    var substringCount = 0
+                    var seqcount = 0 
+                    for (var m = 0; m <= value.length - 3; m++) {
+                        substringCount++
+                        for(var l=0;l<= seqcodewords.length; l++){
+                            if (seqcodewords[l] === value.substring(m, m + 3).toUpperCase()) {
+                                seqcount++
+                                if(substringCount < seqcount){
+                                if (!similarcodewords.includes(value)) {
+                                    similarcodewords.push(value)
+                                    break
+                                }    
+                            }
+                        }
+                        }
+                        if(substringCount < seqcount) {
+                            break
+                        }
+                    }
+                })
+                console.log(similarcodewords.length)
+                if(similarcodewords.length > 0){
+                    return res.status(200).json({data: similarcodewords, count: false})
+                }else if(codeword_duplicates_1 > 0){
                     return res.status(200).json({ data: 'Uploaded excel has duplicates codewords in row '+ codeword_duplicates_1 + ' and ' +codeword_duplicates_2 + ' has same! ', count: false })
                 }else if(empty_codeword !== 0){
                     return res.status(200).json({ data: 'Uploaded excel sheet has empty!! ', count: false })

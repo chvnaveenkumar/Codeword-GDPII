@@ -393,6 +393,7 @@ export default {
           }
         }).then(response => {
           if (response.data.message === true) {
+            swal('Success', ' Student info is successfully updated!!', 'success')
             $('#editStudent').modal('hide')
             this.getCourseStudentData()
             this.getCoursesData(this.courseNameData)
@@ -454,6 +455,7 @@ export default {
       }).then(response => {
         this.getCourseStudentData()
         this.getCoursesData(this.courseNameData)
+        swal('Success', 'Course details is successfully updated!!', 'success')
         $('#editCourse').modal('hide')
       })
     },

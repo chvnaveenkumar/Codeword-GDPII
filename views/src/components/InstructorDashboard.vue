@@ -248,7 +248,7 @@ export default {
           data: {
             token: window.localStorage.getItem('token'),
             courseNameKey: this.courseName,
-            codfeWordSetName: this.selectedCodeWordSet.CodeWordSetName,
+            codeWordSetName: this.selectedCodeWordSet.CodeWordSetName,
             startDate: this.startDate,
             endDate: this.endDate,
             preSurveyURL: this.startSurveyurldata,
@@ -319,7 +319,8 @@ export default {
         url: 'codeword/getCourseList',
         headers: {
           token: window.localStorage.getItem('token')
-        }
+        },
+        timeout: 5000
       }).then(response => {
         this.coursesData = response.data.data
         this.courses = ''
@@ -359,6 +360,7 @@ export default {
           CourseNameKey: this.selectedCourse
         }
       }).then(response => {
+        swal('Success', this.selectedCourse + ' course is successfully deleted!!', 'success')
         $('#deleteCourse').modal('hide')
         this.fetchCourseList()
       })

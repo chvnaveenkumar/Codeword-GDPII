@@ -226,11 +226,11 @@ export default {
       for (var i = 0; i < this.codewords.length; i++) {
         seqcodewords = []
         for (var j = 0; j < this.codewords[i].length; j++) {
-          for (var k = 0; k <= this.codewords[i].length - 2; k++) {
-            seqcodewords.push(this.codewords[i].substring(k, k + 2).toUpperCase())
+          for (var k = 0; k <= this.codewords[i].length - 3; k++) {
+            seqcodewords.push(this.codewords[i].substring(k, k + 3).toUpperCase())
             for (var l = 0; l <= this.newCodeword.length; l++) {
-              for (var m = 0; m <= this.newCodeword.length - 2; m++) {
-                if (seqcodewords.includes(this.newCodeword.substring(m, m + 2).toUpperCase())) {
+              for (var m = 0; m <= this.newCodeword.length - 3; m++) {
+                if (seqcodewords.includes(this.newCodeword.substring(m, m + 3).toUpperCase())) {
                   if (!similarcodewords.includes(this.codewords[i])) {
                     similarcodewords.push(this.codewords[i])
                     break
@@ -244,7 +244,6 @@ export default {
           }
         }
       }
-      console.log(similarcodewords)
       if (similarcodewords.length > 0) {
         swal('New codeword is similar to existing codewords: ' + similarcodewords)
       } else if (this.codewords.includes(this.newCodeword.toUpperCase())) {

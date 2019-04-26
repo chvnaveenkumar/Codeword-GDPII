@@ -95,7 +95,7 @@
             <form @submit.prevent="CreateCourse">
             <div class="modal-body">
             <div class="form-group">
-              <input type="text" class="form-control" pattern="[A-Za-z0-9 ]{6,15}" id="courseName" name="courseName" placeholder="Enter Course Name" data-toggle="tooltip" title="Course Name should be 6-15 characters/numbers only" required>
+              <input type="text" class="form-control" pattern="[A-Za-z0-9 ]{6,20}" id="courseName" name="courseName" placeholder="Enter Course Name" data-toggle="tooltip" title="Course Name should be 6-20 characters/numbers only" required>
             </div>
             <div class="row">
                 <div class="col tooltip-test" title="Start Date"> Start Date:<datepicker type="date" :disabledDates="startdisabledDates" name="startDate" v-model="startDate" required></datepicker></div>
@@ -129,7 +129,7 @@
                   <option v-for="codewordset in codeWordSetData" :value="codewordset" :key="codewordset._id">{{ codewordset.CodeWordSetName }}</option>
                 </select>
                 <br/>
-                <span>{{ selectedCodeWordSet.CodeWordSetName }} : {{ selectedCodeWordSet ? selectedCodeWordSet.Codewords.length : '' }}</span>
+                <span v-if="selectedCodeWordSet.CodeWordSetName">The selected {{ selectedCodeWordSet.CodeWordSetName }} has {{ selectedCodeWordSet ? selectedCodeWordSet.Codewords.length : '' }} codewords.</span>
             </div>
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Enter Survey Start URL" name="startSurveyurl" data-toggle="tooltip" data-placement="bottom" title="Enter Survey Start URL" >

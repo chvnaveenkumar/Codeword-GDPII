@@ -147,7 +147,8 @@ export default {
         texts: {
           filterPlaceholder: 'Search Codeword',
           filter: '',
-          limit: ''
+          limit: '',
+          noResults: 'No Codewords'
         },
         sortIcon: { base: 'fas', up: 'fa-chevron-up', down: 'fa-chevron-down', is: 'fa-sort' }
       },

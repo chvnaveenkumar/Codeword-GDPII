@@ -75,20 +75,21 @@
 #### 2.06 As an instructor, I want to create a new course by adding a list of students (containing one *@ email & one name field for each student), selecting a codeword set from a drop-down that shows the name of the set with the calculated count in parenthesis, and setting the start date (default to today) and end date (defaulted to 4 Months after then start date) for the course, and a pre-survey URL, and a post-survey URL. Team: implement either cut & paste a tab or comma separated list of students OR offer to import by selecting a csv file or Excel file in the proper format). 
 
 |                             Acceptance Criteria                            | Yes/No | Comments |
-|--------------------------------------------------------------------------:|--------|----------|
-| User should be able to add students lists by uploading names and Email Id. |        |         |
-| User should be able to select codeword set from dropdown list .            |        |         |
+|:--------------------------------------------------------------------------:|--------|----------|
+| User should be able to add students lists by uploading names and Email Id. |        |          |
+| User should be able to select codeword set from dropdown list .            |        |          |
 | User should be able to add new course                                      |        |          |
-| And also able to set start date and end date for the course                |        |         |
+| And also able to set start date and end date for the course.               |        |          |
 | User should able to enter Survey Start URL                                 |        |          |
-| User should able to enter Survey End URL                                   |        |         |
+| User should able to enter Survey End URL                                   |        |          |
 
 #### 2.07 As an instructor, if I click on "View Students" I want to see a list of students for the selected course (emails and names) and want to see the calculated count of students in that course.
+
 |                                        Acceptance Criteria                                       | Yes/No | Comments |
-|------------------------------------------------------------------------------------------------:|--------|----------|
+|:------------------------------------------------------------------------------------------------:|--------|----------|
 | If user clicks on "View Students", list of students for the selected course should be displayed. |        |          |
-| Email address and names should be included while displaying the list of students.                |        |         |
-| User can see the calculated count of the students in the selected course.                        |        |          |
+| Email address and names should be included while displaying the list of students.                |        |          |
+| User can see the calculated count of the students in the selected course..                       |        |          |
 
 #### 2.08 As an instructor, when I view my list of active courses, for each active course, I want to see:
     a. The unique name,
@@ -104,7 +105,7 @@
     f. An option to "Delete" an active course (expired courses will be not appear)
     
 |                                                   Acceptance Criteria                                                  | Yes/No | Comments |
-|----------------------------------------------------------------------------------------------------------------------:|--------|----------|
+|:----------------------------------------------------------------------------------------------------------------------:|--------|----------|
 | User should be able to see a unique name for the codeword set.                                                         |        |          |
 | User should be able to see the codeword set name which is selected from dropdown list.                                 |        |          |
 | User should also able to see the calculated count of words in the set by  selecting a code word set from dropdown box. |        |          |
@@ -152,14 +153,13 @@
 | Codewords should be confidential.                         |        |          |
 
 #### 3.05 As a user, I want to navigate between multiple pages (Home (list of active courses), + New Course, View a Set of Codewords and Confirm Delete Course).
-
 |                                                                Acceptance Criteria                                                               | Yes/No | Comments |
 |:------------------------------------------------------------------------------------------------------------------------------------------------:|--------|----------|
 | User should be able to navigate easily between the pages.                                                                                        |        |          |
 | When clicked on "+ Add course", it should redirect to the page where we can add the course details.                                              |        |          |
 | When clicked on "View Students", it should redirect to the page where it has the course details and students assigned to that particular course. |        |          |
 | When clicked on "Delete course", user should get a pop up asking for a confirmation.                                                             |        |          |
-
+You can now import Markdown table code directly using File/Paste table data... dialog.
 #### 3.06 As an instructor, I want to delete an existing course once it is completed. 
 
 |                        Acceptance Criteria                        | Yes/No | Comments |
@@ -223,14 +223,12 @@
     c. The start date and the end date,
 
     d. The pre-survey URL and the post-survey URL
-|                                                   Acceptance Criteria                                                  | Yes/No | Comments |
-|----------------------------------------------------------------------------------------------------------------------:|--------|----------|
-| User should be able to edit student name.                                                                               |        |           |
-| User should be able to edit student email.                                                                              |        |           |
-| User should be able to edit the Start date and End date for courses                                                     |        |           |
-| User must be able to edit pre-survey URL and the post-survey URL                                                        |        |           |
-
-
+|                         Acceptance Criteria                         | Yes/No | Comments |
+|:-------------------------------------------------------------------:|--------|----------|
+| User should be able to edit student name.                           |        |          |
+| User should be able to add a unique email                           |        |          |
+| User should be able to edit the Start date and End date for courses |        |          |
+| User must be able to edit pre-survey URL and the post-survey URL    |        |          |
 
 
 #### 3.14 - Each course is limited to no more than 1000 students.  (Verified with client)

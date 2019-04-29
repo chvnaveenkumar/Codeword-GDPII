@@ -16,15 +16,15 @@
 | Acceptance Criteria                                                | Yes/No | Comments |
 |--------------------------------------------------------------------|--------|----------|
 | User has entered correct username and password in the login screen |        |         |
-| User click on ‘Sign in’ button in the login screen                 |         |         |
+| User click on ï¿½Sign inï¿½ button in the login screen                 |         |         |
 | User should be able to see the home screen with codewords          |        |        |
 
 #### 1.03 - As a user, if I forget the password, I want to retrieve my account by entering the registered Email ID and submit it. Later I can access my account with the temporary password provided.
 
 | Acceptance Criteria                                                                      | Yes/No | Comments |
 |------------------------------------------------------------------------------------------|--------|----------|
-| Invalid login results will display the error message as “Password wrong”                 |        |          |
-| User clicks on ‘Forget password’, is asked for email address to send password reset link |        |         |
+| Invalid login results will display the error message as ï¿½Password wrongï¿½                 |        |          |
+| User clicks on ï¿½Forget passwordï¿½, is asked for email address to send password reset link |        |         |
 
 ## MVP 2:
 
@@ -35,14 +35,14 @@
 | Should be able to View the Login page                                                       |        |         |
 | Should be able to Click on Sign Up/Register and should be able to view the Registration page|        |          |
 | Register himself/herself by filling information like Name, Email id, Password, Confirm password and checking the Instructor checkbox                                                                           |        |          |
-| After clicking on “Register Now” button, he/she should be able to view a message “Successfully Registered and Redirecting to Sign In page”                                                               |        |          |
+| After clicking on ï¿½Register Nowï¿½ button, he/she should be able to view a message ï¿½Successfully Registered and Redirecting to Sign In pageï¿½                                                               |        |          |
 
 #### 2.02 As an instructor, I want to see  list of my active courses.
 
 | Acceptance Criteria                                                                         | Yes/No | Comments |
 |---------------------------------------------------------------------------------------------|--------|----------|
-| After filling information in Sign In page and clicking on Sign In button, he/she should be able to view a message “Sign In successful. Redirecting to Instructor’s Dashboard”                                   |        |         |
-| After successful Sign In, he/she should be able to view Instructor’s dashboard where they can view all the courses he/she are added to along with list of active courses.                                                                                         |        |          |
+| After filling information in Sign In page and clicking on Sign In button, he/she should be able to view a message ï¿½Sign In successful. Redirecting to Instructorï¿½s Dashboardï¿½                                   |        |         |
+| After successful Sign In, he/she should be able to view Instructorï¿½s dashboard where they can view all the courses he/she are added to along with list of active courses.                                                                                         |        |          |
 | After clicking on courses, instructor should be able to view course details like Course Name and Code-words assigned for respective course|        |          |
 
 
@@ -56,9 +56,9 @@
 | Acceptance Criteria                                                                         | Yes/No | Comments |
 |---------------------------------------------------------------------------------------------|--------|----------|
 | After successfull login, he/she should be able to view his/her Email Id (used for signing in) on top right corner of navigation bar along with dropdown arrow symbol for change password and logout options          |        |         |
-| Once clicking on Code-word Set in Navigation bar, he/she should be able to view “Create Code-word Set” page                                                                |        |       |
+| Once clicking on Code-word Set in Navigation bar, he/she should be able to view ï¿½Create Code-word Setï¿½ page                                                                |        |       |
 | Instructor should be able to view 2 default Codewordset (Small & Large set) along with count of codewords in the sets                                                               |        |        |
-| Once clicking on Code-word Set button at top left corner of the page, he/she should be able to view "Create Code-word Set” modal                                                               |        |        |
+| Once clicking on Code-word Set button at top left corner of the page, he/she should be able to view "Create Code-word Setï¿½ modal                                                               |        |        |
 | Post filling Codeword set Name and uploading excel file containing codewords in it, Instructor should be able to view number of codewords present in the uploaded set.                                                               |        |         |
 | After filling all the required fields and clicking on Create Codewordset button, Instructor should be able to view the new created codeword set along with count of codewords and Show Details button in the codewordset list                                                                 |        |         |
 | Once clicking on Show details button, Instructor should be redirected to Codeword page.                                                               |        |         |
@@ -83,10 +83,10 @@
 | User should able to enter Survey Start URL                                 |        |          |
 | User should able to enter Survey End URL                                   |        |         |
 
-#### 2.07 As an instructor, if I click on “View Students” I want to see a list of students for the selected course (emails and names) and want to see the calculated count of students in that course.
+#### 2.07 As an instructor, if I click on ï¿½View Studentsï¿½ I want to see a list of students for the selected course (emails and names) and want to see the calculated count of students in that course.
 |                                        Acceptance Criteria                                       | Yes/No | Comments |
 |------------------------------------------------------------------------------------------------:|--------|----------|
-| If user clicks on “View Students”, list of students for the selected course should be displayed. |        |          |
+| If user clicks on ï¿½View Studentsï¿½, list of students for the selected course should be displayed. |        |          |
 | Email address and names should be included while displaying the list of students.                |        |         |
 | User can see the calculated count of the students in the selected course.                        |        |          |
 
@@ -99,9 +99,9 @@
 
     d. The pre-survey URL and the post-survey URL
 
-    e. An option to “Edit”,
+    e. An option to ï¿½Editï¿½,
 
-    f. An option to “Delete” an active course (expired courses will be not appear)
+    f. An option to ï¿½Deleteï¿½ an active course (expired courses will be not appear)
     
 |                                                   Acceptance Criteria                                                  | Yes/No | Comments |
 |----------------------------------------------------------------------------------------------------------------------:|--------|----------|
@@ -130,14 +130,14 @@
 | User should be able to see the list of courses assigned to him/her.                 |        |          |
 | User should be able to see the Random codeword which is displayed on the home page. |        |          |
 
-#### 3.02 As an instructor, I want to see my list of courses, those are “active” today between the start and end date inclusively.
+#### 3.02 As an instructor, I want to see my list of courses, those are ï¿½activeï¿½ today between the start and end date inclusively.
 
 |                       Acceptance Criteria                      | Yes/No | Comments |
 |:--------------------------------------------------------------:|--------|----------|
 | User should be able to see the list of his/her courses.        |        |          |
 | User should be able to see the courses which are active today. |        |          |
 
-#### 3.03 As an instructor, I want to be notified if the codeword set is too small. If the calculated count of codewords is less than the calculated count of students then I want to see a warning that says “You have n students, but the codeword set has only m words. 
+#### 3.03 As an instructor, I want to be notified if the codeword set is too small. If the calculated count of codewords is less than the calculated count of students then I want to see a warning that says ï¿½You have n students, but the codeword set has only m words. 
 
 |                                                              Acceptance Criteria                                                              | Yes/No | Comments |
 |:---------------------------------------------------------------------------------------------------------------------------------------------:|--------|----------|
@@ -206,7 +206,7 @@
 
     b. The unique email,
 
-    |                                                   Acceptance Criteria                                                  | Yes/No | Comments |
+    |                                               Acceptance Criteria                                                  | Yes/No | Comments |
 |----------------------------------------------------------------------------------------------------------------------:|--------|----------|
 | User should be able to add a student name .                                                         |        |           |  
 | User should be able to add a unique email .                                                         |        |           |

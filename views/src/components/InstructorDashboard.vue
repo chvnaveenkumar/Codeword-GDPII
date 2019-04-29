@@ -132,7 +132,7 @@
                   <option v-for="codewordset in codeWordSetData" :value="codewordset" :key="codewordset._id">{{ codewordset.CodeWordSetName }}</option>
                 </select>
                 <br/>
-                <span>{{ selectedCodeWordSet.CodeWordSetName }} : {{ selectedCodeWordSet ? selectedCodeWordSet.Codewords.length : '' }}</span>
+                <span v-if="selectedCodeWordSet.CodeWordSetName">The selected {{ selectedCodeWordSet.CodeWordSetName }} has {{ selectedCodeWordSet ? selectedCodeWordSet.Codewords.length : '' }} codewords.</span>
             </div>
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Enter Survey Start URL" name="startSurveyurl" data-toggle="tooltip" data-placement="bottom" title="Enter Survey Start URL" >

@@ -202,15 +202,13 @@
 
 
 #### 3.11 - As an instructor, I want to add a student to an active course (e.g. when a new student transfers in) 
-    a. The student name,
-
-    b. The unique email,
-
-    |                                               Acceptance Criteria                                                  | Yes/No | Comments |
-|----------------------------------------------------------------------------------------------------------------------:|--------|----------|
-| User should be able to add a student name .                                                         |        |           |  
-| User should be able to add a unique email .                                                         |        |           |
-
+    a. The student name
+    b. The unique email
+|            Acceptance Criteria            | Yes/No | Comments |
+|:-----------------------------------------:|--------|----------|
+| User should be able to add a student name |        |          |
+| User should be able to add a unique email |        |          |
+   
 #### 3.12 - As an instructor, I want to delete a student from an active course (e.g. when they drop).
 |                        Acceptance Criteria                        | Yes/No | Comments |
 |:-----------------------------------------------------------------:|--------|----------|

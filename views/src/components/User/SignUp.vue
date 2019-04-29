@@ -13,7 +13,7 @@
             <div class="alert alert-danger" v-else-if="!signed && msg" role="alert"> {{ msg }} </div>
             <form>
                 <div class="form-group">
-                  <input type="email" class="form-control" placeholder="Enter email" required="required" pattern=".+@*.edu" v-model="email" >
+                  <input type="email" class="form-control" placeholder="Enter email" required="required" pattern="\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+" v-model="email" >
                 </div>
                 <div class="form-group">
                   <input type="checkbox" id="instructor" v-model="instructor">
@@ -52,7 +52,6 @@ export default {
           email: emailid
         }
       }).then(res => {
-        console.log(res.data.message)
         if (res.data.message === false) {
           axios.post('codeword/signupuser', {
             email: emailid,

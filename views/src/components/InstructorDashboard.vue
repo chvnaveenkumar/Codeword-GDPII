@@ -8,10 +8,14 @@
   </button>
 </div>
         <div class="row">
-                <div class="col-md-2 col-lg-2 col-xs-2 col-sm-2 tooltip-test"><button type="button" class="btn btn-success" title="Create CodeWord Set" data-toggle="modal" data-target="#addcourse" v-on:click="loadCourseModel">
+                <div class="col-md-2 col-lg-2 col-xs-2 col-sm-2 tooltip-test"><button type="button" class="btn btn-success" title="Create CodeWord Set" :disabled="courses.length >= 10" data-toggle="modal" data-target="#addcourse" v-on:click="loadCourseModel">
       <span class="fa fa-plus"></span> Add Course </button>
+      
     </div>
         <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
+      <div class="alert alert-danger" role="alert" v-if="courses.length >= 10">
+        Instructor has reached 10 courses.  
+      </div>
         </div>
     <div class="col-md-2 col-lg-2 col-xs-2 col-sm-2">
     <input class="form-check-input" type="checkbox" v-model="active" value="Active Courses" id="defaultCheck1">
@@ -95,7 +99,7 @@
             <form @submit.prevent="CreateCourse">
             <div class="modal-body">
             <div class="form-group">
-              <input type="text" class="form-control" pattern="[A-Za-z0-9 ]{6,15}" id="courseName" name="courseName" placeholder="Enter Course Name" data-toggle="tooltip" title="Course Name should be 6-15 characters/numbers only" required>
+              <input type="text" class="form-control" pattern="[A-Za-z0-9 ]{3,30}" id="courseName" name="courseName" placeholder="Enter Course Name" data-toggle="tooltip" title="Course Name should be 3-30 characters/numbers only" required>
             </div>
             <div class="row">
                 <div class="col tooltip-test" title="Start Date"> Start Date:<datepicker type="date" :disabledDates="startdisabledDates" name="startDate" v-model="startDate" required></datepicker></div>
@@ -109,10 +113,9 @@
                   <b-button id="popover-3" variant="primary">hint</b-button>
         <b-popover target="popover-3" triggers="hover focus">
           <template slot="title">Rules for student excel</template>
-           1. The uploaded excelsheet should have 2 columns. </br> 2. First column should contain email address (should be in @ format example:abc@nwmissouri.edu). </br> 3. In this excelsheet email address should be unique. </br>
-         4. Second column should contain name of the student. </br> 5. Student name should be of range between 5-25 characters.</br>
+           1. The uploaded excelsheet should have two columns. </br> 2. First column should contain email address (should be in @ format example:abc@nwmissouri.edu). </br> 3. In this excelsheet email address should be unique. </br>
+         4. Second column should contain name of the student. </br> 5. Student name should be of range between 5-25 characters.</br> 6. Excel sheet should hava headers in the first row Eg: Student Email, Student Name
         </b-popover></div>
-            
             </div>
             Upload Student Details(Excel)
             <div class="text-center my-3">
@@ -230,8 +233,8 @@ export default {
       } else {
         let data = new FormData(document.querySelector('form'))
         this.courseName = data.get('courseName')
-        this.startDate = this.startDate
-        this.endDate = this.endDate
+        this.startDate = new Date(this.startDate) && new Date(this.startDate).toISOString().split('T')[0]
+        this.endDate = new Date(this.endDate) && new Date(this.endDate).toISOString().split('T')[0]
         this.startSurveyurldata = data.get('startSurveyurl')
         this.endSurveyurldata = data.get('endSurveyurl')
         let formData = new FormData()

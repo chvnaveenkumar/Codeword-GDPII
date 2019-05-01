@@ -8,7 +8,7 @@ var { UserModel } = require('../model/model.user');
 var { mongoose } = require('./../config/database')
 var mailController = require('../config/user.mail.js')
 let XLSX = require('xlsx')
-
+//This function is for sign up
 let signUp = (req,res) => {
     var body = _.pick(req.body,['email','password','instructor']);
     var gen_token = jwt.sign({email: body.email },'codewordnwmsu',{expiresIn:  1* 300 }).toString();
@@ -33,7 +33,7 @@ let signUp = (req,res) => {
     })
 }
 module.exports.signUp = signUp;
-
+//this method for sign in
 let signIn = (req,res) => {
     var body = _.pick(req.body,['email','password']);
     console.log(body.email+"Controller user signin");
@@ -58,7 +58,7 @@ let signIn = (req,res) => {
     })
 }
 module.exports.signIn = signIn;
-
+// this details function is for to retrive the details of the user
 let details = (req,res) => {    
     console.log('email'+ req.session.id);
     UserModel.findOne({_id: req.session.id}).then((user) => {
@@ -70,7 +70,7 @@ let details = (req,res) => {
     });
 }
 module.exports.details = details;
-
+//this function is for valadating email
 let validateEmail = (req, res) => {
     var body = _.pick(req.body,['email']);
     console.log(body.email+"controller validateEmail");
@@ -89,7 +89,7 @@ let validateEmail = (req, res) => {
         });
 }
 module.exports.validateEmail = validateEmail;
-
+// this function is for getting temporary password
 let tempPassword = (req, res ) => {
     var body = _.pick(req.body,['email']);
     var chars = "abcdefghijklmnopqrstuvwxyz@#$%&*ABCDEFGHIJKLMNOP123456789";
@@ -112,7 +112,7 @@ let tempPassword = (req, res ) => {
     });
 }
 module.exports.tempPassword = tempPassword;
-
+// this function is for changing password
 let changePassword = (req,res) => { 
     var body = _.pick(req.body,['password']);
     console.log("change password:"+ req.session.id+" Change Password:"+body.password); 
@@ -132,7 +132,7 @@ let changePassword = (req,res) => {
    });
 }
 module.exports.changePassword = changePassword;
-
+//this function is for signing up by user
 
 let signUpUser = (req,res) => {
     var body = _.pick(req.body,['email','instructor']);

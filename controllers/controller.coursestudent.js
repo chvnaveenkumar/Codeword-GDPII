@@ -19,7 +19,7 @@ var storage = multer.diskStorage({
 
 var upload = multer({ storage: storage }).single('file')
 
-// Fetching data from uploaded xls file is added by Ujjawal Kumar
+// Fetching data from uploaded xls file 
 let getDataStudentXLSX = (req, res) => {
     upload(req, res, function (err) {
         if (req && (!req.file || req.file.size == 0)) {
@@ -139,6 +139,7 @@ let addCourseStudent = (req,res) => {
         }
     })
 }
+//This function is for shuffling codewords
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
     while (0 !== currentIndex) {
@@ -151,7 +152,7 @@ function shuffle(array) {
     return array;
   }
 module.exports.addCourseStudent = addCourseStudent;
-
+//this function is for getting course student details
 let getCourseStudent = (req,res) => {
     var body = _.pick(req.body,['CourseNameValue']);
     let AcknowledgedTrue = 0,ackPercent = 0;
@@ -173,7 +174,7 @@ let getCourseStudent = (req,res) => {
 }
 
 module.exports.getCourseStudent = getCourseStudent;
-
+//this function is for deleting student from course
 let deletecoursestudent=(req,res) =>{
     var body = _.pick(req.body,['CourseNameKey','EmailKey']);  
     CourseStudentModel.deleteOne({CourseNameKey: body.CourseNameKey,EmailKey: body.EmailKey}, function(err,deletecoursestudent){
@@ -185,7 +186,7 @@ let deletecoursestudent=(req,res) =>{
 }
 
 module.exports.deletecoursestudent=deletecoursestudent;
-
+//this function is for upadting students 
 let updatecoursestudent=(req,res) =>{
     var body = _.pick(req.body,['_id','NewEmailKey','Newstudentkey']);  
         CourseStudentModel.updateOne({_id: body._id}, { $set: { "StudentName" : body.Newstudentkey,"EmailKey":body.NewEmailKey } }, function(err,updatecoursestudent){
@@ -196,7 +197,7 @@ let updatecoursestudent=(req,res) =>{
     })
 }
 module.exports.updatecoursestudent=updatecoursestudent;
-
+//this method is for adding students
 let addStudent=(req,res) =>{
     var body = _.pick(req.body,['courseName','courseCreater','newStudentEmail','newStudentName','newCodeword','id','remainingCodewords']);  
         CourseStudentModel.insertMany([{

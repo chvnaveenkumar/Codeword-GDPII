@@ -18,7 +18,7 @@ var storage = multer.diskStorage({
 
 var upload = multer({ storage: storage }).single('file')
 
-// Fetching data from uploaded xls file is added by Ujjawal Kumar
+// Fetching data from uploaded xls file 
 let getDataFromXLS = (req, res) => {
     upload(req, res, function (err) {
         if (req && (!req.file || req.file.size == 0)) {
@@ -121,7 +121,7 @@ let getDataFromXLS = (req, res) => {
 
 }
 module.exports.getDataFromXLS = getDataFromXLS;
-
+//this function is for adding codeword
 let addcodewordset = (req, res) => {
     var body = _.pick(req.body,['CodeWordSetName','Codewords']);
     for (var i = 0; i < body.Codewords.length; i++) {
@@ -140,7 +140,7 @@ let addcodewordset = (req, res) => {
     })
 }
 module.exports.addcodewordset = addcodewordset;
-
+//this function is for getting codeword
 let getcodewordset = (req, res) => {
     Codewordset.find({ $or: [{CodeWordCreator: req.session.email}, {isPermanent: true}] } ).then((codes) => {
         if (codes)
@@ -151,7 +151,7 @@ let getcodewordset = (req, res) => {
     })
 }
 module.exports.getcodewordset = getcodewordset;
-
+//This function is for deleting codeowrd
 let deletecodewordset = (req, res) => {
     var body = _.pick(req.body,['CodeWordSetName']);
     Codewordset.remove({ CodeWordSetName: body.CodeWordSetName } ).then((result) => {

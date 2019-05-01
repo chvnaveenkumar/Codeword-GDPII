@@ -9,7 +9,7 @@ var { CourseModel } = require('../model/model.course');
 var { mongoose } = require('./../config/database')
 var mailController = require('../config/user.mail.js')
 let XLSX = require('xlsx')
-
+//This function is for adding courses
 let addCourse = (req,res) => {
     var body = _.pick(req.body,['courseNameKey',
     'codeWordSetName','startDate','endDate','preSurveyURL','postSurveyURL']);
@@ -35,7 +35,7 @@ oldCodewords: []
     })
 }
 module.exports.addCourse = addCourse;
-
+//This function is for getting getting courses
 let getCourses = (req,res) => {
     CourseModel.find({emailKey: req.session.email}, function (err, courses) {
         if (courses) {
@@ -54,7 +54,7 @@ let getCourses = (req,res) => {
         })
 }
 module.exports.getCourses = getCourses;
-
+//This function is for deleting courses
 let deleteCourse=(req,res) =>{
     var body = _.pick(req.body,['CourseNameKey']);  
     CourseModel.deleteOne({courseNameKey: body.CourseNameKey,emailKey: req.session.email }, function(err,deletecourse){
@@ -72,7 +72,7 @@ let deleteCourse=(req,res) =>{
 }
 
 module.exports.deleteCourse=deleteCourse;
-
+//this function is for updating courses
 let updateCourse=(req,res) =>{
     var body = _.pick(req.body,['id','Startdate','Enddate','PreSurveyURL','PostSurveyURL']);  
         CourseModel.updateOne({_id: body.id}, { $set: { "Startdate" : new Date(body.Startdate) && new Date(body.Startdate).toISOString().split('T')[0],"Enddate":new Date(body.Enddate) && new Date(body.Enddate).toISOString().split('T')[0] , "PreSurveyURL":body.PreSurveyURL, "PostSurveyURL": body.PostSurveyURL } }, function(err,updatecoursestudent){

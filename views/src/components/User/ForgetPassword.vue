@@ -1,4 +1,5 @@
 <!-- @author Naveen Kumar Chandaluri <S530742@nwmissouri.edu> -->
+<!-- This is the forget password page -->
 <template>
 <div class="container">
         <div class="row" style="margin-top: 7em">
@@ -35,6 +36,7 @@ export default {
       email: ''
     }
   },
+  // This method is used for the forget password
   methods: {
     forget () {
       this.msg = ''

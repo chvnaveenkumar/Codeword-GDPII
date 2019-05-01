@@ -1,6 +1,7 @@
 /**
  * @author Ujjawal Kumar
  */
+<!-- This is the codeword set view page--> 
 <template>
 <div id="codeWordSet" class="container-fluid" style="margin-top:5em">
     <div class="col-md-4 col-lg-4 col-xs-0 col-sm-0">
@@ -79,7 +80,9 @@
             </tr>
         </tbody>
             </table>
+            
 <!-- Modal Delete codewordset -->
+<!-- This is modal for the codewordset delete -->
 <div class="modal fade" id="deleteCodwordsetmodel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -135,7 +138,7 @@ export default {
         this.count = response.data.count
       })
     },
-    // Calling API of codeWordSet controller and sending xls data in form of json
+    // Calling API of codeWordSet controller and sending xls data in form of json //
     saveCodeWordData () {
       let data = new FormData(document.querySelector('form'))
       let sendData = {
@@ -154,6 +157,7 @@ export default {
         this.getCodeWordData()
       })
     },
+    // This is the getcodeworddata to get the data
     getCodeWordData () {
       axios({
         method: 'get',
@@ -169,6 +173,7 @@ export default {
     codewordhint () {
       swal({html: '1.Every codeword should be unique in the set. <br/>2. The codewords with substring should differ by at least 3 letters.<br/> 3.There should not be any codewords like Ex: daa, baa. <br/> 4. Scan the codewords as soon as the upload is done and give the feedback.<br/> 5. Every codeword should be compared with every other codeword in the set.'})
     },
+    // This is the method for the codeword set delete
     codewordSetDelete () {
       console.log('test')
       axios({

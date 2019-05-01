@@ -1,3 +1,4 @@
+<!-- This is the test vue page  -->
 <template>
   <div>
     <div class="container ">
@@ -60,6 +61,7 @@ export default {
       status: false
     }
   },
+  // This is used for the validation of the password
   methods: {
     validate (e) {
       this.repeatPassword = e.target.value

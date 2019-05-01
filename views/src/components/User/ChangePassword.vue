@@ -1,4 +1,5 @@
 <!-- @author Naveen Kumar Chandaluri <S530742@nwmissouri.edu> -->
+<!-- This is the change password page -->
 <template>
   <div>
     <div class="container ">
@@ -111,6 +112,7 @@ export default {
         })
       }
     },
+    // This method will validate the password
     validatePassword: function (e) {
       if (this.newpassword === this.repeatPassword) {
         this.matchPassword = true

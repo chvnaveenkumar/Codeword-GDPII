@@ -28,7 +28,7 @@ let addcodewords = (req, res) => {
     })
 }
 module.exports.addcodewords = addcodewords;
-
+//This  is founction is for getting the codewords
 let getCodewords = (req,res) => {
     var body = _.pick(req.body,['CodeWordSetKey']);
     Codewordset.findOne({CodeWordSetName : body.CodeWordSetKey}).then((codewordset) => {
@@ -46,7 +46,7 @@ let getCodewords = (req,res) => {
         })
 }
 module.exports.getCodewords = getCodewords;
-
+//This update function is for updating the codewords
 let updatecodeword=(req,res) =>{
     var body = _.pick(req.body,['CodeWordSetKey','updatedCodewords']);  
     Codewordset.updateOne({CodeWordSetName: body.CodeWordSetKey}, { $set: { "Codewords" : body.updatedCodewords }}).then((updatecodeword) => {
@@ -57,7 +57,7 @@ let updatecodeword=(req,res) =>{
 }
 
 module.exports.updatecodeword=updatecodeword;
-
+//This function is for deleting codewords
 let deleteCodewords=(req,res) =>{
     var body = _.pick(req.body,['CodeWordSetName','Codeword']);  
     CodeWord.deleteOne({Codeword: body.Codeword}, function(err,deleteCodewords){

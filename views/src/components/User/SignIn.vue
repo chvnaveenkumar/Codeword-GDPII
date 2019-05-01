@@ -1,4 +1,5 @@
 <!-- @author Naveen Kumar Chandaluri <S530742@nwmissouri.edu> -->
+<!-- This is the sign in page-->
 <template>
   <div>
     <div class="container ">
@@ -47,6 +48,7 @@ export default {
       pass: ''
     }
   },
+  // This method is used for the signin of the application
   methods: {
     signIn () {
       let data = new FormData(document.querySelector('form'))

@@ -1,3 +1,5 @@
+<!-- This is the coursestudent page-->
+
 <template>
 <div class="container-fluid" style="margin-top:5em" >
    <div class="row" >
@@ -41,6 +43,7 @@
       </button>
   </v-client-table>
 <!-- Modal Add Student -->
+<!-- This is the modal for the adding of the student  -->
 <div class="modal fade" id="addStudentModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -91,6 +94,7 @@
 </div>
 
 <!-- Modal Delete Student -->
+<!-- This is the modal for the deletion of the student-->
 <div class="modal fade" id="deleteStudent" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -114,6 +118,7 @@
 </div>
 
 <!-- Modal Edit Student -->
+<!-- This is the modal for the edit of the student -->
 <div class="modal fade" id="editStudent" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -145,6 +150,7 @@
 </div>
 
 <!-- Modal Edit Course -->
+<!-- This is the modal for the edit of the course -->
 <div class="modal fade" id="editCourse" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -275,6 +281,7 @@ export default {
       this.courseInfo.Enddate = new Date(start.setMonth(start.getMonth())) && new Date(start.setMonth(start.getMonth() + 4)).toISOString().split('T')[0]
       document.getElementById('endDate').value = this.courseInfo.Enddate
     },
+    // This is the method for the getting of the student data //
     getCourseStudentData () {
       axios({
         method: 'post',
@@ -326,6 +333,7 @@ export default {
         this.prevUrl = response.data.prevUrl
       })
     },
+    // This method will fetch the course data //
     getCoursesData (courseNameData) {
       axios({
         method: 'get',
@@ -349,6 +357,7 @@ export default {
       this.selectedEmailKey = emailKey
       this.selectedStudentName = studentName
     },
+    // This method is used to delete the student //
     deleteStudent (emailKey) {
       axios({
         method: 'post',
@@ -369,6 +378,7 @@ export default {
         }
       })
     },
+    // This method is used for the edit of the student //
     editStudent (studentId, selectEmailKey, selectStudent) {
       var studentValidate = 0
       var studentData = this.courseStudentData
@@ -401,6 +411,7 @@ export default {
         })
       }
     },
+    // This method is used to add an particular student in the course
     addStudent (studentName, studentEmail) {
       var studentValidate = true
       var studentData = this.courseStudentData
@@ -438,6 +449,7 @@ export default {
         })
       }
     },
+    // This method is used to edit an particular course //
     editCourse (courseId) {
       axios({
         method: 'post',

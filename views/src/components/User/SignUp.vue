@@ -1,4 +1,5 @@
 <!-- @author Naveen Kumar Chandaluri <S530742@nwmissouri.edu> -->
+<!-- This is the sign up page -->
 <template>
 <div class="container">
         <div class="row" style="margin-top: 7em">

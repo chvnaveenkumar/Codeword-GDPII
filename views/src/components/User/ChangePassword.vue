@@ -1,4 +1,5 @@
 <!-- @author Naveen Kumar Chandaluri <S530742@nwmissouri.edu> -->
+<!-- This is the change password page -->
 <template>
   <div>
     <div class="container ">

@@ -40,6 +40,7 @@ export default {
       instructor: false
     }
   },
+  // This method is used when an user or admin forget the password
   methods: {
     forget () {
       this.msg = ''

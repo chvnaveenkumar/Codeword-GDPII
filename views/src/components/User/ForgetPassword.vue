@@ -35,6 +35,7 @@ export default {
       email: ''
     }
   },
+  // This method is used for the forget password
   methods: {
     forget () {
       this.msg = ''

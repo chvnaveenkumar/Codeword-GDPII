@@ -111,6 +111,7 @@ export default {
         })
       }
     },
+    // This method will validate the password
     validatePassword: function (e) {
       if (this.newpassword === this.repeatPassword) {
         this.matchPassword = true

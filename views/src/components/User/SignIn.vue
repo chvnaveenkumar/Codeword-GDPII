@@ -47,6 +47,7 @@ export default {
       pass: ''
     }
   },
+  // This method is used for the signin of the application
   methods: {
     signIn () {
       let data = new FormData(document.querySelector('form'))

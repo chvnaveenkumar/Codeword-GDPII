@@ -191,7 +191,7 @@ export default {
   components: {
     Datepicker
   },
-  // this method is for startdate and enddate 
+  // This method is for startdate and enddate
   created () {
     this.startDate = new Date() && new Date().toISOString().split('T')[0]
     this.enddisabledDates.to = new Date(new Date(this.startDate).getFullYear(), new Date(this.startDate).getMonth(), new Date(this.startDate).getDate() + 1)
@@ -230,7 +230,7 @@ export default {
     }
   },
   methods: {
-    // This method is for creating course in instructor dashboard 
+    // This method is for creating course in instructor dashboard
     CreateCourse () {
       console.log(this.selectedCodeWordSet.CodeWordSetName)
       if (this.selectedCodeWordSet.CodeWordSetName === '' || this.selectedCodeWordSet.CodeWordSetName === undefined) {
@@ -288,7 +288,7 @@ export default {
           })
       }
     },
-    // this method is for handling file upload while creating course 
+    // This method is for handling file upload while creating course
     handleFileUpload () {
       this.checkFileUpload = true
       this.file = this.$refs.file.files[0]

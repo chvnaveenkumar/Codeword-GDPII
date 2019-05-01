@@ -68,10 +68,9 @@ export default {
   },
   methods: {
     /**
-     * 
+     *
      * Get the Studentdcourse from JSON Object
-     * 
-     * @ param {object} 
+     *
      * @ return the studentcourse
      */
     fetchUserData () {

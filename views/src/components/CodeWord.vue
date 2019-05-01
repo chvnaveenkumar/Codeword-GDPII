@@ -182,11 +182,9 @@ export default {
   },
   methods: {
     /**
-     * 
-     * Get the codeword from JSON Object
-     * 
-     * @ param {object} 
-     * @ return the codewords
+     *
+     *Get the codeword from JSON Object
+     *@ return the codewords
      */
     async getCodeWords () {
       axios({
@@ -232,7 +230,6 @@ export default {
       this.codewords.splice(this.codewordIndex, 1)
       this.updateCodeword()
     },
-    
     addCodeword () {
       var seqcodewords = []
       var similarcodewords = []

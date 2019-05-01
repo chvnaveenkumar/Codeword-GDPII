@@ -67,6 +67,13 @@ export default {
     '$route': 'fetchUserData'
   },
   methods: {
+    /**
+     * 
+     * Get the Studentdcourse from JSON Object
+     * 
+     * @ param {object} 
+     * @ return the studentcourse
+     */
     fetchUserData () {
       axios({
         method: 'get',

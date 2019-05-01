@@ -67,6 +67,7 @@
     </div>
   </div>
   </div>
+<!-- This model is for deleting the course from instructor dashboard -->
 <!-- Modal Delete course -->
 <div class="modal fade" id="deleteCourse" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -87,6 +88,7 @@
     </div>
   </div>
 </div>
+<!-- This model is for creating course in instructor dashboard -->
   <!-- Model to  add Course -->
       <div class="modal fade" id="addcourse" tabindex="-1" role="dialog" aria-labelledby="addcourseLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -189,12 +191,14 @@ export default {
   components: {
     Datepicker
   },
+  // this method is for startdate and enddate 
   created () {
     this.startDate = new Date() && new Date().toISOString().split('T')[0]
     this.enddisabledDates.to = new Date(new Date(this.startDate).getFullYear(), new Date(this.startDate).getMonth(), new Date(this.startDate).getDate() + 1)
     this.endDate = new Date(new Date().setMonth(new Date().getMonth())) && new Date(new Date().setMonth(new Date().getMonth() + 4)).toISOString().split('T')[0]
     this.fetchCourseList()
   },
+  // this method shows welcome to instructor dashboard everytime they login into application
   mounted () {
     $('#addcourse').on('hidden.bs.modal', function () {
       $('#addcourse form')[0].reset()
@@ -226,6 +230,7 @@ export default {
     }
   },
   methods: {
+    // This method is for creating course in instructor dashboard 
     CreateCourse () {
       console.log(this.selectedCodeWordSet.CodeWordSetName)
       if (this.selectedCodeWordSet.CodeWordSetName === '' || this.selectedCodeWordSet.CodeWordSetName === undefined) {
@@ -283,6 +288,7 @@ export default {
           })
       }
     },
+    // this method is for handling file upload while creating course 
     handleFileUpload () {
       this.checkFileUpload = true
       this.file = this.$refs.file.files[0]
@@ -297,10 +303,12 @@ export default {
         console.log(this.count + 'student')
       })
     },
+    // this method is for getting date
     getStartDate () {
       var today = new Date()
       document.getElementById('startDate').value = today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2)
     },
+    // this method is for loading coursemodel
     loadCourseModel () {
       axios({
         method: 'get',
@@ -316,6 +324,7 @@ export default {
     status () {
       this.isEnabled = false
     },
+    // this method is for getting courselist in intsructor dashboard
     fetchCourseList () {
       axios({
         method: 'get',
@@ -351,6 +360,7 @@ export default {
     getCourseName (item) {
       this.selectedCourse = item
     },
+    // this method is for deleting course
     deleteCourseKey () {
       console.log('deletecoursekey')
       axios({

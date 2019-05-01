@@ -1,7 +1,7 @@
 /**
  * @author Sravya Kancharla <S531500@nwmissouri.edu>
  */
-
+// This is Course model 
 var mongoose = require('mongoose');
 var validator = require('validator');
 

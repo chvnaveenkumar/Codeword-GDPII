@@ -1,7 +1,7 @@
 /**
  *  @author Srimai Reddy Yanala <s531384@nwmissouri.edu>
   */
-
+// This is codewordset model
 var mongoose = require('mongoose'),
 Schema = mongoose.Schema;
 

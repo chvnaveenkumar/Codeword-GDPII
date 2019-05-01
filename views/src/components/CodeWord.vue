@@ -181,6 +181,13 @@ export default {
     }
   },
   methods: {
+    /**
+     * 
+     * Get the codeword from JSON Object
+     * 
+     * @ param {object} 
+     * @ return the codewords
+     */
     async getCodeWords () {
       axios({
         method: 'post',
@@ -205,10 +212,12 @@ export default {
         this.data = JSON.parse(JSON.stringify(codewordsjson))
       })
     },
+    // Gets the selected codeword
     selectCodeword (index) {
       this.codewordIndex = index
       this.selectedCodeword = this.data[index].CodewordName
     },
+    // Edits the codeword
     editCodeword (selectedCodeword, index) {
       if (this.codewords.includes(this.selectedCodeword.toUpperCase())) {
         swal('Codeword already exists! Please add different Codeword!!')
@@ -218,10 +227,12 @@ export default {
         $('#editcodeword').modal('hide')
       }
     },
+    // Deletes the codeword
     deleteCodeword () {
       this.codewords.splice(this.codewordIndex, 1)
       this.updateCodeword()
     },
+    
     addCodeword () {
       var seqcodewords = []
       var similarcodewords = []
@@ -271,6 +282,7 @@ export default {
         this.getCodeWords()
       })
     },
+    // Adds the codeword
     selectCodewordSet (setName) {
       this.CodewordSetName = setName
     }

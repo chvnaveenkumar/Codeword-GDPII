@@ -1,6 +1,7 @@
 /**
  * @author Vyshnavi Yalamareddy <S531383@nwmissouri.edu>
  */
+//This is coursestudent model
 var mongoose = require('mongoose');
 var validator = require('validator');
 var mongoosePaginate = require('mongoose-paginate');

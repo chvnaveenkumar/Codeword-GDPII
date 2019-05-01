@@ -4,7 +4,7 @@
 var { CourseStudentModel } = require('../model/model.coursestudent');
 var { CourseModel } = require('../model/model.course');
 const _ = require('lodash');
-
+//This function is for getting student details
 let getstudentDetails = (req,res) => {
     var email = req.session.email.charAt(0).toLowerCase() + req.session.email.slice(1)
    CourseStudentModel.find({EmailKey: email}).then((studentcourses) => {
@@ -18,7 +18,7 @@ let getstudentDetails = (req,res) => {
        })
    }
 module.exports.getstudentDetails = getstudentDetails;
-
+//This function is for upadting acknowledge status
 let updateAcknowledged=(req,res) =>{
     var body = _.pick(req.body,['acknowledgedStatus']);
     CourseStudentModel.update({CourseNameKey: body.acknowledgedStatus.courseInfo.courseNameKey, courseCreater: body.acknowledgedStatus.courseInfo.emailKey, EmailKey: req.session.email}, { $set: { Acknowledged : true } }, function(err,updatecoursestudent){
@@ -30,7 +30,7 @@ let updateAcknowledged=(req,res) =>{
     })
 }
 module.exports.updateAcknowledged = updateAcknowledged;
-
+//this function is for getting details from course
 let getCourseDetails = (req,res) => {
     var body = _.pick(req.body,['courseName','courseCreater','codeword','ack']);
     CourseModel.find({courseNameKey: req.body.courseName, emailKey: req.body.courseCreater}, function (err, courseinfo) {

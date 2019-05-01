@@ -1,7 +1,7 @@
 /**
  * @author Naveen Kumar Chandaluri <S530742@nwmissouri.edu>
  */
-
+//This is user model 
 var mongoose = require('mongoose');
 var validator = require('validator');
 
